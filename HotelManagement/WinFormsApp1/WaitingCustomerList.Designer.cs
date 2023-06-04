@@ -1,7 +1,6 @@
-﻿using System.Windows.Forms;
-namespace GUI_HotelManagement
+﻿namespace GUI_HotelManagement
 {
-    partial class CustomerList
+    partial class WaitingCustomerList
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +30,9 @@ namespace GUI_HotelManagement
         {
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            comboBox1 = new ComboBox();
-            label2 = new Label();
+            btnBook = new Button();
+            btnDelete = new Button();
+            btnSave = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -40,50 +40,61 @@ namespace GUI_HotelManagement
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(298, 38);
+            label1.Location = new Point(216, 38);
             label1.Name = "label1";
-            label1.Size = new Size(247, 46);
+            label1.Size = new Size(388, 46);
             label1.TabIndex = 0;
-            label1.Text = "Customer List";
+            label1.Text = "Waiting Customer List";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 146);
+            dataGridView1.Location = new Point(12, 115);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(730, 294);
+            dataGridView1.Size = new Size(664, 323);
             dataGridView1.TabIndex = 1;
             // 
-            // comboBox1
+            // btnBook
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(599, 99);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(164, 28);
-            comboBox1.TabIndex = 2;
+            btnBook.Location = new Point(682, 336);
+            btnBook.Name = "btnBook";
+            btnBook.Size = new Size(94, 29);
+            btnBook.TabIndex = 2;
+            btnBook.Text = "Book";
+            btnBook.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnDelete
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(550, 104);
-            label2.Name = "label2";
-            label2.Size = new Size(46, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Fillter";
+            btnDelete.Location = new Point(682, 371);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 3;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
             // 
-            // CustomerList
+            // btnSave
+            // 
+            btnSave.Location = new Point(682, 406);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(94, 29);
+            btnSave.TabIndex = 4;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            // 
+            // WaitingCustomerList
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label2);
-            Controls.Add(comboBox1);
+            Controls.Add(btnSave);
+            Controls.Add(btnDelete);
+            Controls.Add(btnBook);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
-            Name = "CustomerList";
-            Text = "CustomerList";
+            Name = "WaitingCustomerList";
+            Text = "WaitingCustomerList";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -93,7 +104,8 @@ namespace GUI_HotelManagement
 
         private Label label1;
         private DataGridView dataGridView1;
-        private ComboBox comboBox1;
-        private Label label2;
+        private Button btnBook;
+        private Button btnDelete;
+        private Button btnSave;
     }
 }

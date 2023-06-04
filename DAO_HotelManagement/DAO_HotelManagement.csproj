@@ -10,4 +10,8 @@
     <ProjectReference Include="..\DTO\DTO_HoTelManagement.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>
