@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DTO\DTO_HoTelManagement.csproj" />
+    <ProjectReference Include="..\DTO_HotelManagement\DTO_HotelManagement.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -18,7 +18,7 @@ namespace DTO_HoTelManagement
         public string Name { get => name; set => name=value; }
         public string Content { get => content; set => content=value; }
         public string CreateDate { get => createDate; set => createDate=value; }
-        public string Manager { get => manager; set => manager=value; }       idRule;
+        public string Manager { get => manager; set => manager=value; }       
 
         public Rules_DTO(string idRule, string name, string content, string createDate, string manager) 
         {

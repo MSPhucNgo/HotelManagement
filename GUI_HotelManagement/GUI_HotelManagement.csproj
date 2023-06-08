@@ -17,4 +17,9 @@
     </COMReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_HotelManagement\BUS_HotelManagement.csproj" />
+    <ProjectReference Include="..\DTO_HotelManagement\DTO_HotelManagement.csproj" />
+  </ItemGroup>
+
 </Project>

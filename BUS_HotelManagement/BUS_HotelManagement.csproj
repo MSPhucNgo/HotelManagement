@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DTO\DTO_HoTelManagement.csproj" />
+    <ProjectReference Include="..\DAO_HotelManagement\DAO_HotelManagement.csproj" />
+    <ProjectReference Include="..\DTO_HotelManagement\DTO_HotelManagement.csproj" />
   </ItemGroup>
 
 </Project>

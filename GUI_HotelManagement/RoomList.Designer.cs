@@ -41,9 +41,10 @@
             label1.Font = new Font("Segoe UI Black", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(277, 45);
             label1.Name = "label1";
-            label1.Size = new Size(247, 46);
+            label1.Size = new Size(186, 46);
             label1.TabIndex = 1;
-            label1.Text = "Customer List";
+            label1.Text = "Room List";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -83,6 +84,7 @@
             Controls.Add(label1);
             Name = "RoomList";
             Text = "RoomList";
+            this.Load += new System.EventHandler(this.GUI_RoomList_Load);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

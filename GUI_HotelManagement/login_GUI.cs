@@ -46,7 +46,7 @@ namespace GUI_HotelManagement
                 MessageBox.Show("Đăng nhập thành công");
                 this.Hide();
                 //Đổi tên temp -> tên form của mấy người
-                temp temp = new temp();
+                RoomList temp = new RoomList();
                 temp.ShowDialog();
                 this.Show();
             }
