@@ -17,6 +17,9 @@ namespace GUI_HotelManagement
             InitializeComponent();
         }
 
-        
+        private void lb_List_Of_Items_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
