@@ -28,69 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btn_login = new Button();
-            tb_User = new TextBox();
-            tb_Pass = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            SuspendLayout();
+            this.btn_login = new System.Windows.Forms.Button();
+            this.tb_User = new System.Windows.Forms.TextBox();
+            this.tb_Pass = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // btn_login
             // 
-            btn_login.Location = new Point(356, 250);
-            btn_login.Name = "btn_login";
-            btn_login.Size = new Size(75, 23);
-            btn_login.TabIndex = 0;
-            btn_login.Text = "LOGIN";
-            btn_login.UseVisualStyleBackColor = true;
-            btn_login.Click += btn_login_Click;
+            this.btn_login.Location = new System.Drawing.Point(407, 333);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(86, 31);
+            this.btn_login.TabIndex = 0;
+            this.btn_login.Text = "LOGIN";
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click_1);
             // 
             // tb_User
             // 
-            tb_User.Location = new Point(344, 137);
-            tb_User.Name = "tb_User";
-            tb_User.Size = new Size(100, 23);
-            tb_User.TabIndex = 1;
+            this.tb_User.Location = new System.Drawing.Point(393, 183);
+            this.tb_User.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tb_User.Name = "tb_User";
+            this.tb_User.Size = new System.Drawing.Size(114, 27);
+            this.tb_User.TabIndex = 1;
             // 
             // tb_Pass
             // 
-            tb_Pass.Location = new Point(344, 190);
-            tb_Pass.Name = "tb_Pass";
-            tb_Pass.Size = new Size(100, 23);
-            tb_Pass.TabIndex = 2;
+            this.tb_Pass.Location = new System.Drawing.Point(393, 253);
+            this.tb_Pass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tb_Pass.Name = "tb_Pass";
+            this.tb_Pass.Size = new System.Drawing.Size(114, 27);
+            this.tb_Pass.TabIndex = 2;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(549, 144);
-            label1.Name = "label1";
-            label1.Size = new Size(43, 15);
-            label1.TabIndex = 3;
-            label1.Text = "EMP11";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(627, 192);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "EMP11";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(549, 198);
-            label2.Name = "label2";
-            label2.Size = new Size(31, 15);
-            label2.TabIndex = 4;
-            label2.Text = "1234";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(627, 264);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "1234";
             // 
             // login_GUI
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(tb_Pass);
-            Controls.Add(tb_User);
-            Controls.Add(btn_login);
-            Name = "login_GUI";
-            Text = "login_GUI";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tb_Pass);
+            this.Controls.Add(this.tb_User);
+            this.Controls.Add(this.btn_login);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "login_GUI";
+            this.Text = "login_GUI";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

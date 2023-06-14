@@ -61,5 +61,10 @@ namespace GUI_HotelManagement
                 MessageBox.Show("Thông tin đăng nhập không đúng");
             }
         }
+
+        private void btn_login_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
