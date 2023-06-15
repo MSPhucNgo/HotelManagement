@@ -22,7 +22,7 @@ namespace DAO_HotelManagement
         }
 
         private DataProvider() { }
-        private string connectStr = "Data Source=.\\SQLEXPRESS;Initial Catalog=HotelManagement;Integrated Security=True";
+        private string connectStr = "Data Source = (local);Initial Catalog = HotelManagement; Integrated Security = True";
 
         public DataSet ExecuteQuery1(string query)
         {

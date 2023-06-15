@@ -67,6 +67,17 @@
             this.panel3.Size = new System.Drawing.Size(1356, 690);
             this.panel3.TabIndex = 2;
             // 
+            // bt_Logout
+            // 
+            this.bt_Logout.Location = new System.Drawing.Point(1104, 610);
+            this.bt_Logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bt_Logout.Name = "bt_Logout";
+            this.bt_Logout.Size = new System.Drawing.Size(75, 29);
+            this.bt_Logout.TabIndex = 33;
+            this.bt_Logout.Text = "EXIT";
+            this.bt_Logout.UseVisualStyleBackColor = true;
+            this.bt_Logout.Click += new System.EventHandler(this.bt_Logout_Click);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Silver;
@@ -88,6 +99,7 @@
             this.dgv_List_Of_Items.RowTemplate.Height = 29;
             this.dgv_List_Of_Items.Size = new System.Drawing.Size(1317, 347);
             this.dgv_List_Of_Items.TabIndex = 5;
+            this.dgv_List_Of_Items.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_List_Of_Items_CellContentClick);
             // 
             // lb_List_Of_Items_Room
             // 
@@ -156,17 +168,6 @@
             this.lb_List_Of_Items.Text = "LIST OF ITEMS";
             this.lb_List_Of_Items.UseCompatibleTextRendering = true;
             this.lb_List_Of_Items.Click += new System.EventHandler(this.lb_List_Of_Items_Click);
-            // 
-            // bt_Logout
-            // 
-            this.bt_Logout.Location = new System.Drawing.Point(1104, 610);
-            this.bt_Logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bt_Logout.Name = "bt_Logout";
-            this.bt_Logout.Size = new System.Drawing.Size(75, 29);
-            this.bt_Logout.TabIndex = 33;
-            this.bt_Logout.Text = "EXIT";
-            this.bt_Logout.UseVisualStyleBackColor = true;
-            this.bt_Logout.Click += new System.EventHandler(this.bt_Logout_Click);
             // 
             // List_Of_Items
             // 
