@@ -95,9 +95,9 @@
             this.panel5.Controls.Add(this.dgv_Reservation);
             this.panel5.Controls.Add(this.lb_List_Of_Items_Room);
             this.panel5.ForeColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(18, 138);
+            this.panel5.Location = new System.Drawing.Point(18, 111);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1051, 335);
+            this.panel5.Size = new System.Drawing.Size(1051, 362);
             this.panel5.TabIndex = 1;
             // 
             // dgv_Reservation
@@ -108,7 +108,7 @@
             this.dgv_Reservation.Name = "dgv_Reservation";
             this.dgv_Reservation.RowHeadersWidth = 51;
             this.dgv_Reservation.RowTemplate.Height = 29;
-            this.dgv_Reservation.Size = new System.Drawing.Size(1048, 290);
+            this.dgv_Reservation.Size = new System.Drawing.Size(1048, 317);
             this.dgv_Reservation.TabIndex = 6;
             this.dgv_Reservation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Reservation_CellContentClick);
             // 
@@ -134,7 +134,7 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(19, 21);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1050, 111);
+            this.panel4.Size = new System.Drawing.Size(1050, 84);
             this.panel4.TabIndex = 0;
             // 
             // bt_Search_Reservation
