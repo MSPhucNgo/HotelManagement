@@ -77,7 +77,7 @@
             this.panel5.ForeColor = System.Drawing.Color.Silver;
             this.panel5.Location = new System.Drawing.Point(18, 177);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1320, 364);
+            this.panel5.Size = new System.Drawing.Size(1320, 440);
             this.panel5.TabIndex = 1;
             // 
             // lb_List_Of_Items_Room
@@ -174,12 +174,13 @@
             this.dgv_Reservation.Name = "dgv_Reservation";
             this.dgv_Reservation.RowHeadersWidth = 51;
             this.dgv_Reservation.RowTemplate.Height = 29;
-            this.dgv_Reservation.Size = new System.Drawing.Size(1317, 322);
+            this.dgv_Reservation.Size = new System.Drawing.Size(1317, 398);
             this.dgv_Reservation.TabIndex = 6;
+            this.dgv_Reservation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Reservation_CellContentClick);
             // 
             // bt_Edit_Reservation
             // 
-            this.bt_Edit_Reservation.Location = new System.Drawing.Point(594, 572);
+            this.bt_Edit_Reservation.Location = new System.Drawing.Point(594, 623);
             this.bt_Edit_Reservation.Name = "bt_Edit_Reservation";
             this.bt_Edit_Reservation.Size = new System.Drawing.Size(201, 40);
             this.bt_Edit_Reservation.TabIndex = 2;

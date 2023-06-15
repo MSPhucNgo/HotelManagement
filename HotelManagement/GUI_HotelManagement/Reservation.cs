@@ -16,5 +16,10 @@ namespace GUI_HotelManagement
         {
             InitializeComponent();
         }
+
+        private void dgv_Reservation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
