@@ -16,10 +16,14 @@ namespace GUI_HotelManagement
         {
             InitializeComponent();
         }
-
+        public string selectedID;
         private void dgv_Reservation_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+                if (e.ColumnIndex == dgv_Reservation.Columns["ID_Service"].Index && e.RowIndex >= 0)
+                {
+                    selectedID = dgv_Reservation.Rows[e.RowIndex].Cells["ID_Service"].Value.ToString();
+                }
+                else return;
         }
 
         private void bt_Edit_Reservation_Click(object sender, EventArgs e)
