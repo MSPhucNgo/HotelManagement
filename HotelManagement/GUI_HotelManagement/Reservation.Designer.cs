@@ -41,6 +41,7 @@
             this.text_Room_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_List_Of_Items = new System.Windows.Forms.Label();
+            this.bt_Exit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -61,6 +62,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Controls.Add(this.bt_Exit);
             this.panel3.Controls.Add(this.bt_Edit_Reservation);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
@@ -71,9 +73,9 @@
             // 
             // bt_Edit_Reservation
             // 
-            this.bt_Edit_Reservation.Location = new System.Drawing.Point(594, 623);
+            this.bt_Edit_Reservation.Location = new System.Drawing.Point(500, 623);
             this.bt_Edit_Reservation.Name = "bt_Edit_Reservation";
-            this.bt_Edit_Reservation.Size = new System.Drawing.Size(201, 40);
+            this.bt_Edit_Reservation.Size = new System.Drawing.Size(150, 29);
             this.bt_Edit_Reservation.TabIndex = 2;
             this.bt_Edit_Reservation.Text = "EDIT RESERVATION";
             this.bt_Edit_Reservation.UseVisualStyleBackColor = true;
@@ -188,6 +190,16 @@
             this.lb_List_Of_Items.Text = "RESERVATION\r\n";
             this.lb_List_Of_Items.UseCompatibleTextRendering = true;
             // 
+            // bt_Exit
+            // 
+            this.bt_Exit.Location = new System.Drawing.Point(697, 623);
+            this.bt_Exit.Name = "bt_Exit";
+            this.bt_Exit.Size = new System.Drawing.Size(75, 29);
+            this.bt_Exit.TabIndex = 3;
+            this.bt_Exit.Text = "EXIT";
+            this.bt_Exit.UseVisualStyleBackColor = true;
+            this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -224,5 +236,6 @@
         private Label lb_List_Of_Items;
         private Button bt_Edit_Reservation;
         private DataGridView dgv_Reservation;
+        private Button bt_Exit;
     }
 }

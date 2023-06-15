@@ -28,5 +28,10 @@ namespace GUI_HotelManagement
             er.Show();
             this.Hide();
         }
+
+        private void bt_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
