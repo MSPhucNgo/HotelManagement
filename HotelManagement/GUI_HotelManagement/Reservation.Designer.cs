@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.bt_Exit = new System.Windows.Forms.Button();
             this.bt_Edit_Reservation = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -60,6 +61,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.bt_Exit);
             this.panel3.Controls.Add(this.bt_Edit_Reservation);
             this.panel3.Controls.Add(this.panel5);
@@ -69,9 +71,19 @@
             this.panel3.Size = new System.Drawing.Size(1093, 550);
             this.panel3.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(198, 490);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 29);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "CHECKIN";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // bt_Exit
             // 
-            this.bt_Exit.Location = new System.Drawing.Point(610, 490);
+            this.bt_Exit.Location = new System.Drawing.Point(346, 490);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(75, 29);
             this.bt_Exit.TabIndex = 3;
@@ -81,7 +93,7 @@
             // 
             // bt_Edit_Reservation
             // 
-            this.bt_Edit_Reservation.Location = new System.Drawing.Point(413, 490);
+            this.bt_Edit_Reservation.Location = new System.Drawing.Point(18, 490);
             this.bt_Edit_Reservation.Name = "bt_Edit_Reservation";
             this.bt_Edit_Reservation.Size = new System.Drawing.Size(150, 29);
             this.bt_Edit_Reservation.TabIndex = 2;
@@ -110,7 +122,6 @@
             this.dgv_Reservation.RowTemplate.Height = 29;
             this.dgv_Reservation.Size = new System.Drawing.Size(1048, 317);
             this.dgv_Reservation.TabIndex = 6;
-            this.dgv_Reservation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Reservation_CellContentClick);
             // 
             // lb_List_Of_Items_Room
             // 
@@ -213,5 +224,6 @@
         private Button bt_Edit_Reservation;
         private DataGridView dgv_Reservation;
         private Button bt_Exit;
+        private Button button1;
     }
 }
