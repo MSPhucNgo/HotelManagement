@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bt_Exit = new System.Windows.Forms.Button();
             this.bt_Edit_Reservation = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgv_Reservation = new System.Windows.Forms.DataGridView();
@@ -38,10 +39,7 @@
             this.bt_Search_Reservation = new System.Windows.Forms.Button();
             this.text_Customer_Name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.text_Room_ID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.lb_List_Of_Items = new System.Windows.Forms.Label();
-            this.bt_Exit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -56,7 +54,7 @@
             this.panel1.Controls.Add(this.lb_List_Of_Items);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1358, 729);
+            this.panel1.Size = new System.Drawing.Size(1093, 589);
             this.panel1.TabIndex = 2;
             // 
             // panel3
@@ -68,12 +66,22 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(0, 39);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1356, 690);
+            this.panel3.Size = new System.Drawing.Size(1093, 550);
             this.panel3.TabIndex = 2;
+            // 
+            // bt_Exit
+            // 
+            this.bt_Exit.Location = new System.Drawing.Point(610, 490);
+            this.bt_Exit.Name = "bt_Exit";
+            this.bt_Exit.Size = new System.Drawing.Size(75, 29);
+            this.bt_Exit.TabIndex = 3;
+            this.bt_Exit.Text = "EXIT";
+            this.bt_Exit.UseVisualStyleBackColor = true;
+            this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
             // 
             // bt_Edit_Reservation
             // 
-            this.bt_Edit_Reservation.Location = new System.Drawing.Point(500, 623);
+            this.bt_Edit_Reservation.Location = new System.Drawing.Point(413, 490);
             this.bt_Edit_Reservation.Name = "bt_Edit_Reservation";
             this.bt_Edit_Reservation.Size = new System.Drawing.Size(150, 29);
             this.bt_Edit_Reservation.TabIndex = 2;
@@ -87,9 +95,9 @@
             this.panel5.Controls.Add(this.dgv_Reservation);
             this.panel5.Controls.Add(this.lb_List_Of_Items_Room);
             this.panel5.ForeColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(18, 177);
+            this.panel5.Location = new System.Drawing.Point(18, 138);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1320, 440);
+            this.panel5.Size = new System.Drawing.Size(1051, 335);
             this.panel5.TabIndex = 1;
             // 
             // dgv_Reservation
@@ -100,7 +108,7 @@
             this.dgv_Reservation.Name = "dgv_Reservation";
             this.dgv_Reservation.RowHeadersWidth = 51;
             this.dgv_Reservation.RowTemplate.Height = 29;
-            this.dgv_Reservation.Size = new System.Drawing.Size(1317, 398);
+            this.dgv_Reservation.Size = new System.Drawing.Size(1048, 290);
             this.dgv_Reservation.TabIndex = 6;
             this.dgv_Reservation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Reservation_CellContentClick);
             // 
@@ -124,16 +132,14 @@
             this.panel4.Controls.Add(this.bt_Search_Reservation);
             this.panel4.Controls.Add(this.text_Customer_Name);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.text_Room_ID);
-            this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(19, 21);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1320, 150);
+            this.panel4.Size = new System.Drawing.Size(1050, 111);
             this.panel4.TabIndex = 0;
             // 
             // bt_Search_Reservation
             // 
-            this.bt_Search_Reservation.Location = new System.Drawing.Point(813, 54);
+            this.bt_Search_Reservation.Location = new System.Drawing.Point(396, 28);
             this.bt_Search_Reservation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bt_Search_Reservation.Name = "bt_Search_Reservation";
             this.bt_Search_Reservation.Size = new System.Drawing.Size(75, 29);
@@ -144,7 +150,7 @@
             // text_Customer_Name
             // 
             this.text_Customer_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.text_Customer_Name.Location = new System.Drawing.Point(575, 85);
+            this.text_Customer_Name.Location = new System.Drawing.Point(163, 30);
             this.text_Customer_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.text_Customer_Name.Name = "text_Customer_Name";
             this.text_Customer_Name.Size = new System.Drawing.Size(201, 27);
@@ -153,29 +159,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(423, 87);
+            this.label1.Location = new System.Drawing.Point(11, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 20);
             this.label1.TabIndex = 33;
             this.label1.Text = "CUSTOMER NAME:";
-            // 
-            // text_Room_ID
-            // 
-            this.text_Room_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.text_Room_ID.Location = new System.Drawing.Point(575, 24);
-            this.text_Room_ID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.text_Room_ID.Name = "text_Room_ID";
-            this.text_Room_ID.Size = new System.Drawing.Size(201, 27);
-            this.text_Room_ID.TabIndex = 31;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(481, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 20);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "ROOM ID:";
             // 
             // lb_List_Of_Items
             // 
@@ -190,21 +178,11 @@
             this.lb_List_Of_Items.Text = "RESERVATION\r\n";
             this.lb_List_Of_Items.UseCompatibleTextRendering = true;
             // 
-            // bt_Exit
-            // 
-            this.bt_Exit.Location = new System.Drawing.Point(697, 623);
-            this.bt_Exit.Name = "bt_Exit";
-            this.bt_Exit.Size = new System.Drawing.Size(75, 29);
-            this.bt_Exit.TabIndex = 3;
-            this.bt_Exit.Text = "EXIT";
-            this.bt_Exit.UseVisualStyleBackColor = true;
-            this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
-            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1382, 753);
+            this.ClientSize = new System.Drawing.Size(1117, 613);
             this.Controls.Add(this.panel1);
             this.Name = "Reservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -231,8 +209,6 @@
         private Button bt_Search_Reservation;
         private TextBox text_Customer_Name;
         private Label label1;
-        private TextBox text_Room_ID;
-        private Label label2;
         private Label lb_List_Of_Items;
         private Button bt_Edit_Reservation;
         private DataGridView dgv_Reservation;

@@ -17,15 +17,24 @@ namespace GUI_HotelManagement
             InitializeComponent();
         }
 
-        private void bt_Edit_Reservation_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_Edit_Reservation_Click_1(object sender, EventArgs e)
+        {
             Reservation r = new Reservation();
             r.Show();
             this.Hide();
         }
 
-        private void bt_Cancel_Click(object sender, EventArgs e)
+        private void bt_Cancel_Click_1(object sender, EventArgs e)
         {
             Reservation r = new Reservation();
             r.Show();
