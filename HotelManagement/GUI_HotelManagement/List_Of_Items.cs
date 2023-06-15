@@ -26,5 +26,10 @@ namespace GUI_HotelManagement
         {
 
         }
+
+        private void bt_Logout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.BookID_Text = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_List_Of_Items = new System.Windows.Forms.Label();
+            this.bt_Logout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -58,6 +59,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Controls.Add(this.bt_Logout);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(0, 39);
@@ -73,7 +75,7 @@
             this.panel5.ForeColor = System.Drawing.Color.Silver;
             this.panel5.Location = new System.Drawing.Point(18, 177);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1320, 493);
+            this.panel5.Size = new System.Drawing.Size(1320, 390);
             this.panel5.TabIndex = 1;
             // 
             // dgv_List_Of_Items
@@ -84,7 +86,7 @@
             this.dgv_List_Of_Items.Name = "dgv_List_Of_Items";
             this.dgv_List_Of_Items.RowHeadersWidth = 51;
             this.dgv_List_Of_Items.RowTemplate.Height = 29;
-            this.dgv_List_Of_Items.Size = new System.Drawing.Size(1317, 447);
+            this.dgv_List_Of_Items.Size = new System.Drawing.Size(1317, 347);
             this.dgv_List_Of_Items.TabIndex = 5;
             // 
             // lb_List_Of_Items_Room
@@ -119,7 +121,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 29);
             this.button2.TabIndex = 32;
-            this.button2.Text = "Search";
+            this.button2.Text = "SEARCH";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -137,9 +139,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(481, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 20);
+            this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Booking_ID";
+            this.label2.Text = "ROOM ID:";
             // 
             // lb_List_Of_Items
             // 
@@ -154,6 +156,17 @@
             this.lb_List_Of_Items.Text = "LIST OF ITEMS";
             this.lb_List_Of_Items.UseCompatibleTextRendering = true;
             this.lb_List_Of_Items.Click += new System.EventHandler(this.lb_List_Of_Items_Click);
+            // 
+            // bt_Logout
+            // 
+            this.bt_Logout.Location = new System.Drawing.Point(1104, 610);
+            this.bt_Logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bt_Logout.Name = "bt_Logout";
+            this.bt_Logout.Size = new System.Drawing.Size(75, 29);
+            this.bt_Logout.TabIndex = 33;
+            this.bt_Logout.Text = "EXIT";
+            this.bt_Logout.UseVisualStyleBackColor = true;
+            this.bt_Logout.Click += new System.EventHandler(this.bt_Logout_Click);
             // 
             // List_Of_Items
             // 
@@ -188,5 +201,6 @@
         private Button button2;
         private TextBox BookID_Text;
         private Label label2;
+        private Button bt_Logout;
     }
 }

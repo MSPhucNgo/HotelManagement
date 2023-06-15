@@ -30,22 +30,22 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bt_Edit_Reservation = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dgv_Reservation = new System.Windows.Forms.DataGridView();
             this.lb_List_Of_Items_Room = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.text_Room_ID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lb_List_Of_Items = new System.Windows.Forms.Label();
             this.bt_Search_Reservation = new System.Windows.Forms.Button();
             this.text_Customer_Name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_Reservation = new System.Windows.Forms.DataGridView();
-            this.bt_Edit_Reservation = new System.Windows.Forms.Button();
+            this.text_Room_ID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb_List_Of_Items = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Reservation)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,6 +69,16 @@
             this.panel3.Size = new System.Drawing.Size(1356, 690);
             this.panel3.TabIndex = 2;
             // 
+            // bt_Edit_Reservation
+            // 
+            this.bt_Edit_Reservation.Location = new System.Drawing.Point(594, 623);
+            this.bt_Edit_Reservation.Name = "bt_Edit_Reservation";
+            this.bt_Edit_Reservation.Size = new System.Drawing.Size(201, 40);
+            this.bt_Edit_Reservation.TabIndex = 2;
+            this.bt_Edit_Reservation.Text = "EDIT RESERVATION";
+            this.bt_Edit_Reservation.UseVisualStyleBackColor = true;
+            this.bt_Edit_Reservation.Click += new System.EventHandler(this.bt_Edit_Reservation_Click);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Silver;
@@ -79,6 +89,18 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1320, 440);
             this.panel5.TabIndex = 1;
+            // 
+            // dgv_Reservation
+            // 
+            this.dgv_Reservation.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.dgv_Reservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Reservation.Location = new System.Drawing.Point(2, 42);
+            this.dgv_Reservation.Name = "dgv_Reservation";
+            this.dgv_Reservation.RowHeadersWidth = 51;
+            this.dgv_Reservation.RowTemplate.Height = 29;
+            this.dgv_Reservation.Size = new System.Drawing.Size(1317, 398);
+            this.dgv_Reservation.TabIndex = 6;
+            this.dgv_Reservation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Reservation_CellContentClick);
             // 
             // lb_List_Of_Items_Room
             // 
@@ -106,6 +128,34 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1320, 150);
             this.panel4.TabIndex = 0;
+            // 
+            // bt_Search_Reservation
+            // 
+            this.bt_Search_Reservation.Location = new System.Drawing.Point(813, 54);
+            this.bt_Search_Reservation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bt_Search_Reservation.Name = "bt_Search_Reservation";
+            this.bt_Search_Reservation.Size = new System.Drawing.Size(75, 29);
+            this.bt_Search_Reservation.TabIndex = 35;
+            this.bt_Search_Reservation.Text = "SEARCH";
+            this.bt_Search_Reservation.UseVisualStyleBackColor = true;
+            // 
+            // text_Customer_Name
+            // 
+            this.text_Customer_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_Customer_Name.Location = new System.Drawing.Point(575, 85);
+            this.text_Customer_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.text_Customer_Name.Name = "text_Customer_Name";
+            this.text_Customer_Name.Size = new System.Drawing.Size(201, 27);
+            this.text_Customer_Name.TabIndex = 34;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(423, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 20);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "CUSTOMER NAME:";
             // 
             // text_Room_ID
             // 
@@ -138,55 +188,6 @@
             this.lb_List_Of_Items.Text = "RESERVATION\r\n";
             this.lb_List_Of_Items.UseCompatibleTextRendering = true;
             // 
-            // bt_Search_Reservation
-            // 
-            this.bt_Search_Reservation.Location = new System.Drawing.Point(813, 54);
-            this.bt_Search_Reservation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bt_Search_Reservation.Name = "bt_Search_Reservation";
-            this.bt_Search_Reservation.Size = new System.Drawing.Size(75, 29);
-            this.bt_Search_Reservation.TabIndex = 35;
-            this.bt_Search_Reservation.Text = "Search";
-            this.bt_Search_Reservation.UseVisualStyleBackColor = true;
-            // 
-            // text_Customer_Name
-            // 
-            this.text_Customer_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.text_Customer_Name.Location = new System.Drawing.Point(575, 85);
-            this.text_Customer_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.text_Customer_Name.Name = "text_Customer_Name";
-            this.text_Customer_Name.Size = new System.Drawing.Size(201, 27);
-            this.text_Customer_Name.TabIndex = 34;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(423, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 20);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "CUSTOMER NAME:";
-            // 
-            // dgv_Reservation
-            // 
-            this.dgv_Reservation.BackgroundColor = System.Drawing.Color.DarkGray;
-            this.dgv_Reservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Reservation.Location = new System.Drawing.Point(2, 42);
-            this.dgv_Reservation.Name = "dgv_Reservation";
-            this.dgv_Reservation.RowHeadersWidth = 51;
-            this.dgv_Reservation.RowTemplate.Height = 29;
-            this.dgv_Reservation.Size = new System.Drawing.Size(1317, 398);
-            this.dgv_Reservation.TabIndex = 6;
-            this.dgv_Reservation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Reservation_CellContentClick);
-            // 
-            // bt_Edit_Reservation
-            // 
-            this.bt_Edit_Reservation.Location = new System.Drawing.Point(594, 623);
-            this.bt_Edit_Reservation.Name = "bt_Edit_Reservation";
-            this.bt_Edit_Reservation.Size = new System.Drawing.Size(201, 40);
-            this.bt_Edit_Reservation.TabIndex = 2;
-            this.bt_Edit_Reservation.Text = "EDIT RESERVATION";
-            this.bt_Edit_Reservation.UseVisualStyleBackColor = true;
-            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -194,15 +195,16 @@
             this.ClientSize = new System.Drawing.Size(1382, 753);
             this.Controls.Add(this.panel1);
             this.Name = "Reservation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservation";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Reservation)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Reservation)).EndInit();
             this.ResumeLayout(false);
 
         }

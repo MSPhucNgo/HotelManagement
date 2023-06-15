@@ -10,22 +10,25 @@ using System.Windows.Forms;
 
 namespace GUI_HotelManagement
 {
-    public partial class Reservation : Form
+    public partial class Edit_Resevation : Form
     {
-        public Reservation()
+        public Edit_Resevation()
         {
             InitializeComponent();
         }
 
-        private void dgv_Reservation_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void bt_Edit_Reservation_Click(object sender, EventArgs e)
         {
-            Edit_Resevation er = new Edit_Resevation();
-            er.Show();
+
+            Reservation r = new Reservation();
+            r.Show();
+            this.Hide();
+        }
+
+        private void bt_Cancel_Click(object sender, EventArgs e)
+        {
+            Reservation r = new Reservation();
+            r.Show();
             this.Hide();
         }
     }
