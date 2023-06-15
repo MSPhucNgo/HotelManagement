@@ -44,5 +44,9 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.check_Booking(BookingId);
         }
+        public static DataTable loadlistOfReservation(BookingForm_DTO BookingId)
+        {
+            return BookingForm_DAO.Instance.loadlistOfReservation(BookingId);
+        }
     }
 }

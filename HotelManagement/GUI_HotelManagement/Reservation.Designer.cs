@@ -122,6 +122,7 @@
             this.dgv_Reservation.RowTemplate.Height = 29;
             this.dgv_Reservation.Size = new System.Drawing.Size(1048, 317);
             this.dgv_Reservation.TabIndex = 6;
+            this.dgv_Reservation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Reservation_CellContentClick);
             // 
             // lb_List_Of_Items_Room
             // 
@@ -172,9 +173,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 20);
+            this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 33;
-            this.label1.Text = "CUSTOMER NAME:";
+            this.label1.Text = "BOOKING ID:";
             // 
             // lb_List_Of_Items
             // 

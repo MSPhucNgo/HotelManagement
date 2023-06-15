@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bt_Logout = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgv_List_Of_Items = new System.Windows.Forms.DataGridView();
             this.lb_List_Of_Items_Room = new System.Windows.Forms.Label();
@@ -203,5 +204,6 @@
         private TextBox BookID_Text;
         private Label label2;
         private Button bt_Logout;
+        private readonly DataGridViewCellEventHandler dgv_List_Of_Items_CellContentClick;
     }
 }

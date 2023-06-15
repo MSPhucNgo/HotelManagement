@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 
 namespace DAO_HotelManagement
@@ -132,6 +133,12 @@ namespace DAO_HotelManagement
                 return username;
             }
             return null;
+        }
+        public DataTable loadlistOfReservation(BookingForm_DTO BookingID)
+        {
+            string query = "SELECT * FROM BOOKING_ROOM"; //"select distinct I.NAME, IR.AMOUNT from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM where IR.ID_ROOM = '" + BookingID.IdBooking + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
         }
     }
 }

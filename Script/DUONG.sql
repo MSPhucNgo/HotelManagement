@@ -1,5 +1,9 @@
 ﻿select * from ITEM_ROOM
 select * from ITEM
+select * from PARTNER
+select * from PARTNER_TOUR
+select * from ROOM
+select * from BOOKING_ROOM
 
 -- Liệt kê danh sách vật dụng theo mã phòng
 CREATE FUNCTION fu_List_Of_Items_Room 
