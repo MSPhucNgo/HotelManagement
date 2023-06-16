@@ -1,11 +1,11 @@
 ﻿namespace QLKS
 {
-    partial class Check_inForm
+    public partial class Check_inForm
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.

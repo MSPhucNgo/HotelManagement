@@ -1,4 +1,5 @@
 ﻿using DAO_HotelManagement;
+using HotelManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,7 @@ namespace GUI_HotelManagement
                 this.Hide();
                 //fPartner fPartner = new fPartner();
                 //fPartner.ShowDialog();
-                temp tmp = new temp();
+                Services4Customer tmp = new Services4Customer();
                 tmp.ShowDialog();
                 this.Show();
             }

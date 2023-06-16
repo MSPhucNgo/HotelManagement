@@ -10,9 +10,7 @@ using System.Threading.Tasks;
 namespace DAO_HotelManagement
 {
     public class BookingForm_DAO
-    {
-        public static string BookingID;
-        
+    {        
      
         private static BookingForm_DAO instance;
         public static BookingForm_DAO Instance
