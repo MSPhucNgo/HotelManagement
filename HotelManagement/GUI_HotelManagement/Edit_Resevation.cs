@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO_HotelManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,12 @@ namespace GUI_HotelManagement
 
         private void bt_Edit_Reservation_Click_1(object sender, EventArgs e)
         {
+            /*string str = dtgvRoomList.Rows[e.RowIndex].Cells["ID_ROOM"].Value.ToString();
+            string cusId = dtgvRoomList.Rows[e.RowIndex].Cells["ID_CUSTOMER"].Value.ToString();
+            Room_DTO room = new Room_DTO(str);
+            Service_Of_Room serviceOfRoomScreen = new Service_Of_Room(room);
+            this.Hide();
+            serviceOfRoomScreen.ShowDialog();*/
             Reservation r = new Reservation();
             r.Show();
             this.Hide();

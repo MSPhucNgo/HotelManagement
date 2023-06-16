@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLKS;
 using DAO_HotelManagement;
-
+using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace GUI_HotelManagement
 {
     public partial class Reservation : Form
@@ -20,7 +21,10 @@ namespace GUI_HotelManagement
         {
             InitializeComponent();
             loadlistOfReservation();
+            cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
+            /*loadlistOfReservation_Room();*/
         }
+        
 
         private void bt_Edit_Reservation_Click(object sender, EventArgs e)
         {
@@ -55,13 +59,33 @@ namespace GUI_HotelManagement
         {
 
             BookingForm_DTO booking = new BookingForm_DTO(null);
-           /* if (BookingForm_DAO.loadlistOfReservation(booking).Rows.Count <= 0)
-            {
-                MessageBox.Show("Dịch vụ không có chương trình khuyến mãi");
-                dgv_Reservation.DataSource = null;
-                return;
-            }*/
-            dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation(booking);
+           dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation(booking);
+
+        }
+
+        /*public void loadlistOfReservation_Room(BookingForm_DTO BookingID)
+        {
+
+            BookingForm_DTO booking = new BookingForm_DTO(BookingID);
+            dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation_Room(booking);
+
+        }*/
+        
+        public void cb_BookingID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private void bt_Search_Reservation_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bt_Check_Out_Click(object sender, EventArgs e)
+        {
 
         }
     }

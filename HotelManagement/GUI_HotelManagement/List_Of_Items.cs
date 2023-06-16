@@ -20,6 +20,7 @@ namespace GUI_HotelManagement
         public List_Of_Items()
         {
             InitializeComponent();
+            loadlistOfItems();
         }
         
         private void lb_List_Of_Items_Click(object sender, EventArgs e)
@@ -35,6 +36,18 @@ namespace GUI_HotelManagement
         private void bt_Logout_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        public void loadlistOfItems()
+        {
+
+            BookingForm_DTO booking = new BookingForm_DTO(null);
+            dgv_List_Of_Items.DataSource = BookingForm_BUS.loadlistOfItems(booking);
+
+        }
+
+        private void dgv_List_Of_Items_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

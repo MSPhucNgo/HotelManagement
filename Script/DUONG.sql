@@ -17,7 +17,7 @@ select distinct I.NAME, IR.AMOUNT
 from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM
 where IR.ID_ROOM = '1005'
 
-@room_id;
+-- @room_id;
 RETURN @room_id;
 END;
 

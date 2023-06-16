@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -136,9 +137,42 @@ namespace DAO_HotelManagement
         }
         public DataTable loadlistOfReservation(BookingForm_DTO BookingID)
         {
-            string query = "SELECT * FROM BOOKING_ROOM"; //"select distinct I.NAME, IR.AMOUNT from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM where IR.ID_ROOM = '" + BookingID.IdBooking + "'";
+            string query = " SELECT * FROM BOOKING_FORM BF"; 
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
+        /*public DataTable loadlistOfReservation_Room(BookingForm_DTO BookingID)
+        {
+            string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM\r\nwhere IR.ID_ROOM = '1005';";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }*/
+        public DataTable loadlistOfItems(BookingForm_DTO BookingID)
+        {
+            string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+        public DataTable cb_BookingID(BookingForm_DTO BookingID)
+        {
+            string query = "SELECT * FROM BOOKING_FORM BF WHERE BF.STATUS like N'%lý';";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+        public List<string> getBooKingID()
+        {
+            string query = "SELECT * FROM BOOKING_FORM\n" +
+                           "ORDER BY ID_BOOKING ASC";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+
+            List<string> roomList = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                string roomNumber = row["ID_BOOKING"].ToString();
+                roomList.Add(roomNumber);
+            }
+            return roomList;
+        }
+
     }
 }

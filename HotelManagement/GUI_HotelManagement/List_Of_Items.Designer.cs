@@ -39,7 +39,6 @@
             this.BookID_Text = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_List_Of_Items = new System.Windows.Forms.Label();
-            this.bt_Logout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -54,7 +53,7 @@
             this.panel1.Controls.Add(this.lb_List_Of_Items);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1358, 729);
+            this.panel1.Size = new System.Drawing.Size(1093, 599);
             this.panel1.TabIndex = 1;
             // 
             // panel3
@@ -65,12 +64,12 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(0, 39);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1356, 690);
+            this.panel3.Size = new System.Drawing.Size(1093, 560);
             this.panel3.TabIndex = 2;
             // 
             // bt_Logout
             // 
-            this.bt_Logout.Location = new System.Drawing.Point(1104, 610);
+            this.bt_Logout.Location = new System.Drawing.Point(835, 510);
             this.bt_Logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bt_Logout.Name = "bt_Logout";
             this.bt_Logout.Size = new System.Drawing.Size(75, 29);
@@ -85,9 +84,9 @@
             this.panel5.Controls.Add(this.dgv_List_Of_Items);
             this.panel5.Controls.Add(this.lb_List_Of_Items_Room);
             this.panel5.ForeColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(18, 177);
+            this.panel5.Location = new System.Drawing.Point(18, 133);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1320, 390);
+            this.panel5.Size = new System.Drawing.Size(1041, 358);
             this.panel5.TabIndex = 1;
             // 
             // dgv_List_Of_Items
@@ -98,9 +97,9 @@
             this.dgv_List_Of_Items.Name = "dgv_List_Of_Items";
             this.dgv_List_Of_Items.RowHeadersWidth = 51;
             this.dgv_List_Of_Items.RowTemplate.Height = 29;
-            this.dgv_List_Of_Items.Size = new System.Drawing.Size(1317, 347);
+            this.dgv_List_Of_Items.Size = new System.Drawing.Size(1038, 315);
             this.dgv_List_Of_Items.TabIndex = 5;
-            this.dgv_List_Of_Items.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_List_Of_Items_CellContentClick);
+            this.dgv_List_Of_Items.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_List_Of_Items_CellContentClick_1);
             // 
             // lb_List_Of_Items_Room
             // 
@@ -124,12 +123,12 @@
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(19, 21);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1320, 150);
+            this.panel4.Size = new System.Drawing.Size(1040, 94);
             this.panel4.TabIndex = 0;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(816, 54);
+            this.button2.Location = new System.Drawing.Point(369, 30);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 29);
@@ -141,7 +140,7 @@
             // BookID_Text
             // 
             this.BookID_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BookID_Text.Location = new System.Drawing.Point(575, 55);
+            this.BookID_Text.Location = new System.Drawing.Point(128, 31);
             this.BookID_Text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BookID_Text.Name = "BookID_Text";
             this.BookID_Text.Size = new System.Drawing.Size(201, 27);
@@ -150,7 +149,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(481, 58);
+            this.label2.Location = new System.Drawing.Point(34, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 30;
@@ -174,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1382, 753);
+            this.ClientSize = new System.Drawing.Size(1117, 623);
             this.Controls.Add(this.panel1);
             this.Name = "List_Of_Items";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
