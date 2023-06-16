@@ -82,7 +82,7 @@ namespace HotelManagement
             txtUnit.Text = hotelService.unit;
             txtPrice.Text = hotelService.price.ToString();
             txbStatus.Text = hotelService.Status;
-            dtgvOffer.DataSource = Services_for_customer_BUS.usp_getDiscountsOfService_svs(hotelService);
+            dtgvOffer.DataSource = Services_for_customer_BUS.usp_getDiscountOfService_svs(hotelService);
             dtgvOffer.Columns[0].Visible = false;
             for (int i = 0; i < dtgvOffer.Rows.Count; i++)
             {
