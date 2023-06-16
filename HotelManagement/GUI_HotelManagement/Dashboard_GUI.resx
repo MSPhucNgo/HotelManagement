@@ -1,64 +1,3 @@
-<<<<<<< Updated upstream:HotelManagement/GUI_HotelManagement/Check_inForm.resx
-﻿<root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-=======
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
@@ -178,5 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
->>>>>>> Stashed changes:GUI_HotelManagement/RoomDetail.resx
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_Checkin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnBhAHGQpmVnUmAAAB40lEQVRYR+2XzyuEQRjHn/zICbmh
+        5A/AhauTnJSDAycXF7lJDlJYTnaeWT/aRIrkxh4kCiW9O2Mvq00cFDk5uTooEtYzs7Pr9do9LO+Pkm99
+        m2d23neez7wz+7y9UJQEDpPvQOIDeR2S0Soz4oMk76fkaUp8CIJf6Fjglhn1QYIfZQD4JLWbBuAFDqIV
+        5gqPJXEvA4DHkAg3UfxG8TOkVsvNFR5LYJdZtd1LZtQnxXk3rdrSZ0DijH+rD0SCr9AjThXlOPaau12Q
+        wEs4iTTC6WzNd0faQLBpk/idnD0TU+ZuF6QAjsPVOo7FSsEKt9O+M/r9ypbQaY8AJI44EhWyVwBs3JGo
+        kN0EYOeQYJU6DgRALtSZKAAAVWQs3mx6gQC00mTXIMItmb6XACqZ+l87LdkQTXivn8RXgCdb7PQPAATb
+        JohYHu+QX2nS0RyAxFU6mPX0TuixJf0lQD5ZoTINFsd53c8CqFIrcBHOsJZaewV0GUDici650ucW3ECc
+        DVC7a/pOuwUw12CijDw9hIUkeB+kQyU6DgYg8FL8DxA4gP742NDFR2DSlqSwJU6Yu12QKsEW79QWbC1v
+        QmVVLSU/pWvGwKIC5YmcWyDxkdp98qB3Se1SLybJb3V1FLzjj38P+CqAD8DttQrJlRoCAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btn_Checkout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnBhAHHR4Y4GRfAAADIElEQVRYR+1XSWgUQRRtERdEcQku
+        6aqeUQmCEUEIRMWD4oaCy0FEPOhJPAgqSqaqxxzGi6Ao6EVEvYheguQgqMHlIngRFREkIGS6e4a4oCYG
+        9RDRkPH9mt9jk2kzGScGD3nwqfr/V/3/uva2/hUK1u6JvqM25ez0ajaNHQqWNcGXugNSYDnDrrFBLtmy
+        KJK8EEj9jV3V4XnTwUm+7W4MpLslSGamsrkiOudmpgdCfYmQeMmukYMSouOTMAgCvvIW65nsrgjPVhsC
+        oR8HUt3NLVBL2Txy+NI9ECYvkZBasXtYvKvPTMsn3NlR6Wo4PIXdI4MvVLqMgFDn2B0LHrUrIPqzrK/U
+        XwPham5aGflEutEX+nskyEAg0ivZHQtfqpuR9vHiqFZuXhmenV4D5u0gcov2NJtj4Qt3l0lApIW+PzQx
+        FvJtUwr9I+voZdxtdNDZmJkMot0mmdAnULaEiUOhnYRpbTO60A+4azm8ep3AAryORh4a96D8bETqXmND
+        kKx0G7i5QeC4ezhRD21BlLEEqB/qA6THjoIn9XJ8ycdox1gRug8LchV3s3w7tY0WWE7qrUaXqpn0qNDh
+        RD5Mwf6ibch6CpJHZyF5PjZhjKDth3wiRWukqzgy1Uvg6J2c3rC+XAou3Ito4EcTGqEvl/rUb121edLd
+        G/3SaqQ0Db6dXoKAZm4gL8xNRizDRKWEus9cNEI/YttgNuE2mSC1AHN/PkyCOVpHtj8RIF9gp1ZAH2T7
+        NbL9Nfhr31MwJH/G5mEJEDAVD00fnHB09LK5egQytTZMgJV9hM0VCWD+95Xsjj5OO4hd1YFuKgTuR6Be
+        b37LPDZXJNAtj80hHXasHXUaI3GHXdWDtiDdWKwaVCJAQOJLQVIvNHWhzxrjaCEkQO8AlMV3ARNA4kPQ
+        6WTshxRPymIda0k1mwC1AsHCEejA8N4YQuAq+8oFa8MEqBXjBMYJjBP4rwl4wl0P2ycQwSu4KNDb0eZN
+        1m51TIBagWT3mMAFT+iTVMdt+ZTdeAeqHVw1MO8EW29ntXa8rlMz6L+Q/g/pysbDc/NbO13H7lGCZf0C
+        YbrWvRZlAwsAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
