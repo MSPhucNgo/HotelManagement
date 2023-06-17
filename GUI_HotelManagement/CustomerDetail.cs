@@ -1,10 +1,20 @@
-namespace WinFormsApp2
+using System.Windows.Forms;
+using BUS_HotelManagement;
+using DAO_HotelManagement;
+using DTO_HotelManagement;
+namespace GUI_HotelManagement
 {
     public partial class CustomerDetail : Form
     {
         public CustomerDetail()
         {
             InitializeComponent();
+        }
+
+        CustomerDetail_BUS busCustomerDetail = new CustomerDetail_BUS();
+        private void GUI_CustomerDetail_Load()
+        {
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -80,6 +90,16 @@ namespace WinFormsApp2
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click_1(object sender, EventArgs e)
         {
 
         }

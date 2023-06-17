@@ -27,6 +27,20 @@ namespace DTO_HotelManagement
         public string SpecialRequirement { get => specialRequirement; set => specialRequirement = value; }
         public string PaymentMethods { get => paymentMethods; set => paymentMethods = value; }
         public string Customer { get => customer; set => customer = value; }
+
+        public BookingForm_DTO(string _idBooking, string _arrivalDate, string _departure, int _amount,  int _price, string _status, string _specialReq, string _paymethod, string _customer )
+        {
+            this.idBooking = _idBooking;
+            this.arrivalDate = _arrivalDate;
+            this.departureDate = _departure;
+            this.amount = _amount;
+            this.price = _price;
+            this.status = _status;
+            this.specialRequirement = _specialReq;
+            this.paymentMethods = _paymethod;
+            this.customer = _customer;
+
+        }
     }
 }
 

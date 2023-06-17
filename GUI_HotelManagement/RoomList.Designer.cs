@@ -72,6 +72,7 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(776, 292);
             dataGridView1.TabIndex = 6;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // RoomList
             // 
@@ -84,7 +85,7 @@
             Controls.Add(label1);
             Name = "RoomList";
             Text = "RoomList";
-            this.Load += new System.EventHandler(this.GUI_RoomList_Load);
+            Load += GUI_RoomList_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

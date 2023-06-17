@@ -30,5 +30,10 @@ namespace GUI_HotelManagement
         {
             dataGridView1.DataSource = busRoom.getRoom();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DAO_HotelManagement;
+using DTO_HotelManagement;
+using System.Data;
+namespace BUS_HotelManagement
+{
+    public class Customer_BUS
+    {
+        Customer_DAO daoCustomer = new Customer_DAO();
+        public DataTable getCustomer()
+        {
+            return daoCustomer.getCustomer();
+        }
+    }
+}

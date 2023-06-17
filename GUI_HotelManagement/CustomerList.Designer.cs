@@ -45,6 +45,7 @@ namespace GUI_HotelManagement
             label1.Size = new Size(247, 46);
             label1.TabIndex = 0;
             label1.Text = "Customer List";
+            label1.Click += label1_Click;
             // 
             // dataGridView1
             // 
@@ -55,6 +56,7 @@ namespace GUI_HotelManagement
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(730, 294);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // comboBox1
             // 
@@ -84,6 +86,7 @@ namespace GUI_HotelManagement
             Controls.Add(label1);
             Name = "CustomerList";
             Text = "CustomerList";
+            Load += new System.EventHandler(this.GUI_Customer_Load);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace GUI_HotelManagement
 {
+
     internal static class Program
     {
         /// <summary>
@@ -18,7 +18,7 @@ namespace GUI_HotelManagement
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new login_GUI());
+            Application.Run(new Booking_Form());
         }
     }
 }
