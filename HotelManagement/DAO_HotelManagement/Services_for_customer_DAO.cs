@@ -1,4 +1,5 @@
 ﻿using DTO_HotelManagement;
+using DTO_HoTelManagement;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -30,9 +31,14 @@ namespace DAO_HotelManagement
             return dt;
 
         }
-        public DataTable usp_getServicesOfRoom_svs(Room_DTO roomId)
+        public DataTable usp_getServicesOfRoom_svs(Room_DTO roomId, HotelService_DTO hotelService_)
         {
-            string query = "exec usp_getServicesOfRoom_svs '" + roomId.IdRoom + "'";
+            string query;
+            if (hotelService_ == null)
+            {
+                query = "exec usp_getServicesOfRoom_svs '" + roomId.IdRoom + "', N'"  + "'";
+            }
+            query = "exec usp_getServicesOfRoom_svs '" + roomId.IdRoom + "', N'"+hotelService_.name+ "'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
@@ -60,5 +66,18 @@ namespace DAO_HotelManagement
 
             return dt;
         }
+        public DataTable usp_getAllServices_svs(HotelService_DTO hotelService_)
+        {
+            string query = "exec usp_getAllServices_svs N'" + hotelService_.Name + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+        public int usp_AddServiceCoupon(Service_Form_DTO service_Form, Service_Bill_DTO service_Bill)
+        {
+            string query = "exec usp_AddServiceCoupon '" + service_Form.Customer + "', N'" + service_Form.Name + "', '" + service_Form.IdService + "', N'" + service_Form.Description + "', " + service_Form.Price + ", " + service_Form.Amount + ", '" + service_Form.FormCreator + "', " + service_Bill.TotalPrice + ", '" + service_Bill.UsedDate + "', " + service_Bill.Discount +", '"+ service_Bill.IdServiceBill+"'";
+            int index = DataProvider.Instance.ExecuteNonQuery(query);
+            return 1;
+        }
+
     }
 }

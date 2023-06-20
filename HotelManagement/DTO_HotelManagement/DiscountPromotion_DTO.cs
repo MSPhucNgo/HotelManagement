@@ -23,5 +23,24 @@ namespace DTO_HotelManagement
         public string Description { get => description; set => description = value; }
         public int Requirement { get => requirement; set => requirement = value; }
         public float DiscountRate { get => discountRate; set => discountRate = value; }
+
+        public DiscountPromotion_DTO(string idDiscount, string name, string startTime, string endTime, string description, int requirement, float discountRate)
+        {
+            IdDiscount = idDiscount;
+            Name = name;
+            StartTime = startTime;
+            EndTime = endTime;
+            Description = description;
+            Requirement = requirement;
+            DiscountRate = discountRate;
+            IdDiscount = idDiscount;
+            Name = name;
+            StartTime = startTime;
+            EndTime = endTime;
+            Description = description;
+            Requirement = requirement;
+            DiscountRate = discountRate;
+        }
     }
+
 }

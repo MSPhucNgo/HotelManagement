@@ -339,14 +339,14 @@
             tabPage3.Text = "Service Search";
             tabPage3.UseVisualStyleBackColor = true;
             // 
-            // Services_for_customer
+            // Services4Customer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1279, 843);
+            ClientSize = new Size(1117, 624);
             Controls.Add(tabControl_services_for_customer);
             Margin = new Padding(2, 3, 2, 3);
-            Name = "Services_for_customer";
+            Name = "Services4Customer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Services_for_customer";
             tabControl_services_for_customer.ResumeLayout(false);

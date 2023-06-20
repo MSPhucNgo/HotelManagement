@@ -31,11 +31,13 @@
             components = new System.ComponentModel.Container();
             dtgvServiceList = new DataGridView();
             panel1 = new Panel();
-            btn_room_search_search = new Button();
-            txtbServiceName = new TextBox();
+            btnSearchAll = new Button();
+            btnSearch = new Button();
+            txbServiceName = new TextBox();
             lb_room_service = new Label();
             bindingSource1 = new BindingSource(components);
             panel2 = new Panel();
+            txbOffer = new TextBox();
             dtgvOffer = new DataGridView();
             txbStatus = new TextBox();
             label1 = new Label();
@@ -50,11 +52,13 @@
             txbName = new TextBox();
             label3 = new Label();
             label2 = new Label();
+            dtgvAllServices = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dtgvServiceList).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvOffer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvAllServices).BeginInit();
             SuspendLayout();
             // 
             // dtgvServiceList
@@ -65,14 +69,15 @@
             dtgvServiceList.Name = "dtgvServiceList";
             dtgvServiceList.RowHeadersWidth = 62;
             dtgvServiceList.RowTemplate.Height = 33;
-            dtgvServiceList.Size = new Size(680, 722);
+            dtgvServiceList.Size = new Size(680, 307);
             dtgvServiceList.TabIndex = 0;
             dtgvServiceList.CellContentClick += dtgvServiceList_CellContentClick;
             // 
             // panel1
             // 
-            panel1.Controls.Add(btn_room_search_search);
-            panel1.Controls.Add(txtbServiceName);
+            panel1.Controls.Add(btnSearchAll);
+            panel1.Controls.Add(btnSearch);
+            panel1.Controls.Add(txbServiceName);
             panel1.Controls.Add(lb_room_service);
             panel1.Location = new Point(9, 9);
             panel1.Margin = new Padding(2, 3, 2, 3);
@@ -80,24 +85,35 @@
             panel1.Size = new Size(1233, 52);
             panel1.TabIndex = 1;
             // 
-            // btn_room_search_search
+            // btnSearchAll
             // 
-            btn_room_search_search.Location = new Point(724, 3);
-            btn_room_search_search.Margin = new Padding(2, 3, 2, 3);
-            btn_room_search_search.Name = "btn_room_search_search";
-            btn_room_search_search.Size = new Size(179, 40);
-            btn_room_search_search.TabIndex = 2;
-            btn_room_search_search.Text = "Search service";
-            btn_room_search_search.UseVisualStyleBackColor = true;
-            btn_room_search_search.Click += button1_Click;
+            btnSearchAll.Location = new Point(766, 3);
+            btnSearchAll.Margin = new Padding(2, 3, 2, 3);
+            btnSearchAll.Name = "btnSearchAll";
+            btnSearchAll.Size = new Size(179, 40);
+            btnSearchAll.TabIndex = 3;
+            btnSearchAll.Text = "Search all service";
+            btnSearchAll.UseVisualStyleBackColor = true;
+            btnSearchAll.Click += btnSearchAll_Click;
             // 
-            // txtbServiceName
+            // btnSearch
             // 
-            txtbServiceName.Location = new Point(267, 9);
-            txtbServiceName.Margin = new Padding(2, 3, 2, 3);
-            txtbServiceName.Name = "txtbServiceName";
-            txtbServiceName.Size = new Size(283, 27);
-            txtbServiceName.TabIndex = 1;
+            btnSearch.Location = new Point(566, 3);
+            btnSearch.Margin = new Padding(2, 3, 2, 3);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(179, 40);
+            btnSearch.TabIndex = 2;
+            btnSearch.Text = "Search service ";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += button1_Click;
+            // 
+            // txbServiceName
+            // 
+            txbServiceName.Location = new Point(267, 9);
+            txbServiceName.Margin = new Padding(2, 3, 2, 3);
+            txbServiceName.Name = "txbServiceName";
+            txbServiceName.Size = new Size(283, 27);
+            txbServiceName.TabIndex = 1;
             // 
             // lb_room_service
             // 
@@ -111,10 +127,9 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(dtgvOffer);
+            panel2.Controls.Add(txbOffer);
             panel2.Controls.Add(txbStatus);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(btnOrder);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(txtPrice);
             panel2.Controls.Add(label6);
@@ -125,22 +140,32 @@
             panel2.Controls.Add(txbName);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(710, 140);
+            panel2.Location = new Point(696, 67);
             panel2.Margin = new Padding(2, 3, 2, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(546, 679);
+            panel2.Size = new Size(410, 679);
             panel2.TabIndex = 2;
+            // 
+            // txbOffer
+            // 
+            txbOffer.Location = new Point(121, 292);
+            txbOffer.Margin = new Padding(2, 3, 2, 3);
+            txbOffer.Name = "txbOffer";
+            txbOffer.Size = new Size(287, 27);
+            txbOffer.TabIndex = 18;
             // 
             // dtgvOffer
             // 
+            dtgvOffer.BackgroundColor = Color.DarkCyan;
             dtgvOffer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvOffer.Location = new Point(25, 353);
+            dtgvOffer.Location = new Point(11, 424);
             dtgvOffer.Margin = new Padding(2, 3, 2, 3);
             dtgvOffer.Name = "dtgvOffer";
             dtgvOffer.RowHeadersWidth = 62;
             dtgvOffer.RowTemplate.Height = 33;
-            dtgvOffer.Size = new Size(502, 228);
+            dtgvOffer.Size = new Size(1093, 119);
             dtgvOffer.TabIndex = 17;
+            dtgvOffer.CellContentClick += dtgvOffer_CellContentClick;
             // 
             // txbStatus
             // 
@@ -164,7 +189,7 @@
             // 
             // btnOrder
             // 
-            btnOrder.Location = new Point(180, 597);
+            btnOrder.Location = new Point(495, 549);
             btnOrder.Margin = new Padding(2, 3, 2, 3);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(196, 63);
@@ -176,7 +201,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(11, 315);
+            label7.Location = new Point(11, 295);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(106, 20);
@@ -226,7 +251,7 @@
             txtDesc.Margin = new Padding(2, 3, 2, 3);
             txtDesc.Multiline = true;
             txtDesc.Name = "txtDesc";
-            txtDesc.Size = new Size(431, 95);
+            txtDesc.Size = new Size(312, 60);
             txtDesc.TabIndex = 7;
             // 
             // label4
@@ -269,12 +294,28 @@
             label2.Text = "Service Information";
             label2.Click += label2_Click;
             // 
+            // dtgvAllServices
+            // 
+            dtgvAllServices.BackgroundColor = Color.CornflowerBlue;
+            dtgvAllServices.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvAllServices.Location = new Point(9, 67);
+            dtgvAllServices.Margin = new Padding(2, 3, 2, 3);
+            dtgvAllServices.Name = "dtgvAllServices";
+            dtgvAllServices.RowHeadersWidth = 62;
+            dtgvAllServices.RowTemplate.Height = 33;
+            dtgvAllServices.Size = new Size(680, 337);
+            dtgvAllServices.TabIndex = 3;
+            dtgvAllServices.CellContentClick += dtgvAllServices_CellContentClick;
+            // 
             // Service_Of_Room
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1279, 843);
+            ClientSize = new Size(1117, 624);
+            Controls.Add(dtgvAllServices);
+            Controls.Add(dtgvOffer);
             Controls.Add(panel2);
+            Controls.Add(btnOrder);
             Controls.Add(panel1);
             Controls.Add(dtgvServiceList);
             Margin = new Padding(2, 3, 2, 3);
@@ -288,6 +329,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvOffer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvAllServices).EndInit();
             ResumeLayout(false);
         }
 
@@ -295,8 +337,8 @@
 
         private DataGridView dtgvServiceList;
         private Panel panel1;
-        private Button btn_room_search_search;
-        private TextBox txtbServiceName;
+        private Button btnSearch;
+        private TextBox txbServiceName;
         private Label lb_room_service;
         private BindingSource bindingSource1;
         private Panel panel2;
@@ -314,6 +356,10 @@
         private Label label4;
         private TextBox txbStatus;
         private Label label1;
+        private CheckedListBox checklistOffer;
         private DataGridView dtgvOffer;
+        private TextBox txbOffer;
+        private DataGridView dtgvAllServices;
+        private Button btnSearchAll;
     }
 }
