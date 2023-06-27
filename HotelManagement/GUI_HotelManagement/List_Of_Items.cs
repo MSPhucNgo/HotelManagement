@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,20 +22,35 @@ namespace GUI_HotelManagement
 
 			InitializeComponent();
             loadlistOfItems();
-            loadlistOfItems_Room();
 			//cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
 
 		}
         
-        private void lb_List_Of_Items_Click(object sender, EventArgs e)
+			private void lb_List_Of_Items_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) //Search
         {
+
 			string BookingId = BookID_Text.Text.ToString();
-			loadlistOfItems_Room(BookingId);
+			if (BookingId == "")
+			{
+				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				return;
+			}
+			else if (BookingId == " ")
+			{
+				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				return;
+			}
+			else if (BookingId == null)
+			{
+				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				return;
+			}
+			loadlistOfItems(BookingId);
 
 		}
 
@@ -42,30 +58,41 @@ namespace GUI_HotelManagement
         {
             Application.Exit();
         }
-        public void loadlistOfItems()
+        public void loadlistOfItems() // Load List of items (all)
         {
 
             BookingForm_DTO booking = new BookingForm_DTO(null);
-            dgv_List_Of_Items.DataSource = BookingForm_BUS.loadlistOfItems(booking);
-
+            dgv_List_Of_Items.DataSource = BookingForm_BUS.loadlistOfItems();
         }
-		public void loadlistOfItems_Room(string idBooking)
+		public void loadlistOfItems(string idBooking) //Load List of items theo Room_ID
 		{
 
 			BookingForm_DTO bookingID = new BookingForm_DTO(idBooking);
 			dgv_List_Of_Items_Room.DataSource = BookingForm_BUS.loadlistOfItems_Room(bookingID);
 
 		}
-		public void loadlistOfItems_Room()
-		{
-
-			BookingForm_DTO booking = new BookingForm_DTO(null);
-			dgv_List_Of_Items_Room.DataSource = BookingForm_BUS.loadlistOfItems_Room(booking);
-
-		}
 		private void dgv_List_Of_Items_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void tb_RoomID_TextChanged(object sender, EventArgs e)
+        {
+			
+		}
+
+        private void dgv_List_Of_Items_Room_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+			string BookingId = BookID_Text.Text.ToString();
+			/*this.Hide();
+			List_Of_Items li = new List_Of_Items();
+			li.Show();*/
+			loadlistOfItems();
+		}
     }
 }

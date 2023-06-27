@@ -48,22 +48,32 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.loadlistOfReservation(BookingId);
         }
-        /*public static DataTable loadlistOfReservation_Room(BookingForm_DTO BookingId)
+		/*public static DataTable loadlistOfReservation_Room(BookingForm_DTO BookingId)
         {
             return BookingForm_DAO.Instance.loadlistOfReservation_Room(BookingId);
         }*/
-        public static DataTable loadlistOfItems(BookingForm_DTO BookingId)
+		/*public static DataTable loadlistOfItems()
+		{
+			return BookingForm_DAO.Instance.loadlistOfItems();
+		}*/
+		public static DataTable loadlistOfItems()//BookingForm_DTO BookingId)
         {
-            return BookingForm_DAO.Instance.loadlistOfItems(BookingId);
+            return BookingForm_DAO.Instance.loadlistOfItems();//BookingId);
         }
-		public static DataTable loadlistOfItems_Room()
+        
+        public static DataTable loadlistOfItems_Room(BookingForm_DTO BookingId)
+        {
+            return BookingForm_DAO.Instance.loadlistOfItems_Room(BookingId);
+        }
+		/*public static string getName_Items(BookingForm_DTO BookingId)
 		{
-			return BookingForm_DAO.Instance.loadlistOfItems_Room();
+			return BookingForm_DAO.Instance.getName_Items(BookingId);
 		}
-		public static DataTable loadlistOfItems_Room(BookingForm_DTO BookingId)
+		public static string getAmount_Items(BookingForm_DTO BookingId)
 		{
-			return BookingForm_DAO.Instance.loadlistOfItems_Room(BookingId);
-		}
+			return BookingForm_DAO.Instance.getAmount_Items(BookingId);
+		}*/
+
 		public static List<string> cb_BookingID()
         {
             return BookingForm_DAO.Instance.getBooKingID();

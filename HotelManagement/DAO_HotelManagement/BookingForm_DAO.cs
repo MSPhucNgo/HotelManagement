@@ -141,25 +141,56 @@ namespace DAO_HotelManagement
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-		public DataTable loadlistOfItems_Room()
+        /*public DataTable loadlistOfItems_Room()
 		{
 			string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM;";
 			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
 			return dt;
-		}
-		public DataTable loadlistOfItems_Room(BookingForm_DTO BookingID)
-        {
-            string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM\r\nwhere IR.ID_ROOM = '" + BookingID.IdBooking + "'";
-			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            return dt;
-        }
-        public DataTable loadlistOfItems(BookingForm_DTO BookingID)
+		}*/
+        public DataTable loadlistOfItems()
         {
             string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-		
+
+        public DataTable loadlistOfItems_Room(BookingForm_DTO BookingID)
+        {
+            string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM\r\nwhere IR.ID_ROOM = '" + BookingID.IdBooking + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+
+		/*public DataTable loadlistOfItems(BookingForm_DTO BookingID)
+		{
+			string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM WHERE IR.TD_ROOM = '"+ BookingID.IdBooking + "'";
+			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+			return dt;
+		}*/
+		/*public string getName_Items(BookingForm_DTO BookingID)
+		{
+			string query = "select I.NAME from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM where IR.ID_ROOM = '" + BookingID.IdBooking + "'";
+			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+			string username;
+			foreach (DataRow dr in dt.Rows)
+			{
+				username = dr["NAME"].ToString();
+				return username;
+			}
+			return null;
+		}*/
+		/*public string getAmount_Items(BookingForm_DTO BookingID)
+		{
+			string query = "select I.AMOUNTT from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM where IR.ID_ROOM = '" + BookingID.IdBooking + "'";
+			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+			string am;
+			foreach (DataRow dr in dt.Rows)
+			{
+				am = dr["AMOUNT"].ToString();
+				return am;
+			}
+			return null;
+		}*/
 		public DataTable cb_BookingID(BookingForm_DTO BookingID)
         {
             string query = "SELECT * FROM BOOKING_FORM BF WHERE BF.STATUS like N'%lý';";
