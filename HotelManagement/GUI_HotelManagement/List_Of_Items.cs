@@ -1,6 +1,5 @@
 ﻿﻿using BUS_HotelManagement;
 using DTO_HotelManagement;
-using DTO_HoTelManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,11 +16,13 @@ namespace GUI_HotelManagement
 {
     public partial class List_Of_Items : Form
     {
-        public List_Of_Items()
+		public List_Of_Items()
         {
-            InitializeComponent();
+
+			InitializeComponent();
             loadlistOfItems();
             loadlistOfItems_Room();
+			//cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
 
 		}
         
@@ -32,8 +33,10 @@ namespace GUI_HotelManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
+			string BookingId = BookID_Text.Text.ToString();
+			loadlistOfItems_Room(BookingId);
 
-        }
+		}
 
         private void bt_Logout_Click(object sender, EventArgs e)
         {
@@ -46,6 +49,13 @@ namespace GUI_HotelManagement
             dgv_List_Of_Items.DataSource = BookingForm_BUS.loadlistOfItems(booking);
 
         }
+		public void loadlistOfItems_Room(string idBooking)
+		{
+
+			BookingForm_DTO bookingID = new BookingForm_DTO(idBooking);
+			dgv_List_Of_Items_Room.DataSource = BookingForm_BUS.loadlistOfItems_Room(bookingID);
+
+		}
 		public void loadlistOfItems_Room()
 		{
 

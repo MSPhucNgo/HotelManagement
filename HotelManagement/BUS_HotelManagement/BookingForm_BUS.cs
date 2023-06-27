@@ -56,6 +56,10 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.loadlistOfItems(BookingId);
         }
+		public static DataTable loadlistOfItems_Room()
+		{
+			return BookingForm_DAO.Instance.loadlistOfItems_Room();
+		}
 		public static DataTable loadlistOfItems_Room(BookingForm_DTO BookingId)
 		{
 			return BookingForm_DAO.Instance.loadlistOfItems_Room(BookingId);
