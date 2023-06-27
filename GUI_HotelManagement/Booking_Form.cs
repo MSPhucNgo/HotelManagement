@@ -16,9 +16,15 @@ namespace GUI_HotelManagement
     public partial class Booking_Form : Form
     {
         public DataGridView bookingroom = new DataGridView();
+        public List<Room_DTO> roomInfor = new List<Room_DTO>();
         public Booking_Form()
         {
             InitializeComponent();
+        }
+        public Booking_Form(ref List<Room_DTO> roomInfor)
+        {
+            InitializeComponent();
+            this.roomInfor = roomInfor;
         }
 
         private void checkBoxGroup_CheckedChanged(object sender, EventArgs e)
@@ -73,14 +79,43 @@ namespace GUI_HotelManagement
         }
         private void txtIdentity_TextChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void btnChooseRoom_Click(object sender, EventArgs e)
         {
             MultiRoom_Form mrf = new MultiRoom_Form();
+            this.Hide();
             mrf.ShowDialog();
-            this.Show();
+            //this.Close();
+            this.ShowDialog();
+            //this.Hide();
+            //this.Show();
+
+            //this.Close();
+            //this.Close();
+            //mrf.Show();
+
+        }
+
+        private void Booking_Form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateBooking_Click(object sender, EventArgs e)
+        {
+            Booking_Form bf = new Booking_Form(ref roomInfor);
+            MessageBox.Show(roomInfor[0].IdRoom);
+        }
+
+        private void panelBooking_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelBooking_Paint_1(object sender, PaintEventArgs e)
+        {
         }
     }
 }

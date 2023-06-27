@@ -136,6 +136,7 @@
             btnCreateBooking.TabIndex = 36;
             btnCreateBooking.Text = "Create Booking";
             btnCreateBooking.UseVisualStyleBackColor = true;
+            btnCreateBooking.Click += btnCreateBooking_Click;
             // 
             // labelGender
             // 
@@ -230,6 +231,7 @@
             panelBooking.Name = "panelBooking";
             panelBooking.Size = new Size(1093, 599);
             panelBooking.TabIndex = 8;
+            panelBooking.Paint += panelBooking_Paint_1;
             // 
             // btnCheck
             // 
@@ -417,6 +419,7 @@
             Controls.Add(panelBooking);
             Name = "Booking_Form";
             Text = "Booking_Form";
+            Load += Booking_Form_Load;
             panelBooking.ResumeLayout(false);
             panelBooking.PerformLayout();
             ResumeLayout(false);

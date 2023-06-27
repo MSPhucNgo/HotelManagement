@@ -10,10 +10,14 @@ namespace BUS_HotelManagement
 {
     public class Customer_BUS
     {
-        Customer_DAO daoCustomer = new Customer_DAO();
         public DataTable getCustomer()
         {
-            return daoCustomer.getCustomer();
+            return Customer_DAO.Instance.getCustomer();
+        }
+
+        public static bool updateCustomer(Customer_DTO Cusinfo)
+        {
+            return Customer_DAO.Instance.updateCustomer(Cusinfo);
         }
     }
 }

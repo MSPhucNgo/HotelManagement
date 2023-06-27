@@ -14,6 +14,7 @@ namespace GUI_HotelManagement
 {
     public partial class MultiRoom_Form : Form
     {
+        public List<Room_DTO> roomInfor = new List<Room_DTO>();
         //public List<Room_DTO> idRoom = new List<Room_DTO>();
         public MultiRoom_Form()
         {
@@ -118,22 +119,42 @@ namespace GUI_HotelManagement
         private void button1_Click(object sender, EventArgs e)
         {
             //string a = "";
-            public List<Room_DTO> idRoom = new List<Room_DTO>();
-            List<string> name = new List<string>();
+            //List<Room_DTO> idRoom = new List<Room_DTO>();
+            //Room_BUS busroom= new Room_BUS();
+           
+            //List<Room_DTO> idRoom = new List<string>();
             foreach (DataGridViewRow row in bookingRoom_DataGrid.Rows)
             {
-                idRoom
+
+                string temp = row.Cells["NameRoom"].Value.ToString();
+                //Room_DTO room = new Room_DTO();
+                //roomInfor.Add(room);
+                string idRoom = Room_BUS.getRoomId(new Room_DTO(null, temp, 0));
+                roomInfor.Add(new Room_DTO(idRoom, null, 0));
+                //Room_DTO idtemp = busroom.getRoomId(roomInfor[0]);
+                //idRoom.Add((busroom.getRoomId(temp)).ToString());
+                //idRoom.Add(temp);
                 //Add(row.Cells[0].Value.ToString());
 
                 //room.Add(a);
                 //room.IdRoom = dr[0].ToString();
                 //}
-
-                //MessageBox.Show(name[0]);
-
-
-
             }
+            //string a = roomInfor[0].IdRoom;
+            //string b = roomInfor[1].IdRoom;
+            //string c = roomInfor[2].IdRoom;
+            //MessageBox.Show(a);
+            //MessageBox.Show(b);
+            //MessageBox.Show(c);
+            this.Hide();
+            //this.Close();
+            Booking_Form bkf = new Booking_Form(ref roomInfor);
+            bkf.ShowDialog();
+            //this.Hide();
+
+            //bkf.ShowDialog();
+            //this.Show();
+            //this.Close();
         }
     }
 }

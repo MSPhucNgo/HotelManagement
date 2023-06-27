@@ -196,7 +196,7 @@ namespace DAO_HotelManagement
             {
                 query = "SELECT * FROM ROOM\n" +
                         "WHERE STATUS = N'" + filterStatus + "'\n" +
-                        "ORDER BY TYPE ASC"; ;
+                        "ORDER BY TYPE ASC"; 
             }
             else if (filterStatus == "All" && filterType != "All")
             {
@@ -264,10 +264,10 @@ namespace DAO_HotelManagement
             return true;
         }
 
-        public string getRoomId(Room_DTO RoomName)
+        public string getRoomId(Room_DTO roomInfor)
         {
             string query = "SELECT ID_ROOM FROM ROOM \n " +
-                           "WHERE NAME = N'" + RoomName.Name + "'\n";
+                           "WHERE NAME = N'" + roomInfor.Name + "'\n";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             string idRoom;
             foreach (DataRow dr in dt.Rows)
