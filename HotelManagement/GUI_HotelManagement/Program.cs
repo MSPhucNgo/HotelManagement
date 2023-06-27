@@ -17,8 +17,8 @@ namespace GUI_HotelManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new List_Of_Items());
-            Application.Run(new Reservation());
-            //Application.Run(new List_Of_Items());
+            //Application.Run(new Reservation());
+            Application.Run(new Edit_Resevation());
         }
     }
 }

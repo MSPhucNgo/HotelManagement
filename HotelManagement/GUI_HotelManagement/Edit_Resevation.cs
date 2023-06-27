@@ -1,4 +1,5 @@
-﻿using DTO_HotelManagement;
+﻿using BUS_HotelManagement;
+using DTO_HotelManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +16,11 @@ namespace GUI_HotelManagement
     {
         public Edit_Resevation()
         {
-            InitializeComponent();
-        }
+			InitializeComponent();
+            loadlistOfReservation_Edit();
+			cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
+
+		}
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -30,22 +34,65 @@ namespace GUI_HotelManagement
 
         private void bt_Edit_Reservation_Click_1(object sender, EventArgs e)
         {
-            /*string str = dtgvRoomList.Rows[e.RowIndex].Cells["ID_ROOM"].Value.ToString();
-            string cusId = dtgvRoomList.Rows[e.RowIndex].Cells["ID_CUSTOMER"].Value.ToString();
-            Room_DTO room = new Room_DTO(str);
-            Service_Of_Room serviceOfRoomScreen = new Service_Of_Room(room);
-            this.Hide();
-            serviceOfRoomScreen.ShowDialog();*/
-            Reservation r = new Reservation();
+            /*string BookingId = cb_BookingID.Text.ToString();
+            if (BookingId == "")
+            {
+                MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
+                return;
+            }
+            else if (BookingId == "0")
+            {
+                MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
+                return;
+            }
+            else if (BookingId == null)
+            {
+                MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
+                return;
+            }
+            //Edit_Reservation(BookingId);
+            MessageBox.Show("Update successful!");
+			Reservation r = new Reservation();
             r.Show();
-            this.Hide();
+            this.Hide();*/
         }
+		public void loadlistOfReservation_Edit(string idBooking)
+		{
 
-        private void bt_Cancel_Click_1(object sender, EventArgs e)
+			BookingForm_DTO booking = new BookingForm_DTO(idBooking);
+			dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation_Edit(booking);
+
+		}
+		private void bt_Cancel_Click_1(object sender, EventArgs e)
         {
             Reservation r = new Reservation();
             r.Show();
             this.Hide();
         }
-    }
+
+        private void bt_Exit_Click(object sender, EventArgs e)
+        {
+			Application.Exit();
+		}
+		private void bt_Search_Reservation_Click(object sender, EventArgs e)
+		{
+			string BookingId = cb_BookingID.Text.ToString();
+			if (BookingId == "")
+			{
+				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				return;
+			}
+			else if (BookingId == "0")
+			{
+				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				return;
+			}
+			else if (BookingId == null)
+			{
+				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				return;
+			}
+			loadlistOfReservation_Edit(BookingId);
+		}
+	}
 }

@@ -52,20 +52,16 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.loadlistOfReservation_Room(BookingId);
         }
-		/*public static DataTable loadlistOfReservation_Room(BookingForm_DTO BookingId)
+        public static DataTable loadlistOfReservation_Edit(BookingForm_DTO BookingId)
         {
-            return BookingForm_DAO.Instance.loadlistOfReservation_Room(BookingId);
-        }*/
-		/*public static DataTable loadlistOfItems()
-		{
-			return BookingForm_DAO.Instance.loadlistOfItems();
-		}*/
-		public static DataTable loadlistOfItems()//BookingForm_DTO BookingId)
+            return BookingForm_DAO.Instance.loadlistOfReservation_Edit(BookingId);
+        }
+        public static DataTable loadlistOfItems()//BookingForm_DTO BookingId)
         {
             return BookingForm_DAO.Instance.loadlistOfItems();//BookingId);
         }
-        
-        public static DataTable loadlistOfItems_Room(BookingForm_DTO BookingId)
+
+		public static DataTable loadlistOfItems_Room(BookingForm_DTO BookingId)
         {
             return BookingForm_DAO.Instance.loadlistOfItems_Room(BookingId);
         }
@@ -86,5 +82,9 @@ namespace BUS_HotelManagement
 		{
 			return BookingForm_DAO.Instance.getRoomID();
 		}
+		/*public static DataTable Edit_Reservation(BookingForm_DTO BookingId)//BookingForm_DTO BookingId)
+		{
+			return BookingForm_DAO.Instance.Edit_Reservation(BookingForm_DTO BookingId);//BookingId);
+		}*/
 	}
 }

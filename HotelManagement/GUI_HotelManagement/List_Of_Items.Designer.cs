@@ -38,10 +38,10 @@
 			this.dgv_List_Of_Items_Room = new System.Windows.Forms.DataGridView();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.cb_RoomID = new System.Windows.Forms.ComboBox();
 			this.button2 = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.lb_List_Of_Items = new System.Windows.Forms.Label();
-			this.cb_RoomID = new System.Windows.Forms.ComboBox();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgv_List_Of_Items)).BeginInit();
@@ -167,6 +167,15 @@
 			this.panel4.Size = new System.Drawing.Size(448, 71);
 			this.panel4.TabIndex = 0;
 			// 
+			// cb_RoomID
+			// 
+			this.cb_RoomID.FormattingEnabled = true;
+			this.cb_RoomID.Location = new System.Drawing.Point(128, 25);
+			this.cb_RoomID.Name = "cb_RoomID";
+			this.cb_RoomID.Size = new System.Drawing.Size(165, 28);
+			this.cb_RoomID.TabIndex = 34;
+			this.cb_RoomID.SelectedIndexChanged += new System.EventHandler(this.cb_RoomID_SelectedIndexChanged);
+			// 
 			// button2
 			// 
 			this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -201,15 +210,6 @@
 			this.lb_List_Of_Items.Text = "LIST OF ITEMS";
 			this.lb_List_Of_Items.UseCompatibleTextRendering = true;
 			this.lb_List_Of_Items.Click += new System.EventHandler(this.lb_List_Of_Items_Click);
-			// 
-			// cb_RoomID
-			// 
-			this.cb_RoomID.FormattingEnabled = true;
-			this.cb_RoomID.Location = new System.Drawing.Point(128, 25);
-			this.cb_RoomID.Name = "cb_RoomID";
-			this.cb_RoomID.Size = new System.Drawing.Size(165, 28);
-			this.cb_RoomID.TabIndex = 34;
-			this.cb_RoomID.SelectedIndexChanged += new System.EventHandler(this.cb_RoomID_SelectedIndexChanged);
 			// 
 			// List_Of_Items
 			// 
