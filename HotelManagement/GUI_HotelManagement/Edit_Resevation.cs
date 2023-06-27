@@ -17,7 +17,7 @@ namespace GUI_HotelManagement
         public Edit_Resevation()
         {
 			InitializeComponent();
-            loadlistOfReservation_Edit();
+            loadlistOfReservation();
 			cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
 
 		}
@@ -56,13 +56,28 @@ namespace GUI_HotelManagement
             r.Show();
             this.Hide();*/
         }
-		public void loadlistOfReservation_Edit(string idBooking)
+		public void loadlistOfReservation()
+		{
+
+			BookingForm_DTO booking = new BookingForm_DTO(null);
+			dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation();
+
+		}
+
+		public void loadlistOfReservation(string idBooking)
+		{
+
+			BookingForm_DTO booking = new BookingForm_DTO(idBooking);
+			dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation_Room(booking);
+
+		}
+		/*public void loadlistOfReservation_Edit(string idBooking)
 		{
 
 			BookingForm_DTO booking = new BookingForm_DTO(idBooking);
 			dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation_Edit(booking);
 
-		}
+		}*/
 		private void bt_Cancel_Click_1(object sender, EventArgs e)
         {
             Reservation r = new Reservation();
@@ -74,25 +89,26 @@ namespace GUI_HotelManagement
         {
 			Application.Exit();
 		}
-		private void bt_Search_Reservation_Click(object sender, EventArgs e)
+
+		private void bt_Search_Reservation_Click_1(object sender, EventArgs e)
 		{
 			string BookingId = cb_BookingID.Text.ToString();
 			if (BookingId == "")
 			{
-				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
 				return;
 			}
 			else if (BookingId == "0")
 			{
-				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
 				return;
 			}
 			else if (BookingId == null)
 			{
-				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
 				return;
 			}
-			loadlistOfReservation_Edit(BookingId);
+			loadlistOfReservation(BookingId);
 		}
 	}
 }

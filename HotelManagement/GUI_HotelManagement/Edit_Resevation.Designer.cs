@@ -30,6 +30,7 @@
         {
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.bt_Exit = new System.Windows.Forms.Button();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.dgv_Reservation = new System.Windows.Forms.DataGridView();
 			this.lb_List_Of_Reservation = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.lb_Edit_Reservation = new System.Windows.Forms.Label();
-			this.bt_Exit = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel5.SuspendLayout();
@@ -85,8 +85,20 @@
 			this.panel3.Location = new System.Drawing.Point(0, 29);
 			this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(956, 412);
+			this.panel3.Size = new System.Drawing.Size(956, 413);
 			this.panel3.TabIndex = 2;
+			// 
+			// bt_Exit
+			// 
+			this.bt_Exit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.bt_Exit.Location = new System.Drawing.Point(836, 370);
+			this.bt_Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.bt_Exit.Name = "bt_Exit";
+			this.bt_Exit.Size = new System.Drawing.Size(66, 22);
+			this.bt_Exit.TabIndex = 9;
+			this.bt_Exit.Text = "EXIT";
+			this.bt_Exit.UseVisualStyleBackColor = false;
+			this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
 			// 
 			// panel5
 			// 
@@ -155,6 +167,7 @@
 			this.bt_Search_Reservation.TabIndex = 35;
 			this.bt_Search_Reservation.Text = "SEARCH";
 			this.bt_Search_Reservation.UseVisualStyleBackColor = false;
+			this.bt_Search_Reservation.Click += new System.EventHandler(this.bt_Search_Reservation_Click_1);
 			// 
 			// label2
 			// 
@@ -325,18 +338,6 @@
 			this.lb_Edit_Reservation.TabIndex = 1;
 			this.lb_Edit_Reservation.Text = "EDIT RESERVATION";
 			this.lb_Edit_Reservation.UseCompatibleTextRendering = true;
-			// 
-			// bt_Exit
-			// 
-			this.bt_Exit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.bt_Exit.Location = new System.Drawing.Point(836, 370);
-			this.bt_Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.bt_Exit.Name = "bt_Exit";
-			this.bt_Exit.Size = new System.Drawing.Size(66, 22);
-			this.bt_Exit.TabIndex = 9;
-			this.bt_Exit.Text = "EXIT";
-			this.bt_Exit.UseVisualStyleBackColor = false;
-			this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
 			// 
 			// Edit_Resevation
 			// 
