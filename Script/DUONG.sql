@@ -22,3 +22,20 @@ RETURN @room_id;
 END;
 
 -- Liệt kê tất cả vật dụng
+-- done
+SELECT * FROM RESERVATION_ROOM
+SELECT * FROM ITEM_ROOM
+SELECT * FROM ITEM
+select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM where IR.ID_ROOM = '1005'
+select I.NAME from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM where IR.ID_ROOM = '1005'
+select IR.AMOUNT from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM where IR.ID_ROOM = '1005'
+select I.NAME from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM where IR.ID_ROOM = '1005'
+select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM where IR.ID_ROOM = '1005'
+select distinct ID_ROOM from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM order by ID_ROOM asc;
+select * from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM order by ID_ROOM asc
+SELECT * FROM BOOKING_FORM BF where ID_BOOKING = 'BK00680615'
+select * from BOOKING_ROOM BR JOIN ROOM R ON BR.ID_ROOM = R.ID_ROOM
+
+
+
+
