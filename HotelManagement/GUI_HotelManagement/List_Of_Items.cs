@@ -22,11 +22,11 @@ namespace GUI_HotelManagement
 
 			InitializeComponent();
             loadlistOfItems();
-			//cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
+			cb_RoomID.DataSource = BookingForm_BUS.cb_RoomID();
 
 		}
-        
-			private void lb_List_Of_Items_Click(object sender, EventArgs e)
+
+		private void lb_List_Of_Items_Click(object sender, EventArgs e)
         {
 
         }
@@ -34,13 +34,13 @@ namespace GUI_HotelManagement
         private void button2_Click(object sender, EventArgs e) //Search
         {
 
-			string BookingId = BookID_Text.Text.ToString();
+			string BookingId = cb_RoomID.Text.ToString();
 			if (BookingId == "")
 			{
 				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
 				return;
 			}
-			else if (BookingId == " ")
+			else if (BookingId == "0")
 			{
 				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
 				return;
@@ -75,24 +75,23 @@ namespace GUI_HotelManagement
         {
 
         }
-
-        private void tb_RoomID_TextChanged(object sender, EventArgs e)
-        {
-			
-		}
-
         private void dgv_List_Of_Items_Room_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
-			string BookingId = BookID_Text.Text.ToString();
-			/*this.Hide();
-			List_Of_Items li = new List_Of_Items();
-			li.Show();*/
+			string BookingId = cb_RoomID.Text.ToString();
 			loadlistOfItems();
 		}
-    }
+		private void dgv_List_Of_Items_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		private void cb_RoomID_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

@@ -197,7 +197,13 @@ namespace DAO_HotelManagement
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-        public List<string> getBooKingID()
+		public DataTable cb_RoomID(BookingForm_DTO BookingID)
+		{
+			string query = "select distinct ID_ROOM from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM";
+			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+			return dt;
+		}
+		public List<string> getBooKingID()
         {
             string query = "SELECT * FROM BOOKING_FORM\n" +
                            "ORDER BY ID_BOOKING ASC";
@@ -211,6 +217,19 @@ namespace DAO_HotelManagement
             }
             return roomList;
         }
+		public List<string> getRoomID()
+		{
+			string query = "select * from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM order by ID_ROOM asc";
+			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
 
-    }
+			List<string> roomList = new List<string>();
+			foreach (DataRow row in dt.Rows)
+			{
+				string roomNumber = row["ID_ROOM"].ToString();
+				roomList.Add(roomNumber);
+			}
+			return roomList;
+		}
+
+	}
 }

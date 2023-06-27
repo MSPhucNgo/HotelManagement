@@ -78,5 +78,9 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.getBooKingID();
         }
-    }
+		public static List<string> cb_RoomID()
+		{
+			return BookingForm_DAO.Instance.getRoomID();
+		}
+	}
 }

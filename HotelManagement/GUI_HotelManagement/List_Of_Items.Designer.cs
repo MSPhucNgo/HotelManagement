@@ -39,9 +39,9 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.button2 = new System.Windows.Forms.Button();
-			this.BookID_Text = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.lb_List_Of_Items = new System.Windows.Forms.Label();
+			this.cb_RoomID = new System.Windows.Forms.ComboBox();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgv_List_Of_Items)).BeginInit();
@@ -97,6 +97,7 @@
 			this.dgv_List_Of_Items.RowTemplate.Height = 29;
 			this.dgv_List_Of_Items.Size = new System.Drawing.Size(542, 463);
 			this.dgv_List_Of_Items.TabIndex = 34;
+			this.dgv_List_Of_Items.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_List_Of_Items_CellContentClick_2);
 			// 
 			// bt_Logout
 			// 
@@ -128,7 +129,7 @@
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
 			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -158,8 +159,8 @@
 			// panel4
 			// 
 			this.panel4.BackColor = System.Drawing.Color.DarkGray;
+			this.panel4.Controls.Add(this.cb_RoomID);
 			this.panel4.Controls.Add(this.button2);
-			this.panel4.Controls.Add(this.BookID_Text);
 			this.panel4.Controls.Add(this.label2);
 			this.panel4.Location = new System.Drawing.Point(19, 21);
 			this.panel4.Name = "panel4";
@@ -177,15 +178,6 @@
 			this.button2.Text = "SEARCH";
 			this.button2.UseVisualStyleBackColor = false;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
-			// 
-			// BookID_Text
-			// 
-			this.BookID_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.BookID_Text.Location = new System.Drawing.Point(120, 26);
-			this.BookID_Text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.BookID_Text.Name = "BookID_Text";
-			this.BookID_Text.Size = new System.Drawing.Size(201, 27);
-			this.BookID_Text.TabIndex = 31;
 			// 
 			// label2
 			// 
@@ -209,6 +201,15 @@
 			this.lb_List_Of_Items.Text = "LIST OF ITEMS";
 			this.lb_List_Of_Items.UseCompatibleTextRendering = true;
 			this.lb_List_Of_Items.Click += new System.EventHandler(this.lb_List_Of_Items_Click);
+			// 
+			// cb_RoomID
+			// 
+			this.cb_RoomID.FormattingEnabled = true;
+			this.cb_RoomID.Location = new System.Drawing.Point(128, 25);
+			this.cb_RoomID.Name = "cb_RoomID";
+			this.cb_RoomID.Size = new System.Drawing.Size(165, 28);
+			this.cb_RoomID.TabIndex = 34;
+			this.cb_RoomID.SelectedIndexChanged += new System.EventHandler(this.cb_RoomID_SelectedIndexChanged);
 			// 
 			// List_Of_Items
 			// 
@@ -241,7 +242,6 @@
         private Panel panel5;
         private Panel panel4;
         private Button button2;
-        private TextBox BookID_Text;
         private Label label2;
         private Button bt_Logout;
         private readonly DataGridViewCellEventHandler dgv_List_Of_Items_CellContentClick;
@@ -249,5 +249,6 @@
 		private DataGridView dgv_List_Of_Items;
 		private DataGridView dgv_List_Of_Items_Room;
 		private Label label1;
+		private ComboBox cb_RoomID;
 	}
 }
