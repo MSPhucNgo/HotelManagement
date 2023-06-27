@@ -59,25 +59,42 @@ namespace GUI_HotelManagement
         {
 
             BookingForm_DTO booking = new BookingForm_DTO(null);
-           dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation(booking);
+           dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation();
 
         }
 
-        /*public void loadlistOfReservation_Room(BookingForm_DTO BookingID)
+        public void loadlistOfReservation(string idBooking)
         {
 
-            BookingForm_DTO booking = new BookingForm_DTO(BookingID);
+            BookingForm_DTO booking = new BookingForm_DTO(idBooking);
             dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation_Room(booking);
 
-        }*/
-        
+        }
+
         public void cb_BookingID_SelectedIndexChanged(object sender, EventArgs e)
         {
             
         }
         private void bt_Search_Reservation_Click(object sender, EventArgs e)
         {
-        }
+			string BookingId = cb_BookingID.Text.ToString();
+			if (BookingId == "")
+			{
+				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				return;
+			}
+			else if (BookingId == "0")
+			{
+				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				return;
+			}
+			else if (BookingId == null)
+			{
+				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+				return;
+			}
+			loadlistOfReservation(BookingId);
+		}
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {

@@ -135,19 +135,25 @@ namespace DAO_HotelManagement
             }
             return null;
         }
-        public DataTable loadlistOfReservation(BookingForm_DTO BookingID)
+		public DataTable loadlistOfReservation()
+		{
+			string query = " SELECT * FROM BOOKING_FORM BF";
+			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+			return dt;
+		}
+		public DataTable loadlistOfReservation(BookingForm_DTO BookingID)
         {
             string query = " SELECT * FROM BOOKING_FORM BF"; 
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-        /*public DataTable loadlistOfItems_Room()
+		public DataTable loadlistOfReservation_Room(BookingForm_DTO BookingID)
 		{
-			string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM;";
+			string query = " SELECT * FROM BOOKING_FORM where ID_BOOKING = '" + BookingID.IdBooking + "'";
 			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
 			return dt;
-		}*/
-        public DataTable loadlistOfItems()
+		}
+		public DataTable loadlistOfItems()
         {
             string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
