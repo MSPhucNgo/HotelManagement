@@ -21,7 +21,9 @@ namespace GUI_HotelManagement
         {
             InitializeComponent();
             loadlistOfItems();
-        }
+            loadlistOfItems_Room();
+
+		}
         
         private void lb_List_Of_Items_Click(object sender, EventArgs e)
         {
@@ -44,8 +46,14 @@ namespace GUI_HotelManagement
             dgv_List_Of_Items.DataSource = BookingForm_BUS.loadlistOfItems(booking);
 
         }
+		public void loadlistOfItems_Room()
+		{
 
-        private void dgv_List_Of_Items_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+			BookingForm_DTO booking = new BookingForm_DTO(null);
+			dgv_List_Of_Items_Room.DataSource = BookingForm_BUS.loadlistOfItems_Room(booking);
+
+		}
+		private void dgv_List_Of_Items_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
