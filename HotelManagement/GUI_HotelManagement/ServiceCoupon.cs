@@ -21,6 +21,7 @@ namespace HotelManagement
         bool isFee;
         DiscountPromotion_DTO discountPromotion;
         BookingForm_DTO bookingForm_;
+        Employee_DTO emp;
         int quantity;
         float rate;
         float endtotal;
@@ -30,7 +31,7 @@ namespace HotelManagement
         {
             InitializeComponent();
         }
-        public Service_Coupon(Customer_DTO cus, BookingForm_DTO bookingForm, Room_DTO room, HotelService_DTO service, bool isFee, DiscountPromotion_DTO discount)
+        public Service_Coupon(Customer_DTO cus, BookingForm_DTO bookingForm, Room_DTO room, HotelService_DTO service, bool isFee, DiscountPromotion_DTO discount, Employee_DTO emp)
         {
             InitializeComponent();
             this.cus = cus;
@@ -39,6 +40,7 @@ namespace HotelManagement
             this.isFee = isFee;
             this.discountPromotion = discount;
             this.bookingForm_ = bookingForm;
+            this.emp = emp;
            
             txbQuantity.Text = "1";
             if (!isFee)
@@ -52,6 +54,7 @@ namespace HotelManagement
                 cbxNow.Visible = false;
                 cbxWhenCheckout.Visible = false;
                 txbOffer.Text = "Not Fee";
+                price = 0;
             }
             else
             {
@@ -144,11 +147,13 @@ namespace HotelManagement
 
             Service_Form_DTO sf;
             Service_Bill_DTO sb;
-            sf = new Service_Form_DTO("",txbServiceName.Text,txbServiceName.Text,price, quantity, service.idService, cus.IdCustomer, cus.IdCustomer);
+            //fix
+            emp = new Employee_DTO("EMP00");
+            sf = new Service_Form_DTO("",txbServiceName.Text,txbServiceName.Text,price, quantity, service.idService, emp.IdEmp, cus.IdCustomer);
             sb = new Service_Bill_DTO("", total, txbUsingTime.Text, float.Parse(txbDiscount.Text), "", bookingForm_.IdBooking, cus.IdCustomer);
 
-            int res = Services_for_customer_BUS.usp_AddServiceCoupon(sf, sb);
-            if (res == 1)
+            int res = Services_for_customer_BUS.usp_AddServiceCoupon(sf, sb, emp);
+            if (res != 0)
             {
                 MessageBox.Show("Order successfully!");
             }

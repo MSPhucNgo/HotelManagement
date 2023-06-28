@@ -131,11 +131,12 @@ namespace HotelManagement
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            Employee_DTO emp = new Employee_DTO("EMP00");
             if( !isChoosedDiscount)
             {
                 discountPromotion = new DiscountPromotion_DTO("", "", "", "", "", 0, 0);
             } 
-            Service_Coupon service_Coupon = new Service_Coupon(customer, bookingForm, room, hotelService, isAllServices, discountPromotion);
+            Service_Coupon service_Coupon = new Service_Coupon(customer, bookingForm, room, hotelService, isAllServices, discountPromotion, emp);
             service_Coupon.ShowDialog();
 
 

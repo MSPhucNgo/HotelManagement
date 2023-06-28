@@ -36,33 +36,36 @@
             txbRoomID = new TextBox();
             lb_room_search = new Label();
             tabPage2 = new TabPage();
-            dataGridView2 = new DataGridView();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Departure = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
-            Column11 = new DataGridViewTextBoxColumn();
-            Column12 = new DataGridViewTextBoxColumn();
-            Column13 = new DataGridViewTextBoxColumn();
+            dtgvTour = new DataGridView();
             panel2 = new Panel();
+            txbError = new TextBox();
+            label1 = new Label();
+            timepickEnd = new DateTimePicker();
+            timepickLeaving = new DateTimePicker();
+            cbxDestination = new ComboBox();
             btn_tour_search = new Button();
-            textBox5 = new TextBox();
+            cbxDeparture = new ComboBox();
             lb_tour_search_tour_sort = new Label();
-            textBox4 = new TextBox();
             lb_tour_search_leaving_time = new Label();
-            textBox3 = new TextBox();
             lb_tour_search_des = new Label();
-            textBox2 = new TextBox();
             lb_tour_search_dep = new Label();
             tabPage3 = new TabPage();
+            dtgvServiceForm = new DataGridView();
+            panel3 = new Panel();
+            btnSearchServiceForm = new Button();
+            tbSearchPhone = new TextBox();
+            label2 = new Label();
+            tabPage4 = new TabPage();
             tabControl_services_for_customer.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvRoomList).BeginInit();
             panel1.SuspendLayout();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvTour).BeginInit();
             panel2.SuspendLayout();
+            tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgvServiceForm).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl_services_for_customer
@@ -70,11 +73,12 @@
             tabControl_services_for_customer.Controls.Add(tabPage1);
             tabControl_services_for_customer.Controls.Add(tabPage2);
             tabControl_services_for_customer.Controls.Add(tabPage3);
+            tabControl_services_for_customer.Controls.Add(tabPage4);
             tabControl_services_for_customer.Location = new Point(9, 9);
             tabControl_services_for_customer.Margin = new Padding(2, 3, 2, 3);
             tabControl_services_for_customer.Name = "tabControl_services_for_customer";
             tabControl_services_for_customer.SelectedIndex = 0;
-            tabControl_services_for_customer.Size = new Size(971, 585);
+            tabControl_services_for_customer.Size = new Size(1097, 585);
             tabControl_services_for_customer.TabIndex = 0;
             // 
             // tabPage1
@@ -85,7 +89,7 @@
             tabPage1.Margin = new Padding(2, 3, 2, 3);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(2, 3, 2, 3);
-            tabPage1.Size = new Size(963, 552);
+            tabPage1.Size = new Size(1089, 552);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Room Search";
             tabPage1.UseVisualStyleBackColor = true;
@@ -148,105 +152,93 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(dataGridView2);
+            tabPage2.Controls.Add(dtgvTour);
             tabPage2.Controls.Add(panel2);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Margin = new Padding(2, 3, 2, 3);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(2, 3, 2, 3);
-            tabPage2.Size = new Size(963, 552);
+            tabPage2.Size = new Size(1089, 552);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Tour Search";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dtgvTour
             // 
-            dataGridView2.ColumnHeadersHeight = 34;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column7, Column8, Departure, Column9, Column10, Column11, Column12, Column13 });
-            dataGridView2.Location = new Point(5, 79);
-            dataGridView2.Margin = new Padding(2, 3, 2, 3);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 62;
-            dataGridView2.Size = new Size(941, 180);
-            dataGridView2.TabIndex = 0;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick_1;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "No.";
-            Column7.MinimumWidth = 8;
-            Column7.Name = "Column7";
-            Column7.Width = 50;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Tour Name";
-            Column8.MinimumWidth = 8;
-            Column8.Name = "Column8";
-            Column8.Width = 250;
-            // 
-            // Departure
-            // 
-            Departure.HeaderText = "Departure";
-            Departure.MinimumWidth = 8;
-            Departure.Name = "Departure";
-            Departure.Width = 200;
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Destination";
-            Column9.MinimumWidth = 8;
-            Column9.Name = "Column9";
-            Column9.Width = 200;
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Starting Time";
-            Column10.MinimumWidth = 8;
-            Column10.Name = "Column10";
-            Column10.Width = 150;
-            // 
-            // Column11
-            // 
-            Column11.HeaderText = "Ending Time";
-            Column11.MinimumWidth = 8;
-            Column11.Name = "Column11";
-            Column11.Width = 150;
-            // 
-            // Column12
-            // 
-            Column12.HeaderText = "Partner";
-            Column12.MinimumWidth = 8;
-            Column12.Name = "Column12";
-            Column12.Width = 150;
-            // 
-            // Column13
-            // 
-            Column13.HeaderText = "Max of Participants";
-            Column13.MinimumWidth = 8;
-            Column13.Name = "Column13";
-            Column13.Width = 150;
+            dtgvTour.BackgroundColor = Color.Azure;
+            dtgvTour.ColumnHeadersHeight = 34;
+            dtgvTour.Location = new Point(5, 79);
+            dtgvTour.Margin = new Padding(2, 3, 2, 3);
+            dtgvTour.Name = "dtgvTour";
+            dtgvTour.RowHeadersWidth = 62;
+            dtgvTour.Size = new Size(1084, 467);
+            dtgvTour.TabIndex = 0;
+            dtgvTour.CellContentClick += dataGridView2_CellContentClick_1;
             // 
             // panel2
             // 
+            panel2.BackColor = Color.AliceBlue;
+            panel2.Controls.Add(txbError);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(timepickEnd);
+            panel2.Controls.Add(timepickLeaving);
+            panel2.Controls.Add(cbxDestination);
             panel2.Controls.Add(btn_tour_search);
-            panel2.Controls.Add(textBox5);
+            panel2.Controls.Add(cbxDeparture);
             panel2.Controls.Add(lb_tour_search_tour_sort);
-            panel2.Controls.Add(textBox4);
             panel2.Controls.Add(lb_tour_search_leaving_time);
-            panel2.Controls.Add(textBox3);
             panel2.Controls.Add(lb_tour_search_des);
-            panel2.Controls.Add(textBox2);
             panel2.Controls.Add(lb_tour_search_dep);
+            panel2.ForeColor = Color.CadetBlue;
             panel2.Location = new Point(5, 3);
             panel2.Margin = new Padding(2, 3, 2, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(779, 71);
+            panel2.Size = new Size(1088, 71);
             panel2.TabIndex = 0;
+            // 
+            // txbError
+            // 
+            txbError.Location = new Point(800, 39);
+            txbError.Name = "txbError";
+            txbError.Size = new Size(43, 27);
+            txbError.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(750, 42);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 20);
+            label1.TabIndex = 10;
+            label1.Text = "Error:";
+            // 
+            // timepickEnd
+            // 
+            timepickEnd.Location = new Point(472, 37);
+            timepickEnd.Name = "timepickEnd";
+            timepickEnd.Size = new Size(250, 27);
+            timepickEnd.TabIndex = 9;
+            timepickEnd.ValueChanged += timepickEnd_ValueChanged;
+            // 
+            // timepickLeaving
+            // 
+            timepickLeaving.Location = new Point(105, 38);
+            timepickLeaving.Name = "timepickLeaving";
+            timepickLeaving.Size = new Size(250, 27);
+            timepickLeaving.TabIndex = 3;
+            timepickLeaving.ValueChanged += timepickLeaving_ValueChanged;
+            // 
+            // cbxDestination
+            // 
+            cbxDestination.FormattingEnabled = true;
+            cbxDestination.Location = new Point(472, 7);
+            cbxDestination.Name = "cbxDestination";
+            cbxDestination.Size = new Size(250, 28);
+            cbxDestination.TabIndex = 8;
             // 
             // btn_tour_search
             // 
-            btn_tour_search.Location = new Point(666, 20);
+            btn_tour_search.Location = new Point(902, 20);
             btn_tour_search.Margin = new Padding(2, 3, 2, 3);
             btn_tour_search.Name = "btn_tour_search";
             btn_tour_search.Size = new Size(89, 27);
@@ -255,31 +247,23 @@
             btn_tour_search.UseVisualStyleBackColor = true;
             btn_tour_search.Click += btn_tour_search_Click;
             // 
-            // textBox5
+            // cbxDeparture
             // 
-            textBox5.Location = new Point(401, 37);
-            textBox5.Margin = new Padding(2, 3, 2, 3);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(169, 27);
-            textBox5.TabIndex = 7;
+            cbxDeparture.FormattingEnabled = true;
+            cbxDeparture.Location = new Point(105, 8);
+            cbxDeparture.Name = "cbxDeparture";
+            cbxDeparture.Size = new Size(250, 28);
+            cbxDeparture.TabIndex = 1;
             // 
             // lb_tour_search_tour_sort
             // 
             lb_tour_search_tour_sort.AutoSize = true;
-            lb_tour_search_tour_sort.Location = new Point(306, 39);
+            lb_tour_search_tour_sort.Location = new Point(376, 37);
             lb_tour_search_tour_sort.Margin = new Padding(2, 0, 2, 0);
             lb_tour_search_tour_sort.Name = "lb_tour_search_tour_sort";
-            lb_tour_search_tour_sort.Size = new Size(72, 20);
+            lb_tour_search_tour_sort.Size = new Size(74, 20);
             lb_tour_search_tour_sort.TabIndex = 6;
-            lb_tour_search_tour_sort.Text = "Tour Sort:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(105, 37);
-            textBox4.Margin = new Padding(2, 3, 2, 3);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(169, 27);
-            textBox4.TabIndex = 5;
+            lb_tour_search_tour_sort.Text = "End Time:";
             // 
             // lb_tour_search_leaving_time
             // 
@@ -291,31 +275,15 @@
             lb_tour_search_leaving_time.TabIndex = 4;
             lb_tour_search_leaving_time.Text = "Leaving Time:";
             // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(401, 5);
-            textBox3.Margin = new Padding(2, 3, 2, 3);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(169, 27);
-            textBox3.TabIndex = 3;
-            // 
             // lb_tour_search_des
             // 
             lb_tour_search_des.AutoSize = true;
-            lb_tour_search_des.Location = new Point(306, 7);
+            lb_tour_search_des.Location = new Point(376, 8);
             lb_tour_search_des.Margin = new Padding(2, 0, 2, 0);
             lb_tour_search_des.Name = "lb_tour_search_des";
             lb_tour_search_des.Size = new Size(88, 20);
             lb_tour_search_des.TabIndex = 2;
             lb_tour_search_des.Text = "Destination:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(105, 5);
-            textBox2.Margin = new Padding(2, 3, 2, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(169, 27);
-            textBox2.TabIndex = 1;
             // 
             // lb_tour_search_dep
             // 
@@ -330,14 +298,82 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(dtgvServiceForm);
+            tabPage3.Controls.Add(panel3);
             tabPage3.Location = new Point(4, 29);
             tabPage3.Margin = new Padding(2, 3, 2, 3);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(2, 3, 2, 3);
-            tabPage3.Size = new Size(963, 552);
+            tabPage3.Size = new Size(1089, 552);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Service Search";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dtgvServiceForm
+            // 
+            dtgvServiceForm.AllowUserToAddRows = false;
+            dtgvServiceForm.AllowUserToDeleteRows = false;
+            dtgvServiceForm.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvServiceForm.Location = new Point(13, 49);
+            dtgvServiceForm.Margin = new Padding(2, 3, 2, 3);
+            dtgvServiceForm.Name = "dtgvServiceForm";
+            dtgvServiceForm.ReadOnly = true;
+            dtgvServiceForm.RowHeadersWidth = 62;
+            dtgvServiceForm.RowTemplate.Height = 33;
+            dtgvServiceForm.Size = new Size(827, 507);
+            dtgvServiceForm.TabIndex = 3;
+            dtgvServiceForm.CellContentClick += dtgvServiceForm_CellContentClick;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(btnSearchServiceForm);
+            panel3.Controls.Add(tbSearchPhone);
+            panel3.Controls.Add(label2);
+            panel3.Location = new Point(13, 10);
+            panel3.Margin = new Padding(2, 3, 2, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(827, 35);
+            panel3.TabIndex = 2;
+            // 
+            // btnSearchServiceForm
+            // 
+            btnSearchServiceForm.Location = new Point(539, 4);
+            btnSearchServiceForm.Margin = new Padding(2, 3, 2, 3);
+            btnSearchServiceForm.Name = "btnSearchServiceForm";
+            btnSearchServiceForm.Size = new Size(89, 27);
+            btnSearchServiceForm.TabIndex = 2;
+            btnSearchServiceForm.Text = "Search";
+            btnSearchServiceForm.UseVisualStyleBackColor = true;
+            btnSearchServiceForm.Click += btnSearchServiceForm_Click;
+            // 
+            // tbSearchPhone
+            // 
+            tbSearchPhone.Location = new Point(198, 4);
+            tbSearchPhone.Margin = new Padding(2, 3, 2, 3);
+            tbSearchPhone.Name = "tbSearchPhone";
+            tbSearchPhone.Size = new Size(222, 27);
+            tbSearchPhone.TabIndex = 1;
+            tbSearchPhone.TextChanged += textBox1_TextChanged_1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(69, 7);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(105, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Phone number";
+            // 
+            // tabPage4
+            // 
+            tabPage4.Location = new Point(4, 29);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(1089, 552);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "tabPage4";
+            tabPage4.UseVisualStyleBackColor = true;
             // 
             // Services4Customer
             // 
@@ -355,9 +391,13 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvTour).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dtgvServiceForm).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -374,14 +414,10 @@
         private Label lb_tour_search_dep;
         private Panel panel2;
         private TabPage tabPage3;
-        private TextBox textBox5;
         private Label lb_tour_search_tour_sort;
-        private TextBox textBox4;
         private Label lb_tour_search_leaving_time;
-        private TextBox textBox3;
         private Label lb_tour_search_des;
-        private TextBox textBox2;
-        private DataGridView dataGridView2;
+        private DataGridView dtgvTour;
         private Button btn_tour_search;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
@@ -389,18 +425,23 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Departure;
-        private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column10;
-        private DataGridViewTextBoxColumn Column11;
-        private DataGridViewTextBoxColumn Column12;
-        private DataGridViewTextBoxColumn Column13;
         private DataGridViewTextBoxColumn ID_ROOM;
         private DataGridViewTextBoxColumn NAME;
         private DataGridViewTextBoxColumn STATUS;
         private DataGridViewTextBoxColumn PRICE;
         private DataGridViewTextBoxColumn TYPE;
+        private ComboBox cbxTourType;
+        private DateTimePicker timepickLeaving;
+        private ComboBox cbxDestination;
+        private ComboBox cbxDeparture;
+        private DateTimePicker timepickEnd;
+        private TextBox txbError;
+        private Label label1;
+        private DataGridView dtgvServiceForm;
+        private Panel panel3;
+        private Button btnSearchServiceForm;
+        private TextBox tbSearchPhone;
+        private Label label2;
+        private TabPage tabPage4;
     }
 }
