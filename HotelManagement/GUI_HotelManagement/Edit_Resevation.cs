@@ -133,7 +133,6 @@ namespace GUI_HotelManagement
         {
 
         }
-
         private void cb_RoomType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -169,6 +168,7 @@ using (OracleConnection connection = new OracleConnection(connectionString))
 index = command.ExecuteNonQuery();
    }
 }
-setData();*/
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {        }
     }
 }
