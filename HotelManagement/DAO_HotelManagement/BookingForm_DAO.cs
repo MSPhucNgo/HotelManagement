@@ -137,16 +137,11 @@ namespace DAO_HotelManagement
         }
 		public DataTable loadlistOfReservation()
 		{
-			string query = " SELECT * FROM BOOKING_FORM BF";
+			string query = "SELECT BF.*, C.NAME, BR.ID_ROOM, R.TYPE\r\n--INTO BOOKING_FORM_CUSTOMER_NAME\r\nFROM BOOKING_FORM BF JOIN BOOKING_ROOM BR ON BF.ID_BOOKING = BR.ID_BOOKING \r\n\t\t JOIN CUSTOMER C ON BF.CUSTOMER = C.ID_CUSTOMER \r\n\t\t JOIN ROOM R ON BR.ID_ROOM = R.ID_ROOM\r\nORDER BY ID_BOOKING ASC";
 			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
 			return dt;
 		}
-		/*public DataTable loadlistOfReservation(BookingForm_DTO BookingID)
-        {
-            string query = " SELECT * FROM BOOKING_FORM BF"; 
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            return dt;
-        }*/
+		
 		public DataTable loadlistOfReservation_Room(BookingForm_DTO BookingID)
 		{
 			string query = " SELECT * FROM BOOKING_FORM where ID_BOOKING = '" + BookingID.IdBooking + "'";
@@ -215,7 +210,7 @@ namespace DAO_HotelManagement
 		}
 		public List<string> getRoomType()
 		{
-			string query = "select * from BOOKING_ROOM BR JOIN ROOM R ON BR.ID_ROOM = R.ID_ROOM";
+			string query = "select DISTINCT R.TYPE from BOOKING_ROOM BR JOIN ROOM R ON BR.ID_ROOM = R.ID_ROOM\r\n";
 			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
 
 			List<string> roomList = new List<string>();
@@ -226,11 +221,23 @@ namespace DAO_HotelManagement
 			}
 			return roomList;
 		}
-		/*public DataTable Edit_Reservation(BookingForm_DTO BookingID)
+        public DataTable Edit_Reservation(string BookingID, string name)
+        {
+            string query = "UPDATE BOOKING_FORM_CUSTOMER_NAME SET NAME = N'" + name + "' WHERE ID_BOOKING = '" + BookingID + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+
+        /*public bool updateCustomer(Customer_DTO CusInfo)
 		{
-			string query = "where IR.ID_ROOM = '" + BookingID.IdBooking + "'";
-			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-			return dt;
+			string query = "UPDATE CUSTOMER \n" +
+						   "SET NAME = N'" + CusInfo.Name + "' \n" +
+						   "WHERE ID_CUSTOMER = N'" + CusInfo.IdCustomer + "'";
+			int index = DataProvider.Instance.ExecuteNonQuery(query);
+			if (index <= 0) { return false; }
+			return true;
 		}*/
-	}
+
+
+    }
 }

@@ -65,19 +65,19 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.loadlistOfItems_Room(BookingId);
         }
-		/*public static string getName_Items(BookingForm_DTO BookingId)
+        public static DataTable Edit_Reservation(string BookingID, string name)
 		{
-			return BookingForm_DAO.Instance.getName_Items(BookingId);
-		}
-		public static string getAmount_Items(BookingForm_DTO BookingId)
-		{
-			return BookingForm_DAO.Instance.getAmount_Items(BookingId);
-		}*/
+            return BookingForm_DAO.Instance.Edit_Reservation(BookingID, name);
+        }
 
-		public static List<string> cb_BookingID()
+        public static List<string> cb_BookingID()
         {
             return BookingForm_DAO.Instance.getBooKingID();
         }
+		public static List<string> cb_BookingID_Edit()
+		{
+			return BookingForm_DAO.Instance.getBooKingID();
+		}
 		public static List<string> cb_RoomID()
 		{
 			return BookingForm_DAO.Instance.getRoomID();
