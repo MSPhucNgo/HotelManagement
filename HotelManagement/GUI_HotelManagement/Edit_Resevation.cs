@@ -1,5 +1,7 @@
 ﻿using BUS_HotelManagement;
+using DAO_HotelManagement;
 using DTO_HotelManagement;
+using MongoDB.Driver.Core.Configuration;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +21,7 @@ namespace GUI_HotelManagement
 			InitializeComponent();
             loadlistOfReservation();
 			cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
+            cb_RoomType.DataSource = BookingForm_BUS.cb_RoomType();
 
 		}
 
@@ -110,5 +113,62 @@ namespace GUI_HotelManagement
 			}
 			loadlistOfReservation(BookingId);
 		}
-	}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			loadlistOfReservation();
+		}
+
+		private void dgv_Reservation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		private void textBox3_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+        private void cb_BookingID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_RoomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        /*int index;
+
+string procName = "QLCONGTY.USP_ADDEMPLOYEE";
+string connectionString = DataProvider.Instance.getconnecStr();
+using (OracleConnection connection = new OracleConnection(connectionString))
+{
+   connection.Open();
+   using (OracleCommand command = new OracleCommand(procName, connection))
+   {
+       command.CommandType = CommandType.StoredProcedure;
+
+       command.Parameters.Add("NAMEEMP", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(Name_Text.Text) ? (object)null : Name_Text.Text;
+       command.Parameters.Add("GENDER", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(gender_ComboBox.Text) ? (object)null : gender_ComboBox.Text;
+       command.Parameters.Add("BIRTHDAY", OracleDbType.Date).Value = birthday_Datetime.Value;
+       command.Parameters.Add("ADDRESS", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(address_Text.Text) ? (object)null : address_Text.Text;
+       command.Parameters.Add("PHONE", OracleDbType.Char).Value = string.IsNullOrEmpty(phone_Text.Text) ? (object)null : phone_Text.Text;
+       command.Parameters.Add("SALARY", OracleDbType.Char).Value = string.IsNullOrEmpty(salary_Text.Text) ? (object)null : (salary_Text.Text);
+       command.Parameters.Add("ALLOWANCE", OracleDbType.Char).Value = string.IsNullOrEmpty(allowance_Text.Text) ? (object)null : (allowance_Text.Text);
+       //command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(role_ComboBox.Text) ? (object)null : role_ComboBox.Text;
+       if (role_ComboBox.Text == "QLTT") command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = "QL trực tiếp";
+       else command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(role_ComboBox.Text) ? (object)null : role_ComboBox.Text;
+
+       if (manager_ComboBox.Text == "<None>") command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = null;
+       else command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = manager_ComboBox.Text;
+
+       if (room_ComboBox.Text == "<None>") command.Parameters.Add("PHGBAN", OracleDbType.Int32).Value = null;
+       else command.Parameters.Add("PHGBAN", OracleDbType.Int32).Value = int.Parse(room_ComboBox.Text);
+
+index = command.ExecuteNonQuery();
+   }
+}
+setData();*/
+    }
 }

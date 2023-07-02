@@ -213,6 +213,19 @@ namespace DAO_HotelManagement
 			}
 			return roomList;
 		}
+		public List<string> getRoomType()
+		{
+			string query = "select * from BOOKING_ROOM BR JOIN ROOM R ON BR.ID_ROOM = R.ID_ROOM";
+			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+
+			List<string> roomList = new List<string>();
+			foreach (DataRow row in dt.Rows)
+			{
+				string roomType = row["TYPE"].ToString();
+				roomList.Add(roomType);
+			}
+			return roomList;
+		}
 		/*public DataTable Edit_Reservation(BookingForm_DTO BookingID)
 		{
 			string query = "where IR.ID_ROOM = '" + BookingID.IdBooking + "'";

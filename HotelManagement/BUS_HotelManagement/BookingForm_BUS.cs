@@ -82,6 +82,10 @@ namespace BUS_HotelManagement
 		{
 			return BookingForm_DAO.Instance.getRoomID();
 		}
+		public static List<string> cb_RoomType()
+		{
+			return BookingForm_DAO.Instance.getRoomType();
+		}
 		/*public static DataTable Edit_Reservation(BookingForm_DTO BookingId)//BookingForm_DTO BookingId)
 		{
 			return BookingForm_DAO.Instance.Edit_Reservation(BookingForm_DTO BookingId);//BookingId);
