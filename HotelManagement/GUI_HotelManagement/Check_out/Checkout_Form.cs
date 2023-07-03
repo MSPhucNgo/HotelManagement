@@ -179,6 +179,7 @@ namespace GUI_HotelManagement
             {
                 string billID = BookingForm_BUS.getBillID(new BookingForm_DTO(idBooking_Text.Text));
                 Bill_DTO updateBill = new Bill_DTO(billID, roomFee_Text.Text, serviceFee_Text.Text, damageFee_Text.Text, depositPrice_Text.Text, totalFee_Text.Text, Method_ComboBox.Text, "Đã thanh toán", "EMP02", idBooking_Text.Text);
+                //string roomID = 
                 bool flag = Bill_BUS.updateBill(updateBill);
                 if (flag)
                 {
