@@ -121,6 +121,7 @@
             this.button1.TabIndex = 92;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button4
             // 
@@ -135,6 +136,7 @@
             this.button4.TabIndex = 91;
             this.button4.Text = "Confirm";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // label6
             // 
@@ -250,6 +252,7 @@
             this.button2.TabIndex = 29;
             this.button2.Text = "Search";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // panel2
             // 
@@ -276,6 +279,7 @@
             this.Agent_CheckBox.TabIndex = 27;
             this.Agent_CheckBox.Text = "Travel agent account";
             this.Agent_CheckBox.UseVisualStyleBackColor = true;
+            this.Agent_CheckBox.CheckedChanged += new System.EventHandler(this.Agent_CheckBox_CheckedChanged_1);
             // 
             // Own_CheckList
             // 
@@ -290,6 +294,7 @@
             this.Own_CheckList.Name = "Own_CheckList";
             this.Own_CheckList.Size = new System.Drawing.Size(244, 48);
             this.Own_CheckList.TabIndex = 24;
+            this.Own_CheckList.SelectedIndexChanged += new System.EventHandler(this.Own_CheckList_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -440,6 +445,7 @@
             this.Edit_Button.TabIndex = 35;
             this.Edit_Button.Text = "Edit";
             this.Edit_Button.UseVisualStyleBackColor = false;
+            this.Edit_Button.Click += new System.EventHandler(this.Edit_Button_Click_1);
             // 
             // IdentityNo_Text
             // 

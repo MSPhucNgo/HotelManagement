@@ -28,489 +28,477 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Room_Label = new Label();
-            roomID_Text = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            Status_Text = new TextBox();
-            label3 = new Label();
-            Price_Text = new TextBox();
-            label4 = new Label();
-            roomName_Text = new TextBox();
-            label5 = new Label();
-            roomType_Text = new TextBox();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            ItemList_DataGrid = new DataGridView();
-            serviceList_DataGrid = new DataGridView();
-            panel1 = new Panel();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            panel2 = new Panel();
-            Identify_Text = new TextBox();
-            Phone_Text = new TextBox();
-            Email_Text = new TextBox();
-            Birthday_Text = new TextBox();
-            gender_Text = new TextBox();
-            customerName_Text = new TextBox();
-            panel3 = new Panel();
-            button2 = new Button();
-            button7 = new Button();
-            label15 = new Label();
-            panel4 = new Panel();
-            button1 = new Button();
-            Edit_Confirm_Button = new Button();
-            label16 = new Label();
-            ((System.ComponentModel.ISupportInitialize)ItemList_DataGrid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)serviceList_DataGrid).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel4.SuspendLayout();
-            SuspendLayout();
+            this.Room_Label = new System.Windows.Forms.Label();
+            this.roomID_Text = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Status_Text = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Price_Text = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.roomName_Text = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.roomType_Text = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ItemList_DataGrid = new System.Windows.Forms.DataGridView();
+            this.serviceList_DataGrid = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Identify_Text = new System.Windows.Forms.TextBox();
+            this.Phone_Text = new System.Windows.Forms.TextBox();
+            this.Email_Text = new System.Windows.Forms.TextBox();
+            this.Birthday_Text = new System.Windows.Forms.TextBox();
+            this.gender_Text = new System.Windows.Forms.TextBox();
+            this.customerName_Text = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Edit_Confirm_Button = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemList_DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceList_DataGrid)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.SuspendLayout();
             // 
             // Room_Label
             // 
-            Room_Label.AutoSize = true;
-            Room_Label.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Room_Label.ForeColor = Color.FromArgb(8, 48, 107);
-            Room_Label.Location = new Point(131, 15);
-            Room_Label.Name = "Room_Label";
-            Room_Label.Size = new Size(134, 20);
-            Room_Label.TabIndex = 0;
-            Room_Label.Text = "Room Information";
+            this.Room_Label.AutoSize = true;
+            this.Room_Label.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Room_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.Room_Label.Location = new System.Drawing.Point(150, 20);
+            this.Room_Label.Name = "Room_Label";
+            this.Room_Label.Size = new System.Drawing.Size(170, 25);
+            this.Room_Label.TabIndex = 0;
+            this.Room_Label.Text = "Room Information";
             // 
             // roomID_Text
             // 
-            roomID_Text.Enabled = false;
-            roomID_Text.Location = new Point(91, 50);
-            roomID_Text.Margin = new Padding(3, 2, 3, 2);
-            roomID_Text.Name = "roomID_Text";
-            roomID_Text.ReadOnly = true;
-            roomID_Text.Size = new Size(254, 23);
-            roomID_Text.TabIndex = 1;
+            this.roomID_Text.Enabled = false;
+            this.roomID_Text.Location = new System.Drawing.Point(104, 67);
+            this.roomID_Text.Name = "roomID_Text";
+            this.roomID_Text.ReadOnly = true;
+            this.roomID_Text.Size = new System.Drawing.Size(290, 27);
+            this.roomID_Text.TabIndex = 1;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(14, 50);
-            label1.Name = "label1";
-            label1.Size = new Size(66, 19);
-            label1.TabIndex = 2;
-            label1.Text = "ID Room:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(16, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 23);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ID Room:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(15, 152);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 19);
-            label2.TabIndex = 3;
-            label2.Text = "Status:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(17, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 23);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Status:";
             // 
             // Status_Text
             // 
-            Status_Text.BorderStyle = BorderStyle.FixedSingle;
-            Status_Text.Enabled = false;
-            Status_Text.Location = new Point(91, 150);
-            Status_Text.Margin = new Padding(3, 2, 3, 2);
-            Status_Text.Name = "Status_Text";
-            Status_Text.Size = new Size(254, 23);
-            Status_Text.TabIndex = 4;
+            this.Status_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Status_Text.Enabled = false;
+            this.Status_Text.Location = new System.Drawing.Point(104, 200);
+            this.Status_Text.Name = "Status_Text";
+            this.Status_Text.Size = new System.Drawing.Size(290, 27);
+            this.Status_Text.TabIndex = 4;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(15, 125);
-            label3.Name = "label3";
-            label3.Size = new Size(41, 19);
-            label3.TabIndex = 5;
-            label3.Text = "Price:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(17, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 23);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Price:";
             // 
             // Price_Text
             // 
-            Price_Text.BorderStyle = BorderStyle.FixedSingle;
-            Price_Text.Enabled = false;
-            Price_Text.Location = new Point(91, 125);
-            Price_Text.Margin = new Padding(3, 2, 3, 2);
-            Price_Text.Name = "Price_Text";
-            Price_Text.Size = new Size(254, 23);
-            Price_Text.TabIndex = 6;
-            Price_Text.Text = " ";
+            this.Price_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Price_Text.Enabled = false;
+            this.Price_Text.Location = new System.Drawing.Point(104, 167);
+            this.Price_Text.Name = "Price_Text";
+            this.Price_Text.Size = new System.Drawing.Size(290, 27);
+            this.Price_Text.TabIndex = 6;
+            this.Price_Text.Text = " ";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(14, 74);
-            label4.Name = "label4";
-            label4.Size = new Size(48, 19);
-            label4.TabIndex = 7;
-            label4.Text = "Name:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(16, 99);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 23);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Name:";
             // 
             // roomName_Text
             // 
-            roomName_Text.BorderStyle = BorderStyle.FixedSingle;
-            roomName_Text.Enabled = false;
-            roomName_Text.Location = new Point(91, 74);
-            roomName_Text.Margin = new Padding(3, 2, 3, 2);
-            roomName_Text.Name = "roomName_Text";
-            roomName_Text.Size = new Size(254, 23);
-            roomName_Text.TabIndex = 8;
+            this.roomName_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.roomName_Text.Enabled = false;
+            this.roomName_Text.Location = new System.Drawing.Point(104, 99);
+            this.roomName_Text.Name = "roomName_Text";
+            this.roomName_Text.Size = new System.Drawing.Size(290, 27);
+            this.roomName_Text.TabIndex = 8;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(15, 100);
-            label5.Name = "label5";
-            label5.Size = new Size(40, 19);
-            label5.TabIndex = 9;
-            label5.Text = "Type:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(17, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 23);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Type:";
             // 
             // roomType_Text
             // 
-            roomType_Text.BorderStyle = BorderStyle.FixedSingle;
-            roomType_Text.Enabled = false;
-            roomType_Text.Location = new Point(91, 100);
-            roomType_Text.Margin = new Padding(3, 2, 3, 2);
-            roomType_Text.Name = "roomType_Text";
-            roomType_Text.Size = new Size(254, 23);
-            roomType_Text.TabIndex = 10;
+            this.roomType_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.roomType_Text.Enabled = false;
+            this.roomType_Text.Location = new System.Drawing.Point(104, 133);
+            this.roomType_Text.Name = "roomType_Text";
+            this.roomType_Text.Size = new System.Drawing.Size(290, 27);
+            this.roomType_Text.TabIndex = 10;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.FromArgb(8, 48, 107);
-            label6.Location = new Point(117, 10);
-            label6.Name = "label6";
-            label6.Size = new Size(159, 20);
-            label6.TabIndex = 11;
-            label6.Text = "Customer Information";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.label6.Location = new System.Drawing.Point(134, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Customer Information";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.FromArgb(8, 48, 107);
-            label7.Location = new Point(498, 73);
-            label7.Name = "label7";
-            label7.Size = new Size(143, 21);
-            label7.TabIndex = 12;
-            label7.Text = "Services of Room:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.label7.Location = new System.Drawing.Point(569, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(175, 28);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Services of Room:";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.FromArgb(8, 48, 107);
-            label8.Location = new Point(833, 73);
-            label8.Name = "label8";
-            label8.Size = new Size(123, 21);
-            label8.TabIndex = 13;
-            label8.Text = "Items of Room:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.label8.Location = new System.Drawing.Point(952, 97);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(152, 28);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Items of Room:";
             // 
             // ItemList_DataGrid
             // 
-            ItemList_DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ItemList_DataGrid.Location = new Point(833, 107);
-            ItemList_DataGrid.Margin = new Padding(3, 2, 3, 2);
-            ItemList_DataGrid.Name = "ItemList_DataGrid";
-            ItemList_DataGrid.RowHeadersWidth = 51;
-            ItemList_DataGrid.RowTemplate.Height = 29;
-            ItemList_DataGrid.Size = new Size(284, 387);
-            ItemList_DataGrid.TabIndex = 14;
+            this.ItemList_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemList_DataGrid.Location = new System.Drawing.Point(952, 143);
+            this.ItemList_DataGrid.Name = "ItemList_DataGrid";
+            this.ItemList_DataGrid.RowHeadersWidth = 51;
+            this.ItemList_DataGrid.RowTemplate.Height = 29;
+            this.ItemList_DataGrid.Size = new System.Drawing.Size(325, 516);
+            this.ItemList_DataGrid.TabIndex = 14;
             // 
             // serviceList_DataGrid
             // 
-            serviceList_DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            serviceList_DataGrid.Location = new Point(498, 107);
-            serviceList_DataGrid.Margin = new Padding(3, 2, 3, 2);
-            serviceList_DataGrid.Name = "serviceList_DataGrid";
-            serviceList_DataGrid.RowHeadersWidth = 51;
-            serviceList_DataGrid.RowTemplate.Height = 29;
-            serviceList_DataGrid.Size = new Size(288, 387);
-            serviceList_DataGrid.TabIndex = 15;
+            this.serviceList_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.serviceList_DataGrid.Location = new System.Drawing.Point(569, 143);
+            this.serviceList_DataGrid.Name = "serviceList_DataGrid";
+            this.serviceList_DataGrid.RowHeadersWidth = 51;
+            this.serviceList_DataGrid.RowTemplate.Height = 29;
+            this.serviceList_DataGrid.Size = new System.Drawing.Size(329, 516);
+            this.serviceList_DataGrid.TabIndex = 15;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(212, 230, 242);
-            panel1.Controls.Add(roomID_Text);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(Status_Text);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(roomType_Text);
-            panel1.Controls.Add(Price_Text);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(roomName_Text);
-            panel1.Controls.Add(Room_Label);
-            panel1.Location = new Point(46, 73);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(385, 195);
-            panel1.TabIndex = 16;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
+            this.panel1.Controls.Add(this.roomID_Text);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.Status_Text);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.roomType_Text);
+            this.panel1.Controls.Add(this.Price_Text);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.roomName_Text);
+            this.panel1.Controls.Add(this.Room_Label);
+            this.panel1.Location = new System.Drawing.Point(53, 97);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(440, 260);
+            this.panel1.TabIndex = 16;
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(15, 42);
-            label9.Name = "label9";
-            label9.Size = new Size(48, 19);
-            label9.TabIndex = 17;
-            label9.Text = "Name:";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(17, 56);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 23);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Name:";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(15, 69);
-            label10.Name = "label10";
-            label10.Size = new Size(57, 19);
-            label10.TabIndex = 18;
-            label10.Text = "Gender:";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(17, 92);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 23);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Gender:";
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(15, 94);
-            label11.Name = "label11";
-            label11.Size = new Size(63, 19);
-            label11.TabIndex = 19;
-            label11.Text = "Birthday:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(17, 125);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 23);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Birthday:";
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(15, 119);
-            label12.Name = "label12";
-            label12.Size = new Size(44, 19);
-            label12.TabIndex = 20;
-            label12.Text = "Email:";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(17, 159);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 23);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Email:";
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(15, 143);
-            label13.Name = "label13";
-            label13.Size = new Size(51, 19);
-            label13.TabIndex = 21;
-            label13.Text = "Phone:";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(17, 191);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 23);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Phone:";
             // 
             // label14
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(15, 168);
-            label14.Name = "label14";
-            label14.Size = new Size(88, 19);
-            label14.TabIndex = 22;
-            label14.Text = "Identify card:";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(17, 224);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(109, 23);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "Identify card:";
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(212, 230, 242);
-            panel2.Controls.Add(Identify_Text);
-            panel2.Controls.Add(Phone_Text);
-            panel2.Controls.Add(Email_Text);
-            panel2.Controls.Add(Birthday_Text);
-            panel2.Controls.Add(gender_Text);
-            panel2.Controls.Add(customerName_Text);
-            panel2.Controls.Add(label9);
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(label10);
-            panel2.Controls.Add(label12);
-            panel2.Controls.Add(label14);
-            panel2.Controls.Add(label13);
-            panel2.Controls.Add(label11);
-            panel2.Location = new Point(46, 288);
-            panel2.Margin = new Padding(3, 2, 3, 2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(385, 206);
-            panel2.TabIndex = 26;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
+            this.panel2.Controls.Add(this.Identify_Text);
+            this.panel2.Controls.Add(this.Phone_Text);
+            this.panel2.Controls.Add(this.Email_Text);
+            this.panel2.Controls.Add(this.Birthday_Text);
+            this.panel2.Controls.Add(this.gender_Text);
+            this.panel2.Controls.Add(this.customerName_Text);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Location = new System.Drawing.Point(53, 384);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(440, 275);
+            this.panel2.TabIndex = 26;
             // 
             // Identify_Text
             // 
-            Identify_Text.BorderStyle = BorderStyle.FixedSingle;
-            Identify_Text.Enabled = false;
-            Identify_Text.Location = new Point(103, 164);
-            Identify_Text.Margin = new Padding(3, 2, 3, 2);
-            Identify_Text.Name = "Identify_Text";
-            Identify_Text.Size = new Size(128, 23);
-            Identify_Text.TabIndex = 28;
+            this.Identify_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Identify_Text.Enabled = false;
+            this.Identify_Text.Location = new System.Drawing.Point(118, 219);
+            this.Identify_Text.Name = "Identify_Text";
+            this.Identify_Text.Size = new System.Drawing.Size(146, 27);
+            this.Identify_Text.TabIndex = 28;
             // 
             // Phone_Text
             // 
-            Phone_Text.BorderStyle = BorderStyle.FixedSingle;
-            Phone_Text.Enabled = false;
-            Phone_Text.Location = new Point(103, 139);
-            Phone_Text.Margin = new Padding(3, 2, 3, 2);
-            Phone_Text.Name = "Phone_Text";
-            Phone_Text.Size = new Size(128, 23);
-            Phone_Text.TabIndex = 27;
+            this.Phone_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Phone_Text.Enabled = false;
+            this.Phone_Text.Location = new System.Drawing.Point(118, 185);
+            this.Phone_Text.Name = "Phone_Text";
+            this.Phone_Text.Size = new System.Drawing.Size(146, 27);
+            this.Phone_Text.TabIndex = 27;
             // 
             // Email_Text
             // 
-            Email_Text.BorderStyle = BorderStyle.FixedSingle;
-            Email_Text.Enabled = false;
-            Email_Text.Location = new Point(103, 115);
-            Email_Text.Margin = new Padding(3, 2, 3, 2);
-            Email_Text.Name = "Email_Text";
-            Email_Text.Size = new Size(242, 23);
-            Email_Text.TabIndex = 26;
+            this.Email_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Email_Text.Enabled = false;
+            this.Email_Text.Location = new System.Drawing.Point(118, 153);
+            this.Email_Text.Name = "Email_Text";
+            this.Email_Text.Size = new System.Drawing.Size(276, 27);
+            this.Email_Text.TabIndex = 26;
             // 
             // Birthday_Text
             // 
-            Birthday_Text.BorderStyle = BorderStyle.FixedSingle;
-            Birthday_Text.Enabled = false;
-            Birthday_Text.Location = new Point(103, 90);
-            Birthday_Text.Margin = new Padding(3, 2, 3, 2);
-            Birthday_Text.Name = "Birthday_Text";
-            Birthday_Text.Size = new Size(128, 23);
-            Birthday_Text.TabIndex = 25;
+            this.Birthday_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Birthday_Text.Enabled = false;
+            this.Birthday_Text.Location = new System.Drawing.Point(118, 120);
+            this.Birthday_Text.Name = "Birthday_Text";
+            this.Birthday_Text.Size = new System.Drawing.Size(146, 27);
+            this.Birthday_Text.TabIndex = 25;
             // 
             // gender_Text
             // 
-            gender_Text.BorderStyle = BorderStyle.FixedSingle;
-            gender_Text.Enabled = false;
-            gender_Text.Location = new Point(103, 65);
-            gender_Text.Margin = new Padding(3, 2, 3, 2);
-            gender_Text.Name = "gender_Text";
-            gender_Text.Size = new Size(128, 23);
-            gender_Text.TabIndex = 24;
+            this.gender_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gender_Text.Enabled = false;
+            this.gender_Text.Location = new System.Drawing.Point(118, 87);
+            this.gender_Text.Name = "gender_Text";
+            this.gender_Text.Size = new System.Drawing.Size(146, 27);
+            this.gender_Text.TabIndex = 24;
             // 
             // customerName_Text
             // 
-            customerName_Text.BorderStyle = BorderStyle.FixedSingle;
-            customerName_Text.Enabled = false;
-            customerName_Text.Location = new Point(103, 41);
-            customerName_Text.Margin = new Padding(3, 2, 3, 2);
-            customerName_Text.Name = "customerName_Text";
-            customerName_Text.Size = new Size(242, 23);
-            customerName_Text.TabIndex = 23;
+            this.customerName_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.customerName_Text.Enabled = false;
+            this.customerName_Text.Location = new System.Drawing.Point(118, 55);
+            this.customerName_Text.Name = "customerName_Text";
+            this.customerName_Text.Size = new System.Drawing.Size(276, 27);
+            this.customerName_Text.TabIndex = 23;
             // 
             // panel3
             // 
-            panel3.Location = new Point(0, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(200, 100);
-            panel3.TabIndex = 0;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.TabIndex = 0;
             // 
             // button2
             // 
-            button2.Location = new Point(0, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 0;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
             // 
             // button7
             // 
-            button7.Location = new Point(0, 0);
-            button7.Name = "button7";
-            button7.Size = new Size(75, 23);
-            button7.TabIndex = 0;
+            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 0;
             // 
             // label15
             // 
-            label15.Location = new Point(0, 0);
-            label15.Name = "label15";
-            label15.Size = new Size(100, 23);
-            label15.TabIndex = 0;
+            this.label15.Location = new System.Drawing.Point(0, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 23);
+            this.label15.TabIndex = 0;
             // 
             // panel4
             // 
-            panel4.BackColor = Color.White;
-            panel4.Controls.Add(button1);
-            panel4.Controls.Add(Edit_Confirm_Button);
-            panel4.Controls.Add(label16);
-            panel4.Controls.Add(label7);
-            panel4.Controls.Add(label8);
-            panel4.Controls.Add(serviceList_DataGrid);
-            panel4.Controls.Add(panel1);
-            panel4.Controls.Add(panel2);
-            panel4.Controls.Add(ItemList_DataGrid);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(10, 10);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1153, 572);
-            panel4.TabIndex = 27;
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.Edit_Confirm_Button);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.serviceList_DataGrid);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.ItemList_DataGrid);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(11, 13);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1319, 763);
+            this.panel4.TabIndex = 27;
             // 
             // button1
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.FromArgb(239, 59, 44);
-            button1.Location = new Point(1110, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(40, 36);
-            button1.TabIndex = 29;
-            button1.Text = "x";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(59)))), ((int)(((byte)(44)))));
+            this.button1.Location = new System.Drawing.Point(1269, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 48);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "x";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Edit_Confirm_Button
             // 
-            Edit_Confirm_Button.BackColor = Color.White;
-            Edit_Confirm_Button.Cursor = Cursors.Hand;
-            Edit_Confirm_Button.FlatAppearance.BorderSize = 2;
-            Edit_Confirm_Button.FlatStyle = FlatStyle.Flat;
-            Edit_Confirm_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            Edit_Confirm_Button.ForeColor = Color.FromArgb(222, 28, 119);
-            Edit_Confirm_Button.Location = new Point(167, 512);
-            Edit_Confirm_Button.Name = "Edit_Confirm_Button";
-            Edit_Confirm_Button.Size = new Size(144, 38);
-            Edit_Confirm_Button.TabIndex = 28;
-            Edit_Confirm_Button.Text = "Edit";
-            Edit_Confirm_Button.UseVisualStyleBackColor = false;
-            Edit_Confirm_Button.Click += Edit_Confirm_Button_Click_1;
+            this.Edit_Confirm_Button.BackColor = System.Drawing.Color.White;
+            this.Edit_Confirm_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Edit_Confirm_Button.FlatAppearance.BorderSize = 2;
+            this.Edit_Confirm_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Edit_Confirm_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Edit_Confirm_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(28)))), ((int)(((byte)(119)))));
+            this.Edit_Confirm_Button.Location = new System.Drawing.Point(191, 683);
+            this.Edit_Confirm_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Edit_Confirm_Button.Name = "Edit_Confirm_Button";
+            this.Edit_Confirm_Button.Size = new System.Drawing.Size(165, 51);
+            this.Edit_Confirm_Button.TabIndex = 28;
+            this.Edit_Confirm_Button.Text = "Edit";
+            this.Edit_Confirm_Button.UseVisualStyleBackColor = false;
+            this.Edit_Confirm_Button.Click += new System.EventHandler(this.Edit_Confirm_Button_Click);
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.BackColor = SystemColors.ControlLightLight;
-            label16.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.ForeColor = Color.FromArgb(8, 48, 107);
-            label16.Location = new Point(467, 21);
-            label16.Name = "label16";
-            label16.Size = new Size(167, 25);
-            label16.TabIndex = 27;
-            label16.Text = "DETAIL OF ROOM";
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.label16.Location = new System.Drawing.Point(534, 28);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(213, 32);
+            this.label16.TabIndex = 27;
+            this.label16.Text = "DETAIL OF ROOM";
             // 
             // DetailRoom_Form
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(0, 193, 138);
-            ClientSize = new Size(1173, 592);
-            Controls.Add(panel4);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "DetailRoom_Form";
-            Padding = new Padding(10, 10, 10, 10);
-            Text = "DetailRoom_Form";
-            ((System.ComponentModel.ISupportInitialize)ItemList_DataGrid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)serviceList_DataGrid).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.ClientSize = new System.Drawing.Size(1341, 789);
+            this.Controls.Add(this.panel4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "DetailRoom_Form";
+            this.Padding = new System.Windows.Forms.Padding(11, 13, 11, 13);
+            this.Text = "DetailRoom_Form";
+            ((System.ComponentModel.ISupportInitialize)(this.ItemList_DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceList_DataGrid)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

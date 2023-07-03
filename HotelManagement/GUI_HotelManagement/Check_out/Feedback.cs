@@ -26,7 +26,7 @@ namespace GUI_HotelManagement.Check_out
             rate_Label.Text = "0";
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Star1st_Click(object sender, EventArgs e)
         {
             Star1st.Image = Resources.Star_Bright;
 
@@ -38,7 +38,7 @@ namespace GUI_HotelManagement.Check_out
             rate_Label.Text = "1";
         }
 
-        private void Star2nd_Click(object sender, EventArgs e)
+        private void Star2nd_Click_1(object sender, EventArgs e)
         {
             Star1st.Image = Resources.Star_Bright;
             Star2nd.Image = Resources.Star_Bright;
@@ -50,7 +50,7 @@ namespace GUI_HotelManagement.Check_out
             rate_Label.Text = "2";
         }
 
-        private void Star3rd_Click(object sender, EventArgs e)
+        private void Star3rd_Click_1(object sender, EventArgs e)
         {
             Star1st.Image = Resources.Star_Bright;
             Star2nd.Image = Resources.Star_Bright;
@@ -62,7 +62,7 @@ namespace GUI_HotelManagement.Check_out
             rate_Label.Text = "3";
         }
 
-        private void Star4th_Click(object sender, EventArgs e)
+        private void Star4th_Click_1(object sender, EventArgs e)
         {
             Star1st.Image = Resources.Star_Bright;
             Star2nd.Image = Resources.Star_Bright;
@@ -74,7 +74,7 @@ namespace GUI_HotelManagement.Check_out
             rate_Label.Text = "4";
         }
 
-        private void Star5th_Click(object sender, EventArgs e)
+        private void Star5th_Click_1(object sender, EventArgs e)
         {
             Star1st.Image = Resources.Star_Bright;
             Star2nd.Image = Resources.Star_Bright;
@@ -85,12 +85,12 @@ namespace GUI_HotelManagement.Check_out
             rate_Label.Text = "5";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Xác nhận thêm đánh giá!", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -115,11 +115,6 @@ namespace GUI_HotelManagement.Check_out
             {
                 return;
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

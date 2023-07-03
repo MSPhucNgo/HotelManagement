@@ -87,7 +87,13 @@ namespace GUI_HotelManagement
         private void btn_Checkin_Click(object sender, EventArgs e)
         {
             Check_inForm checkIn = new Check_inForm();
-            checkIn.ShowDialog();
+            checkIn.Show();
+        }
+
+        private void btn_Checkout_Click(object sender, EventArgs e)
+        {
+            Checkout_Form checkOut = new Checkout_Form();
+            checkOut.Show();
         }
     }
 }

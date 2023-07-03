@@ -73,13 +73,8 @@ namespace GUI_HotelManagement
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         public bool isEditing = true;
-        private void Edit_Confirm_Button_Click_1(object sender, EventArgs e)
+        private void Edit_Confirm_Button_Click(object sender, EventArgs e)
         {
             if (isEditing)
             {
@@ -180,6 +175,11 @@ namespace GUI_HotelManagement
                 }
             }
             isEditing = !isEditing;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

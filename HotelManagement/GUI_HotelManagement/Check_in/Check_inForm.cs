@@ -74,37 +74,58 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public bool isEditing = true;
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
             LoadData();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Edit_Button_Click_1(object sender, EventArgs e)
         {
-            BookID_Text.Text = "";
-            Booking_Grid.DataSource = null;
-            Name_Text.Text = "";
-            NoRooms_Text.Text = "";
-            NoRooms_Text.Text = "";
-            IdentityNo_Text.Text = "";
-            SPRequiments_Text.Text = "";
-            Price_Text.Text = "";
-            Edit_Button.Enabled = false;
-            In_Datatime.Value = DateTime.Today;
-            Out_Datetime.Value = DateTime.Today.AddMonths(1);
-            for (int i = 0; i < Own_CheckList.Items.Count; i++)
+            if (isEditing)
             {
-                Own_CheckList.SetItemChecked(i, false);
+                Edit_Button.Text = "Confirm";
+                SPRequiments_Text.Enabled = true;
+                SPRequiments_Text.ReadOnly = false;
             }
-            Own_CheckList.Enabled = false;
-            Agent_CheckBox.Checked = false;
-            Agent_CheckBox.Enabled = false;
-            group_CheckBox.Checked = false;
-            gName_Text.Text = "";
-            amountGroup_Text.Text = "";
+            else
+            {
+                Edit_Button.Text = "Edit";
+                SPRequiments_Text.Enabled = false;
+                SPRequiments_Text.ReadOnly = true;
+            }
+            isEditing = !isEditing;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Own_CheckList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int count = Own_CheckList.CheckedItems.Count;
+            int index = Own_CheckList.SelectedIndex;
+
+            for (int i = 0; i < Own_CheckList.Items.Count; i++)
+            {
+                if (i != index)
+                {
+                    Own_CheckList.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
+        }
+
+        private void Agent_CheckBox_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (Agent_CheckBox.Checked == true)
+            {
+                for (int i = 0; i < Own_CheckList.Items.Count; i++)
+                {
+                    Own_CheckList.SetItemChecked(i, false);
+                }
+                Own_CheckList.Enabled = false;
+            }
+            else Own_CheckList.Enabled = true;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Xác nhận thông tin Check-in!", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -163,49 +184,29 @@ namespace GUI_HotelManagement
             }
         }
 
-        public bool isEditing = true;
-        private void Edit_Button_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            if (isEditing)
-            {
-                Edit_Button.Text = "Confirm";
-                SPRequiments_Text.Enabled = true;
-                SPRequiments_Text.ReadOnly = false;
-            }
-            else
-            {
-                Edit_Button.Text = "Edit";
-                SPRequiments_Text.Enabled = false;
-                SPRequiments_Text.ReadOnly = true;
-            }
-            isEditing = !isEditing;
-        }
-
-        private void Own_CheckList_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            int count = Own_CheckList.CheckedItems.Count;
-            int index = Own_CheckList.SelectedIndex;
-
+            BookID_Text.Text = "";
+            Booking_Grid.DataSource = null;
+            Name_Text.Text = "";
+            NoRooms_Text.Text = "";
+            NoRooms_Text.Text = "";
+            IdentityNo_Text.Text = "";
+            SPRequiments_Text.Text = "";
+            Price_Text.Text = "";
+            Edit_Button.Enabled = false;
+            In_Datatime.Value = DateTime.Today;
+            Out_Datetime.Value = DateTime.Today.AddMonths(1);
             for (int i = 0; i < Own_CheckList.Items.Count; i++)
             {
-                if (i != index)
-                {
-                    Own_CheckList.SetItemCheckState(i, CheckState.Unchecked);
-                }
+                Own_CheckList.SetItemChecked(i, false);
             }
-        }
-
-        private void Agent_CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (Agent_CheckBox.Checked == true)
-            {
-                for (int i = 0; i < Own_CheckList.Items.Count; i++)
-                {
-                    Own_CheckList.SetItemChecked(i, false);
-                }
-                Own_CheckList.Enabled = false;
-            }
-            else Own_CheckList.Enabled = true;
+            Own_CheckList.Enabled = false;
+            Agent_CheckBox.Checked = false;
+            Agent_CheckBox.Enabled = false;
+            group_CheckBox.Checked = false;
+            gName_Text.Text = "";
+            amountGroup_Text.Text = "";
         }
     }
 }

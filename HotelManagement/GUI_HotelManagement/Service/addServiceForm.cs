@@ -130,5 +130,10 @@ namespace GUI_HotelManagement
                 Unit_ComboBox.Text = HotelService_BUS.getServiceUnit(service);
             }
         }
+
+        private void Name_Text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

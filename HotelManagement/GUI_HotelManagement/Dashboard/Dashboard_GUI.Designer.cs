@@ -354,6 +354,7 @@
             this.btn_Checkout.TabIndex = 1;
             this.btn_Checkout.Text = "       Checkout";
             this.btn_Checkout.UseVisualStyleBackColor = false;
+            this.btn_Checkout.Click += new System.EventHandler(this.btn_Checkout_Click);
             // 
             // btn_OrderService
             // 

@@ -153,6 +153,7 @@
             this.Name_Text.Name = "Name_Text";
             this.Name_Text.Size = new System.Drawing.Size(517, 27);
             this.Name_Text.TabIndex = 1;
+            this.Name_Text.TextChanged += new System.EventHandler(this.Name_Text_TextChanged);
             // 
             // label4
             // 

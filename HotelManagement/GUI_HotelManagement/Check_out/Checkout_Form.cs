@@ -26,7 +26,7 @@ namespace GUI_HotelManagement
         {
             InitializeComponent();
             Method_ComboBox.Text = "None";
-            cusName_Text.Text = "Ngô Lê Hưng Thịnh ";
+            //cusName_Text.Text = "Ngô Lê Hưng Thịnh ";
         }
         public Checkout_Form(BookingForm_DTO bookingInfo, DataTable listDamaged)
         {
@@ -124,14 +124,15 @@ namespace GUI_HotelManagement
             if (statusBill == "Chưa thanh toán") totalFee_Text.Text = (roomFee + serviceFee + damagedFee + depositFree).ToString();
             else totalFee_Text.Text = (roomFee + serviceFee + damagedFee).ToString();
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void button4_Click_1(object sender, EventArgs e)
         {
             string userName = cusName_Text.Text.ToString();
 
             setDatawithCusInfo(new Customer_DTO(userName));
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             if (!isUpdate)
             {
@@ -154,7 +155,7 @@ namespace GUI_HotelManagement
 
         }
 
-        private void addDamage_Button_Click(object sender, EventArgs e)
+        private void addDamage_Button_Click_1(object sender, EventArgs e)
         {
             if (!isUpdate)
             {
@@ -172,7 +173,7 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Xác nhận thanh toán!", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -215,14 +216,7 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string userName = cusName_Text.Text.ToString();
-
-            setDatawithCusInfo(new Customer_DTO(userName));
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }

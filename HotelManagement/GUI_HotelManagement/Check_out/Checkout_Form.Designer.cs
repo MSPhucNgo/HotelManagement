@@ -29,423 +29,418 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Checkout_Form));
-            BookingId_Label = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            idBooking_Text = new TextBox();
-            cusName_Text = new TextBox();
-            roomFee_Text = new TextBox();
-            serviceFee_Text = new TextBox();
-            damageFee_Text = new TextBox();
-            addDamage_Button = new Button();
-            label5 = new Label();
-            totalFee_Text = new TextBox();
-            label6 = new Label();
-            Method_ComboBox = new ComboBox();
-            button3 = new Button();
-            label7 = new Label();
-            label8 = new Label();
-            listRoom_DataGrid = new DataGridView();
-            listService_DataGrid = new DataGridView();
-            button1 = new Button();
-            damage_DataGrid = new DataGridView();
-            label9 = new Label();
-            label10 = new Label();
-            depositPrice_Text = new TextBox();
-            label11 = new Label();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            button4 = new Button();
-            button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)listRoom_DataGrid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)listService_DataGrid).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)damage_DataGrid).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            SuspendLayout();
+            this.BookingId_Label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.idBooking_Text = new System.Windows.Forms.TextBox();
+            this.cusName_Text = new System.Windows.Forms.TextBox();
+            this.roomFee_Text = new System.Windows.Forms.TextBox();
+            this.serviceFee_Text = new System.Windows.Forms.TextBox();
+            this.damageFee_Text = new System.Windows.Forms.TextBox();
+            this.addDamage_Button = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.totalFee_Text = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Method_ComboBox = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.listRoom_DataGrid = new System.Windows.Forms.DataGridView();
+            this.listService_DataGrid = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.damage_DataGrid = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.depositPrice_Text = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.listRoom_DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listService_DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.damage_DataGrid)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // BookingId_Label
             // 
-            BookingId_Label.AutoSize = true;
-            BookingId_Label.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            BookingId_Label.Location = new Point(38, 28);
-            BookingId_Label.Name = "BookingId_Label";
-            BookingId_Label.Size = new Size(80, 19);
-            BookingId_Label.TabIndex = 0;
-            BookingId_Label.Text = "Booking ID:";
+            this.BookingId_Label.AutoSize = true;
+            this.BookingId_Label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BookingId_Label.Location = new System.Drawing.Point(43, 37);
+            this.BookingId_Label.Name = "BookingId_Label";
+            this.BookingId_Label.Size = new System.Drawing.Size(98, 23);
+            this.BookingId_Label.TabIndex = 0;
+            this.BookingId_Label.Text = "Booking ID:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(37, 59);
-            label1.Name = "label1";
-            label1.Size = new Size(110, 19);
-            label1.TabIndex = 1;
-            label1.Text = "Customer name:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(42, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Customer name:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(37, 90);
-            label2.Name = "label2";
-            label2.Size = new Size(70, 19);
-            label2.TabIndex = 2;
-            label2.Text = "Room fee:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(42, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Room fee:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(37, 186);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 19);
-            label3.TabIndex = 3;
-            label3.Text = "Damage fee:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(42, 248);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 23);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Damage fee:";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(37, 122);
-            label4.Name = "label4";
-            label4.Size = new Size(76, 19);
-            label4.TabIndex = 4;
-            label4.Text = "Service fee:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(42, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 23);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Service fee:";
             // 
             // idBooking_Text
             // 
-            idBooking_Text.BorderStyle = BorderStyle.FixedSingle;
-            idBooking_Text.Enabled = false;
-            idBooking_Text.Location = new Point(163, 24);
-            idBooking_Text.Margin = new Padding(3, 2, 3, 2);
-            idBooking_Text.Name = "idBooking_Text";
-            idBooking_Text.Size = new Size(256, 23);
-            idBooking_Text.TabIndex = 5;
+            this.idBooking_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.idBooking_Text.Enabled = false;
+            this.idBooking_Text.Location = new System.Drawing.Point(186, 32);
+            this.idBooking_Text.Name = "idBooking_Text";
+            this.idBooking_Text.Size = new System.Drawing.Size(292, 27);
+            this.idBooking_Text.TabIndex = 5;
             // 
             // cusName_Text
             // 
-            cusName_Text.BorderStyle = BorderStyle.FixedSingle;
-            cusName_Text.Location = new Point(163, 55);
-            cusName_Text.Margin = new Padding(3, 2, 3, 2);
-            cusName_Text.Name = "cusName_Text";
-            cusName_Text.Size = new Size(256, 23);
-            cusName_Text.TabIndex = 6;
+            this.cusName_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cusName_Text.Location = new System.Drawing.Point(186, 73);
+            this.cusName_Text.Name = "cusName_Text";
+            this.cusName_Text.Size = new System.Drawing.Size(292, 27);
+            this.cusName_Text.TabIndex = 6;
             // 
             // roomFee_Text
             // 
-            roomFee_Text.BorderStyle = BorderStyle.FixedSingle;
-            roomFee_Text.Enabled = false;
-            roomFee_Text.Location = new Point(163, 86);
-            roomFee_Text.Margin = new Padding(3, 2, 3, 2);
-            roomFee_Text.Name = "roomFee_Text";
-            roomFee_Text.Size = new Size(156, 23);
-            roomFee_Text.TabIndex = 7;
+            this.roomFee_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.roomFee_Text.Enabled = false;
+            this.roomFee_Text.Location = new System.Drawing.Point(186, 115);
+            this.roomFee_Text.Name = "roomFee_Text";
+            this.roomFee_Text.Size = new System.Drawing.Size(178, 27);
+            this.roomFee_Text.TabIndex = 7;
             // 
             // serviceFee_Text
             // 
-            serviceFee_Text.BorderStyle = BorderStyle.FixedSingle;
-            serviceFee_Text.Enabled = false;
-            serviceFee_Text.Location = new Point(163, 118);
-            serviceFee_Text.Margin = new Padding(3, 2, 3, 2);
-            serviceFee_Text.Name = "serviceFee_Text";
-            serviceFee_Text.Size = new Size(156, 23);
-            serviceFee_Text.TabIndex = 8;
+            this.serviceFee_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.serviceFee_Text.Enabled = false;
+            this.serviceFee_Text.Location = new System.Drawing.Point(186, 157);
+            this.serviceFee_Text.Name = "serviceFee_Text";
+            this.serviceFee_Text.Size = new System.Drawing.Size(178, 27);
+            this.serviceFee_Text.TabIndex = 8;
             // 
             // damageFee_Text
             // 
-            damageFee_Text.BorderStyle = BorderStyle.FixedSingle;
-            damageFee_Text.Enabled = false;
-            damageFee_Text.Location = new Point(163, 181);
-            damageFee_Text.Margin = new Padding(3, 2, 3, 2);
-            damageFee_Text.Name = "damageFee_Text";
-            damageFee_Text.Size = new Size(156, 23);
-            damageFee_Text.TabIndex = 9;
+            this.damageFee_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.damageFee_Text.Enabled = false;
+            this.damageFee_Text.Location = new System.Drawing.Point(186, 241);
+            this.damageFee_Text.Name = "damageFee_Text";
+            this.damageFee_Text.Size = new System.Drawing.Size(178, 27);
+            this.damageFee_Text.TabIndex = 9;
             // 
             // addDamage_Button
             // 
-            addDamage_Button.BackColor = Color.White;
-            addDamage_Button.Enabled = false;
-            addDamage_Button.FlatAppearance.BorderSize = 0;
-            addDamage_Button.FlatStyle = FlatStyle.Flat;
-            addDamage_Button.Image = (Image)resources.GetObject("addDamage_Button.Image");
-            addDamage_Button.Location = new Point(334, 179);
-            addDamage_Button.Margin = new Padding(3, 2, 3, 2);
-            addDamage_Button.Name = "addDamage_Button";
-            addDamage_Button.Size = new Size(27, 26);
-            addDamage_Button.TabIndex = 10;
-            addDamage_Button.UseVisualStyleBackColor = false;
-            addDamage_Button.Click += addDamage_Button_Click;
+            this.addDamage_Button.BackColor = System.Drawing.Color.White;
+            this.addDamage_Button.Enabled = false;
+            this.addDamage_Button.FlatAppearance.BorderSize = 0;
+            this.addDamage_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addDamage_Button.Image = ((System.Drawing.Image)(resources.GetObject("addDamage_Button.Image")));
+            this.addDamage_Button.Location = new System.Drawing.Point(382, 239);
+            this.addDamage_Button.Name = "addDamage_Button";
+            this.addDamage_Button.Size = new System.Drawing.Size(31, 35);
+            this.addDamage_Button.TabIndex = 10;
+            this.addDamage_Button.UseVisualStyleBackColor = false;
+            this.addDamage_Button.Click += new System.EventHandler(this.addDamage_Button_Click_1);
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(37, 217);
-            label5.Name = "label5";
-            label5.Size = new Size(63, 19);
-            label5.TabIndex = 12;
-            label5.Text = "Total fee:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(42, 289);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 23);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Total fee:";
             // 
             // totalFee_Text
             // 
-            totalFee_Text.BorderStyle = BorderStyle.FixedSingle;
-            totalFee_Text.Enabled = false;
-            totalFee_Text.Location = new Point(163, 213);
-            totalFee_Text.Margin = new Padding(3, 2, 3, 2);
-            totalFee_Text.Name = "totalFee_Text";
-            totalFee_Text.Size = new Size(156, 23);
-            totalFee_Text.TabIndex = 13;
+            this.totalFee_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalFee_Text.Enabled = false;
+            this.totalFee_Text.Location = new System.Drawing.Point(186, 284);
+            this.totalFee_Text.Name = "totalFee_Text";
+            this.totalFee_Text.Size = new System.Drawing.Size(178, 27);
+            this.totalFee_Text.TabIndex = 13;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(37, 249);
-            label6.Name = "label6";
-            label6.Size = new Size(118, 19);
-            label6.TabIndex = 14;
-            label6.Text = "Payment method:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(42, 332);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 23);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Payment method:";
             // 
             // Method_ComboBox
             // 
-            Method_ComboBox.FormattingEnabled = true;
-            Method_ComboBox.Items.AddRange(new object[] { "None", "Cash", "Credit Card", "Traveller Cheque", "Travel agent account" });
-            Method_ComboBox.Location = new Point(163, 245);
-            Method_ComboBox.Margin = new Padding(3, 2, 3, 2);
-            Method_ComboBox.Name = "Method_ComboBox";
-            Method_ComboBox.Size = new Size(256, 23);
-            Method_ComboBox.TabIndex = 15;
+            this.Method_ComboBox.FormattingEnabled = true;
+            this.Method_ComboBox.Items.AddRange(new object[] {
+            "None",
+            "Cash",
+            "Credit Card",
+            "Traveller Cheque",
+            "Travel agent account"});
+            this.Method_ComboBox.Location = new System.Drawing.Point(186, 327);
+            this.Method_ComboBox.Name = "Method_ComboBox";
+            this.Method_ComboBox.Size = new System.Drawing.Size(292, 28);
+            this.Method_ComboBox.TabIndex = 15;
             // 
             // button3
             // 
-            button3.FlatAppearance.BorderSize = 2;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(8, 48, 107);
-            button3.Location = new Point(393, 600);
-            button3.Margin = new Padding(3, 2, 3, 2);
-            button3.Name = "button3";
-            button3.Size = new Size(182, 50);
-            button3.TabIndex = 16;
-            button3.Text = "Refresh";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.button3.Location = new System.Drawing.Point(449, 800);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(208, 67);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Refresh";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.FromArgb(8, 48, 107);
-            label7.Location = new Point(655, 83);
-            label7.Name = "label7";
-            label7.Size = new Size(90, 21);
-            label7.TabIndex = 17;
-            label7.Text = "List rooms:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.label7.Location = new System.Drawing.Point(749, 111);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 28);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "List rooms:";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.FromArgb(8, 48, 107);
-            label8.Location = new Point(928, 83);
-            label8.Name = "label8";
-            label8.Size = new Size(102, 21);
-            label8.TabIndex = 18;
-            label8.Text = "List services:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.label8.Location = new System.Drawing.Point(1061, 111);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(126, 28);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "List services:";
             // 
             // listRoom_DataGrid
             // 
-            listRoom_DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            listRoom_DataGrid.Location = new Point(655, 111);
-            listRoom_DataGrid.Margin = new Padding(3, 2, 3, 2);
-            listRoom_DataGrid.Name = "listRoom_DataGrid";
-            listRoom_DataGrid.RowHeadersWidth = 51;
-            listRoom_DataGrid.RowTemplate.Height = 29;
-            listRoom_DataGrid.Size = new Size(235, 261);
-            listRoom_DataGrid.TabIndex = 19;
+            this.listRoom_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listRoom_DataGrid.Location = new System.Drawing.Point(749, 148);
+            this.listRoom_DataGrid.Name = "listRoom_DataGrid";
+            this.listRoom_DataGrid.RowHeadersWidth = 51;
+            this.listRoom_DataGrid.RowTemplate.Height = 29;
+            this.listRoom_DataGrid.Size = new System.Drawing.Size(269, 348);
+            this.listRoom_DataGrid.TabIndex = 19;
             // 
             // listService_DataGrid
             // 
-            listService_DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            listService_DataGrid.Location = new Point(928, 111);
-            listService_DataGrid.Margin = new Padding(3, 2, 3, 2);
-            listService_DataGrid.Name = "listService_DataGrid";
-            listService_DataGrid.RowHeadersWidth = 51;
-            listService_DataGrid.RowTemplate.Height = 29;
-            listService_DataGrid.Size = new Size(236, 261);
-            listService_DataGrid.TabIndex = 20;
+            this.listService_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listService_DataGrid.Location = new System.Drawing.Point(1061, 148);
+            this.listService_DataGrid.Name = "listService_DataGrid";
+            this.listService_DataGrid.RowHeadersWidth = 51;
+            this.listService_DataGrid.RowTemplate.Height = 29;
+            this.listService_DataGrid.Size = new System.Drawing.Size(270, 348);
+            this.listService_DataGrid.TabIndex = 20;
             // 
             // button1
             // 
-            button1.FlatAppearance.BorderSize = 2;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.FromArgb(0, 193, 138);
-            button1.Location = new Point(651, 600);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(182, 50);
-            button1.TabIndex = 21;
-            button1.Text = "Confirm";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.button1.Location = new System.Drawing.Point(744, 800);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 67);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Confirm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // damage_DataGrid
             // 
-            damage_DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            damage_DataGrid.Location = new Point(26, 420);
-            damage_DataGrid.Margin = new Padding(3, 2, 3, 2);
-            damage_DataGrid.Name = "damage_DataGrid";
-            damage_DataGrid.RowHeadersWidth = 51;
-            damage_DataGrid.RowTemplate.Height = 29;
-            damage_DataGrid.Size = new Size(1138, 151);
-            damage_DataGrid.TabIndex = 22;
+            this.damage_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.damage_DataGrid.Location = new System.Drawing.Point(30, 560);
+            this.damage_DataGrid.Name = "damage_DataGrid";
+            this.damage_DataGrid.RowHeadersWidth = 51;
+            this.damage_DataGrid.RowTemplate.Height = 29;
+            this.damage_DataGrid.Size = new System.Drawing.Size(1301, 201);
+            this.damage_DataGrid.TabIndex = 22;
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(8, 48, 107);
-            label9.Location = new Point(26, 393);
-            label9.Name = "label9";
-            label9.Size = new Size(149, 21);
-            label9.TabIndex = 23;
-            label9.Text = "List damaged item:";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.label9.Location = new System.Drawing.Point(30, 524);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(186, 28);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "List damaged item:";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(37, 154);
-            label10.Name = "label10";
-            label10.Size = new Size(81, 19);
-            label10.TabIndex = 24;
-            label10.Text = "Deposit fee:";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(42, 205);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 23);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Deposit fee:";
             // 
             // depositPrice_Text
             // 
-            depositPrice_Text.BorderStyle = BorderStyle.FixedSingle;
-            depositPrice_Text.Enabled = false;
-            depositPrice_Text.Location = new Point(163, 150);
-            depositPrice_Text.Margin = new Padding(3, 2, 3, 2);
-            depositPrice_Text.Name = "depositPrice_Text";
-            depositPrice_Text.ReadOnly = true;
-            depositPrice_Text.Size = new Size(156, 23);
-            depositPrice_Text.TabIndex = 25;
+            this.depositPrice_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.depositPrice_Text.Enabled = false;
+            this.depositPrice_Text.Location = new System.Drawing.Point(186, 200);
+            this.depositPrice_Text.Name = "depositPrice_Text";
+            this.depositPrice_Text.ReadOnly = true;
+            this.depositPrice_Text.Size = new System.Drawing.Size(178, 27);
+            this.depositPrice_Text.TabIndex = 25;
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.BackColor = SystemColors.ControlLightLight;
-            label11.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.FromArgb(8, 48, 107);
-            label11.Location = new Point(435, 24);
-            label11.Name = "label11";
-            label11.Size = new Size(285, 30);
-            label11.TabIndex = 91;
-            label11.Text = "CHECK-OUT INFOMATION";
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.label11.Location = new System.Drawing.Point(497, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(351, 37);
+            this.label11.TabIndex = 91;
+            this.label11.Text = "CHECK-OUT INFOMATION";
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(listRoom_DataGrid);
-            panel1.Controls.Add(listService_DataGrid);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(damage_DataGrid);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(10, 10);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1189, 680);
-            panel1.TabIndex = 92;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(212, 230, 242);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(cusName_Text);
-            panel2.Controls.Add(roomFee_Text);
-            panel2.Controls.Add(serviceFee_Text);
-            panel2.Controls.Add(idBooking_Text);
-            panel2.Controls.Add(depositPrice_Text);
-            panel2.Controls.Add(damageFee_Text);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(label10);
-            panel2.Controls.Add(addDamage_Button);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label5);
-            panel2.Controls.Add(Method_ComboBox);
-            panel2.Controls.Add(BookingId_Label);
-            panel2.Controls.Add(totalFee_Text);
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(label4);
-            panel2.Location = new Point(26, 83);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(553, 289);
-            panel2.TabIndex = 92;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(8, 48, 107);
-            button4.Cursor = Cursors.Hand;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(436, 55);
-            button4.Name = "button4";
-            button4.Size = new Size(88, 25);
-            button4.TabIndex = 93;
-            button4.Text = "Search";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.listRoom_DataGrid);
+            this.panel1.Controls.Add(this.listService_DataGrid);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.damage_DataGrid);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(11, 13);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1360, 907);
+            this.panel1.TabIndex = 92;
             // 
             // button2
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.FromArgb(239, 59, 44);
-            button2.Location = new Point(1146, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(40, 36);
-            button2.TabIndex = 94;
-            button2.Text = "x";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(59)))), ((int)(((byte)(44)))));
+            this.button2.Location = new System.Drawing.Point(1310, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(46, 48);
+            this.button2.TabIndex = 94;
+            this.button2.Text = "x";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.cusName_Text);
+            this.panel2.Controls.Add(this.roomFee_Text);
+            this.panel2.Controls.Add(this.serviceFee_Text);
+            this.panel2.Controls.Add(this.idBooking_Text);
+            this.panel2.Controls.Add(this.depositPrice_Text);
+            this.panel2.Controls.Add(this.damageFee_Text);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.addDamage_Button);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.Method_ComboBox);
+            this.panel2.Controls.Add(this.BookingId_Label);
+            this.panel2.Controls.Add(this.totalFee_Text);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(30, 111);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(632, 385);
+            this.panel2.TabIndex = 92;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(498, 73);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 33);
+            this.button4.TabIndex = 93;
+            this.button4.Text = "Search";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // Checkout_Form
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(0, 193, 138);
-            ClientSize = new Size(1209, 700);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "Checkout_Form";
-            Padding = new Padding(10);
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Checkout_Form";
-            ((System.ComponentModel.ISupportInitialize)listRoom_DataGrid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)listService_DataGrid).EndInit();
-            ((System.ComponentModel.ISupportInitialize)damage_DataGrid).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.ClientSize = new System.Drawing.Size(1382, 933);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Checkout_Form";
+            this.Padding = new System.Windows.Forms.Padding(11, 13, 11, 13);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Checkout_Form";
+            ((System.ComponentModel.ISupportInitialize)(this.listRoom_DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listService_DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.damage_DataGrid)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

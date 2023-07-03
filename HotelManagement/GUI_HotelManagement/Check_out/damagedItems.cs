@@ -149,40 +149,6 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void add_Button_Click(object sender, EventArgs e)
-        {
-            string name = items_ComboBox.Text;
-            string amount = amount_Text.Text;
-            string price = Item_BUS.getItemPrice(new Item_DTO(name));
-            string total_price = (int.Parse(price) * int.Parse(amount)).ToString();
-
-            bool flag = false;
-            int index = 0;
-            if (damageList_DataGrid.Rows.Count > 1)
-            {
-                foreach (DataGridViewRow row in damageList_DataGrid.Rows)
-                {
-                    if (row.Cells["Name"].Value != null && row.Cells["Name"].Value.ToString() == name)
-                    {
-                        flag = true;
-                        index = row.Index;
-                        break;
-                    }
-                }
-            }
-            if (!flag)
-            {
-                damageList_DataGrid.Rows.Add(name, amount, price, total_price);
-            }
-            else
-            {
-                damageList_DataGrid.Rows[index].Cells["Name"].Value = name;
-                damageList_DataGrid.Rows[index].Cells["Price"].Value = price;
-                damageList_DataGrid.Rows[index].Cells["Amount"].Value = amount;
-                damageList_DataGrid.Rows[index].Cells["Total_Price"].Value = total_price;
-            }
-        }
-
         DataTable getData()
         {
             DataTable damageList = new DataTable();
@@ -208,9 +174,8 @@ namespace GUI_HotelManagement
             return damageList;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-
             DataTable damageList = getData();
 
             Checkout_Form checkout = new Checkout_Form(infoBooking, damageList);
@@ -219,7 +184,7 @@ namespace GUI_HotelManagement
             this.Close();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void add_Button_Click_1(object sender, EventArgs e)
         {
             string name = items_ComboBox.Text;
             string amount = amount_Text.Text;
@@ -251,16 +216,6 @@ namespace GUI_HotelManagement
                 damageList_DataGrid.Rows[index].Cells["Amount"].Value = amount;
                 damageList_DataGrid.Rows[index].Cells["Total_Price"].Value = total_price;
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DataTable damageList = getData();
-
-            Checkout_Form checkout = new Checkout_Form(infoBooking, damageList);
-            this.Hide();
-            checkout.ShowDialog();
-            this.Close();
         }
     }
 }
