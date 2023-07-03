@@ -8,11 +8,11 @@ namespace DTO_HotelManagement
 {
     public class HotelService_DTO
     {
-        public string idService;
-        public string name;
-        public string description;
-        public int price;
-        public string unit;
+        private string idService;
+        private string name;
+        private string description;
+        private int price;
+        private string unit;
         private string status;
 
         public string IdService { get => idService; set => idService = value; }
@@ -21,20 +21,30 @@ namespace DTO_HotelManagement
         public int Price { get => price; set => price = value; }
         public string Unit { get => unit; set => unit = value; }
         public string Status { get => status; set => status = value; }
+        public HotelService_DTO()
+        {
+            this.idService = null;
+            this.name = null;
+            this.description = null;
+            this.price = 0;
+            this.unit = null;
+            this.status = null;
+    }
+        public HotelService_DTO(string serviceId) {
+            this.idService = serviceId;
+        }
+        public HotelService_DTO(string serviceID, string servicename)
+        {
+            this.idService = serviceID;
+            this.name = servicename;
+        }
 
-        public HotelService_DTO() { }
-        public HotelService_DTO(string idService, string name, string description, int price, string unit, string status)
+        public HotelService_DTO(string servicename, string Descript, int Price, string Unit)
         {
-            IdService = idService;
-            Name = name;
-            Description = description;
-            Price = price;
-            Unit = unit;
-            Status = status;
-        }   
-        public HotelService_DTO(string idService)
-        {
-            IdService = idService;
+            this.description = Descript;
+            this.name = servicename;
+            this.price = Price;
+            this.unit = Unit;  
         }
     }
 }

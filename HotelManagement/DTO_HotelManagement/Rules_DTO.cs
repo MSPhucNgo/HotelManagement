@@ -28,5 +28,23 @@ namespace DTO_HoTelManagement
             this.createDate=createDate;
             this.manager=manager;
         }
+        public Rules_DTO(string name, string content, string manager)
+        {
+            this.name = name;
+            this.content = content;
+            this.manager=manager;  
         }
+        public Rules_DTO(string Id)
+        {
+            this.idRule = Id;
+        }
+        public Rules_DTO() {}
+        public Rules_DTO(string id, string name, string content, string manager)
+        {
+            this.idRule = id;
+            this.name = name;
+            this.content = content;
+            this.manager = manager;
+        }
+    }
 }

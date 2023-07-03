@@ -27,13 +27,15 @@ namespace DTO_HotelManagement
             this.price = _price;    
             this.type = _type;  
         }
-        public Room_DTO()
+        public Room_DTO(string name)
         {
-     
+            this.name = name;
         }
-        public Room_DTO(string _idRoom)
-        { 
-            this.idRoom = _idRoom;
+        public Room_DTO() { }
+        public Room_DTO(string name, int price)
+        {
+            this.name = name;
+            this.price = price;
         }
     }
 }

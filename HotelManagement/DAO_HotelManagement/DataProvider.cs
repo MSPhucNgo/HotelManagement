@@ -5,25 +5,26 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DAO_HotelManagement
 {
     public class DataProvider
     {
+
         private static DataProvider instance;
         public static DataProvider Instance
         {
             get
             {
                 if (instance == null) instance = new DataProvider();
-                return DataProvider.instance;
+                return instance;
             }
-            private set { DataProvider.instance = value; }
+            private set { instance = value; }
         }
 
         private DataProvider() { }
         private string connectStr = "Data Source = (local);Initial Catalog = HotelManagement; Integrated Security = True";
-
         public DataSet ExecuteQuery1(string query)
         {
             DataSet dataset = new DataSet();
@@ -37,11 +38,10 @@ namespace DAO_HotelManagement
             }
             return dataset;
         }
-
         public DataTable ExecuteQuery(string query)
         {
-            DataTable dataTable = new DataTable();
 
+            DataTable dataTable = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectStr))
             {
                 connection.Open();
@@ -53,7 +53,6 @@ namespace DAO_HotelManagement
 
             return dataTable;
         }
-
         public int ExecuteNonQuery(string query)
         {
             int result = 0;
@@ -66,7 +65,6 @@ namespace DAO_HotelManagement
             }
             return result;
         }
-
         public string ExecuteScalar(string query)
         {
             string result = "";
@@ -74,7 +72,7 @@ namespace DAO_HotelManagement
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                result = (string)command.ExecuteScalar();
+                result = command.ExecuteScalar().ToString();
                 connection.Close();
             }
             return result;

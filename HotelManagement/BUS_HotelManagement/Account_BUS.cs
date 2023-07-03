@@ -7,7 +7,7 @@ using DAO_HotelManagement;
 
 namespace BUS_HotelManagement
 {
-    internal class Account_BUS
+    public class Account_BUS
     {
         public static bool Login(string username, string password)
         {

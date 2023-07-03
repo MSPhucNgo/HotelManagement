@@ -28,16 +28,14 @@ namespace DTO_HoTelManagement
         public string Customer { get => customer; set => customer=value; }
         public Service_Form_DTO( string idServiceForm, string name, string description, int price, int amount, string idService, string formCreator, string customer)
         {
-            this.Amount = amount;
-            this.IdServiceForm = idServiceForm;
-            this.Name = name;
-            this.Description = description;
-            this.Price = price;
-            this.Amount = amount;
-            this.IdService = idService;
-            this.FormCreator = formCreator;
-            this.Customer = customer;
-
+            this.idServiceForm=idServiceForm;
+            this.name=name;
+            this.description=description;
+            this.price=price;
+            this.amount=amount;
+            this.idService=idService;
+            this.formCreator=formCreator;
+            this.customer=customer;
         }
            
     }

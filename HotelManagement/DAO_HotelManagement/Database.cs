@@ -27,7 +27,7 @@ namespace DAO_HotelManagement
         }
         public Database(string id, string password)
         {
-            string connectionString = "Data Source = (local);Initial Catalog = HotelManagement; User ID=" + id + "; Password=" + password;
+            string connectionString = "Data Source = (local);Initial Catalog = HotelManagement ;User ID=" + id + ";Password=" + password;
             try
             {
                 conn = new SqlConnection(connectionString);

@@ -25,6 +25,10 @@ namespace DTO_HotelManagement
         public string ItemFunction { get => itemFunction; set => itemFunction = value; }
         public string CheckOutDate { get => checkOutDate; set => checkOutDate = value; }
         public string Manager { get => manager; set => manager = value; }
+
+        public Item_DTO(string name) {
+            this.name = name;
+        }
     }
 }
 

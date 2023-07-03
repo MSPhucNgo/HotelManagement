@@ -25,6 +25,9 @@ namespace DTO_HoTelManagement
             this.registeredName= registeredName;
             this.groupSize= groupSize;
         }
-       
+        public Supply_Form_DTO(string registeredName)
+        {
+            this.registeredName = registeredName;
+        }    
     }
 }

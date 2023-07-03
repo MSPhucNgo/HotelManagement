@@ -13,5 +13,6 @@ namespace DTO_HotelManagement
 
         public string IdRoom { get => idRoom; set => idRoom = value; }
         public string IdService { get => idService; set => idService = value; }
+
     }
 }

@@ -36,6 +36,9 @@ namespace DTO_HotelManagement
             this.Phone = phone;
             this.Identify_Card = identify_Card;
         }
-        public Customer_DTO() { }
+        public Customer_DTO(string name)
+        {
+            this.name = name;
+        }
     }
 }

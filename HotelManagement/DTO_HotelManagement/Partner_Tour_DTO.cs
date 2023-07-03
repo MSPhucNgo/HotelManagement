@@ -47,10 +47,6 @@ namespace DTO_HoTelManagement
             this.supervisor=supervisor;
 
         }
-        public Partner_Tour_DTO()
-        {
-
-        }
 
     }
 }
