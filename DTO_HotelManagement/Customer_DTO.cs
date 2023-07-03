@@ -44,6 +44,10 @@ namespace DTO_HotelManagement
             this.Email = email;
             this.Phone = phone;
         }
-
+        public Customer_DTO(string name)
+        {
+            this.name = name;
+        }
+        public Customer_DTO() { }
     }
 }

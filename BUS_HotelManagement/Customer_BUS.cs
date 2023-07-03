@@ -19,5 +19,19 @@ namespace BUS_HotelManagement
         {
             return Customer_DAO.Instance.updateCustomer(Cusinfo);
         }
+
+        public static DataTable getUsedService(Customer_DTO Cusinfo)
+        {
+            return Customer_DAO.Instance.getUsedService(Cusinfo);
+        }
+        public static string getCusID_Booking(Customer_DTO Cusinfo)
+        {
+            return Customer_DAO.Instance.getCusID_Booking(Cusinfo);
+        }
+        public static bool insertCustomer(Customer_DTO Cusinfo) {
+            return Customer_DAO.Instance.insertCustomer(Cusinfo);
+        }
     }
+
+
 }

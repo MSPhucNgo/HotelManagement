@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO_HoTelManagement;
+using DTO_HotelManagement;
 using DAO_HotelManagement;
 using BUS_HotelManagement;
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO_HoTelManagement
+namespace DTO_HotelManagement
 {
     public class Supply_Form_DTO
     {
@@ -25,6 +25,7 @@ namespace DTO_HoTelManagement
             this.registeredName= registeredName;
             this.groupSize= groupSize;
         }
+        public Supply_Form_DTO() { }
        
     }
 }

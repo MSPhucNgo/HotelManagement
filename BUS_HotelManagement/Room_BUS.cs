@@ -12,7 +12,7 @@ namespace BUS_HotelManagement
 {
     public class Room_BUS
     {
-       
+
         public DataTable getRoom()
         {
             return Room_DAO.Instance.getRoom();
@@ -71,6 +71,9 @@ namespace BUS_HotelManagement
         {
             return Room_DAO.Instance.getRoomId(RoomName);
         }
-        
+        public static List<string> getListItems(Room_DTO RoomInfo)
+        {
+            return Room_DAO.Instance.getListItems(RoomInfo);
+        }
     }
 }

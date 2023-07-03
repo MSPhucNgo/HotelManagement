@@ -1,4 +1,6 @@
-﻿namespace GUI_HotelManagement
+﻿using System.Runtime.Intrinsics.X86;
+
+namespace GUI_HotelManagement
 {
     partial class Booking_Form
     {
@@ -28,7 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container(); 
             contextMenuStrip1 = new ContextMenuStrip(components);
             labelName = new Label();
             labelPhone = new Label();
@@ -65,8 +67,7 @@
             contextMenuStrip2 = new ContextMenuStrip(components);
             panelBooking.SuspendLayout();
             SuspendLayout();
-            // 
-            // contextMenuStrip1
+            
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Name = "contextMenuStrip1";
@@ -193,6 +194,8 @@
             labelSepcialReq.TabIndex = 49;
             labelSepcialReq.Text = "Special Requiments";
             // 
+            // Load data 
+            this.Load += new System.EventHandler(this.Load_BookingForm);
             // panelBooking
             // 
             panelBooking.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;

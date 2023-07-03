@@ -15,10 +15,28 @@ namespace GUI_HotelManagement
     public partial class MultiRoom_Form : Form
     {
         public List<Room_DTO> roomInfor = new List<Room_DTO>();
+        public BookingForm_DTO inforBooking = new BookingForm_DTO();
+        public Customer_DTO inforCTM = new Customer_DTO();
+        public Infomation_Form_DTO inforForm = new Infomation_Form_DTO();
+        public Supply_Form_DTO supInfo = new Supply_Form_DTO();
+
         //public List<Room_DTO> idRoom = new List<Room_DTO>();
         public MultiRoom_Form()
         {
             InitializeComponent();
+            bookingRoom_DataGrid.Columns.Add("NameRoom", "Name");
+            bookingRoom_DataGrid.Columns.Add("PriceRoom", "Price");
+            bookingRoom_DataGrid.Columns.Add("TypeRoom", "Type");
+            setData_FilterType();
+
+        }
+        public MultiRoom_Form(ref Customer_DTO _inforCTM, ref BookingForm_DTO _inforBooking, ref Infomation_Form_DTO _inforForm, ref Supply_Form_DTO _supInfo)
+        {
+            InitializeComponent();
+            this.inforBooking = _inforBooking;
+            this.inforCTM = _inforCTM;
+            this.inforForm = _inforForm;
+            this.supInfo = _supInfo;
             bookingRoom_DataGrid.Columns.Add("NameRoom", "Name");
             bookingRoom_DataGrid.Columns.Add("PriceRoom", "Price");
             bookingRoom_DataGrid.Columns.Add("TypeRoom", "Type");
@@ -116,6 +134,7 @@ namespace GUI_HotelManagement
         //    roundedButton.Click += Show_Click;
         //    ListRoom_FlowLayout.Controls.Add(roundedButton);
         //}
+        
         private void button1_Click(object sender, EventArgs e)
         {
             //string a = "";
@@ -148,7 +167,7 @@ namespace GUI_HotelManagement
             //MessageBox.Show(c);
             this.Hide();
             //this.Close();
-            Booking_Form bkf = new Booking_Form(ref roomInfor);
+            Booking_Form bkf = new Booking_Form(ref inforCTM, ref inforBooking, ref roomInfor, ref inforForm, ref supInfo);
             bkf.ShowDialog();
             //this.Hide();
 
