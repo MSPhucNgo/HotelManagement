@@ -24,7 +24,7 @@ namespace DAO_HotelManagement
         public bool updateCustomer(Customer_DTO CusInfo)
         {
             string query = "UPDATE CUSTOMER \n" +
-                           "SET NAME = N'" + CusInfo.Name + "', GENDER = N'" + CusInfo.Gender + "', BIRTHDAY = CONVERT(DATE, '" + CusInfo.Birthday + "', 103), EMAIL = N'" + CusInfo.Email +
+                           "SET NAME = N'" + CusInfo.Name + "', GENDER = N'" + CusInfo.Gender + "', BIRTHDAY = N'" + CusInfo.Birthday + "', EMAIL = N'" + CusInfo.Email +
                            "', PHONE = '" + CusInfo.Phone + "', IDENTIFY_CARD = N'" + CusInfo.Identify_Card + "' \n" +
                            "WHERE ID_CUSTOMER = N'" + CusInfo.IdCustomer +"'";
             int index = DataProvider.Instance.ExecuteNonQuery(query);
