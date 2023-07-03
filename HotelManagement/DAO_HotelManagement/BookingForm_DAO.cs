@@ -156,14 +156,14 @@ namespace DAO_HotelManagement
 		}
 		public DataTable loadlistOfItems()
         {
-            string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM";
+            string query = "select distinct IR.ID_ROOM, I.ID_ITEM, I.NAME,IR.AMOUNT, I.TYPE, I.STORAGE_LOCATION, I.CHECKOUT_DATE, I.MANAGER from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM ORDER BY IR.ID_ROOM ASC ";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
 
         public DataTable loadlistOfItems_Room(BookingForm_DTO BookingID)
         {
-            string query = "select distinct IR.ID_ROOM,I.NAME, IR.AMOUNT\r\nfrom ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM\r\nwhere IR.ID_ROOM = '" + BookingID.IdBooking + "'";
+            string query = "select distinct IR.ID_ROOM, I.ID_ITEM, I.NAME,IR.AMOUNT, I.TYPE, I.STORAGE_LOCATION, I.CHECKOUT_DATE, I.MANAGER from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM WHERE IR.ID_ROOM = '" + BookingID.IdBooking + "'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         } 

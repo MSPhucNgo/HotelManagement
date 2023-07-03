@@ -109,7 +109,7 @@ select * from BOOKING_FORM_CUSTOMER_NAME
 
 -- Tạo bảng mới để lưu thông tin đơn đặt hàng
 SELECT BF.*, C.NAME, BR.ID_ROOM, R.TYPE
-	INTO BOOKING_FORM_CUSTOMER_NAME
+	--INTO BOOKING_FORM_CUSTOMER_NAME
 	FROM BOOKING_FORM BF JOIN BOOKING_ROOM BR ON BF.ID_BOOKING = BR.ID_BOOKING 
 			 JOIN CUSTOMER C ON BF.CUSTOMER = C.ID_CUSTOMER 
 			 JOIN ROOM R ON BR.ID_ROOM = R.ID_ROOM
@@ -124,11 +124,16 @@ proc usp_edit_reservation(
 	) 
 as 
 	go
-	DECLARE @customer_name nvarchar(50)
+	DECLARE @customer_name nvarchar(80)
+	DECLARE @idbooking char(10)
+
 	UPDATE BOOKING_FORM_CUSTOMER_NAME
 	SET NAME = @customer_name
-	WHERE ID_BOOKING = 'BK123';
-	go
-	--select * from BOOKING_FORM_CUSTOMER_NAME
+	WHERE ID_BOOKING = @idbooking;
+	--go
+	select * from BOOKING_FORM_CUSTOMER_NAME
 go
-exec usp_edit_reservation N'Lê Thị Thùy Dương'
+exec usp_edit_reservation N'Lê Thị Thùy Dương', 'BK244'
+UPDATE BOOKING_FORM_CUSTOMER_NAME
+	SET NAME = N'Yeu thay mến cô'
+	WHERE ID_BOOKING = 'BK244';

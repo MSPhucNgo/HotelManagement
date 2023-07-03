@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
-			this.bt_Check_Out = new System.Windows.Forms.Button();
-			this.bt_Check_In = new System.Windows.Forms.Button();
 			this.bt_Exit = new System.Windows.Forms.Button();
-			this.bt_Edit_Reservation = new System.Windows.Forms.Button();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.dgv_Reservation = new System.Windows.Forms.DataGridView();
 			this.lb_List_Of_Reservation = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.bt_Check_Out = new System.Windows.Forms.Button();
 			this.cb_BookingID = new System.Windows.Forms.ComboBox();
+			this.bt_Check_In = new System.Windows.Forms.Button();
 			this.bt_Search_Reservation = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
+			this.bt_Edit_Reservation = new System.Windows.Forms.Button();
 			this.lb_List_Of_Items = new System.Windows.Forms.Label();
 			this.bookingFormBUSBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.panel1.SuspendLayout();
@@ -73,28 +74,6 @@
 			this.panel3.Size = new System.Drawing.Size(1093, 560);
 			this.panel3.TabIndex = 2;
 			// 
-			// bt_Check_Out
-			// 
-			this.bt_Check_Out.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.bt_Check_Out.Location = new System.Drawing.Point(843, 28);
-			this.bt_Check_Out.Name = "bt_Check_Out";
-			this.bt_Check_Out.Size = new System.Drawing.Size(100, 29);
-			this.bt_Check_Out.TabIndex = 5;
-			this.bt_Check_Out.Text = "CHECKOUT";
-			this.bt_Check_Out.UseVisualStyleBackColor = false;
-			this.bt_Check_Out.Click += new System.EventHandler(this.bt_Check_Out_Click);
-			// 
-			// bt_Check_In
-			// 
-			this.bt_Check_In.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.bt_Check_In.Location = new System.Drawing.Point(706, 28);
-			this.bt_Check_In.Name = "bt_Check_In";
-			this.bt_Check_In.Size = new System.Drawing.Size(100, 29);
-			this.bt_Check_In.TabIndex = 4;
-			this.bt_Check_In.Text = "CHECKIN";
-			this.bt_Check_In.UseVisualStyleBackColor = false;
-			this.bt_Check_In.Click += new System.EventHandler(this.button1_Click);
-			// 
 			// bt_Exit
 			// 
 			this.bt_Exit.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -105,17 +84,6 @@
 			this.bt_Exit.Text = "EXIT";
 			this.bt_Exit.UseVisualStyleBackColor = false;
 			this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
-			// 
-			// bt_Edit_Reservation
-			// 
-			this.bt_Edit_Reservation.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.bt_Edit_Reservation.Location = new System.Drawing.Point(517, 28);
-			this.bt_Edit_Reservation.Name = "bt_Edit_Reservation";
-			this.bt_Edit_Reservation.Size = new System.Drawing.Size(150, 29);
-			this.bt_Edit_Reservation.TabIndex = 2;
-			this.bt_Edit_Reservation.Text = "EDIT RESERVATION";
-			this.bt_Edit_Reservation.UseVisualStyleBackColor = false;
-			this.bt_Edit_Reservation.Click += new System.EventHandler(this.bt_Edit_Reservation_Click);
 			// 
 			// panel5
 			// 
@@ -132,6 +100,14 @@
 			// 
 			this.dgv_Reservation.BackgroundColor = System.Drawing.Color.DarkGray;
 			this.dgv_Reservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgv_Reservation.DefaultCellStyle = dataGridViewCellStyle1;
 			this.dgv_Reservation.Location = new System.Drawing.Point(0, 42);
 			this.dgv_Reservation.Name = "dgv_Reservation";
 			this.dgv_Reservation.RowHeadersWidth = 51;
@@ -169,6 +145,17 @@
 			this.panel4.TabIndex = 0;
 			this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
 			// 
+			// bt_Check_Out
+			// 
+			this.bt_Check_Out.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.bt_Check_Out.Location = new System.Drawing.Point(843, 28);
+			this.bt_Check_Out.Name = "bt_Check_Out";
+			this.bt_Check_Out.Size = new System.Drawing.Size(100, 29);
+			this.bt_Check_Out.TabIndex = 5;
+			this.bt_Check_Out.Text = "CHECKOUT";
+			this.bt_Check_Out.UseVisualStyleBackColor = false;
+			this.bt_Check_Out.Click += new System.EventHandler(this.bt_Check_Out_Click);
+			// 
 			// cb_BookingID
 			// 
 			this.cb_BookingID.FormattingEnabled = true;
@@ -177,6 +164,17 @@
 			this.cb_BookingID.Size = new System.Drawing.Size(199, 28);
 			this.cb_BookingID.TabIndex = 36;
 			this.cb_BookingID.SelectedIndexChanged += new System.EventHandler(this.cb_BookingID_SelectedIndexChanged);
+			// 
+			// bt_Check_In
+			// 
+			this.bt_Check_In.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.bt_Check_In.Location = new System.Drawing.Point(706, 28);
+			this.bt_Check_In.Name = "bt_Check_In";
+			this.bt_Check_In.Size = new System.Drawing.Size(100, 29);
+			this.bt_Check_In.TabIndex = 4;
+			this.bt_Check_In.Text = "CHECKIN";
+			this.bt_Check_In.UseVisualStyleBackColor = false;
+			this.bt_Check_In.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// bt_Search_Reservation
 			// 
@@ -198,6 +196,17 @@
 			this.label1.Size = new System.Drawing.Size(96, 20);
 			this.label1.TabIndex = 33;
 			this.label1.Text = "BOOKING ID:";
+			// 
+			// bt_Edit_Reservation
+			// 
+			this.bt_Edit_Reservation.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.bt_Edit_Reservation.Location = new System.Drawing.Point(517, 28);
+			this.bt_Edit_Reservation.Name = "bt_Edit_Reservation";
+			this.bt_Edit_Reservation.Size = new System.Drawing.Size(150, 29);
+			this.bt_Edit_Reservation.TabIndex = 2;
+			this.bt_Edit_Reservation.Text = "EDIT RESERVATION";
+			this.bt_Edit_Reservation.UseVisualStyleBackColor = false;
+			this.bt_Edit_Reservation.Click += new System.EventHandler(this.bt_Edit_Reservation_Click);
 			// 
 			// lb_List_Of_Items
 			// 
