@@ -32,16 +32,16 @@
 
 
 	<ItemGroup>
-		<Compile Update="ServiceCoupon.cs">
+		<Compile Update="ServiceBooking\ServiceCoupon.cs">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Compile>
-		<Compile Update="ServiceOfRoom.cs">
+		<Compile Update="ServiceBooking\ServiceOfRoom.cs">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Compile>
-		<Compile Update="Services4Customer.cs">
+		<Compile Update="ServiceBooking\Services4Customer.cs">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Compile>
-		<Compile Update="TourBooking.cs">
+		<Compile Update="ServiceBooking\TourBooking.cs">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Compile>
 	</ItemGroup>

@@ -336,6 +336,15 @@ namespace DAO_HotelManagement
             }
             return listItems;
         }
+        public bool updateStatusRoom(Room_DTO roomName, string newStatus)
+        {
+            string query = "UPDATE ROOM \n" +
+                           "SET STATUS = N'" + newStatus + "'\n" +
+                           "WHERE NAME = N'" + roomName.Name + "'";
+            int index = DataProvider.Instance.ExecuteNonQuery(query);
+            if (index <= 0) { return false; }
+            return true;
+        }
     }
 }
 

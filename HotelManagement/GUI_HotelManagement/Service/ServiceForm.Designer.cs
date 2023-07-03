@@ -68,8 +68,9 @@
             // 
             this.Service_ComboBox.FormattingEnabled = true;
             this.Service_ComboBox.Items.AddRange(new object[] {
-            "Dịch vụ khách sạn",
-            "Dịch vụ du lịch"});
+            "All",
+            "Dịch vụ hậu cần",
+            "Dịch vụ kinh doanh"});
             this.Service_ComboBox.Location = new System.Drawing.Point(170, 56);
             this.Service_ComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Service_ComboBox.Name = "Service_ComboBox";
