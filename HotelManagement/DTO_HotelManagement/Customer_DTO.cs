@@ -36,6 +36,14 @@ namespace DTO_HoTelManagement
             this.Phone = phone;
             this.Identify_Card = identify_Card;
         }
+        public Customer_DTO(string phone, string email, string gender, string birthday)
+        {
+            this.Name = name;
+            this.Gender = gender;
+            this.Birthday = birthday;
+            this.Email = email;
+            this.Phone = phone;
+        }
         public Customer_DTO(string name)
         {
             this.name = name;

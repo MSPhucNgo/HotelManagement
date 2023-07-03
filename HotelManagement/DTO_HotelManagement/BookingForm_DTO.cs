@@ -28,6 +28,19 @@ namespace DTO_HoTelManagement
         public string PaymentMethods { get => paymentMethods; set => paymentMethods = value; }
         public string Customer { get => customer; set => customer = value; }
 
+        public BookingForm_DTO(string _idBooking, string _arrivalDate, string _departure, int _amount,  int _price, string _status, string _specialReq, string _paymethod, string _customer )
+        {
+            this.idBooking = _idBooking;
+            this.arrivalDate = _arrivalDate;
+            this.departureDate = _departure;
+            this.amount = _amount;
+            this.price = _price;
+            this.status = _status;
+            this.specialRequirement = _specialReq;
+            this.paymentMethods = _paymethod;
+            this.customer = _customer;
+        }
+
         public BookingForm_DTO(string Id)
         {
             this.idBooking = Id;
@@ -35,9 +48,10 @@ namespace DTO_HoTelManagement
         public BookingForm_DTO(string Id, string SpecialRequirement, string PaymentMethods)
         {
             this.idBooking = Id;
-            this.paymentMethods= PaymentMethods;
-            this.specialRequirement= SpecialRequirement;
+            this.paymentMethods = PaymentMethods;
+            this.specialRequirement = SpecialRequirement;
         }
+        public BookingForm_DTO() { }
     }
 }
 

@@ -12,7 +12,7 @@ namespace DAO_HotelManagement
     public class DataProvider
     {
 
-        private static DataProvider instance;
+        public static DataProvider instance;
         public static DataProvider Instance
         {
             get

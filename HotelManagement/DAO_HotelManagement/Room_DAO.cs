@@ -5,11 +5,21 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+
+using System.Data.SqlClient;
 
 namespace DAO_HotelManagement
 {
     public class Room_DAO
     {
+        public DataTable getRoom()
+        {
+            DataProvider dp = new DataProvider();
+            string query = "exec usp_getRoomList";
+            return dp.ExecuteQuery(query);
+        }
+
         private static Room_DAO instance;
         public static Room_DAO Instance
         {
@@ -146,7 +156,7 @@ namespace DAO_HotelManagement
             {
                 query = "SELECT * FROM ROOM\n" +
                         "ORDER BY NAME ASC";
-                
+
             }
             else if(filterStatus != "All" && filterType == "All")
             {
@@ -204,7 +214,7 @@ namespace DAO_HotelManagement
                         "WHERE STATUS = N'" + filterStatus + "'\n" +
                         "AND TYPE = N'" + filterType + "'\n";
             }
-             
+
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
 
             List<string> roomList = new List<string>();
@@ -228,7 +238,7 @@ namespace DAO_HotelManagement
             {
                 query = "SELECT * FROM ROOM\n" +
                         "WHERE STATUS = N'" + filterStatus + "'\n" +
-                        "ORDER BY TYPE ASC"; ;
+                        "ORDER BY TYPE ASC";
             }
             else if (filterStatus == "All" && filterType != "All")
             {
@@ -295,5 +305,37 @@ namespace DAO_HotelManagement
             if(index <= 0) { return false; }
             return true;
         }
+
+        public string getRoomId(Room_DTO roomInfor)
+        {
+            string query = "SELECT ID_ROOM FROM ROOM \n " +
+                           "WHERE NAME = N'" + roomInfor.Name + "'\n";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string idRoom;
+            foreach (DataRow dr in dt.Rows)
+            {
+                idRoom = dr["ID_ROOM"].ToString();
+                return idRoom;
+            }
+            return null;
+        }
+
+        public List<string> getListItems(Room_DTO RoomInfo)
+        {
+            string query = "select I.NAME from ROOM R \n" +
+                           "join ITEM_ROOM IR on R.ID_ROOM = IR.ID_ROOM \n" +
+                           "join ITEM I on I.ID_ITEM = IR.ID_ITEM \n" +
+                           "WHERE R.NAME = N'" + RoomInfo.Name + "'\n" +
+                           "ORDER BY I.NAME ASC";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            List<string> listItems = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                string name = row["NAME"].ToString();
+                listItems.Add(name);
+            }
+            return listItems;
+        }
     }
 }
+

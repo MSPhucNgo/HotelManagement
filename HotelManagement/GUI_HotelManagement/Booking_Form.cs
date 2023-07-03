@@ -1,0 +1,190 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Security.Permissions;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
+using BUS_HotelManagement;
+using DTO_HotelManagement;
+using DTO_HotelManagement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
+namespace GUI_HotelManagement
+{
+    public partial class Booking_Form : Form
+    {
+        public DataGridView bookingroom = new DataGridView();
+        public BookingForm_DTO inforBooking = new BookingForm_DTO();
+        public Customer_DTO inforCTM = new Customer_DTO();
+        public List<Room_DTO> roomInfor = new List<Room_DTO>();
+        public Infomation_Form_DTO inforForm = new Infomation_Form_DTO();
+        public Supply_Form_DTO supInfo = new Supply_Form_DTO();
+        public Booking_Form()
+        {
+            InitializeComponent();
+        }
+        public Booking_Form(ref Customer_DTO _inforCTM, ref BookingForm_DTO _inforBooking, ref List<Room_DTO> _roomInfor, ref Infomation_Form_DTO _inforForm, ref Supply_Form_DTO _supInfo)
+        {
+            InitializeComponent();
+            //txtName.Text = _inforCTM.Name.ToString();
+            this.inforCTM = _inforCTM;
+            this.inforBooking = _inforBooking;
+            this.roomInfor = _roomInfor;
+            this.inforForm = _inforForm;
+            this.supInfo = _supInfo;
+            //this.txtName.Text = this.inforCTM.Name.ToString();
+        }
+
+        private void checkBoxGroup_CheckedChanged(object sender, EventArgs e)
+        {
+            this.labelNumberStay.Visible = true;
+            this.labelNameGroup.Visible = true;
+            this.txtNameGroup.Visible = true;
+            this.txtNumberStay.Visible = true;
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            BookingForm_BUS bf = new BookingForm_BUS();
+            //MessageBox.Show(bf.checkExistedCTM(txtIdentify.Text.ToString()).ToString());
+            if (bf.checkExistedCTM(txtIdentify.Text.ToString()) == true)
+            {
+                MessageBox.Show("Customer is exist!");
+
+            }
+            else
+            {
+                MessageBox.Show(txtIdentify.Text);
+                MessageBox.Show("Customer is not exist!");
+            }
+            Load_ExistedCustomer(sender, e);
+        }
+
+        private void Load_ExistedCustomer(object sender, EventArgs e)
+        {
+            BookingForm_BUS busbf = new BookingForm_BUS();
+            //inforCTM = new Customer_DTO("null", "null", "null", "null", "null", "null", "null");
+             DataTable dt = new DataTable();
+            dt = busbf.getInforExistedCTM(txtIdentify.Text.ToString());
+            foreach (DataRow dr in dt.Rows)
+            {
+                inforCTM.IdCustomer = dr["ID_CUSTOMER"].ToString();
+                inforCTM.Name = dr["NAME"].ToString();
+                inforCTM.Identify_Card = dr["IDENTIFY_CARD"].ToString();
+                inforCTM.Phone = dr["PHONE"].ToString();
+                inforCTM.Email = dr["EMAIL"].ToString();
+                inforCTM.Gender = dr["GENDER"].ToString();
+                inforCTM.Birthday = dr["BIRTHDAY"].ToString();
+
+                txtName.Text = inforCTM.Name;
+                txtIdentify.Text = inforCTM.Identify_Card;
+                txtPhone.Text = inforCTM.Phone;
+                txtEmail.Text = inforCTM.Email;
+                txtGender.Text = inforCTM.Gender;
+                txtBirthday.Text = inforCTM.Birthday;
+            }
+        }
+
+        private void Load_BookingForm(object sender, EventArgs e)
+        {
+            txtName.Text = inforCTM.Name;
+            txtIdentify.Text = inforCTM.Identify_Card;
+            txtPhone.Text = inforCTM.Phone;
+            txtEmail.Text = inforCTM.Email;
+            txtGender.Text = inforCTM.Gender;
+            txtBirthday.Text = inforCTM.Birthday;
+            txtArrivalDate.Text = inforBooking.ArrivalDate;
+            txtDepartureDate.Text = inforBooking.DepartureDate;
+            txtSpecialReq.Text = inforBooking.SpecialRequirement;
+            txtNumberRoom.Text = roomInfor.Count().ToString();
+            txtNumberStay.Text = inforForm.NumberStays.ToString();
+            txtNameGroup.Text = supInfo.GroupName;
+        }
+        private void txtIdentity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChooseRoom_Click(object sender, EventArgs e)
+        { 
+            //Gán data khách hàng trong textbox vào biến inforCTM
+            this.inforCTM.Name = txtName.Text.ToString();
+            this.inforCTM.Gender = txtGender.Text.ToString();
+            this.inforCTM.Birthday = txtBirthday.Text.ToString();
+            this.inforCTM.Email = txtEmail.Text.ToString();
+            this.inforCTM.Phone = txtPhone.Text.ToString();
+            this.inforCTM.Identify_Card = txtIdentify.Text.ToString();
+            //Gàn data booking trong textbox vào biến 
+            this.inforBooking.ArrivalDate = txtArrivalDate.Text.ToString();
+            this.inforBooking.DepartureDate = txtDepartureDate.Text.ToString();
+            this.inforBooking.SpecialRequirement = txtSpecialReq.Text.ToString();
+            this.inforBooking.Amount = int.Parse(txtNumberStay.Text);
+            this.inforBooking.IdBooking = "";
+            this.inforBooking.Price = 9999;
+            this.inforBooking.Status = "xONG";
+            this.inforBooking.Customer = "C4740"; //this.inforCTM.IdCustomer;
+
+            // Gán vào data information_form
+            this.inforForm.ArrivalDate = txtArrivalDate.Text.ToString();
+            this.inforForm.NumberStays = int.Parse(txtNumberStay.Text);
+            this.inforForm.NumberRooms = int.Parse(txtNumberRoom.Text);
+            this.inforForm.SpecialRequirements = txtSpecialReq.Text.ToString();
+
+            // Gán data vào supplyform
+            this.supInfo.IdInformation = "I9800"; //this.inforBooking.IdBooking;
+            this.supInfo.GroupName = txtNameGroup.Text.ToString();
+            this.supInfo.RegisteredName = txtName.Text.ToString();
+            this.supInfo.GroupSize = int.Parse(txtNumberStay.Text);
+
+            MultiRoom_Form mrf = new MultiRoom_Form(ref this.inforCTM, ref this.inforBooking, ref this.inforForm, ref this.supInfo);
+            this.Hide();
+            mrf.ShowDialog();
+            //this.Close();
+            //this.ShowDialog();
+            //this.Hide();
+            //this.Show();
+
+            //this.Close();
+            //this.Close();
+            //mrf.Show();
+
+        }
+
+        private void Booking_Form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateBooking_Click(object sender, EventArgs e)
+        {
+            inforForm.NumberRooms = roomInfor.Count();
+            Customer_BUS.insertCustomer(inforCTM);
+            InformationForm_BUS.insertInformationForm(inforForm);
+            BookingForm_BUS.insertBookingForm(inforBooking);
+            //Supply_Form_BUS.insertSupplyForm(supInfo);
+            //Booking_Form bf = new Booking_Form(ref roomInfor);
+            MessageBox.Show(roomInfor[0].IdRoom);
+            //MessageBox.Show(inforForm.NumberRooms.ToString());
+
+            //MessageBox.Show(inforCTM.Name);
+            //MessageBox.Show(roomInfor[0].IdRoom);
+
+
+        }
+
+        private void panelBooking_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelBooking_Paint_1(object sender, PaintEventArgs e)
+        {
+        }
+    }
+}

@@ -12,7 +12,35 @@ using System.Xml.Linq;
 namespace DAO_HotelManagement
 {
     public class BookingForm_DAO
-    {        
+    {
+        //Check if customer has existed in database
+        public bool checkExistedCTM(string idCard)
+        {
+            string query = "exec usp_checkExistedCustomer " + "'" + idCard + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            int count = 0;
+            foreach (DataRow dr in dt.Rows)
+            {
+                count = int.Parse((dr["EXIST"]).ToString());
+            }
+            if (count == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        //Get more Information of existed customer from database     
+        public DataTable getInforExistedCTM(string idCard)
+        {
+
+            DataProvider dp = new DataProvider();
+            string query = "exec usp_getExistedCustomer" + "'" + idCard + "'";
+            return dp.ExecuteQuery(query);
+        }
+
         private static BookingForm_DAO instance;
         public static BookingForm_DAO Instance
         {
@@ -35,7 +63,7 @@ namespace DAO_HotelManagement
             else return true;
         }
         public DataTable LoadData(BookingForm_DTO BookingID)
-        {  
+        {
             string query = "SELECT R.* \n" +
                            "FROM BOOKING_FORM BF \n" +
                            "JOIN BOOKING_ROOM BR ON BF.ID_BOOKING = BR.ID_BOOKING \n" +
@@ -314,6 +342,20 @@ namespace DAO_HotelManagement
                 return idBill;
             }
             return null;
+        }
+
+        public bool insertBookingForm(BookingForm_DTO inforBooking)
+        {
+               
+        
+            string query = "DECLARE @ARRIVAL_DATE_CONVERTED DATE\r\nSET @ARRIVAL_DATE_CONVERTED = CONVERT(DATE, '" + inforBooking.ArrivalDate + "', 103);\r\n" +
+                "DECLARE @DEPARTURE_DATE_CONVERTED DATE\r\nSET @DEPARTURE_DATE_CONVERTED = CONVERT(DATE, '" + inforBooking.DepartureDate + "', 103);\r\n" +
+                "EXEC USP_AddBOOKINGFORM @IDBOOKINGFORM = '" + inforBooking.IdBooking + "', @ARRIVAL_DATE = @ARRIVAL_DATE_CONVERTED, @DEPARTURE_DATE = @DEPARTURE_DATE_CONVERTED, " +
+                "@AMOUNT = N'" + inforBooking.Amount + "', @PRICE = N'" + inforBooking.Price + "', @STATUS = N'" + inforBooking.Status + "', @SPECIAL_REQUIREMENTS = N'" + inforBooking.SpecialRequirement + "',@PAYMENT_METHODS = N'" + inforBooking.PaymentMethods + "',@CUSTOMER = '" + inforBooking.Customer + "'";
+            
+            int index = DataProvider.Instance.ExecuteNonQuery(query);
+            if (index <= 0) { return false; }
+            return true;
         }
     }
 }

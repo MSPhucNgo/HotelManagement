@@ -1,5 +1,5 @@
 ﻿using DTO_HoTelManagement;
-using DTO_HoTelManagement;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -34,6 +34,14 @@ namespace DAO_HotelManagement
                 return result;
             }
             return null;
+        }
+        
+        public bool insertSupplyForm(Supply_Form_DTO supInfo)
+        {
+            string query = "EXEC USP_AddSUPLLYFORM @ID_INFORMATION_FORM = '" + supInfo.IdInformation + "', @GROUP_NAME = N'" + supInfo.GroupName + "', @REGISTERED_NAME = N'" + supInfo.RegisteredName + "', @GROUP_SIZE = N'" + supInfo.GroupSize + "'";
+            int index = DataProvider.Instance.ExecuteNonQuery(query);
+            if (index <= 0) { return false; }
+            return true;
         }
     }
 }
