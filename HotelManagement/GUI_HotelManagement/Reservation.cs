@@ -1,4 +1,4 @@
-﻿using DTO_HotelManagement;
+﻿using DTO_HoTelManagement;
 using BUS_HotelManagement;
 using System;
 using System.Collections.Generic;
