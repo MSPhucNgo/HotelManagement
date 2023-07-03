@@ -1,5 +1,4 @@
 ﻿using DAO_HotelManagement;
-using HotelManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,13 +47,11 @@ namespace GUI_HotelManagement
             //if (flag == 1 && type.Equals("Đối tác"))
             if (flag == true)
             {
-                MessageBox.Show("Đăng nhập thành công");
+                MessageBox.Show("Login successful!");
+                //this.Hide();
+                Dashboard_GUI dashboard_GUI = new Dashboard_GUI();
+                dashboard_GUI.Show();
                 this.Hide();
-                //fPartner fPartner = new fPartner();
-                //fPartner.ShowDialog();
-                Services4Customer tmp = new Services4Customer();
-                tmp.ShowDialog();
-                this.Show();
             }
 
             else
@@ -66,6 +63,20 @@ namespace GUI_HotelManagement
         private void btn_login_Click_1(object sender, EventArgs e)
         {
 
+        }
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkbox_ShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbox_ShowPass.Checked == true)
+            {
+                tb_Pass.UseSystemPasswordChar = false;
+            }
+            else
+                tb_Pass.UseSystemPasswordChar = true;
         }
     }
 }

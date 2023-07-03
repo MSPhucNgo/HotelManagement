@@ -175,7 +175,7 @@ begin transaction
 	set @endDate = null
 	if (@leavingDate is not null and @endDate is not null) 
 	begin
-		select t.ID_TOUR,t.NAME,  t.DEPARTURE_POINt, t.DESTINATION, t.OWNER, t.MINIMUM_NUMBER, t.MAXIMUM_NUMBER, t.PRICE, t.TOTAL_DAY, s.START_TIME, s.END_TIME, p.NAME as TRAVEL_AGENCY
+		select t.ID_TOUR,t.NAME,  t.DEPARTURE_POINt, t.DESTINATION, t.OWNER, t.MINIMUM_NUMBER, t.MAXIMUM_NUMBER, t.PRICE, t.TOTAL_DAY, s.START_TIME, s.END_TIME, t.ID_TOUR, p.NAME as TRAVEL_AGENCY
 		 from PARTNER_TOUR t join schedule s on t.ID_TOUR= s.ID_TOUR join partner p on t.OWNER = p.ID_PARTNER
 		where 
 		t.DEPARTURE_POINT like @departlike 
@@ -187,7 +187,7 @@ begin transaction
 		
 	else if (@endDate is null and @leavingDate is not null)
 	begin
-		select t.ID_TOUR,t.NAME,  t.DEPARTURE_POINt, t.DESTINATION, t.OWNER, t.MINIMUM_NUMBER, t.MAXIMUM_NUMBER, t.PRICE, t.TOTAL_DAY, s.START_TIME, s.END_TIME, p.NAME as TRAVEL_AGENCY
+		select t.ID_TOUR,t.NAME,  t.DEPARTURE_POINt, t.DESTINATION, t.OWNER, t.MINIMUM_NUMBER, t.MAXIMUM_NUMBER, t.PRICE, t.TOTAL_DAY, s.START_TIME, s.END_TIME, t.ID_TOUR, p.NAME as TRAVEL_AGENCY
 		from PARTNER_TOUR t join schedule s on t.ID_TOUR= s.ID_TOUR join partner p on t.OWNER = p.ID_PARTNER
 		where 
 		t.DEPARTURE_POINT like @departlike 
@@ -198,7 +198,7 @@ begin transaction
 		
 	 else if ( @leavingDate is null and @endDate is not null)
 	begin
-		select t.ID_TOUR,t.NAME,  t.DEPARTURE_POINt, t.DESTINATION, t.OWNER, t.MINIMUM_NUMBER, t.MAXIMUM_NUMBER, t.PRICE, t.TOTAL_DAY, s.START_TIME, s.END_TIME, p.NAME as TRAVEL_AGENCY
+		select t.ID_TOUR,t.NAME,  t.DEPARTURE_POINt, t.DESTINATION, t.OWNER, t.MINIMUM_NUMBER, t.MAXIMUM_NUMBER, t.PRICE, t.TOTAL_DAY, s.START_TIME, s.END_TIME, t.ID_TOUR, p.NAME as TRAVEL_AGENCY
 		from PARTNER_TOUR t join schedule s on t.ID_TOUR= s.ID_TOUR join partner p on t.OWNER = p.ID_PARTNER
 		where 
 		t.DEPARTURE_POINT like @departlike 
@@ -209,7 +209,7 @@ begin transaction
 		
 	else if ( @leavingDate is null and @endDate is null)
 	begin
-		select t.ID_TOUR,t.NAME,  t.DEPARTURE_POINt, t.DESTINATION, t.OWNER, t.MINIMUM_NUMBER, t.MAXIMUM_NUMBER, t.PRICE, t.TOTAL_DAY, s.START_TIME, s.END_TIME, p.NAME as TRAVEL_AGENCY
+		select t.ID_TOUR,t.NAME,  t.DEPARTURE_POINt, t.DESTINATION, t.OWNER, t.MINIMUM_NUMBER, t.MAXIMUM_NUMBER, t.PRICE, t.TOTAL_DAY, s.START_TIME, s.END_TIME, t.ID_TOUR,  p.NAME as TRAVEL_AGENCY
 		from PARTNER_TOUR t join schedule s on t.ID_TOUR= s.ID_TOUR join partner p on t.OWNER = p.ID_PARTNER
 		where 
 		t.DEPARTURE_POINT like @departlike 
@@ -220,30 +220,26 @@ begin transaction
 
 commit
 go
-
 go
-exec usp_searchTour_svs N'Beethovenplatz', N'Rừng thông Yên Minh', '2023-50-28' ,'2023-50-28', '3'
-exec usp_searchTour_svs N'Pfisterstraße',N'Hoàng Su Phì', '2023-05-09', '2023-06-10', 30
-exec usp_searchTour_svs N'Pfisterstraße',N'Hoàng Su Phì', 'null', 'null', 50
-exec usp_searchTour_svs N'',N'', 'null', 'null', 50
-select * from PARTNER_TOUR
-select * from PARTNER
-select  * from SCHEDULE where ID_TOUR = 'PT002';
+create 
+--alter 
+proc usp_getCustomerByPhone_svs(@phone char(11))
+as 
+begin transaction
+	select * from CUSTOMER where PHONE= @phone
+
+commit
 go
-
-
-select * from SCHEDULE order by ID_TOUR
-select * from CUSTOMER_TOUR 
+exec usp_getCustomerByPhone_svs '09285313679'
+go
+exec usp_createTourForm_svs '5/9/2023 5:47:01 AM', 2, 17683, N'Di bo', N'Đang chờ phản hồi từ đối tác du lịch', 'PT002', 'C0250'
+exec usp_createTourForm_svs '5/9/2023 5:47:01 AM', 2, 17683, N'Di bo', N'Đang chờ phản hồi từ đối tác du lịch', 'PT002', 'C0250'
 select * from CUSTOMER
---select * from PARTICIPATION
-select * from PARTNER_TOUR
-select * from SERVICE_BILL
-select * from SERVICE_FORM
-select * from BOOKING_FORM
-select * from BILL
-select * from BOOKING_ROOM
 
-select * from SERVICE_HISTORY
+go
+
+select * from SERVICE_FORM 
+select * from SERVICE_BILL
 go
 create 
 --alter 
@@ -254,6 +250,43 @@ begin transaction
 	--set @EMPID='EMP00'
 	insert into CUSTOMER_TOUR(ID_CUSTOMER_TOUR, START_DATE, NUMBER_PARTICIPATION, PRICE, TRAVEL_METHOD, STATUS, ID_TOUR_ORIGIN, CUSTOMER)
 	values (@IDCusTour, @startDate, @numPart, @price, @travelMethod, @status, @idPartnerTour, @id_cus);
+commit
+
+exec usp_createTourForm_svs '2023-5-26', 4, 1234, N'Xe lua', N'Tu choi', 'PT002','C0250'
+
+go
+create 
+--alter 
+proc usp_getServiceFormsByPhone_svs( @phone char(11)) 
+as 
+begin transaction
+	select ID_SERVICE_FORM, sf.NAME, PRICE, AMOUNT , c.PHONE
+	from SERVICE_FORM sf join CUSTOMER c on sf.CUSTOMER = c.ID_CUSTOMER
+	where c.PHONE = @phone
+commit
+go
+create 
+--alter 
+proc usp__svs( ) 
+as 
+begin transaction
+	
+commit
+go
+create 
+--alter 
+proc usp__svs( ) 
+as 
+begin transaction
+	
+commit
+go
+create 
+--alter 
+proc usp__svs( ) 
+as 
+begin transaction
+	
 commit
 
 exec usp_createTourForm_svs '2023-5-26', 4, 1234, N'Xe lua', N'Tu choi', 'PT002','C0250'
