@@ -208,5 +208,10 @@ namespace GUI_HotelManagement
             gName_Text.Text = "";
             amountGroup_Text.Text = "";
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
