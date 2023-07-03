@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO_HotelManagement
+namespace DTO_HoTelManagement
 {
     public class HotelService_DTO
     {
-        private string idService;
-        private string name;
-        private string description;
-        private int price;
-        private string unit;
-        private string status;
+        public string idService;
+        public string name;
+        public string description;
+        public int price;
+        public string unit;
+        public string status;
 
         public string IdService { get => idService; set => idService = value; }
         public string Name { get => name; set => name = value; }
@@ -45,6 +45,15 @@ namespace DTO_HotelManagement
             this.name = servicename;
             this.price = Price;
             this.unit = Unit;  
+        }
+        public HotelService_DTO(string idService, string name, string description, int price, string unit, string status)
+        {
+            IdService = idService;
+            Name = name;
+            Description = description;
+            Price = price;
+            Unit = unit;
+            Status = status;
         }
     }
 }

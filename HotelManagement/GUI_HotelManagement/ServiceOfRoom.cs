@@ -1,5 +1,5 @@
 ﻿using BUS_HotelManagement;
-using DTO_HotelManagement;
+using DTO_HoTelManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -203,7 +203,7 @@ namespace HotelManagement
             string discRequirement = dtgvOffer.Rows[e.RowIndex].Cells["REQUIREMENT"].Value.ToString();
             string discRate = dtgvOffer.Rows[e.RowIndex].Cells["DISCOUNT_RATE"].Value.ToString();
             string discDesc = dtgvOffer.Rows[e.RowIndex].Cells["DESCRIPTION"].Value.ToString();
-            discountPromotion = new DiscountPromotion_DTO(discId, discName, discStartTime, discEndTime,discDesc, Int32.Parse(discRequirement), float.Parse(discRate, CultureInfo.InvariantCulture.NumberFormat));
+            discountPromotion = new DiscountPromotion_DTO(discId, discName, discStartTime, discEndTime,discDesc, Int32.Parse(discRequirement), float.Parse(discRate, CultureInfo.InvariantCulture.NumberFormat),0);
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO_HotelManagement
+namespace DTO_HoTelManagement
 {
     public class Employee_DTO
     {
@@ -25,9 +25,13 @@ namespace DTO_HotelManagement
         public string Phone { get => phone; set => phone = value; }
         public string IdentityCard { get => identityCard; set => identityCard = value; }
         public string Role { get => role; set => role = value; }
+        public Employee_DTO(string idemp)
+        {
+            this.IdEmp = idemp;
 
+        }
     }
-
+  
 }
 
 

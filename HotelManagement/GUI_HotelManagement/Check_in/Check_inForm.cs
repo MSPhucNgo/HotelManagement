@@ -1,6 +1,6 @@
 ﻿using Amazon.SecurityToken.Model.Internal.MarshallTransformations;
 using BUS_HotelManagement;
-using DTO_HotelManagement;
+using DTO_HoTelManagement;
 using DTO_HoTelManagement;
 using GUI_HotelManagement;
 using System;

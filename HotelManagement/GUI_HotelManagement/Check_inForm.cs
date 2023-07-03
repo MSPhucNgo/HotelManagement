@@ -1,5 +1,5 @@
 ﻿using BUS_HotelManagement;
-using DTO_HotelManagement;
+using DTO_HoTelManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +28,8 @@ namespace QLKS
                 Booking_Grid.DataSource = BookingForm_BUS.LoadData(IdBooking);
                 Name_Text.Text = BookingForm_BUS.getGuestName(IdBooking);
                 NoRooms_Text.Text = BookingForm_BUS.getNumberofrooms(IdBooking);
-                NoCustomers_Text.Text = BookingForm_BUS.getNumberofcustomers(IdBooking);
+                //
+                //NoCustomers_Text.Text = BookingForm_BUS.getNumberofcustomers(IdBooking);
                 IdentityNo_Text.Text = BookingForm_BUS.getNoIdentity(IdBooking);
                 SPRequiments_Text.Text = BookingForm_BUS.getSPRequires(IdBooking);
                 Price_Text.Text = BookingForm_BUS.getPrice(IdBooking);

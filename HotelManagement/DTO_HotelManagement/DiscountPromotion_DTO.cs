@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO_HotelManagement
+namespace DTO_HoTelManagement
 {
     public class DiscountPromotion_DTO
     {
@@ -56,6 +56,22 @@ namespace DTO_HotelManagement
             this.startTime = startTime;
             this.endTime = endTime;
         }
-
+        public DiscountPromotion_DTO(string idDiscount, string name, string startTime, string endTime, string description, int requirement, float discountRate, int k)
+        {
+            IdDiscount = idDiscount;
+            Name = name;
+            StartTime = startTime;
+            EndTime = endTime;
+            Description = description;
+            Requirement = requirement;
+            DiscountRate = discountRate;
+            IdDiscount = idDiscount;
+            Name = name;
+            StartTime = startTime;
+            EndTime = endTime;
+            Description = description;
+            Requirement = requirement;
+            DiscountRate = discountRate;
+        }
     }
 }

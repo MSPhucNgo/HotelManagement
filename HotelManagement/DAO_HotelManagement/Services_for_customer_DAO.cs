@@ -1,5 +1,5 @@
-﻿using DTO_HotelManagement;
-using DTO_HoTelManagement;
+﻿using DTO_HoTelManagement;
+//using DTO_HoTelManagement;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -38,7 +38,7 @@ namespace DAO_HotelManagement
             {
                 query = "exec usp_getServicesOfRoom_svs '" + roomId.IdRoom + "', N'"  + "'";
             }
-            query = "exec usp_getServicesOfRoom_svs '" + roomId.IdRoom + "', N'"+hotelService_.name+ "'";
+            query = "exec usp_getServicesOfRoom_svs '" + roomId.IdRoom + "', N'"+hotelService_.Name+ "'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
@@ -77,7 +77,7 @@ namespace DAO_HotelManagement
         }
         public DataTable usp_getDiscountOfService_svs(HotelService_DTO hotelService)
         {
-            string query = "exec usp_getDiscountOfService_svs '" + hotelService.idService + "'";
+            string query = "exec usp_getDiscountOfService_svs '" + hotelService.IdService + "'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
 
             return dt;

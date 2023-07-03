@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO_HotelManagement
+namespace DTO_HoTelManagement
 {
     public class Customer_DTO
     {
@@ -40,5 +40,6 @@ namespace DTO_HotelManagement
         {
             this.name = name;
         }
+        public Customer_DTO() { }
     }
 }

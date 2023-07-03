@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO_HotelManagement
+namespace DTO_HoTelManagement
 {
     public class Item_DTO
     {

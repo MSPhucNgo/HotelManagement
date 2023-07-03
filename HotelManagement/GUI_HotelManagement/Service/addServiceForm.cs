@@ -1,5 +1,5 @@
 ﻿using BUS_HotelManagement;
-using DTO_HotelManagement;
+using DTO_HoTelManagement;
 using GUI_HotelManagement;
 using System;
 using System.Collections.Generic;
