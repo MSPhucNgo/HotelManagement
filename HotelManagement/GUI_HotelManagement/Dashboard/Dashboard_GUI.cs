@@ -83,6 +83,12 @@ namespace GUI_HotelManagement
             label_Tittle.Text = "ITEM";
             //loadForm(new Discount_PromotionForm());
         }
+
+        private void btn_Checkin_Click(object sender, EventArgs e)
+        {
+            Check_inForm checkIn = new Check_inForm();
+            checkIn.ShowDialog();
+        }
     }
 }
 

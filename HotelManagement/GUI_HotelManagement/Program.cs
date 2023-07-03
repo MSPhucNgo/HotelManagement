@@ -18,7 +18,7 @@ namespace GUI_HotelManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
   
-            Application.Run(new Checkout_Form());
+            Application.Run(new Dashboard_GUI());
         }
     }
 }
