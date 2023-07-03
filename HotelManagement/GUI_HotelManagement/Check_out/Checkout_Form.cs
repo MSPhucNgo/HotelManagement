@@ -179,7 +179,19 @@ namespace GUI_HotelManagement
             {
                 string billID = BookingForm_BUS.getBillID(new BookingForm_DTO(idBooking_Text.Text));
                 Bill_DTO updateBill = new Bill_DTO(billID, roomFee_Text.Text, serviceFee_Text.Text, damageFee_Text.Text, depositPrice_Text.Text, totalFee_Text.Text, Method_ComboBox.Text, "Đã thanh toán", "EMP02", idBooking_Text.Text);
-                //string roomID = 
+                foreach (DataGridViewRow row in listRoom_DataGrid.Rows)
+                {
+                    if (!row.IsNewRow && row.Cells["NAME"].Value.ToString() != "")
+                    {
+                        Room_DTO updateStatus = new Room_DTO(row.Cells["NAME"].Value.ToString());
+                        bool flag_status = Room_BUS.updateStatusRoom(updateStatus, "Trống");
+                        if (!flag_status)
+                        {
+                            MessageBox.Show("Cập nhật thất bại, thông tin không chính xác!");
+                            return;
+                        }
+                    }
+                }
                 bool flag = Bill_BUS.updateBill(updateBill);
                 if (flag)
                 {
