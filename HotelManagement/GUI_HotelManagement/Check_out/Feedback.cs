@@ -1,7 +1,7 @@
 ﻿using Amazon.Auth.AccessControlPolicy;
 using BUS_HotelManagement;
-using DTO_HoTelManagement;
-using DTO_HoTelManagement;
+
+using DTO_HotelManagement;
 using GUI_HotelManagement.Properties;
 using System;
 using System.Collections.Generic;

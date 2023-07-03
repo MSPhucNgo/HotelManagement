@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO_HoTelManagement
+
+namespace DTO_HotelManagement
+
 {
     public class Customer_DTO
     {
@@ -36,6 +38,7 @@ namespace DTO_HoTelManagement
             this.Phone = phone;
             this.Identify_Card = identify_Card;
         }
+
         public Customer_DTO(string phone, string email, string gender, string birthday)
         {
             this.Name = name;
@@ -44,6 +47,7 @@ namespace DTO_HoTelManagement
             this.Email = email;
             this.Phone = phone;
         }
+
         public Customer_DTO(string name)
         {
             this.name = name;

@@ -1,11 +1,12 @@
 ﻿using DAO_HotelManagement;
-using DTO_HoTelManagement;
+using DTO_HotelManagement;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace BUS_HotelManagement
 {
@@ -41,7 +42,7 @@ namespace BUS_HotelManagement
         }
         public static string getPrice(BookingForm_DTO BookingId)
         {
-                return BookingForm_DAO.Instance.getPrice(BookingId);
+            return BookingForm_DAO.Instance.getPrice(BookingId);
         }
         public static string getPaymenMethods(BookingForm_DTO BookingId)
         {
@@ -51,11 +52,11 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.check_Booking(BookingId);
         }
-		public static DataTable loadlistOfReservation()
-		{
-			return BookingForm_DAO.Instance.loadlistOfReservation();
-		}
-		public static DataTable loadlistOfReservation_Room(BookingForm_DTO BookingId)
+        public static DataTable loadlistOfReservation()
+        {
+            return BookingForm_DAO.Instance.loadlistOfReservation();
+        }
+        public static DataTable loadlistOfReservation_Room(BookingForm_DTO BookingId)
         {
             return BookingForm_DAO.Instance.loadlistOfReservation_Room(BookingId);
         }
@@ -68,12 +69,12 @@ namespace BUS_HotelManagement
             return BookingForm_DAO.Instance.loadlistOfItems();//BookingId);
         }
 
-		public static DataTable loadlistOfItems_Room(BookingForm_DTO BookingId)
+        public static DataTable loadlistOfItems_Room(BookingForm_DTO BookingId)
         {
             return BookingForm_DAO.Instance.loadlistOfItems_Room(BookingId);
         }
         public static DataTable Edit_Reservation(string BookingID, string name)
-		{
+        {
             return BookingForm_DAO.Instance.Edit_Reservation(BookingID, name);
         }
 
@@ -81,23 +82,23 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.getBooKingID();
         }
-		public static List<string> cb_BookingID_Edit()
-		{
-			return BookingForm_DAO.Instance.getBooKingID();
-		}
-		public static List<string> cb_RoomID()
-		{
-			return BookingForm_DAO.Instance.getRoomID();
-		}
-		public static List<string> cb_RoomType()
-		{
-			return BookingForm_DAO.Instance.getRoomType();
-		}
-		/*public static DataTable Edit_Reservation(BookingForm_DTO BookingId)//BookingForm_DTO BookingId)
+        public static List<string> cb_BookingID_Edit()
+        {
+            return BookingForm_DAO.Instance.getBooKingID();
+        }
+        public static List<string> cb_RoomID()
+        {
+            return BookingForm_DAO.Instance.getRoomID();
+        }
+        public static List<string> cb_RoomType()
+        {
+            return BookingForm_DAO.Instance.getRoomType();
+        }
+        /*public static DataTable Edit_Reservation(BookingForm_DTO BookingId)//BookingForm_DTO BookingId)
 		{
 			return BookingForm_DAO.Instance.Edit_Reservation(BookingForm_DTO BookingId);//BookingId);
 		}*/
-	}
+
         public static DateTime getIn_Date(BookingForm_DTO BookingId)
         {
             return BookingForm_DAO.Instance.getDateIn(BookingId);

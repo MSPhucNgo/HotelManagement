@@ -1,5 +1,4 @@
-﻿using HotelManagement;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +16,9 @@ namespace GUI_HotelManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-  
             Application.Run(new Dashboard_GUI());
+            //Application.Run(new Reservation());
+            //Application.Run(new Edit_Resevation());
         }
     }
 }

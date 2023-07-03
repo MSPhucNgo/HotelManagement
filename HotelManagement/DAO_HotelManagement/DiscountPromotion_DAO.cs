@@ -1,11 +1,12 @@
-﻿using DTO_HoTelManagement;
-using DTO_HoTelManagement;
+﻿using DTO_HotelManagement;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAO_HotelManagement;
+
 
 namespace DAO_HotelManagement
 {

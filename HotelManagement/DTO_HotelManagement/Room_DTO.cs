@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO_HoTelManagement
+namespace DTO_HotelManagement
 {
     public class Room_DTO
     {
@@ -31,18 +31,21 @@ namespace DTO_HoTelManagement
         {
             this.name = name;
         }
+
         public Room_DTO() {      }
+
         public Room_DTO(string name, int price)
         {
             this.name = name;
             this.price = price;
         }
+
         public Room_DTO(string idRoom, string name, int price)
         {
             this.idRoom = idRoom;
             this.name = name;
             this.price = price;
         }
- 
+
     }
 }

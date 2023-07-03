@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO_HotelManagement;
-using DTO_HotelManagement;
+
 
 namespace DAO_HotelManagement
 {

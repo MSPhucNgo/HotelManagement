@@ -1,7 +1,7 @@
 ﻿using Amazon.SecurityToken.Model.Internal.MarshallTransformations;
 using BUS_HotelManagement;
-using DTO_HoTelManagement;
-using DTO_HoTelManagement;
+using DTO_HotelManagement;
+
 using GUI_HotelManagement;
 using System;
 using System.Collections.Generic;

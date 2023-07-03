@@ -25,11 +25,14 @@ namespace DTO_HotelManagement
             this.registeredName= registeredName;
             this.groupSize= groupSize;
         }
+
         public Supply_Form_DTO(string registeredName)
         {
             this.registeredName = registeredName;
         }    
+
         public Supply_Form_DTO() { }
        
+
     }
 }

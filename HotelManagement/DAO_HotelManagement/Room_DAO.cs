@@ -1,4 +1,4 @@
-﻿using DTO_HoTelManagement;
+﻿using DTO_HotelManagement;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -320,7 +320,7 @@ namespace DAO_HotelManagement
             return null;
         }
 
-        public List<string> getListItems(Room_DTO RoomInfo)
+      /*  public List<string> getListItems(Room_DTO RoomInfo)
         {
             string query = "select I.NAME from ROOM R \n" +
                            "join ITEM_ROOM IR on R.ID_ROOM = IR.ID_ROOM \n" +
@@ -335,7 +335,7 @@ namespace DAO_HotelManagement
                 listItems.Add(name);
             }
             return listItems;
-        }
+        }*/
         public bool updateStatusRoom(Room_DTO roomName, string newStatus)
         {
             string query = "UPDATE ROOM \n" +

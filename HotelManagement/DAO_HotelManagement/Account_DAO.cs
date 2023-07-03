@@ -32,8 +32,7 @@ namespace DAO_HotelManagement
 
             if (dt != 0)
             {
-                username = dr["Username"].ToString();
-                id = dr["UserID"].ToString();
+               
                 return true;
             }
 

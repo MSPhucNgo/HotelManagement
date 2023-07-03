@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.Logging;
+﻿using HotelManagement;
+using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,6 +89,12 @@ namespace GUI_HotelManagement
         {
             Check_inForm checkIn = new Check_inForm();
             checkIn.ShowDialog();
+        }
+
+        private void btn_OrderService_Click(object sender, EventArgs e)
+        {
+            Services4Customer services = new Services4Customer();
+            services.ShowDialog();
         }
     }
 }
