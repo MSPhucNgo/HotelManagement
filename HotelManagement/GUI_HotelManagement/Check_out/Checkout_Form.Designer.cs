@@ -44,21 +44,35 @@
             this.totalFee_Text = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Method_ComboBox = new System.Windows.Forms.ComboBox();
+<<<<<<< Updated upstream
             this.button3 = new System.Windows.Forms.Button();
+=======
+            this.Refresh_Button = new System.Windows.Forms.Button();
+>>>>>>> Stashed changes
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.listRoom_DataGrid = new System.Windows.Forms.DataGridView();
             this.listService_DataGrid = new System.Windows.Forms.DataGridView();
+<<<<<<< Updated upstream
             this.button1 = new System.Windows.Forms.Button();
+=======
+            this.Confirm_Button = new System.Windows.Forms.Button();
+>>>>>>> Stashed changes
             this.damage_DataGrid = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.depositPrice_Text = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+=======
+            this.close_Button = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Search_Button = new System.Windows.Forms.Button();
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.listRoom_DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listService_DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.damage_DataGrid)).BeginInit();
@@ -122,6 +136,10 @@
             this.idBooking_Text.Enabled = false;
             this.idBooking_Text.Location = new System.Drawing.Point(186, 32);
             this.idBooking_Text.Name = "idBooking_Text";
+<<<<<<< Updated upstream
+=======
+            this.idBooking_Text.ReadOnly = true;
+>>>>>>> Stashed changes
             this.idBooking_Text.Size = new System.Drawing.Size(292, 27);
             this.idBooking_Text.TabIndex = 5;
             // 
@@ -172,7 +190,10 @@
             this.addDamage_Button.Size = new System.Drawing.Size(31, 35);
             this.addDamage_Button.TabIndex = 10;
             this.addDamage_Button.UseVisualStyleBackColor = false;
+<<<<<<< Updated upstream
             this.addDamage_Button.Click += new System.EventHandler(this.addDamage_Button_Click_1);
+=======
+>>>>>>> Stashed changes
             // 
             // label5
             // 
@@ -217,8 +238,9 @@
             this.Method_ComboBox.Size = new System.Drawing.Size(292, 28);
             this.Method_ComboBox.TabIndex = 15;
             // 
-            // button3
+            // Refresh_Button
             // 
+<<<<<<< Updated upstream
             this.button3.FlatAppearance.BorderSize = 2;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -230,6 +252,19 @@
             this.button3.Text = "Refresh";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
+=======
+            this.Refresh_Button.FlatAppearance.BorderSize = 2;
+            this.Refresh_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Refresh_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Refresh_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.Refresh_Button.Location = new System.Drawing.Point(449, 800);
+            this.Refresh_Button.Name = "Refresh_Button";
+            this.Refresh_Button.Size = new System.Drawing.Size(208, 67);
+            this.Refresh_Button.TabIndex = 16;
+            this.Refresh_Button.Text = "Refresh";
+            this.Refresh_Button.UseVisualStyleBackColor = true;
+            this.Refresh_Button.Click += new System.EventHandler(this.Refresh_Button_Click);
+>>>>>>> Stashed changes
             // 
             // label7
             // 
@@ -273,8 +308,9 @@
             this.listService_DataGrid.Size = new System.Drawing.Size(270, 348);
             this.listService_DataGrid.TabIndex = 20;
             // 
-            // button1
+            // Confirm_Button
             // 
+<<<<<<< Updated upstream
             this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -286,6 +322,19 @@
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+=======
+            this.Confirm_Button.FlatAppearance.BorderSize = 2;
+            this.Confirm_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Confirm_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Confirm_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.Confirm_Button.Location = new System.Drawing.Point(744, 800);
+            this.Confirm_Button.Name = "Confirm_Button";
+            this.Confirm_Button.Size = new System.Drawing.Size(208, 67);
+            this.Confirm_Button.TabIndex = 21;
+            this.Confirm_Button.Text = "Confirm";
+            this.Confirm_Button.UseVisualStyleBackColor = true;
+            this.Confirm_Button.Click += new System.EventHandler(this.Confirm_Button_Click);
+>>>>>>> Stashed changes
             // 
             // damage_DataGrid
             // 
@@ -343,15 +392,24 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.panel1.Controls.Add(this.button2);
+=======
+            this.panel1.Controls.Add(this.close_Button);
+>>>>>>> Stashed changes
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.listRoom_DataGrid);
             this.panel1.Controls.Add(this.listService_DataGrid);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.damage_DataGrid);
+<<<<<<< Updated upstream
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
+=======
+            this.panel1.Controls.Add(this.Refresh_Button);
+            this.panel1.Controls.Add(this.Confirm_Button);
+>>>>>>> Stashed changes
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -361,6 +419,7 @@
             this.panel1.Size = new System.Drawing.Size(1360, 907);
             this.panel1.TabIndex = 92;
             // 
+<<<<<<< Updated upstream
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
@@ -375,11 +434,31 @@
             this.button2.Text = "x";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+=======
+            // close_Button
+            // 
+            this.close_Button.FlatAppearance.BorderSize = 0;
+            this.close_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.close_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(59)))), ((int)(((byte)(44)))));
+            this.close_Button.Location = new System.Drawing.Point(1310, 4);
+            this.close_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.close_Button.Name = "close_Button";
+            this.close_Button.Size = new System.Drawing.Size(46, 48);
+            this.close_Button.TabIndex = 94;
+            this.close_Button.Text = "x";
+            this.close_Button.UseVisualStyleBackColor = true;
+            this.close_Button.Click += new System.EventHandler(this.close_Button_Click);
+>>>>>>> Stashed changes
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
+<<<<<<< Updated upstream
             this.panel2.Controls.Add(this.button4);
+=======
+            this.panel2.Controls.Add(this.Search_Button);
+>>>>>>> Stashed changes
             this.panel2.Controls.Add(this.cusName_Text);
             this.panel2.Controls.Add(this.roomFee_Text);
             this.panel2.Controls.Add(this.serviceFee_Text);
@@ -403,6 +482,7 @@
             this.panel2.Size = new System.Drawing.Size(632, 385);
             this.panel2.TabIndex = 92;
             // 
+<<<<<<< Updated upstream
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
@@ -419,6 +499,24 @@
             this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
+=======
+            // Search_Button
+            // 
+            this.Search_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.Search_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Search_Button.FlatAppearance.BorderSize = 0;
+            this.Search_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Search_Button.ForeColor = System.Drawing.Color.White;
+            this.Search_Button.Location = new System.Drawing.Point(484, 73);
+            this.Search_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Search_Button.Name = "Search_Button";
+            this.Search_Button.Size = new System.Drawing.Size(129, 29);
+            this.Search_Button.TabIndex = 93;
+            this.Search_Button.Text = "Search";
+            this.Search_Button.UseVisualStyleBackColor = false;
+            this.Search_Button.Click += new System.EventHandler(this.Search_Button_Click);
+>>>>>>> Stashed changes
             // 
             // Checkout_Form
             // 
@@ -460,12 +558,12 @@
         private TextBox totalFee_Text;
         private Label label6;
         private ComboBox Method_ComboBox;
-        private Button button3;
+        private Button Refresh_Button;
         private Label label7;
         private Label label8;
         private DataGridView listRoom_DataGrid;
         private DataGridView listService_DataGrid;
-        private Button button1;
+        private Button Confirm_Button;
         private DataGridView damage_DataGrid;
         private Label label9;
         private Label label10;
@@ -473,7 +571,7 @@
         private Label label11;
         private Panel panel1;
         private Panel panel2;
-        private Button button4;
-        private Button button2;
+        private Button Search_Button;
+        private Button close_Button;
     }
 }

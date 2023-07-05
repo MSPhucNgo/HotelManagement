@@ -17,8 +17,14 @@ namespace GUI_HotelManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
   
             Application.Run(new Dashboard_GUI());
+=======
+            Application.Run(new Checkout_Form());
+            //Application.Run(new Reservation());
+            //Application.Run(new Edit_Resevation());
+>>>>>>> Stashed changes
         }
     }
 }

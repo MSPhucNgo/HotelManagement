@@ -27,5 +27,9 @@ namespace BUS_HotelManagement
         {
             return Customer_DAO.Instance.getCusInfo(Cusinfo);
         }
+        public static string getCusID_Checkin(Customer_DTO Cusinfo)
+        {
+            return Customer_DAO.Instance.getCusID_Checkin(Cusinfo);
+        }
     }
 }

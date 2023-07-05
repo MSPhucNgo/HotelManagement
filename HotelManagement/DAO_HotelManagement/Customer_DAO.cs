@@ -46,7 +46,22 @@ namespace DAO_HotelManagement
                            "JOIN CUSTOMER C ON C.ID_CUSTOMER = BF.CUSTOMER \n" +
                            "JOIN BILL B ON B.ID_BOOKING = BF.ID_BOOKING \n" +
                            "WHERE C.NAME = N'" + cusInfo.Name + "' \n" +
-                           "AND B.STATUS != N'Đã thanh toán'";
+                           "AND B.STATUS != N'Đã thanh toán' AND STATUS == N'Đã xử lý'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string idBooking;
+            foreach (DataRow dr in dt.Rows)
+            {
+                idBooking = dr["ID_BOOKING"].ToString();
+                return idBooking;
+            }
+            return null;
+        }
+        public string getCusID_Checkin(Customer_DTO cusInfo)
+        {
+            string query = "SELECT BF.ID_BOOKING FROM BOOKING_FORM BF \n" +
+                           "JOIN CUSTOMER C ON C.ID_CUSTOMER = BF.CUSTOMER \n" +
+                           "WHERE C.NAME = N'" + cusInfo.Name + "' \n" +
+                           "AND BF.STATUS != N'Đã xử lý'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             string idBooking;
             foreach (DataRow dr in dt.Rows)

@@ -124,6 +124,7 @@ namespace GUI_HotelManagement
             if (statusBill == "Chưa thanh toán") totalFee_Text.Text = (roomFee + serviceFee + damagedFee + depositFree).ToString();
             else totalFee_Text.Text = (roomFee + serviceFee + damagedFee).ToString();
         }
+<<<<<<< Updated upstream
 
         private void button4_Click_1(object sender, EventArgs e)
         {
@@ -154,6 +155,8 @@ namespace GUI_HotelManagement
             }
 
         }
+=======
+>>>>>>> Stashed changes
 
         private void addDamage_Button_Click_1(object sender, EventArgs e)
         {
@@ -173,7 +176,23 @@ namespace GUI_HotelManagement
             }
         }
 
+<<<<<<< Updated upstream
         private void button1_Click_1(object sender, EventArgs e)
+=======
+        private void Search_Button_Click(object sender, EventArgs e)
+        {
+            string userName = cusName_Text.Text.ToString();
+
+            setDatawithCusInfo(new Customer_DTO(userName));
+        }
+
+        private void close_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Confirm_Button_Click(object sender, EventArgs e)
+>>>>>>> Stashed changes
         {
             DialogResult result = MessageBox.Show("Xác nhận thanh toán!", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -216,9 +235,32 @@ namespace GUI_HotelManagement
             }
         }
 
+<<<<<<< Updated upstream
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+=======
+        private void Refresh_Button_Click(object sender, EventArgs e)
+        {
+            if (!isUpdate)
+            {
+                cusName_Text.Text = null;
+                idBooking_Text.Text = null;
+                cusName_Text = null;
+                roomFee_Text.Text = null;
+                serviceFee_Text.Text = null;
+                damageFee_Text.Text = null;
+                totalFee_Text.Text = null;
+                Method_ComboBox.Text = "Cash";
+                listRoom_DataGrid.DataSource = null;
+                listService_DataGrid.DataSource = null;
+                addDamage_Button.Enabled = false;
+            }
+            else
+            {
+                setDatawithCusInfo(new Customer_DTO(cusName_Text.Text));
+            }
+>>>>>>> Stashed changes
         }
     }
 }
