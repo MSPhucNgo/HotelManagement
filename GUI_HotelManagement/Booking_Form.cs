@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,11 +26,13 @@ namespace GUI_HotelManagement
         public List<Room_DTO> roomInfor = new List<Room_DTO>();
         public Infomation_Form_DTO inforForm = new Infomation_Form_DTO();
         public Supply_Form_DTO supInfo = new Supply_Form_DTO();
+        public Bill_DTO inforBill = new Bill_DTO();
+        
         public Booking_Form()
         {
             InitializeComponent();
         }
-        public Booking_Form(ref Customer_DTO _inforCTM, ref BookingForm_DTO _inforBooking, ref List<Room_DTO> _roomInfor, ref Infomation_Form_DTO _inforForm, ref Supply_Form_DTO _supInfo)
+        public Booking_Form(ref Customer_DTO _inforCTM, ref BookingForm_DTO _inforBooking, ref List<Room_DTO> _roomInfor, ref Infomation_Form_DTO _inforForm, ref Supply_Form_DTO _supInfo, ref Bill_DTO _inforBill)
         {
             InitializeComponent();
             //txtName.Text = _inforCTM.Name.ToString();
@@ -38,15 +41,26 @@ namespace GUI_HotelManagement
             this.roomInfor = _roomInfor;
             this.inforForm = _inforForm;
             this.supInfo = _supInfo;
+            this.inforBill = _inforBill;
             //this.txtName.Text = this.inforCTM.Name.ToString();
         }
 
         private void checkBoxGroup_CheckedChanged(object sender, EventArgs e)
         {
-            this.labelNumberStay.Visible = true;
-            this.labelNameGroup.Visible = true;
-            this.txtNameGroup.Visible = true;
-            this.txtNumberStay.Visible = true;
+            if (this.checkBoxGroup.Checked == true)
+            {
+                this.labelNumberStay.Visible = true;
+                this.labelNameGroup.Visible = true;
+                this.txtNameGroup.Visible = true;
+                this.txtNumberStay.Visible = true;
+            }
+            else
+            {
+                this.labelNumberStay.Visible = false;
+                this.labelNameGroup.Visible = false;
+                this.txtNameGroup.Visible = false;
+                this.txtNumberStay.Visible = false;
+            }
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
@@ -70,7 +84,7 @@ namespace GUI_HotelManagement
         {
             BookingForm_BUS busbf = new BookingForm_BUS();
             //inforCTM = new Customer_DTO("null", "null", "null", "null", "null", "null", "null");
-             DataTable dt = new DataTable();
+            DataTable dt = new DataTable();
             dt = busbf.getInforExistedCTM(txtIdentify.Text.ToString());
             foreach (DataRow dr in dt.Rows)
             {
@@ -102,9 +116,16 @@ namespace GUI_HotelManagement
             txtArrivalDate.Text = inforBooking.ArrivalDate;
             txtDepartureDate.Text = inforBooking.DepartureDate;
             txtSpecialReq.Text = inforBooking.SpecialRequirement;
-            txtNumberRoom.Text = roomInfor.Count().ToString();
+            inforForm.NumberRooms = roomInfor.Count();
+            txtNumberRoom.Text = inforForm.NumberRooms.ToString();
             txtNumberStay.Text = inforForm.NumberStays.ToString();
+            txtSpecialReq.Text = inforForm.SpecialRequirements;
+
             txtNameGroup.Text = supInfo.GroupName;
+            supInfo.RegisteredName = inforCTM.Name;
+            supInfo.GroupSize = inforBooking.Amount; 
+            txtRoomFee.Text = inforBooking.Price.ToString();
+            txtDepositFee.Text = inforBill.Deposit_price;
         }
         private void txtIdentity_TextChanged(object sender, EventArgs e)
         {
@@ -112,7 +133,7 @@ namespace GUI_HotelManagement
         }
 
         private void btnChooseRoom_Click(object sender, EventArgs e)
-        { 
+        {
             //Gán data khách hàng trong textbox vào biến inforCTM
             this.inforCTM.Name = txtName.Text.ToString();
             this.inforCTM.Gender = txtGender.Text.ToString();
@@ -120,20 +141,21 @@ namespace GUI_HotelManagement
             this.inforCTM.Email = txtEmail.Text.ToString();
             this.inforCTM.Phone = txtPhone.Text.ToString();
             this.inforCTM.Identify_Card = txtIdentify.Text.ToString();
+
             //Gàn data booking trong textbox vào biến 
             this.inforBooking.ArrivalDate = txtArrivalDate.Text.ToString();
             this.inforBooking.DepartureDate = txtDepartureDate.Text.ToString();
             this.inforBooking.SpecialRequirement = txtSpecialReq.Text.ToString();
             this.inforBooking.Amount = int.Parse(txtNumberStay.Text);
             this.inforBooking.IdBooking = "";
-            this.inforBooking.Price = 9999;
-            this.inforBooking.Status = "xONG";
-            this.inforBooking.Customer = "C4740"; //this.inforCTM.IdCustomer;
+            //this.inforBooking.Price = 9999;
+            //this.inforBooking.Status = "xONG";
+            //this.inforBooking.Customer = "C4740"; //this.inforCTM.IdCustomer;
 
             // Gán vào data information_form
             this.inforForm.ArrivalDate = txtArrivalDate.Text.ToString();
-            this.inforForm.NumberStays = int.Parse(txtNumberStay.Text);
-            this.inforForm.NumberRooms = int.Parse(txtNumberRoom.Text);
+            this.inforForm.NumberStays = 2;//int.Parse(txtNumberStay.Text);
+            this.inforForm.NumberRooms = 2;//int.Parse(txtNumberRoom.Text);
             this.inforForm.SpecialRequirements = txtSpecialReq.Text.ToString();
 
             // Gán data vào supplyform
@@ -142,7 +164,7 @@ namespace GUI_HotelManagement
             this.supInfo.RegisteredName = txtName.Text.ToString();
             this.supInfo.GroupSize = int.Parse(txtNumberStay.Text);
 
-            MultiRoom_Form mrf = new MultiRoom_Form(ref this.inforCTM, ref this.inforBooking, ref this.inforForm, ref this.supInfo);
+            MultiRoom_Form mrf = new MultiRoom_Form(ref this.inforCTM, ref this.inforBooking, ref this.inforForm, ref this.supInfo, ref this.inforBill);
             this.Hide();
             mrf.ShowDialog();
             //this.Close();
@@ -160,20 +182,25 @@ namespace GUI_HotelManagement
         {
 
         }
-
         private void btnCreateBooking_Click(object sender, EventArgs e)
         {
             inforForm.NumberRooms = roomInfor.Count();
-            Customer_BUS.insertCustomer(inforCTM);
-            InformationForm_BUS.insertInformationForm(inforForm);
-            BookingForm_BUS.insertBookingForm(inforBooking);
-            //Supply_Form_BUS.insertSupplyForm(supInfo);
-            //Booking_Form bf = new Booking_Form(ref roomInfor);
-            MessageBox.Show(roomInfor[0].IdRoom);
+            inforBooking.Customer = Customer_BUS.insertCustomer(inforCTM, inforBill, inforForm, supInfo);
+            BookingForm_BUS.insertBookingForm(inforBooking, inforBill);
+
+            MessageBox.Show(inforBill.Payment_methods.ToString());
+            //MessageBox.Show(inforBill.Status.ToString());
+
+            //string id = Customer_BUS.insertCustomer(inforCTM, inforBill);
+            //Update list room status;
+            // MessageBox.Show(roomInfor[0].IdRoom);
+            //MessageBox.Show(id);
+
             //MessageBox.Show(inforForm.NumberRooms.ToString());
 
             //MessageBox.Show(inforCTM.Name);
             //MessageBox.Show(roomInfor[0].IdRoom);
+            //MessageBox.Show(roomInfor[1].IdRoom);
 
 
         }
@@ -185,6 +212,25 @@ namespace GUI_HotelManagement
 
         private void panelBooking_Paint_1(object sender, PaintEventArgs e)
         {
+        }
+
+        private void checkBoxDeposit_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxDeposit.Checked == true)
+            {
+                inforBill.Status = "Đã thanh toán tiền cọc";
+                inforForm.Type = "Đảm bảo";
+            }
+            else
+            {
+                inforBill.Status = "Chưa thanh toán";
+                inforForm.Type = "Không đảm bảo";
+            }
+        }
+
+        private void comboBoxPaymentMethod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            inforBill.Payment_methods = comboBoxPaymentMethod.SelectedItem.ToString();
         }
     }
 }

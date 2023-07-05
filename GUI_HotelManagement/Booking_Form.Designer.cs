@@ -30,7 +30,7 @@ namespace GUI_HotelManagement
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container(); 
+            components = new System.ComponentModel.Container();
             contextMenuStrip1 = new ContextMenuStrip(components);
             labelName = new Label();
             labelPhone = new Label();
@@ -44,6 +44,13 @@ namespace GUI_HotelManagement
             labelNumberRoom = new Label();
             labelSepcialReq = new Label();
             panelBooking = new Panel();
+            labelPaymentMethod = new Label();
+            comboBoxPaymentMethod = new ComboBox();
+            checkBoxDeposit = new CheckBox();
+            txtDepositFee = new TextBox();
+            labelDepositFee = new Label();
+            txtRoomFee = new TextBox();
+            labelRoomFee = new Label();
             btnCheck = new Button();
             splitter1 = new Splitter();
             txtSpecialReq = new TextBox();
@@ -67,7 +74,8 @@ namespace GUI_HotelManagement
             contextMenuStrip2 = new ContextMenuStrip(components);
             panelBooking.SuspendLayout();
             SuspendLayout();
-            
+            // 
+            // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Name = "contextMenuStrip1";
@@ -131,9 +139,9 @@ namespace GUI_HotelManagement
             // 
             // btnCreateBooking
             // 
-            btnCreateBooking.Location = new Point(880, 498);
+            btnCreateBooking.Location = new Point(801, 486);
             btnCreateBooking.Name = "btnCreateBooking";
-            btnCreateBooking.Size = new Size(177, 84);
+            btnCreateBooking.Size = new Size(256, 85);
             btnCreateBooking.TabIndex = 36;
             btnCreateBooking.Text = "Create Booking";
             btnCreateBooking.UseVisualStyleBackColor = true;
@@ -166,7 +174,7 @@ namespace GUI_HotelManagement
             labelArrivalDate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelArrivalDate.AutoSize = true;
             labelArrivalDate.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            labelArrivalDate.Location = new Point(516, 250);
+            labelArrivalDate.Location = new Point(635, 61);
             labelArrivalDate.Name = "labelArrivalDate";
             labelArrivalDate.Size = new Size(145, 35);
             labelArrivalDate.TabIndex = 45;
@@ -177,7 +185,7 @@ namespace GUI_HotelManagement
             labelNumberRoom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelNumberRoom.AutoSize = true;
             labelNumberRoom.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            labelNumberRoom.Location = new Point(508, 443);
+            labelNumberRoom.Location = new Point(589, 249);
             labelNumberRoom.Name = "labelNumberRoom";
             labelNumberRoom.Size = new Size(191, 35);
             labelNumberRoom.TabIndex = 46;
@@ -188,17 +196,22 @@ namespace GUI_HotelManagement
             labelSepcialReq.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelSepcialReq.AutoSize = true;
             labelSepcialReq.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            labelSepcialReq.Location = new Point(512, 382);
+            labelSepcialReq.Location = new Point(550, 183);
             labelSepcialReq.Name = "labelSepcialReq";
             labelSepcialReq.Size = new Size(230, 35);
             labelSepcialReq.TabIndex = 49;
             labelSepcialReq.Text = "Special Requiments";
             // 
-            // Load data 
-            this.Load += new System.EventHandler(this.Load_BookingForm);
             // panelBooking
             // 
             panelBooking.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelBooking.Controls.Add(labelPaymentMethod);
+            panelBooking.Controls.Add(comboBoxPaymentMethod);
+            panelBooking.Controls.Add(checkBoxDeposit);
+            panelBooking.Controls.Add(txtDepositFee);
+            panelBooking.Controls.Add(labelDepositFee);
+            panelBooking.Controls.Add(txtRoomFee);
+            panelBooking.Controls.Add(labelRoomFee);
             panelBooking.Controls.Add(btnCheck);
             panelBooking.Controls.Add(splitter1);
             panelBooking.Controls.Add(txtSpecialReq);
@@ -236,6 +249,72 @@ namespace GUI_HotelManagement
             panelBooking.TabIndex = 8;
             panelBooking.Paint += panelBooking_Paint_1;
             // 
+            // labelPaymentMethod
+            // 
+            labelPaymentMethod.AutoSize = true;
+            labelPaymentMethod.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPaymentMethod.Location = new Point(635, 437);
+            labelPaymentMethod.Name = "labelPaymentMethod";
+            labelPaymentMethod.Size = new Size(204, 35);
+            labelPaymentMethod.TabIndex = 85;
+            labelPaymentMethod.Text = "Payment Method";
+            // 
+            // comboBoxPaymentMethod
+            // 
+            comboBoxPaymentMethod.FormattingEnabled = true;
+            comboBoxPaymentMethod.Items.AddRange(new object[] { "Cash", "Credit Card", "Traveller Cheque", "Traveller Agent Account" });
+            comboBoxPaymentMethod.Location = new Point(862, 444);
+            comboBoxPaymentMethod.Name = "comboBoxPaymentMethod";
+            comboBoxPaymentMethod.Size = new Size(195, 28);
+            comboBoxPaymentMethod.TabIndex = 84;
+            comboBoxPaymentMethod.SelectedIndexChanged += comboBoxPaymentMethod_SelectedIndexChanged;
+            // 
+            // checkBoxDeposit
+            // 
+            checkBoxDeposit.AutoSize = true;
+            checkBoxDeposit.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxDeposit.Location = new Point(635, 505);
+            checkBoxDeposit.Name = "checkBoxDeposit";
+            checkBoxDeposit.Size = new Size(162, 39);
+            checkBoxDeposit.TabIndex = 83;
+            checkBoxDeposit.Text = "Deposited?";
+            checkBoxDeposit.UseVisualStyleBackColor = true;
+            checkBoxDeposit.CheckedChanged += checkBoxDeposit_CheckedChanged;
+            // 
+            // txtDepositFee
+            // 
+            txtDepositFee.Location = new Point(801, 402);
+            txtDepositFee.Name = "txtDepositFee";
+            txtDepositFee.Size = new Size(256, 27);
+            txtDepositFee.TabIndex = 82;
+            // 
+            // labelDepositFee
+            // 
+            labelDepositFee.AutoSize = true;
+            labelDepositFee.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            labelDepositFee.Location = new Point(634, 394);
+            labelDepositFee.Name = "labelDepositFee";
+            labelDepositFee.Size = new Size(146, 35);
+            labelDepositFee.TabIndex = 81;
+            labelDepositFee.Text = "Deposit Fee";
+            // 
+            // txtRoomFee
+            // 
+            txtRoomFee.Location = new Point(801, 357);
+            txtRoomFee.Name = "txtRoomFee";
+            txtRoomFee.Size = new Size(256, 27);
+            txtRoomFee.TabIndex = 80;
+            // 
+            // labelRoomFee
+            // 
+            labelRoomFee.AutoSize = true;
+            labelRoomFee.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            labelRoomFee.Location = new Point(661, 349);
+            labelRoomFee.Name = "labelRoomFee";
+            labelRoomFee.Size = new Size(119, 35);
+            labelRoomFee.TabIndex = 79;
+            labelRoomFee.Text = "RoomFee";
+            // 
             // btnCheck
             // 
             btnCheck.Location = new Point(346, 122);
@@ -256,45 +335,45 @@ namespace GUI_HotelManagement
             // 
             // txtSpecialReq
             // 
-            txtSpecialReq.Location = new Point(748, 382);
+            txtSpecialReq.Location = new Point(796, 192);
             txtSpecialReq.Name = "txtSpecialReq";
-            txtSpecialReq.Size = new Size(258, 27);
+            txtSpecialReq.Size = new Size(263, 27);
             txtSpecialReq.TabIndex = 72;
             // 
             // txtNumberRoom
             // 
-            txtNumberRoom.Location = new Point(720, 451);
+            txtNumberRoom.Location = new Point(713, 287);
             txtNumberRoom.Name = "txtNumberRoom";
-            txtNumberRoom.Size = new Size(132, 27);
+            txtNumberRoom.Size = new Size(56, 27);
             txtNumberRoom.TabIndex = 73;
             // 
             // txtDepartureDate
             // 
-            txtDepartureDate.Location = new Point(759, 320);
+            txtDepartureDate.Location = new Point(796, 130);
             txtDepartureDate.Name = "txtDepartureDate";
-            txtDepartureDate.Size = new Size(245, 27);
+            txtDepartureDate.Size = new Size(261, 27);
             txtDepartureDate.TabIndex = 74;
             // 
             // txtArrivalDate
             // 
-            txtArrivalDate.Location = new Point(720, 259);
+            txtArrivalDate.Location = new Point(796, 69);
             txtArrivalDate.Name = "txtArrivalDate";
-            txtArrivalDate.Size = new Size(286, 27);
+            txtArrivalDate.Size = new Size(263, 27);
             txtArrivalDate.TabIndex = 75;
             // 
             // txtNameGroup
             // 
-            txtNameGroup.Location = new Point(764, 194);
+            txtNameGroup.Location = new Point(242, 544);
             txtNameGroup.Name = "txtNameGroup";
-            txtNameGroup.Size = new Size(242, 27);
+            txtNameGroup.Size = new Size(164, 27);
             txtNameGroup.TabIndex = 76;
             txtNameGroup.Visible = false;
             // 
             // txtNumberStay
             // 
-            txtNumberStay.Location = new Point(734, 130);
+            txtNumberStay.Location = new Point(242, 498);
             txtNumberStay.Name = "txtNumberStay";
-            txtNumberStay.Size = new Size(272, 27);
+            txtNumberStay.Size = new Size(164, 27);
             txtNumberStay.TabIndex = 71;
             txtNumberStay.Visible = false;
             // 
@@ -303,7 +382,7 @@ namespace GUI_HotelManagement
             labelNameGroup.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelNameGroup.AutoSize = true;
             labelNameGroup.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            labelNameGroup.Location = new Point(516, 185);
+            labelNameGroup.Location = new Point(24, 535);
             labelNameGroup.Name = "labelNameGroup";
             labelNameGroup.Size = new Size(189, 35);
             labelNameGroup.TabIndex = 68;
@@ -315,7 +394,7 @@ namespace GUI_HotelManagement
             labelNumberStay.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelNumberStay.AutoSize = true;
             labelNumberStay.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            labelNumberStay.Location = new Point(516, 121);
+            labelNumberStay.Location = new Point(24, 489);
             labelNumberStay.Name = "labelNumberStay";
             labelNumberStay.Size = new Size(159, 35);
             labelNumberStay.TabIndex = 67;
@@ -326,7 +405,7 @@ namespace GUI_HotelManagement
             // 
             checkBoxGroup.AutoSize = true;
             checkBoxGroup.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBoxGroup.Location = new Point(516, 59);
+            checkBoxGroup.Location = new Point(24, 435);
             checkBoxGroup.Name = "checkBoxGroup";
             checkBoxGroup.Size = new Size(276, 39);
             checkBoxGroup.TabIndex = 66;
@@ -336,9 +415,9 @@ namespace GUI_HotelManagement
             // 
             // btnChooseRoom
             // 
-            btnChooseRoom.Location = new Point(880, 434);
+            btnChooseRoom.Location = new Point(801, 249);
             btnChooseRoom.Name = "btnChooseRoom";
-            btnChooseRoom.Size = new Size(124, 58);
+            btnChooseRoom.Size = new Size(256, 80);
             btnChooseRoom.TabIndex = 65;
             btnChooseRoom.Text = "Choose Room";
             btnChooseRoom.UseVisualStyleBackColor = true;
@@ -349,7 +428,7 @@ namespace GUI_HotelManagement
             labelDepartureDate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelDepartureDate.AutoSize = true;
             labelDepartureDate.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            labelDepartureDate.Location = new Point(514, 311);
+            labelDepartureDate.Location = new Point(594, 122);
             labelDepartureDate.Name = "labelDepartureDate";
             labelDepartureDate.Size = new Size(186, 35);
             labelDepartureDate.TabIndex = 62;
@@ -360,7 +439,7 @@ namespace GUI_HotelManagement
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(514, 306);
+            label2.Location = new Point(567, 116);
             label2.Name = "label2";
             label2.Size = new Size(0, 35);
             label2.TabIndex = 61;
@@ -381,9 +460,9 @@ namespace GUI_HotelManagement
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(105, 255);
+            txtEmail.Location = new Point(126, 255);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(301, 27);
+            txtEmail.Size = new Size(280, 27);
             txtEmail.TabIndex = 54;
             // 
             // txtPhone
@@ -395,17 +474,17 @@ namespace GUI_HotelManagement
             // 
             // txtIdentify
             // 
-            txtIdentify.Location = new Point(185, 129);
+            txtIdentify.Location = new Point(214, 129);
             txtIdentify.Name = "txtIdentify";
-            txtIdentify.Size = new Size(155, 27);
+            txtIdentify.Size = new Size(126, 27);
             txtIdentify.TabIndex = 52;
             txtIdentify.TextChanged += txtIdentity_TextChanged;
             // 
             // txtName
             // 
-            txtName.Location = new Point(185, 68);
+            txtName.Location = new Point(214, 68);
             txtName.Name = "txtName";
-            txtName.Size = new Size(221, 27);
+            txtName.Size = new Size(192, 27);
             txtName.TabIndex = 51;
             // 
             // contextMenuStrip2
@@ -422,7 +501,7 @@ namespace GUI_HotelManagement
             Controls.Add(panelBooking);
             Name = "Booking_Form";
             Text = "Booking_Form";
-            Load += Booking_Form_Load;
+            this.Load += new System.EventHandler(this.Load_BookingForm);
             panelBooking.ResumeLayout(false);
             panelBooking.PerformLayout();
             ResumeLayout(false);
@@ -464,5 +543,12 @@ namespace GUI_HotelManagement
         private Label labelNumberStay;
         private CheckBox checkBoxGroup;
         private Button btnCheck;
+        private TextBox txtDepositFee;
+        private Label labelDepositFee;
+        private TextBox txtRoomFee;
+        private Label labelRoomFee;
+        private CheckBox checkBoxDeposit;
+        private ComboBox comboBoxPaymentMethod;
+        private Label labelPaymentMethod;
     }
 }

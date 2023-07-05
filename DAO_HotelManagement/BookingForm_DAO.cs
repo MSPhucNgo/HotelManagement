@@ -223,13 +223,15 @@ namespace DAO_HotelManagement
             return listRoom;
         }
 
-        public bool insertBookingForm(BookingForm_DTO inforBooking)
+        public bool insertBookingForm(BookingForm_DTO inforBooking, Bill_DTO inforBill)
         {
             string query = "DECLARE @ARRIVAL_DATE_CONVERTED DATE\r\nSET @ARRIVAL_DATE_CONVERTED = CONVERT(DATE, '" + inforBooking.ArrivalDate + "', 103);\r\n" +
                 "DECLARE @DEPARTURE_DATE_CONVERTED DATE\r\nSET @DEPARTURE_DATE_CONVERTED = CONVERT(DATE, '" + inforBooking.DepartureDate + "', 103);\r\n" +
-                "EXEC USP_AddBOOKINGFORM @IDBOOKINGFORM = '" + inforBooking.IdBooking + "', @ARRIVAL_DATE = @ARRIVAL_DATE_CONVERTED, @DEPARTURE_DATE = @DEPARTURE_DATE_CONVERTED, " +
-                "@AMOUNT = N'" + inforBooking.Amount + "', @PRICE = N'" + inforBooking.Price + "', @STATUS = N'" + inforBooking.Status + "', @SPECIAL_REQUIREMENTS = N'" + inforBooking.SpecialRequirement + "',@PAYMENT_METHODS = N'" + inforBooking.PaymentMethods + "',@CUSTOMER = '" + inforBooking.Customer + "'";
-            
+                "EXEC USP_AddBOOKINGFORM @ARRIVAL_DATE = @ARRIVAL_DATE_CONVERTED, @DEPARTURE_DATE = @DEPARTURE_DATE_CONVERTED, " +
+                "@AMOUNT = " + inforBooking.Amount + ", @PRICE = " + inforBooking.Price + ", @STATUS = N'" + inforBooking.Status + "', @SPECIAL_REQUIREMENTS = N'" + inforBooking.SpecialRequirement +
+                "',@PAYMENT_METHODS = N'" + inforBill.Payment_methods + "',@CUSTOMER = '" + inforBooking.Customer + "', @ROOM_FEE = " + inforBill.Room_Fee + ", @SERVICE_PRICE = NULL, " +
+                "@DAMAGED_PRICE = NULL, @DEPOSIT_PRICE = " + inforBill.Deposit_price + ", @TOTAL_PRICE = NULL, @STATUS_BILL = N'" + inforBill.Status + "', @FORM_CREATOR = 'EMP01'";
+
             int index = DataProvider.Instance.ExecuteNonQuery(query);
             if (index <= 0) { return false; }
             return true;

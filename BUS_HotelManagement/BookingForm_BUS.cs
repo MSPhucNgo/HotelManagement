@@ -73,9 +73,9 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.getListRoomOfBooking(BookingId);
         }
-        public static bool insertBookingForm(BookingForm_DTO inforBooking)
+        public static bool insertBookingForm(BookingForm_DTO inforBooking, Bill_DTO inforBill)
         {
-            return BookingForm_DAO.Instance.insertBookingForm(inforBooking);
+            return BookingForm_DAO.Instance.insertBookingForm(inforBooking, inforBill);
         }
     }
 }

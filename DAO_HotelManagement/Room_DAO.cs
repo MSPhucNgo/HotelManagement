@@ -294,6 +294,38 @@ namespace DAO_HotelManagement
             }
             return listItems;
         }
-    }
-}
+        public bool updateStatusRoom(Room_DTO roomName, string newStatus)
+        {
+            string query = "UPDATE ROOM \n" +
+                           "SET STATUS = N'" + newStatus + "'\n" +
+                           "WHERE NAME = N'" + roomName.Name + "'";
+            int index = DataProvider.Instance.ExecuteNonQuery(query);
+            if (index <= 0) { return false; }
+            return true;
+        }
 
+        public string getRoomPrice2(Room_DTO Room)
+        {
+            string query = "SELECT PRICE FROM ROOM \n " +
+                           "WHERE ID_ROOM = N'" + Room.IdRoom+ "'\n";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string price;
+            foreach (DataRow dr in dt.Rows)
+            {
+                price = dr["PRICE"].ToString();
+                return price;
+            }
+            return null;
+        }
+        public int totalRoomFee(ref List<Room_DTO> room) {
+            int total = 0;
+            for(int i = 0;  i <room.Count(); i++)
+            {
+                total = total + int.Parse(getRoomPrice2(room[i]));
+            }
+            return total;
+        }
+
+    }
+
+}

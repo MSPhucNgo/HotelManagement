@@ -29,20 +29,20 @@ namespace DTO_HotelManagement
         public Customer_DTO(string idcus, string name, string gender, string birthday, string email, string phone, string identify_Card)
         {
             this.idCustomer = idcus;
-            this.Name = name;
-            this.Gender = gender;
-            this.Birthday = birthday;
-            this.Email = email;
-            this.Phone = phone;
-            this.Identify_Card = identify_Card;
+            this.name = name;
+            this.gender = gender;
+            this.birthday = birthday;
+            this.email = email;
+            this.phone = phone;
+            this.identify_Card = identify_Card;
         }
         public Customer_DTO(string phone, string email, string gender, string birthday)
         {
-            this.Name = name;
-            this.Gender = gender;
-            this.Birthday = birthday;
-            this.Email = email;
-            this.Phone = phone;
+            this.name = name;
+            this.gender = gender;
+            this.birthday = birthday;
+            this.email = email;
+            this.phone = phone;
         }
         public Customer_DTO(string name)
         {

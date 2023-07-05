@@ -19,7 +19,7 @@ namespace GUI_HotelManagement
         public Customer_DTO inforCTM = new Customer_DTO();
         public Infomation_Form_DTO inforForm = new Infomation_Form_DTO();
         public Supply_Form_DTO supInfo = new Supply_Form_DTO();
-
+        public Bill_DTO inforBill = new Bill_DTO();
         //public List<Room_DTO> idRoom = new List<Room_DTO>();
         public MultiRoom_Form()
         {
@@ -30,13 +30,14 @@ namespace GUI_HotelManagement
             setData_FilterType();
 
         }
-        public MultiRoom_Form(ref Customer_DTO _inforCTM, ref BookingForm_DTO _inforBooking, ref Infomation_Form_DTO _inforForm, ref Supply_Form_DTO _supInfo)
+        public MultiRoom_Form(ref Customer_DTO _inforCTM, ref BookingForm_DTO _inforBooking, ref Infomation_Form_DTO _inforForm, ref Supply_Form_DTO _supInfo, ref Bill_DTO _inforBill)
         {
             InitializeComponent();
             this.inforBooking = _inforBooking;
             this.inforCTM = _inforCTM;
             this.inforForm = _inforForm;
             this.supInfo = _supInfo;
+            this.inforBill = _inforBill;
             bookingRoom_DataGrid.Columns.Add("NameRoom", "Name");
             bookingRoom_DataGrid.Columns.Add("PriceRoom", "Price");
             bookingRoom_DataGrid.Columns.Add("TypeRoom", "Type");
@@ -167,7 +168,10 @@ namespace GUI_HotelManagement
             //MessageBox.Show(c);
             this.Hide();
             //this.Close();
-            Booking_Form bkf = new Booking_Form(ref inforCTM, ref inforBooking, ref roomInfor, ref inforForm, ref supInfo);
+            inforBooking.Price = Room_BUS.totalRoomFee(ref roomInfor);
+            inforBill.Room_Fee = inforBooking.Price.ToString();
+            inforBill.Deposit_price = (float.Parse(inforBill.Room_Fee) * 30 / 100).ToString();
+            Booking_Form bkf = new Booking_Form(ref inforCTM, ref inforBooking, ref roomInfor, ref inforForm, ref supInfo, ref inforBill);
             bkf.ShowDialog();
             //this.Hide();
 
