@@ -54,6 +54,14 @@ namespace HotelManagement
                 cbxNow.Visible = false;
                 cbxWhenCheckout.Visible = false;
                 txbOffer.Text = "Not Fee";
+                //
+                txbDiscount.Visible = false;
+                txbEndtotal.Visible = false;
+               // txbPrice.Visible = false;
+                txbSubsidise.Visible = false;
+                txbTotal.Visible = false;
+                txbCheckoutMethod.Visible = false;
+
                 price = 0;
             }
             else
@@ -148,9 +156,10 @@ namespace HotelManagement
             Service_Form_DTO sf;
             Service_Bill_DTO sb;
             //fix
+            string status = "";
             emp = new Employee_DTO("EMP00");
             sf = new Service_Form_DTO("",txbServiceName.Text,txbServiceName.Text,price, quantity, service.idService, emp.IdEmp, cus.IdCustomer);
-            sb = new Service_Bill_DTO("", total, txbUsingTime.Text, float.Parse(txbDiscount.Text), "", bookingForm_.IdBooking, cus.IdCustomer);
+            sb = new Service_Bill_DTO("", total, txbUsingTime.Text, float.Parse(txbDiscount.Text), "", bookingForm_.IdBooking, cus.IdCustomer, status,0);
 
             int res = Services_for_customer_BUS.usp_AddServiceCoupon(sf, sb, emp);
             if (res != 0)

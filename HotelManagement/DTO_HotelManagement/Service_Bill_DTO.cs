@@ -16,6 +16,8 @@ namespace DTO_HotelManagement
         private string idServiceForm;
         private string idBill;
         private string customer;
+        private string status;
+        private int subtotal_price;
         public Service_Bill_DTO() { }
 
         public string IdServiceBill { get => idServiceBill; set => idServiceBill = value; }
@@ -25,6 +27,9 @@ namespace DTO_HotelManagement
         public string IdServiceForm { get => idServiceForm; set => idServiceForm = value; }
         public string IdBill { get => idBill; set => idBill = value; }
         public string Customer { get => customer; set => customer = value; }
+        public string Status { get => status; set => status = value; }
+        public int Subtotal_price { get => subtotal_price; set => subtotal_price = value; }
+
         public Service_Bill_DTO(string idServiceBill, float totalPrice, string usedDate, float discount, string idServiceForm, string idBill, string customer)
         {
             this.IdServiceBill = idServiceBill;
@@ -35,6 +40,19 @@ namespace DTO_HotelManagement
             this.IdBill = idBill;
             this.Customer = customer;
 
+        }
+        public Service_Bill_DTO(string idServiceBill, float totalPrice, string usedDate, float discount, string idServiceForm, string idBill, string customer, string status, int subtotal_price)
+        {
+            this.IdServiceBill = idServiceBill;
+            this.TotalPrice = totalPrice;
+            this.UsedDate = usedDate;
+            this.Discount = discount;
+            this.IdServiceForm = idServiceForm;
+            this.IdBill = idBill;
+            this.Customer = customer;
+            this.Status = status;
+            this.subtotal_price = subtotal_price;
+            this.Subtotal_price = subtotal_price;
         }
     }
 }

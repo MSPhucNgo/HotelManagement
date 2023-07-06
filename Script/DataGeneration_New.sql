@@ -18,36 +18,6 @@ GO
 -- Backing up database HotelManagement
 --
 --
--- Create backup folder
---
-IF OBJECT_ID('xp_create_subdir') IS NOT NULL
-  EXEC xp_create_subdir N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup'
---
--- Backup database to the file with the name: <database_name>_<yyyy>_<mm>_<dd>_<hh>_<mi>.bak
---
-DECLARE @db_name SYSNAME
-SET @db_name = N'HotelManagement'
-
-DECLARE @filepath NVARCHAR(4000)
-SET @filepath =
-/*define base part*/ N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\' + @db_name + '_' +
-/*append date*/ REPLACE(CONVERT(NVARCHAR(10), GETDATE(), 102), '.', '_') + '_' +
-/*append time*/ REPLACE(CONVERT(NVARCHAR(5), GETDATE(), 108), ':', '_') + '.bak'
-
-DECLARE @SQL NVARCHAR(MAX)
-SET @SQL = 
-    N'BACKUP DATABASE ' + QUOTENAME(@db_name) + ' TO DISK = @filepath WITH INIT' + 
-      CASE WHEN EXISTS(
-                SELECT value
-                FROM sys.configurations WITH (NOLOCK)
-                WHERE name = 'backup compression default'
-          )
-        THEN ', COMPRESSION'
-        ELSE ''
-      END
-
-EXEC sys.sp_executesql @SQL, N'@filepath NVARCHAR(4000)', @filepath = @filepath
-GO
 
 USE HotelManagement
 GO

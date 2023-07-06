@@ -26,7 +26,7 @@ namespace DAO_HotelManagement
 
         public DataTable usp_SearchRoomByID_svs(Room_DTO roomId)
         {
-            string query ="exec usp_SearchRoomByID_svs '" + roomId.IdRoom + "'";
+            string query = "exec usp_SearchRoomByID_svs '" + roomId.IdRoom + "'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
 
@@ -91,9 +91,28 @@ namespace DAO_HotelManagement
         public int usp_AddServiceCoupon(Service_Form_DTO service_Form, Service_Bill_DTO service_Bill, Employee_DTO emp)
         {
             // service.idbill
-            string query = "exec usp_AddServiceCoupon '" + service_Form.Customer + "', N'" + service_Form.Name + "', '" + service_Form.IdService + "', N'" + service_Form.Description + "', " + service_Form.Price + ", " + service_Form.Amount + ", '" + service_Form.FormCreator + "', " + service_Bill.TotalPrice + ", '" + service_Bill.UsedDate + "', " + service_Bill.Discount +", '"+ "B0000" + "'";
+            /*
+                @IDCUS CHAR(5),
+	            @NAMESERVICE NVARCHAR(100),
+	            @SERVICEID CHAR(10),
+	            @DESCRIPT NVARCHAR(100),
+	            @PRICE INT,
+	            @AMOUNT INT,
+	            @EMPID CHAR(5),
+	            @TOTAL_PRICE INT,
+	            @USINGDATE DATETIME,
+	            @DISCOUNT FLOAT,
+	            @ID_BILL CHAR(5),
+	            @STATUS NVARCHAR(20),
+	            @SUBTOTAL_PRICE int
+             */
+            string query = "exec usp_AddServiceCoupon '" + service_Form.Customer + "', N'" + service_Form.Name + "', '" + 
+                service_Form.IdService + "', N'" + service_Form.Description + "', " + service_Form.Price + ", " 
+                + service_Form.Amount + ", '" + service_Form.FormCreator + "', " + service_Bill.TotalPrice + ", '" 
+                + service_Bill.UsedDate + "', " + service_Bill.Discount +", '"+ service_Bill.IdBill + "', N'"
+                + service_Bill.Status + "', " + service_Bill.Subtotal_price;
             int index = DataProvider.Instance.ExecuteNonQuery(query);
-            return 1;
+            return index;
         }
         public DataTable usp_getAllDepartureList_svs()
         {

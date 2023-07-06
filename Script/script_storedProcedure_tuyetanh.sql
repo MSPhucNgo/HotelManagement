@@ -1,6 +1,6 @@
 --exec usp_getDiscountOfService_svs 'SEV0793150'
 --exec usp_AddServiceCoupon 'C9909', N'Học nhào lộn - Club Med Punta Cana', 'SEV0793150', N'Học nhào lộn - Club Med Punta Cana', 6469, 4, 'C9909', 25876, '6/27/2023 12:00:00 AM', 2.48, ''
----- usp_AddServiceCoupon 'C0250',N'gÂU GÂU','SEV0793150','LA A',1241223,23,'EMP00',51253234,null,4 ,'B0000'
+ usp_AddServiceCoupon 'C0250',N'gÂU GÂU','SEV0793150','LA A',1241223,23,'EMP00',51253234,null,4 ,'B0000'
 --exec usp_AddServiceCoupon 'C9909', N'Học nhào lộn - Club Med Punta Cana', 'SEV0793150', N'Học nhào lộn - Club Med Punta Cana', 6469, 4, 'EMP00', 25876, '6/27/2023 12:00:00 AM', 2.48, 'B0000'
 --select * from CUSTOMER_TOUR
 --select * from PARTNER_TOUR
@@ -17,7 +17,8 @@ create
 proc usp_SearchRoomByID_svs(@roomid char(5)) 
 as 
 begin transaction
-	select bf.ID_BOOKING, br.ID_ROOM, cus.ID_CUSTOMER, cus.NAME, cus.PHONE, bf.ARRIVAL_DATE, bf.DEPARTURE_DATE  from BOOKING_ROOM br join BOOKING_FORM bf on br.ID_BOOKING = bf.ID_BOOKING
+	select bf.ID_BOOKING, br.ID_ROOM,  cus.ID_CUSTOMER, cus.NAME, cus.PHONE, bf.ARRIVAL_DATE, bf.DEPARTURE_DATE  
+	from BOOKING_ROOM br join BOOKING_FORM bf on br.ID_BOOKING = bf.ID_BOOKING
 		join CUSTOMER cus on bf.CUSTOMER= cus.ID_CUSTOMER 
 		where br.ID_ROOM=@roomid
 		order by bf.ARRIVAL_DATE 
@@ -25,7 +26,8 @@ commit
 
 exec usp_SearchRoomByID_svs '1002';
 -- 
-
+select * FROM ROOM
+SE
 
 go
 -- 3. ds các dịch vụ của phòng đó
@@ -120,23 +122,28 @@ PROC usp_AddServiceCoupon(
 	@TOTAL_PRICE INT,
 	@USINGDATE DATETIME,
 	@DISCOUNT FLOAT,
-	@ID_BILL CHAR(5)
+	@ID_BOOKING CHAR(5),
+	@STATUS NVARCHAR(20),
+	@SUBTOTAL_PRICE int
 )
 AS
 BEGIN transaction
-	DECLARE @IDSERVICE CHAR(10) = DBO.CREATE_IDSERVICE_BF()
+	DECLARE @IDSERVICEFORM CHAR(10) = DBO.CREATE_IDSERVICE_BF()
 	set @EMPID='EMP00'
-	INSERT INTO SERVICE_FORM VALUES(@IDSERVICE,@NAMESERVICE,@DESCRIPT,@PRICE,@AMOUNT,@SERVICEID,@EMPID,@IDCUS)
-	INSERT INTO SERVICE_BILL VALUES(@IDSERVICE,@TOTAL_PRICE,@USINGDATE,@DISCOUNT,@IDSERVICE,'B0000',@IDCUS)
+	DECLARE @ID_BILL CHAR(10) = (select distinct ID_BILL from BILL where ID_BOOKING = @ID_BOOKING)
+	INSERT INTO SERVICE_FORM (ID_SERVICE_FORM,NAME, DESCRIPTION, PRICE, AMOUNT, ID_SERVICE, FORM_CREATOR, CUSTOMER)
+	VALUES(@IDSERVICEFORM,@NAMESERVICE,@DESCRIPT,@PRICE,@AMOUNT,@SERVICEID,@EMPID,@IDCUS)
+	INSERT INTO SERVICE_BILL (ID_SERVICE_BILL,TOTAL_PRICE, USED_DATE, DISCOUNT, ID_SERVICE_FORM, ID_BILL,STATUS, SUBTOTAL_PRICE)
+	 VALUES(@IDSERVICEFORM,@TOTAL_PRICE,@USINGDATE,@DISCOUNT,@IDSERVICEFORM,@ID_BILL, @status,@subtotal_price)
 	--return 1;
 COMMIT
-
+exec usp_AddServiceCoupon 'C0583', N'Học nhào lộn - Club Med Punta Cana', 'SEV0793150', N'Học nhào lộn - Club Med Punta Cana', 6469, 4, 'EMP00', 25876, '7/6/2023 12:00:00 AM', 2.48, 'BK019     ', N'', 0
 select * from SERVICE_FORM
 select * from SERVICE_BILL
 select * from BOOKING_FORM
 select * from HOTEL_SERVICE
 select * from bill
-select * from BOOKING_ROOM
+select * from ROOM
 go
 -- usp_createTourForm_svs( @startDate varchar(30), @numPart int, @price int, 
 --@travelMethod nvarchar(20), @status nvarchar(30), @idPartnerTour char(10), @id_cus char(10)) 
@@ -232,8 +239,8 @@ commit
 go
 exec usp_getCustomerByPhone_svs '09285313679'
 go
-exec usp_createTourForm_svs '5/9/2023 5:47:01 AM', 2, 17683, N'Di bo', N'Đang chờ phản hồi từ đối tác du lịch', 'PT002', 'C0250'
-exec usp_createTourForm_svs '5/9/2023 5:47:01 AM', 2, 17683, N'Di bo', N'Đang chờ phản hồi từ đối tác du lịch', 'PT002', 'C0250'
+--exec usp_createTourForm_svs '5/9/2023 5:47:01 AM', 2, 17683, N'Di bo', N'Đang chờ phản hồi từ đối tác du lịch', 'PT002', 'C0250'
+--exec usp_createTourForm_svs '5/9/2023 5:47:01 AM', 2, 17683, N'Di bo', N'Đang chờ phản hồi từ đối tác du lịch', 'PT002', 'C0250'
 select * from CUSTOMER
 
 go
