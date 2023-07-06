@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+<<<<<<< HEAD
     <StartupObject>GUI_HotelManagement.Program</StartupObject>
   </PropertyGroup>
 
@@ -23,6 +24,17 @@
 
   <ItemGroup>
     <PackageReference Include="MongoDB.Driver.Core" Version="2.19.1" />
+=======
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>4</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>215d64d2-031c-33c7-96e3-61794cd1ee61</Guid>
+    </COMReference>
+>>>>>>> New2BookingForm
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +42,7 @@
     <ProjectReference Include="..\DTO_HotelManagement\DTO_HotelManagement.csproj" />
   </ItemGroup>
 
+<<<<<<< HEAD
 
 	<ItemGroup>
 		<Compile Update="ServiceBooking\ServiceCoupon.cs">
@@ -45,4 +58,6 @@
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Compile>
 	</ItemGroup>
+=======
+>>>>>>> New2BookingForm
 </Project>
