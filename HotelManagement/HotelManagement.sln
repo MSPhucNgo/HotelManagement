@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUI_HotelManagement", "..\GUI_HotelManagement\GUI_HotelManagement.csproj", "{9F1EB8E1-06A2-4C0B-93AD-5105DDFF9AAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUI_HotelManagement", "GUI_HotelManagement\GUI_HotelManagement.csproj", "{9F1EB8E1-06A2-4C0B-93AD-5105DDFF9AAE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAO_HotelManagement", "..\DAO_HotelManagement\DAO_HotelManagement.csproj", "{5BBDD973-34E2-4D80-B45D-04D8BA51B864}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAO_HotelManagement", "DAO_HotelManagement\DAO_HotelManagement.csproj", "{5BBDD973-34E2-4D80-B45D-04D8BA51B864}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BUS_HotelManagement", "..\BUS_HotelManagement\BUS_HotelManagement.csproj", "{4BD9C5BD-A61C-421C-988D-C66E8A1E6286}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BUS_HotelManagement", "BUS_HotelManagement\BUS_HotelManagement.csproj", "{4BD9C5BD-A61C-421C-988D-C66E8A1E6286}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO_HotelManagement", "..\DTO_HotelManagement\DTO_HotelManagement.csproj", "{1C6B312E-DDED-433F-BA5B-23288A7774DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO_HotelManagement", "DTO_HotelManagement\DTO_HotelManagement.csproj", "{1C6B312E-DDED-433F-BA5B-23288A7774DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
