@@ -26,6 +26,8 @@ namespace BUS_HotelManagement
         public static string getCusInfo(Customer_DTO Cusinfo)
         {
             return Customer_DAO.Instance.getCusInfo(Cusinfo);
+        public static string insertCustomer(Customer_DTO CusInfo, Bill_DTO inforBill, Infomation_Form_DTO info, Supply_Form_DTO sup) {
+            return Customer_DAO.Instance.insertCustomer(CusInfo, inforBill, info, sup);
         }
     }
 }

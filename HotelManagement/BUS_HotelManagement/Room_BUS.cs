@@ -11,6 +11,12 @@ namespace BUS_HotelManagement
 {
     public class Room_BUS
     {
+
+        public DataTable getRoom()
+        {
+            return Room_DAO.Instance.getRoom();
+        }
+
         public static List<string> getListRoom()
         {
             return Room_DAO.Instance.getListRoom();
@@ -68,6 +74,10 @@ namespace BUS_HotelManagement
         {
             return Room_DAO.Instance.updatePriceRoom(RoomName);
         }
+        public static string getRoomId(Room_DTO RoomName)
+        {
+            return Room_DAO.Instance.getRoomId(RoomName);
+        }
         public static List<string> getListItems(Room_DTO RoomInfo)
         {
             return Room_DAO.Instance.getListItems(RoomInfo);
@@ -75,6 +85,15 @@ namespace BUS_HotelManagement
         public static bool updateStatusRoom(Room_DTO RoomName, string newStatus)
         {
             return Room_DAO.Instance.updateStatusRoom(RoomName, newStatus);
+        }
+        public static bool updateStatusRoom(Room_DTO RoomName, string newStatus)
+        {
+            return Room_DAO.Instance.updateStatusRoom(RoomName, newStatus);
+        }
+
+        public static int totalRoomFee(ref List<Room_DTO> room)
+        {
+            return Room_DAO.Instance.totalRoomFee(ref room);
         }
     }
 }

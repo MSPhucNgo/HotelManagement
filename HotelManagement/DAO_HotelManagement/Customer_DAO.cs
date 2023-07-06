@@ -74,6 +74,22 @@ namespace DAO_HotelManagement
             }
             return null;
         }
+
+        public string insertCustomer(Customer_DTO CusInfo, Bill_DTO inforBill, Infomation_Form_DTO info, Supply_Form_DTO sup)
+        {
+            string query = "DECLARE @BIRTHDAY_CONVERTED DATE, @ARRIVAL_DATE_CONVERTED DATE;\r\n SET @BIRTHDAY_CONVERTED = CONVERT(DATE, '" + CusInfo.Birthday + "', 103);" +
+                "\n SET @ARRIVAL_DATE_CONVERTED = CONVERT(DATE, '"+info.ArrivalDate+"', 103);" +
+               "EXEC USP_AddCUSTOMER @NAME = N'" + CusInfo.Name + "', @GENDER = N'" + CusInfo.Gender + "', @BIRTHDAY = @BIRTHDAY_CONVERTED, @EMAIL = N'" + 
+               CusInfo.Email + "', @PHONE = '" + CusInfo.Phone + "', @IDENTIFY_CARD = N'" + CusInfo.Identify_Card + "', @TYPE = N'" +info.Type+ "', @ARRIVAL_DATE = @ARRIVAL_DATE_CONVERTED, " +
+               "@NUMBER_ROOMS = "+info.NumberRooms+ ", @NUMBER_STAYS = " +info.NumberStays+ ", " +
+               "@SPECIAL_REQUIREMENTS = N'" + info.SpecialRequirements + "', @GROUP_NAME = N'" +sup.GroupName+ "', @REGISTERED_NAME = N'"+sup.RegisteredName+ "', @GROUP_SIZE = "+sup.GroupSize+";";
+            //string query = "EXEC USP_AddCUSTOMER @NAME = N'" + CusInfo.Name + "', @GENDER = N'" + CusInfo.Gender + "', @BIRTHDAY = CONVERT(DATE, '" + CusInfo.Birthday + "', 103)', @EMAIL = N'" + CusInfo.Email + "', @PHONE = '" + CusInfo.Phone + "', @IDENTIFY_CARD = N'" + CusInfo.Identify_Card + "'";
+            string id = "";
+            id = DataProvider.Instance.ExecuteScalar(query);
+            //int index = DataProvider.Instance.ExecuteNonQuery(query);
+            if (id == "") { return "error"; }
+            return id;
+        }
         public string getCusInfo(Customer_DTO cusInfo)
         {
             string query = "SELECT C.EMAIL, C.PHONE FROM CUSTOMER C \n " +
@@ -81,7 +97,7 @@ namespace DAO_HotelManagement
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             string infoCus;
             foreach (DataRow dr in dt.Rows)
-        {
+            {
                 infoCus = dr["PHONE"].ToString() + '\n' + dr["EMAIL"].ToString();
                 return infoCus;
             }
