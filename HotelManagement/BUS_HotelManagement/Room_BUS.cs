@@ -86,11 +86,7 @@ namespace BUS_HotelManagement
         {
             return Room_DAO.Instance.updateStatusRoom(RoomName, newStatus);
         }
-        public static bool updateStatusRoom(Room_DTO RoomName, string newStatus)
-        {
-            return Room_DAO.Instance.updateStatusRoom(RoomName, newStatus);
-        }
-
+      
         public static int totalRoomFee(ref List<Room_DTO> room)
         {
             return Room_DAO.Instance.totalRoomFee(ref room);
