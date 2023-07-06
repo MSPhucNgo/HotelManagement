@@ -34,6 +34,7 @@ namespace DTO_HotelManagement
         {
             this.idBill = idBill;
         }
+        public Bill_DTO() { }
         public Bill_DTO(string idBill, string room_Fee, string service_price, string damaged_price, string deposit_price, string total_price, string payment_methods, string status, string creator, string idBooking)
         {
             this.idBill = idBill;

@@ -164,9 +164,9 @@ namespace GUI_HotelManagement
             this.supInfo.RegisteredName = txtName.Text.ToString();
             this.supInfo.GroupSize = int.Parse(txtNumberStay.Text);
 
-            MultiRoom_Form mrf = new MultiRoom_Form(ref this.inforCTM, ref this.inforBooking, ref this.inforForm, ref this.supInfo, ref this.inforBill);
-            this.Hide();
-            mrf.ShowDialog();
+            //MultiRoom_Form mrf = new MultiRoom_Form(ref this.inforCTM, ref this.inforBooking, ref this.inforForm, ref this.supInfo, ref this.inforBill);
+            //this.Hide();
+            //mrf.ShowDialog();
             //this.Close();
             //this.ShowDialog();
             //this.Hide();
