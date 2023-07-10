@@ -22,7 +22,6 @@ namespace GUI_HotelManagement.Check_out
         {
             InitializeComponent();
             idBill = BillID;
-            MessageBox.Show(BillID);
             rate_Label.Text = "0";
         }
 

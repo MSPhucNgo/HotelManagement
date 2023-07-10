@@ -265,7 +265,7 @@ namespace GUI_HotelManagement
             }
             else
             {
-                return;
+                this.Close();
             }
         }
     }

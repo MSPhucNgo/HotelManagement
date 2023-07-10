@@ -304,6 +304,15 @@ namespace DAO_HotelManagement
             if (index > 0) return true;
             return false;
         }
+        public bool Update_BookingFormCheckOut(BookingForm_DTO BookingID)
+        {
+            string query = "UPDATE BOOKING_FORM\n" +
+                           "SET STATUS = N'Đã check-out', SPECIAL_REQUIREMENTS = N'" + BookingID.SpecialRequirement + "', PAYMENT_METHODS = N'" + BookingID.PaymentMethods + "'\n" +
+                           "WHERE ID_BOOKING = '" + BookingID.IdBooking + "'";
+            int index = DataProvider.Instance.ExecuteNonQuery(query);
+            if (index > 0) return true;
+            return false;
+        }
         public DataTable getListRoom(BookingForm_DTO BookingID)
         {
             string query = "SELECT R.NAME, R.PRICE, R.TYPE FROM BOOKING_FORM BF \n" +

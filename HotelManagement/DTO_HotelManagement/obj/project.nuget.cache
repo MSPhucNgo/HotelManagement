@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "coqAK0FVri7pIv98riPj90hZGff3sD65MGIobI06ujT2f3zWdqM0YoBO7YNkliVDjU/tYJP1buK9cO9uGgMpsg==",
+  "dgSpecHash": "iyRQod9mdmRz5il9zfKm2lbYfg+jmRQzk2qd5OPGth9ONGo7O7VJ+NXeHZX3K/tW9ejWFY66YJFS+IdsI8ikXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADmin\\Desktop\\FINAL PLS!\\hotelmanagement-tuyetanh1\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
+  "projectFilePath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADmin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
     "C:\\Users\\ADmin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",

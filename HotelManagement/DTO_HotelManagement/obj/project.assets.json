@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADmin\\Desktop\\FINAL PLS!\\hotelmanagement-tuyetanh1\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
+      "projectUniqueName": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
       "projectName": "DTO_HotelManagement",
-      "projectPath": "C:\\Users\\ADmin\\Desktop\\FINAL PLS!\\hotelmanagement-tuyetanh1\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
+      "projectPath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
       "packagesPath": "C:\\Users\\ADmin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADmin\\Desktop\\FINAL PLS!\\hotelmanagement-tuyetanh1\\HotelManagement\\DTO_HotelManagement\\obj\\",
+      "outputPath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

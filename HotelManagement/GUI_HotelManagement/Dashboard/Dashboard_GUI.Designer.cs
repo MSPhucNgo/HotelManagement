@@ -202,6 +202,7 @@
             this.btn_Reservation.TabIndex = 0;
             this.btn_Reservation.Text = "RESERVATION";
             this.btn_Reservation.UseVisualStyleBackColor = false;
+            this.btn_Reservation.Click += new System.EventHandler(this.btn_Reservation_Click_1);
             // 
             // panel7
             // 
@@ -224,6 +225,7 @@
             this.btn_Customer.TabIndex = 0;
             this.btn_Customer.Text = "CUSTOMER";
             this.btn_Customer.UseVisualStyleBackColor = false;
+            this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click_1);
             // 
             // panel6
             // 
@@ -380,6 +382,7 @@
             this.btn_OrderService.TabIndex = 1;
             this.btn_OrderService.Text = "Order\r\nService";
             this.btn_OrderService.UseVisualStyleBackColor = false;
+            this.btn_OrderService.Click += new System.EventHandler(this.btn_OrderService_Click_1);
             // 
             // btn_BookingRoom
             // 

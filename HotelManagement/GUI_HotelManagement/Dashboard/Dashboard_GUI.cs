@@ -55,18 +55,6 @@ namespace GUI_HotelManagement
             //loadForm(new CustomerList());
         }
 
-        private void btn_Reservation_Click(object sender, EventArgs e)
-        {
-            label_Tittle.Text = "RESERVATION";
-            //loadForm(new CustomerList());
-        }
-
-        private void btn_OrderService_Click(object sender, EventArgs e)
-        {
-            Services4Customer services = new Services4Customer();
-            services.ShowDialog();
-        }
-
         private void btn_BookingRoom_Click(object sender, EventArgs e)
         {
             Booking_Form BKF = new Booking_Form();
@@ -119,6 +107,23 @@ namespace GUI_HotelManagement
         private void btn_Dashboard_Click_1(object sender, EventArgs e)
         {
             showMainForm();
+        }
+
+        private void btn_Customer_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Reservation_Click_1(object sender, EventArgs e)
+        {
+            label_Tittle.Text = "RESERVATION";
+            loadForm(new Reservation());
+        }
+
+        private void btn_OrderService_Click_1(object sender, EventArgs e)
+        {
+            Services4Customer services = new Services4Customer();
+            services.ShowDialog();
         }
     }
 }
