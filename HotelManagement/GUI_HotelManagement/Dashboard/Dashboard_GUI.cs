@@ -1,4 +1,5 @@
-﻿using HotelManagement;
+﻿using GUI_HotelManagement.Dashboard;
+using HotelManagement;
 using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,14 @@ namespace GUI_HotelManagement
         public Dashboard_GUI()
         {
             InitializeComponent();
+            showMainForm();
         }
 
+        public void showMainForm()
+        {
+            label_Tittle.Text = "DASHBOARD";
+            loadForm(new Main_Form());
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -48,53 +55,70 @@ namespace GUI_HotelManagement
             //loadForm(new CustomerList());
         }
 
-        private void btn_Logout_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            login_GUI loginForm = new login_GUI();
-            loginForm.Show();
-        }
-
         private void btn_Reservation_Click(object sender, EventArgs e)
         {
             label_Tittle.Text = "RESERVATION";
             //loadForm(new CustomerList());
         }
 
-        private void btn_Service_Click(object sender, EventArgs e)
+        private void btn_OrderService_Click(object sender, EventArgs e)
+        {
+            Services4Customer services = new Services4Customer();
+            services.ShowDialog();
+        }
+
+        private void btn_BookingRoom_Click(object sender, EventArgs e)
+        {
+            Booking_Form BKF = new Booking_Form();
+            BKF.ShowDialog();
+        }
+
+        private void btn_Service_Click_1(object sender, EventArgs e)
         {
             label_Tittle.Text = "SERVICE";
             loadForm(new ServiceForm());
         }
 
-        private void btn_DiscountPromotion_Click(object sender, EventArgs e)
+        private void btn_Item_Click_1(object sender, EventArgs e)
         {
-            label_Tittle.Text = "DISCOUNT";
-            loadForm(new Discount_PromotionForm());
+            label_Tittle.Text = "ITEM";
+            loadForm(new List_Of_Items());
         }
 
-        private void btn_Rule_Click(object sender, EventArgs e)
+        private void btn_Rule_Click_1(object sender, EventArgs e)
         {
             label_Tittle.Text = "RULE";
             loadForm(new RulesForm());
         }
 
-        private void btn_Item_Click(object sender, EventArgs e)
+        private void btn_DiscountPromotion_Click_1(object sender, EventArgs e)
         {
-            label_Tittle.Text = "ITEM";
-            //loadForm(new Discount_PromotionForm());
+            label_Tittle.Text = "DISCOUNT";
+            loadForm(new Discount_PromotionForm());
         }
 
-        private void btn_Checkin_Click(object sender, EventArgs e)
+        private void btn_Logout_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+            login_GUI loginForm = new login_GUI();
+            loginForm.Show();
+        }
+
+        private void btn_Checkin_Click_1(object sender, EventArgs e)
         {
             Check_inForm checkIn = new Check_inForm();
             checkIn.ShowDialog();
         }
 
-        private void btn_OrderService_Click(object sender, EventArgs e)
+        private void btn_Checkout_Click(object sender, EventArgs e)
         {
-            Services4Customer services = new Services4Customer();
-            services.ShowDialog();
+            Checkout_Form checkOut = new Checkout_Form();
+            checkOut.ShowDialog();
+        }
+
+        private void btn_Dashboard_Click_1(object sender, EventArgs e)
+        {
+            showMainForm();
         }
     }
 }

@@ -38,8 +38,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.PercentDiscount_Text = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Refresh_Button = new System.Windows.Forms.Button();
+            this.Add_Button = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -118,7 +118,7 @@
             this.Type_CheckList.Name = "Type_CheckList";
             this.Type_CheckList.Size = new System.Drawing.Size(579, 44);
             this.Type_CheckList.TabIndex = 13;
-            this.Type_CheckList.SelectedIndexChanged += new System.EventHandler(this.Type_CheckList_SelectedIndexChanged_1);
+            this.Type_CheckList.SelectedIndexChanged += new System.EventHandler(this.Type_CheckList_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -139,13 +139,12 @@
             this.PercentDiscount_Text.Name = "PercentDiscount_Text";
             this.PercentDiscount_Text.Size = new System.Drawing.Size(180, 27);
             this.PercentDiscount_Text.TabIndex = 15;
-            this.PercentDiscount_Text.TextChanged += new System.EventHandler(this.PercentDiscount_Text_TextChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.Refresh_Button);
+            this.panel2.Controls.Add(this.Add_Button);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -169,35 +168,35 @@
             this.panel2.Size = new System.Drawing.Size(860, 649);
             this.panel2.TabIndex = 19;
             // 
-            // button1
+            // Refresh_Button
             // 
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.button1.Location = new System.Drawing.Point(469, 548);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 59);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.Refresh_Button.FlatAppearance.BorderSize = 2;
+            this.Refresh_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Refresh_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Refresh_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.Refresh_Button.Location = new System.Drawing.Point(469, 548);
+            this.Refresh_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Refresh_Button.Name = "Refresh_Button";
+            this.Refresh_Button.Size = new System.Drawing.Size(168, 59);
+            this.Refresh_Button.TabIndex = 25;
+            this.Refresh_Button.Text = "Refresh";
+            this.Refresh_Button.UseVisualStyleBackColor = true;
+            this.Refresh_Button.Click += new System.EventHandler(this.Refresh_Button_Click);
             // 
-            // button5
+            // Add_Button
             // 
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.button5.Location = new System.Drawing.Point(251, 548);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(170, 59);
-            this.button5.TabIndex = 24;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.Add_Button.FlatAppearance.BorderSize = 2;
+            this.Add_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Add_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.Add_Button.Location = new System.Drawing.Point(251, 548);
+            this.Add_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Add_Button.Name = "Add_Button";
+            this.Add_Button.Size = new System.Drawing.Size(170, 59);
+            this.Add_Button.TabIndex = 24;
+            this.Add_Button.Text = "Add";
+            this.Add_Button.UseVisualStyleBackColor = true;
+            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // button4
             // 
@@ -311,7 +310,7 @@
         private Label label2;
         private Label label8;
         private Button button4;
-        private Button button1;
-        private Button button5;
+        private Button Refresh_Button;
+        private Button Add_Button;
     }
 }

@@ -12,6 +12,15 @@ namespace BUS_HotelManagement
 {
     public class BookingForm_BUS
     {
+        public bool checkExistedCTM(string idCard)
+        {
+            return BookingForm_DAO.Instance.checkExistedCTM(idCard);
+
+        }
+        public DataTable getInforExistedCTM(string idCard)
+        {
+            return BookingForm_DAO.Instance.getInforExistedCTM(idCard);
+        }
         public static DataTable LoadData(BookingForm_DTO BookingId)
         {
             return BookingForm_DAO.Instance.LoadData(BookingId);

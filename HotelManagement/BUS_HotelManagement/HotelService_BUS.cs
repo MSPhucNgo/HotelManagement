@@ -59,5 +59,9 @@ namespace BUS_HotelManagement
         {
             return HotelService_DAO.Instance.getServiceUnit(ServiceId);
         }
+        public static string amountServiceInfo()
+        {
+            return HotelService_DAO.Instance.amountServiceInfo();
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace GUI_HotelManagement
             Type_ComboBox.Enabled = false;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Add_Button_Click(object sender, EventArgs e)
         {
             if (check)
             {
@@ -97,7 +97,7 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void Refresh_Button_Click(object sender, EventArgs e)
         {
             if (check)
             {
@@ -112,7 +112,7 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Close_Button_Click(object sender, EventArgs e)
         {
             this.Close();
         }

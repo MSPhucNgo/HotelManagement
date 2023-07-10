@@ -16,7 +16,10 @@ namespace BUS_HotelManagement
         {
             return Room_DAO.Instance.getRoom();
         }
-
+        public static string amountRoomInfo()
+        {
+            return Room_DAO.Instance.amountRoomInfo();
+        }
         public static List<string> getListRoom()
         {
             return Room_DAO.Instance.getListRoom();

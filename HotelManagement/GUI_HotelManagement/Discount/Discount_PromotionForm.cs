@@ -29,19 +29,6 @@ namespace GUI_HotelManagement
             idDiscount_ComboBox.DataSource = DiscountPromotion_BUS.getDiscountID();
         }
 
-        private void button8_Click_2(object sender, EventArgs e)
-        {
-            addDiscountForm addDiscount = new addDiscountForm();
-            addDiscount.ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            DiscountPromotion_DTO discountID = new DiscountPromotion_DTO(idDiscount_ComboBox.Text);
-            addDiscountForm addDiscount = new addDiscountForm(discountID);
-            addDiscount.ShowDialog();
-        }
-
         private void Disable_Button_Click(object sender, EventArgs e)
         {
             string DiscountId = idDiscount_ComboBox.Text;
@@ -70,7 +57,13 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button7_Click_1(object sender, EventArgs e)
+        private void Search_Button_Click(object sender, EventArgs e)
+        {
+            DiscountPromotion_DTO discountDate = new DiscountPromotion_DTO(Start_DataTime.Value.ToString(), End_DataTime.Value.ToString());
+            Discount_DataGrid.DataSource = DiscountPromotion_BUS.SearchDataDiscount(discountDate, ServiceID_ComboBox.Text);
+        }
+
+        private void Refresh_Button_Click(object sender, EventArgs e)
         {
             Discount_DataGrid.DataSource = DiscountPromotion_BUS.LoadDataDiscount();
             ServiceID_ComboBox.DataSource = HotelService_BUS.getServiceID();
@@ -78,15 +71,17 @@ namespace GUI_HotelManagement
             End_DataTime.Value = DateTime.Today.AddMonths(1);
         }
 
-        private void button9_Click_1(object sender, EventArgs e)
+        private void Update_Button_Click(object sender, EventArgs e)
         {
-            DiscountPromotion_DTO discountDate = new DiscountPromotion_DTO(Start_DataTime.Value.ToString(), End_DataTime.Value.ToString());
-            Discount_DataGrid.DataSource = DiscountPromotion_BUS.SearchDataDiscount(discountDate, ServiceID_ComboBox.Text);
+            DiscountPromotion_DTO discountID = new DiscountPromotion_DTO(idDiscount_ComboBox.Text);
+            addDiscountForm addDiscount = new addDiscountForm(discountID);
+            addDiscount.ShowDialog();
         }
 
-        private void Discount_DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Add_Button_Click(object sender, EventArgs e)
         {
-
+            addDiscountForm addDiscount = new addDiscountForm();
+            addDiscount.ShowDialog();
         }
     }
 }

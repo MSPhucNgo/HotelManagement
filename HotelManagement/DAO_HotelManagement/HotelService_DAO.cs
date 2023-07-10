@@ -144,5 +144,19 @@ namespace DAO_HotelManagement
             }
             return null;
         }
+        public string amountServiceInfo()
+        {
+            string query =  "SELECT\n" +
+                            "SUM(CASE WHEN TYPE = N'Dịch vụ hậu cần' THEN 1 ELSE 0 END) AS DVHC,\n" +
+                            "SUM(CASE WHEN TYPE = N'Dịch vụ kinh doanh' THEN 1 ELSE 0 END) AS DVKD\n" +
+                            "FROM HOTEL_SERVICE";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string serviceInfo;
+            string DVHC = dt.Rows[0]["DVHC"].ToString();
+            string DVKD = dt.Rows[0]["DVKD"].ToString();
+            
+            serviceInfo = DVHC + "\n" + DVKD;
+            return serviceInfo;
+        }
     }
 }

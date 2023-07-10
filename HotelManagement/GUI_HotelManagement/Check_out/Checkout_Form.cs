@@ -8,6 +8,8 @@ using System.Data;
 using System.Diagnostics.PerformanceData;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,6 +30,14 @@ namespace GUI_HotelManagement
             Method_ComboBox.Text = "None";
             cusName_Text.Text = "Ngô Lê Hưng Thịnh ";
         }
+        public Checkout_Form(string bookingID)
+        {
+            InitializeComponent();
+            idBooking_Text.Text = bookingID;
+            cusName_Text.Text = "";
+            string userName = cusName_Text.Text.ToString();
+            setDatawithCusInfo(new Customer_DTO(userName));
+        }
         public Checkout_Form(BookingForm_DTO bookingInfo, DataTable listDamaged)
         {
             isUpdate = true;
@@ -41,7 +51,7 @@ namespace GUI_HotelManagement
         }
         public void setDatawithCusInfo(Customer_DTO cusInfo)
         {
-            if (cusInfo.Name != null)
+            if (cusInfo.Name.Trim().Length != 0 && idBooking_Text.Text.Trim().Length == 0)
             {
                 idBooking_Text.Text = Customer_BUS.getCusID_Booking(cusInfo);
                 if (idBooking_Text.Text != "")
@@ -62,12 +72,50 @@ namespace GUI_HotelManagement
                     setNullData();
                 }
             }
+            else if (cusInfo.Name.Trim().Length == 0 && idBooking_Text.Text.Trim().Length != 0)
+            {
+                try
+                {
+                    BookingForm_DTO bookingID = new BookingForm_DTO(idBooking_Text.Text);
+                    cusName_Text.Text = BookingForm_BUS.getGuestName(bookingID);
+                    Method_ComboBox.Text = BookingForm_BUS.getPaymenMethods(bookingID);
+                    addDamage_Button.Enabled = true;
+                    listRoom_DataGrid.DataSource = BookingForm_BUS.getListRoom(bookingID);
+                    room = BookingForm_BUS.getListRoom(bookingID);
+                    listService_DataGrid.DataSource = Customer_BUS.getUsedService(new Customer_DTO(cusName_Text.Text.ToString()));
+                    service = Customer_BUS.getUsedService(new Customer_DTO(cusName_Text.Text.ToString()));
+                    setPrice();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Can't find booking id!");
+                }
+            }
+            else if (cusInfo.Name.Trim().Length != 0 && idBooking_Text.Text.Trim().Length != 0)
+            {
+                if (idBooking_Text.Text == Customer_BUS.getCusID_Booking(cusInfo))
+                {
+                    BookingForm_DTO bookingID = new BookingForm_DTO(idBooking_Text.Text);
+                    cusName_Text.Text = BookingForm_BUS.getGuestName(bookingID);
+                    Method_ComboBox.Text = BookingForm_BUS.getPaymenMethods(bookingID);
+                    addDamage_Button.Enabled = true;
+                    listRoom_DataGrid.DataSource = BookingForm_BUS.getListRoom(bookingID);
+                    room = BookingForm_BUS.getListRoom(bookingID);
+                    listService_DataGrid.DataSource = Customer_BUS.getUsedService(new Customer_DTO(cusName_Text.Text.ToString()));
+                    service = Customer_BUS.getUsedService(new Customer_DTO(cusName_Text.Text.ToString()));
+                    setPrice();
+                }
+                else
+                {
+                    MessageBox.Show("Customer not have any booking form!");
+                    setNullData();
+                }
+            }
             else
             {
-                MessageBox.Show("Please assign your name!");
+                MessageBox.Show("Please assign your name or your booking id!");
                 setNullData();
             }
-
         }
         public void setNullData()
         {
@@ -90,6 +138,7 @@ namespace GUI_HotelManagement
             int serviceFee = 0;
             int damagedFee = 0;
             int depositFree = 0;
+            int serviceFeePay = 0;
             string billInfo = Bill_BUS.getBillInfo(new Bill_DTO(billID));
             depositFree = int.Parse(billInfo.Split('\n')[0]);
             string statusBill = billInfo.Split('\n')[1];
@@ -109,6 +158,18 @@ namespace GUI_HotelManagement
                     serviceFee += price;
                 }
             }
+            foreach (DataGridViewRow row in listService_DataGrid.Rows)
+            {
+                if (!row.IsNewRow && row.Cells["Total_Price"].Value.ToString() != "")
+                {
+                    string statusService = row.Cells["Status"].Value.ToString();
+                    if(statusService == "Ðã thanh toán")
+                    {
+                        int price = int.Parse(row.Cells["Total_Price"].Value.ToString());
+                        serviceFeePay += price;
+                    }              
+                }
+            }
             foreach (DataGridViewRow row in damage_DataGrid.Rows)
             {
                 if (!row.IsNewRow && row.Cells["Total_Price"].Value.ToString() != "")
@@ -118,28 +179,36 @@ namespace GUI_HotelManagement
                 }
             }
             roomFee_Text.Text = roomFee.ToString();
-            serviceFee_Text.Text = serviceFee.ToString();
+            serviceFee_Text.Text = (serviceFee - serviceFeePay).ToString();
             damageFee_Text.Text = damagedFee.ToString();
             depositPrice_Text.Text = depositFree.ToString();
-            if (statusBill == "Chưa thanh toán") totalFee_Text.Text = (roomFee + serviceFee + damagedFee + depositFree).ToString();
-            else totalFee_Text.Text = (roomFee + serviceFee + damagedFee).ToString();
+            Deposit_Fee_Status_Label.Text = "Status : " + statusBill.ToString();
+            NotPay_Label.Text = "Not pay : " + (serviceFee - serviceFeePay).ToString();
+            Pay_Label.Text = "Pay : " + serviceFeePay.ToString();
+            if (statusBill == "Chưa thanh toán") totalFee_Text.Text = (roomFee + serviceFee + damagedFee + depositFree - serviceFeePay).ToString();
+            else totalFee_Text.Text = (roomFee + serviceFee + damagedFee - serviceFeePay).ToString();
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void Close_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Search_Button_Click(object sender, EventArgs e)
         {
             string userName = cusName_Text.Text.ToString();
-
             setDatawithCusInfo(new Customer_DTO(userName));
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Refresh_Button_Click(object sender, EventArgs e)
         {
             if (!isUpdate)
             {
                 cusName_Text.Text = null;
                 idBooking_Text.Text = null;
-                cusName_Text = null;
                 roomFee_Text.Text = null;
                 serviceFee_Text.Text = null;
+                depositPrice_Text.Text = null;
                 damageFee_Text.Text = null;
                 totalFee_Text.Text = null;
                 Method_ComboBox.Text = "Cash";
@@ -151,9 +220,7 @@ namespace GUI_HotelManagement
             {
                 setDatawithCusInfo(new Customer_DTO(cusName_Text.Text));
             }
-
         }
-
         private void addDamage_Button_Click(object sender, EventArgs e)
         {
             if (!isUpdate)
@@ -172,7 +239,7 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Confirm_Button_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Xác nhận thanh toán!", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -215,16 +282,32 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        bool isClick_Deposit = false;
+        bool isClick_Service = false;   
+        private void Status_Service_Fee_Button_Click(object sender, EventArgs e)
         {
-            string userName = cusName_Text.Text.ToString();
-
-            setDatawithCusInfo(new Customer_DTO(userName));
+            if(!isClick_Service)
+            {
+                Service_Fee_Details_Panel.Visible= true;
+            }
+            else
+            {
+                Service_Fee_Details_Panel.Visible = false;
+            }
+            isClick_Service = !isClick_Service;
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void Deposit_Fee_Status_Button_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (!isClick_Deposit)
+            {
+                Deposit_Fee_Details_Panel.Visible = true;
+            }
+            else
+            {
+                Deposit_Fee_Details_Panel.Visible = false;
+            }
+            isClick_Deposit = !isClick_Deposit;
         }
     }
 }

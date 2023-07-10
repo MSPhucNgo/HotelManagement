@@ -15,6 +15,12 @@ namespace GUI_HotelManagement
 {
     public partial class MultiRoom_Form : Form
     {
+        public List<Room_DTO> roomInfor = new List<Room_DTO>();
+        public BookingForm_DTO inforBooking = new BookingForm_DTO();
+        public Customer_DTO inforCTM = new Customer_DTO();
+        public Infomation_Form_DTO inforForm = new Infomation_Form_DTO();
+        public Supply_Form_DTO supInfo = new Supply_Form_DTO();
+        public Bill_DTO inforBill = new Bill_DTO();
         public MultiRoom_Form()
         {
             InitializeComponent();
@@ -24,6 +30,22 @@ namespace GUI_HotelManagement
 
             setData_FilterType();
         }
+
+        public MultiRoom_Form(ref Customer_DTO _inforCTM, ref BookingForm_DTO _inforBooking, ref Infomation_Form_DTO _inforForm, ref Supply_Form_DTO _supInfo, ref Bill_DTO _inforBill)
+        {
+            InitializeComponent();
+            this.inforBooking = _inforBooking;
+            this.inforCTM = _inforCTM;
+            this.inforForm = _inforForm;
+            this.supInfo = _supInfo;
+            this.inforBill = _inforBill;
+            bookingRoom_DataGrid.Columns.Add("NameRoom", "Name");
+            bookingRoom_DataGrid.Columns.Add("PriceRoom", "Price");
+            bookingRoom_DataGrid.Columns.Add("TypeRoom", "Type");
+            setData_FilterType();
+
+        }
+
         void setData_FilterType()
         {
             List<string> ListRoomName = Room_BUS.getListRoom_Type("Trống", "All");
@@ -100,30 +122,26 @@ namespace GUI_HotelManagement
             //ListRoom_FlowLayout.Controls.Remove(sender as Button);
         }
 
-        private void bookingRoom_DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            //if (e.ColumnIndex == bookingRoom_DataGrid.Columns["NameRoom"].Index && e.RowIndex >= 0)
-            //{
-            //    DataGridViewRow selectedRow = bookingRoom_DataGrid.Rows[e.RowIndex];
-            //    string roomname = selectedRow.Cells["NameRoom"].Value.ToString() + '\n' + selectedRow.Cells["TypeRoom"].Value.ToString();
-            //    bookingRoom_DataGrid.Rows.Remove(selectedRow);
-            //    foreach (Button value in buttonList)
-            //    {
-            //        if (value.Text == roomname) { value.Enabled = true; value.BackColor = Color.FromArgb(0, 193, 138); break; }
-            //    }
-            //    createButton(roomname);
-            //}
-            //else return;
-        }
+            foreach (DataGridViewRow row in bookingRoom_DataGrid.Rows)
+            {
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+                string temp = row.Cells["NameRoom"].Value.ToString();
 
-        }
+                string idRoom = Room_BUS.getRoomId(new Room_DTO(null, temp, 0));
+                roomInfor.Add(new Room_DTO(idRoom, null, 0));
+            }
+            inforBooking.Price = Room_BUS.totalRoomFee(ref roomInfor);
+            inforBill.Room_Fee = inforBooking.Price.ToString();
+            inforBill.Deposit_price = (float.Parse(inforBill.Room_Fee) * 30 / 100).ToString();
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+            this.Hide();
 
+
+            Booking_Form bkf = new Booking_Form(ref inforCTM, ref inforBooking, ref roomInfor, ref inforForm, ref supInfo, ref inforBill);
+            bkf.ShowDialog();
+            this.Close();
         }
     }
 }

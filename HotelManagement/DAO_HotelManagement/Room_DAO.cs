@@ -368,7 +368,24 @@ namespace DAO_HotelManagement
             }
             return total;
         }
+        public string amountRoomInfo()
+        {
+            string query = "SELECT \n  " +
+                           "SUM(CASE WHEN TYPE = N'Phòng 2 người' THEN 1 ELSE 0 END) AS COUNT_2, \n  " +
+                           "SUM(CASE WHEN TYPE = N'Phòng 4 người' THEN 1 ELSE 0 END) AS COUNT_4, \n  " +
+                           "SUM(CASE WHEN TYPE = N'Phòng 6 người' THEN 1 ELSE 0 END) AS COUNT_6, \n  " +
+                           "SUM(CASE WHEN TYPE = N'Phòng 8 người' THEN 1 ELSE 0 END) AS COUNT_8 \n" +
+                           "FROM ROOM";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string roominfo;
+            string count_2 = dt.Rows[0]["COUNT_2"].ToString();
+            string count_4 = dt.Rows[0]["COUNT_4"].ToString();
+            string count_6 = dt.Rows[0]["COUNT_6"].ToString();
+            string count_8 = dt.Rows[0]["COUNT_8"].ToString();
 
+            roominfo = count_2 + "\n" + count_4 + "\n" + count_6 + "\n" + count_8 + "\n";
+            return roominfo;
+        }
     }
 
 }

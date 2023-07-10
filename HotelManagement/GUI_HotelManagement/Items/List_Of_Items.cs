@@ -19,21 +19,13 @@ namespace GUI_HotelManagement
     {
 		public List_Of_Items()
         {
-
 			InitializeComponent();
             loadlistOfItems();
 			cb_RoomID.DataSource = BookingForm_BUS.cb_RoomID();
-
 		}
 
-		private void lb_List_Of_Items_Click(object sender, EventArgs e)
+        private void Search_Button_Click(object sender, EventArgs e) //Search
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e) //Search
-        {
-
 			string BookingId = cb_RoomID.Text.ToString();
 			if (BookingId == "")
 			{
@@ -54,44 +46,19 @@ namespace GUI_HotelManagement
 
 		}
 
-        private void bt_Logout_Click(object sender, EventArgs e)
+        private void Logout_Button_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
-        public void loadlistOfItems() // Load List of items (all)
+        public void loadlistOfItems()
         {
-
             BookingForm_DTO booking = new BookingForm_DTO(null);
             dgv_List_Of_Items.DataSource = BookingForm_BUS.loadlistOfItems();
         }
-		public void loadlistOfItems(string idBooking) //Load List of items theo Room_ID
+		public void loadlistOfItems(string idBooking)
 		{
-
 			BookingForm_DTO bookingID = new BookingForm_DTO(idBooking);
 			dgv_List_Of_Items_Room.DataSource = BookingForm_BUS.loadlistOfItems_Room(bookingID);
-
-		}
-		private void dgv_List_Of_Items_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void dgv_List_Of_Items_Room_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-			string BookingId = cb_RoomID.Text.ToString();
-			loadlistOfItems();
-		}
-		private void dgv_List_Of_Items_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
-		{
-
-		}
-
-		private void cb_RoomID_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

@@ -21,7 +21,6 @@ namespace GUI_HotelManagement
         {
             InitializeComponent();
             Unit_ComboBox.Text = Unit_ComboBox.Items[0].ToString();
-
         }
         public addServiceForm(HotelService_DTO serviceID)
         {
@@ -34,12 +33,7 @@ namespace GUI_HotelManagement
             Unit_ComboBox.Text = HotelService_BUS.getServiceUnit(serviceID);
         }
 
-        private void Descript_Text_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void Add_Button_Click(object sender, EventArgs e)
         {
             if (check)
             {
@@ -108,12 +102,12 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void Close_Button_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void Refresh_Button_Click(object sender, EventArgs e)
         {
             if (check)
             {

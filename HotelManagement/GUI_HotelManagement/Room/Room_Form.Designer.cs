@@ -63,7 +63,7 @@
             this.Filter_ComboBox.Size = new System.Drawing.Size(437, 28);
             this.Filter_ComboBox.TabIndex = 2;
             this.Filter_ComboBox.Text = "All";
-            this.Filter_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Filter_ComboBox_SelectedIndexChanged_1);
+            this.Filter_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Filter_ComboBox_SelectedIndexChanged);
             // 
             // Status_ComboBox
             // 
@@ -79,7 +79,7 @@
             this.Status_ComboBox.Size = new System.Drawing.Size(175, 28);
             this.Status_ComboBox.TabIndex = 3;
             this.Status_ComboBox.Text = "All";
-            this.Status_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Status_ComboBox_SelectedIndexChanged_1);
+            this.Status_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Status_ComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -129,7 +129,7 @@
             this.Type_ComboBox.Size = new System.Drawing.Size(171, 28);
             this.Type_ComboBox.TabIndex = 7;
             this.Type_ComboBox.Text = "All";
-            this.Type_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Type_ComboBox_SelectedIndexChanged_1);
+            this.Type_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Type_ComboBox_SelectedIndexChanged);
             // 
             // panel1
             // 

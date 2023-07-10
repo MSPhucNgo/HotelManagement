@@ -34,7 +34,7 @@ namespace GUI_HotelManagement
             Status_Text.Text = information.Split('\n')[3];
 
             string cusInformation = Room_BUS.getCustomerRoomInformation(RoomName);
-            if (cusInformation == null)
+            if (Status_Text.Text == "Trống")
             {
                 idCus = null;
                 customerName_Text.Text = null;
@@ -43,15 +43,20 @@ namespace GUI_HotelManagement
                 Email_Text.Text = null;
                 Phone_Text.Text = null;
                 Identify_Text.Text = null;
-                Button bookingRoom = new Button();
-                bookingRoom.Enabled = true;
-                bookingRoom.Text = "Booking";
-                bookingRoom.Size = Edit_Confirm_Button.Size;
-                bookingRoom.Location = Edit_Confirm_Button.Location;
-                bookingRoom.Click += showBookingForm;
-                Controls.Add(bookingRoom);
-                Edit_Confirm_Button.Hide();
 
+                //Edit_Confirm_Button.Hide();
+                
+                //Button bookingRoom = new Button();
+                //bookingRoom.Enabled = true;
+                //bookingRoom.Text = "Booking";
+                //bookingRoom.Size = Edit_Confirm_Button.Size;
+                //bookingRoom.Location = Edit_Confirm_Button.Location;
+                //bookingRoom.Click += showBookingForm;
+                //bookingRoom.Visible = true;
+                //Controls.Add(bookingRoom);
+
+                Edit_Confirm_Button.Click += showBookingForm;
+                Edit_Confirm_Button.Text = "Booking";
             }
             else
             {
@@ -69,17 +74,15 @@ namespace GUI_HotelManagement
         }
         private void showBookingForm(object sender, EventArgs e)
         {
-            //form của ông nhân
-            this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            Room_DTO roomInfo = new Room_DTO(roomID_Text.Text, roomName_Text.Text, Status_Text.Text, int.Parse(Price_Text.Text), roomType_Text.Text);
+            Booking_Form newBooking = new Booking_Form(roomInfo);
+            this.Hide();
+            newBooking.ShowDialog();
             this.Close();
         }
 
         public bool isEditing = true;
-        private void Edit_Confirm_Button_Click_1(object sender, EventArgs e)
+        private void Edit_Confirm_Button_Click(object sender, EventArgs e)
         {
             if (isEditing)
             {
@@ -141,8 +144,6 @@ namespace GUI_HotelManagement
                         bool flagCustomer = Customer_BUS.updateCustomer(CusInfo);
                         if (flagPrice && flagCustomer)
                         {
-                            MessageBox.Show("Cập nhật thành công!");
-                            this.Close();
                             Edit_Confirm_Button.Text = "Edit";
 
                             Price_Text.Enabled = false;
@@ -180,6 +181,11 @@ namespace GUI_HotelManagement
                 }
             }
             isEditing = !isEditing;
+        }
+
+        private void Close_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

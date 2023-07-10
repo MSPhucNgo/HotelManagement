@@ -26,7 +26,56 @@ namespace GUI_HotelManagement.Check_out
             rate_Label.Text = "0";
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Close_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Confirm_Button_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Xác nhận thêm đánh giá!", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                string content = feedback_Text.Text;
+                string newId = (int.Parse(Feedback_BUS.getMaxID()) + 1).ToString();
+                string created_date = DateTime.Today.ToString();
+                Feedback_DTO addFeedback = new Feedback_DTO(newId, content, created_date, rate_Label.Text, idBill);
+                bool flag = Feedback_BUS.addFeedback(addFeedback);
+                if (flag)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại, thông tin không chính xác!");
+                    DialogResult messageNext = MessageBox.Show("Bạn có muốn tiếp tục đánh giá?", "Xác nhận", MessageBoxButtons.YesNo);
+                    if (messageNext == DialogResult.Yes)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại, thông tin không chính xác!");
+                DialogResult messageNext = MessageBox.Show("Bạn có muốn tiếp tục đánh giá?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (messageNext == DialogResult.Yes)
+                {
+                    return;
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
+        }
+
+        private void Star1st_Click(object sender, EventArgs e)
         {
             Star1st.Image = Resources.Star_Bright;
 
@@ -83,43 +132,6 @@ namespace GUI_HotelManagement.Check_out
             Star5th.Image = Resources.Star_Bright;
 
             rate_Label.Text = "5";
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Xác nhận thêm đánh giá!", "Xác nhận", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                string content = feedback_Text.Text;
-                string newId = (int.Parse(Feedback_BUS.getMaxID()) + 1).ToString();
-                string created_date = DateTime.Today.ToString();
-                Feedback_DTO addFeedback = new Feedback_DTO(newId, content, created_date, rate_Label.Text, idBill);
-                bool flag = Feedback_BUS.addFeedback(addFeedback);
-                if (flag)
-                {
-                    MessageBox.Show("Thêm thành công!");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Thêm thất bại, thông tin không chính xác!");
-                    return;
-                }
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

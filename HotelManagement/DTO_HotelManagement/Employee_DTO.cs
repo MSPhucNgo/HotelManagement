@@ -28,8 +28,8 @@ namespace DTO_HotelManagement
         public Employee_DTO(string idemp)
         {
             this.IdEmp = idemp;
-
         }
+        public Employee_DTO(){}
     }
   
 }

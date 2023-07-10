@@ -60,7 +60,62 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Type_CheckList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int count = Type_CheckList.CheckedItems.Count;
+            int index = Type_CheckList.SelectedIndex;
+
+            for (int i = 0; i < Type_CheckList.Items.Count; i++)
+            {
+                if (i != index)
+                {
+                    Type_CheckList.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
+
+            string _checked = "NULL";
+            foreach (var item in Type_CheckList.SelectedItems)
+            {
+                _checked = item.ToString();
+                break;
+            }
+            if (_checked == "Giảm giá")
+            {
+                PercentDiscount_Text.Enabled = true;
+                AmountRequiment_Text.Enabled = false;
+            }
+            else
+            {
+                PercentDiscount_Text.Enabled = false;
+                AmountRequiment_Text.Enabled = true;
+            }
+        }
+
+        private void Refresh_Button_Click(object sender, EventArgs e)
+        {
+            if (check)
+            {
+                nameDiscount_Text.Text = "";
+                Start_Date.Value = DateTime.Today;
+                End_Date.Value = DateTime.Today.AddMonths(1);
+                Descript_Text.Text = null;
+                for (int i = 0; i < Type_CheckList.Items.Count; i++)
+                {
+                    Type_CheckList.SetItemChecked(i, false);
+                }
+                PercentDiscount_Text.Enabled = false;
+                PercentDiscount_Text.Text = "";
+
+                AmountRequiment_Text.Enabled = false;
+                AmountRequiment_Text.Text = "";
+            }
+            else
+            {
+                setData();
+            }
+        }
+
+        private void Add_Button_Click(object sender, EventArgs e)
         {
             if (check)
             {
@@ -210,66 +265,6 @@ namespace GUI_HotelManagement
                     }
                 }
             }
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            if (check)
-            {
-                nameDiscount_Text.Text = "";
-                Start_Date.Value = DateTime.Today;
-                End_Date.Value = DateTime.Today.AddMonths(1);
-                Descript_Text.Text = null;
-                for (int i = 0; i < Type_CheckList.Items.Count; i++)
-                {
-                    Type_CheckList.SetItemChecked(i, false);
-                }
-                PercentDiscount_Text.Enabled = false;
-                PercentDiscount_Text.Text = "";
-
-                AmountRequiment_Text.Enabled = false;
-                AmountRequiment_Text.Text = "";
-            }
-            else
-            {
-                setData();
-            }
-        }
-
-        private void Type_CheckList_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            int count = Type_CheckList.CheckedItems.Count;
-            int index = Type_CheckList.SelectedIndex;
-
-            for (int i = 0; i < Type_CheckList.Items.Count; i++)
-            {
-                if (i != index)
-                {
-                    Type_CheckList.SetItemCheckState(i, CheckState.Unchecked);
-                }
-            }
-
-            string _checked = "NULL";
-            foreach (var item in Type_CheckList.SelectedItems)
-            {
-                _checked = item.ToString();
-                break;
-            }
-            if (_checked == "Giảm giá")
-            {
-                PercentDiscount_Text.Enabled = true;
-                AmountRequiment_Text.Enabled = false;
-            }
-            else
-            {
-                PercentDiscount_Text.Enabled = false;
-                AmountRequiment_Text.Enabled = true;
-            }
-        }
-
-        private void PercentDiscount_Text_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

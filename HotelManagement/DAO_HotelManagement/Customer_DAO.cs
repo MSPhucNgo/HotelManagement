@@ -41,7 +41,7 @@ namespace DAO_HotelManagement
 
         public DataTable getUsedService(Customer_DTO CusInfo)
         {
-            string query = "SELECT SF.NAME, SB.USED_DATE, SF.PRICE, SF.AMOUNT, SB.DISCOUNT, SB.TOTAL_PRICE FROM CUSTOMER C \n" +
+            string query = "SELECT SF.NAME, SB.USED_DATE, SF.PRICE, SF.AMOUNT, SB.DISCOUNT, SB.TOTAL_PRICE, SB.STATUS FROM CUSTOMER C \n" +
                            "JOIN SERVICE_FORM SF ON C.ID_CUSTOMER = SF.CUSTOMER \n" +
                            "JOIN SERVICE_BILL SB ON SB.ID_SERVICE_FORM = SF.ID_SERVICE_FORM \n" +
                            "WHERE C.NAME = N'" + CusInfo.Name + "'";
@@ -64,7 +64,23 @@ namespace DAO_HotelManagement
                            "JOIN CUSTOMER C ON C.ID_CUSTOMER = BF.CUSTOMER \n" +
                            "JOIN BILL B ON B.ID_BOOKING = BF.ID_BOOKING \n" +
                            "WHERE C.NAME = N'" + cusInfo.Name + "' \n" +
-                           "AND B.STATUS != N'Đã thanh toán'";
+                           "AND B.STATUS != N'Đã thanh toán' AND BF.STATUS = N'Đã xử lý'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string idBooking;
+            foreach (DataRow dr in dt.Rows)
+            {
+                idBooking = dr["ID_BOOKING"].ToString();
+                return idBooking;
+            }
+            return null;
+        }
+
+        public string getIdCheck_inCus(Customer_DTO cusInfo)
+        {
+            string query = "SELECT BF.ID_BOOKING FROM BOOKING_FORM BF \n" +
+                           "JOIN CUSTOMER C ON C.ID_CUSTOMER = BF.CUSTOMER \n" +
+                           "WHERE C.NAME = N'" + cusInfo.Name + "' \n" +
+                           "AND BF.STATUS != N'Đã xử lý'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             string idBooking;
             foreach (DataRow dr in dt.Rows)
@@ -78,15 +94,13 @@ namespace DAO_HotelManagement
         public string insertCustomer(Customer_DTO CusInfo, Bill_DTO inforBill, Infomation_Form_DTO info, Supply_Form_DTO sup)
         {
             string query = "DECLARE @BIRTHDAY_CONVERTED DATE, @ARRIVAL_DATE_CONVERTED DATE;\r\n SET @BIRTHDAY_CONVERTED = CONVERT(DATE, '" + CusInfo.Birthday + "', 103);" +
-                "\n SET @ARRIVAL_DATE_CONVERTED = CONVERT(DATE, '"+info.ArrivalDate+"', 103);" +
-               "EXEC USP_AddCUSTOMER @NAME = N'" + CusInfo.Name + "', @GENDER = N'" + CusInfo.Gender + "', @BIRTHDAY = @BIRTHDAY_CONVERTED, @EMAIL = N'" + 
-               CusInfo.Email + "', @PHONE = '" + CusInfo.Phone + "', @IDENTIFY_CARD = N'" + CusInfo.Identify_Card + "', @TYPE = N'" +info.Type+ "', @ARRIVAL_DATE = @ARRIVAL_DATE_CONVERTED, " +
-               "@NUMBER_ROOMS = "+info.NumberRooms+ ", @NUMBER_STAYS = " +info.NumberStays+ ", " +
-               "@SPECIAL_REQUIREMENTS = N'" + info.SpecialRequirements + "', @GROUP_NAME = N'" +sup.GroupName+ "', @REGISTERED_NAME = N'"+sup.RegisteredName+ "', @GROUP_SIZE = "+sup.GroupSize+";";
-            //string query = "EXEC USP_AddCUSTOMER @NAME = N'" + CusInfo.Name + "', @GENDER = N'" + CusInfo.Gender + "', @BIRTHDAY = CONVERT(DATE, '" + CusInfo.Birthday + "', 103)', @EMAIL = N'" + CusInfo.Email + "', @PHONE = '" + CusInfo.Phone + "', @IDENTIFY_CARD = N'" + CusInfo.Identify_Card + "'";
+                "\n SET @ARRIVAL_DATE_CONVERTED = CONVERT(DATE, '" + info.ArrivalDate + "', 103);" +
+               "EXEC USP_AddCUSTOMER @NAME = N'" + CusInfo.Name + "', @GENDER = N'" + CusInfo.Gender + "', @BIRTHDAY = @BIRTHDAY_CONVERTED, @EMAIL = N'" +
+               CusInfo.Email + "', @PHONE = '" + CusInfo.Phone + "', @IDENTIFY_CARD = N'" + CusInfo.Identify_Card + "', @TYPE = N'" + info.Type + "', @ARRIVAL_DATE = @ARRIVAL_DATE_CONVERTED, " +
+               "@NUMBER_ROOMS = " + info.NumberRooms + ", @NUMBER_STAYS = " + info.NumberStays + ", " +
+               "@SPECIAL_REQUIREMENTS = N'" + info.SpecialRequirements + "', @GROUP_NAME = N'" + sup.GroupName + "', @REGISTERED_NAME = N'" + sup.RegisteredName + "', @GROUP_SIZE = " + sup.GroupSize + ";";
             string id = "";
             id = DataProvider.Instance.ExecuteScalar(query);
-            //int index = DataProvider.Instance.ExecuteNonQuery(query);
             if (id == "") { return "error"; }
             return id;
         }

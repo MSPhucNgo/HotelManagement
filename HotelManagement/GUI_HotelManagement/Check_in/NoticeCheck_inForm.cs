@@ -38,12 +38,7 @@ namespace GUI_HotelManagement
             Discount_DataGrid.DataSource = HotelService_BUS.LoadDataDiscountService(IdService);
         }
 
-        private void Discount_DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void ServiceHotel_DataGid_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void ServiceHotel_DataGid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == ServiceHotel_DataGid.Columns["ID_Service"].Index && e.RowIndex >= 0)
             {
@@ -52,24 +47,17 @@ namespace GUI_HotelManagement
             }
         }
 
-        private void Confirm_Button_Click(object sender, EventArgs e)
+        private void Confirm_Button_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Xác nhận hoàn thành thủ tục Check-in!", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                this.Hide();
-                ServiceForm viewService = new ServiceForm();
-                viewService.Show();
+                this.Close();
             }
             else
             {
                 return;
             }
-        }
-
-        private void Rules_DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

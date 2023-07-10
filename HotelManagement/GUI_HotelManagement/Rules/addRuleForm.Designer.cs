@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Add_Button = new System.Windows.Forms.Button();
+            this.Close_Button = new System.Windows.Forms.Button();
+            this.Refresh_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.Type_ComboBox = new System.Windows.Forms.ComboBox();
@@ -42,61 +42,61 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // Add_Button
             // 
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.button1.Location = new System.Drawing.Point(208, 440);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 59);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.Add_Button.FlatAppearance.BorderSize = 2;
+            this.Add_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Add_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.Add_Button.Location = new System.Drawing.Point(208, 440);
+            this.Add_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Add_Button.Name = "Add_Button";
+            this.Add_Button.Size = new System.Drawing.Size(139, 59);
+            this.Add_Button.TabIndex = 1;
+            this.Add_Button.Text = "Add";
+            this.Add_Button.UseVisualStyleBackColor = true;
+            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
-            // button2
+            // Close_Button
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(59)))), ((int)(((byte)(44)))));
-            this.button2.Location = new System.Drawing.Point(726, 8);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 48);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "x";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Close_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Close_Button.FlatAppearance.BorderSize = 0;
+            this.Close_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Close_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Close_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(59)))), ((int)(((byte)(44)))));
+            this.Close_Button.Location = new System.Drawing.Point(726, 8);
+            this.Close_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Close_Button.Name = "Close_Button";
+            this.Close_Button.Size = new System.Drawing.Size(46, 48);
+            this.Close_Button.TabIndex = 2;
+            this.Close_Button.Text = "x";
+            this.Close_Button.UseVisualStyleBackColor = true;
+            this.Close_Button.Click += new System.EventHandler(this.Close_Button_Click);
             // 
-            // button3
+            // Refresh_Button
             // 
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.button3.Location = new System.Drawing.Point(446, 440);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 59);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Refresh";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.Refresh_Button.FlatAppearance.BorderSize = 2;
+            this.Refresh_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Refresh_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Refresh_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.Refresh_Button.Location = new System.Drawing.Point(446, 440);
+            this.Refresh_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Refresh_Button.Name = "Refresh_Button";
+            this.Refresh_Button.Size = new System.Drawing.Size(139, 59);
+            this.Refresh_Button.TabIndex = 3;
+            this.Refresh_Button.Text = "Refresh";
+            this.Refresh_Button.UseVisualStyleBackColor = true;
+            this.Refresh_Button.Click += new System.EventHandler(this.Refresh_Button_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.Refresh_Button);
             this.panel2.Controls.Add(this.Type_ComboBox);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.Close_Button);
             this.panel2.Controls.Add(this.Description_Text);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.Add_Button);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
@@ -206,9 +206,9 @@
         }
 
         #endregion
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button Add_Button;
+        private Button Close_Button;
+        private Button Refresh_Button;
         private Panel panel2;
         private ComboBox Type_ComboBox;
         private TextBox Description_Text;

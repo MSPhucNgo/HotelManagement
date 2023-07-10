@@ -35,50 +35,25 @@ namespace GUI_HotelManagement
                 Rule_ComboBox.Text = selectedValue;
                 Rules_DataGrid.DataSource = Rules_BUS.LoadDataRK();
                 rulesId_ComboBox.DataSource = Rules_BUS.getRulesID_RK();
-                //UD_Panel.Hide();
-                //UD_Panel.Show();
             }
             else if (selectedValue == "Quy định khách sạn")
             {
                 Rule_ComboBox.Text = selectedValue;
                 Rules_DataGrid.DataSource = Rules_BUS.LoadDataOthers();
                 rulesId_ComboBox.DataSource = Rules_BUS.getRulesID_Others();
-                //UD_Panel.Hide();
-                //UD_Panel.Show();
             }
             else
             {
                 Rule_ComboBox.Text = selectedValue;
                 Rules_DataGrid.DataSource = Rules_BUS.LoadData();
                 rulesId_ComboBox.DataSource = Rules_BUS.getRulesID();
-                //UD_Panel.Hide();
-                //UD_Panel.Show();
-
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void Add_Button_Click(object sender, EventArgs e)
         {
             addRuleForm addRule = new addRuleForm();
             addRule.ShowDialog();
-        }
-
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-            Rule_ComboBox.Text = "All";
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            string ruleID = rulesId_ComboBox.Text;
-            Rules_DTO idRule = new Rules_DTO(ruleID);
-            addRuleForm updateRule = new addRuleForm(idRule);
-            updateRule.ShowDialog();
-        }
-
-        private void rulesId_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Rule_ComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -87,7 +62,20 @@ namespace GUI_HotelManagement
             setComboBoxID(selectedValue);
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void Refresh_Button_Click(object sender, EventArgs e)
+        {
+            Rule_ComboBox.Text = "All";
+        }
+
+        private void Update_Button_Click(object sender, EventArgs e)
+        {
+            string ruleID = rulesId_ComboBox.Text;
+            Rules_DTO idRule = new Rules_DTO(ruleID);
+            addRuleForm updateRule = new addRuleForm(idRule);
+            updateRule.ShowDialog();
+        }
+
+        private void Delete_Button_Click(object sender, EventArgs e)
         {
             string RuleId = rulesId_ComboBox.Text;
 
@@ -113,11 +101,6 @@ namespace GUI_HotelManagement
                 MessageBox.Show("Xóa thất bại!");
                 return;
             }
-        }
-
-        private void Rules_DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

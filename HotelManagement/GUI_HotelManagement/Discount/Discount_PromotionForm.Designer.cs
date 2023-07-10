@@ -37,18 +37,18 @@
             this.UD_Panel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.Update_Button = new System.Windows.Forms.Button();
             this.Disable_Button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.Refresh_Button = new System.Windows.Forms.Button();
+            this.Add_Button = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.Search_Button = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Discount_DataGrid)).BeginInit();
             this.panel4.SuspendLayout();
@@ -71,7 +71,6 @@
             this.Discount_DataGrid.RowTemplate.Height = 24;
             this.Discount_DataGrid.Size = new System.Drawing.Size(542, 521);
             this.Discount_DataGrid.TabIndex = 1;
-            this.Discount_DataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Discount_DataGrid_CellContentClick);
             // 
             // End_DataTime
             // 
@@ -144,7 +143,7 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.idDiscount_ComboBox);
-            this.panel5.Controls.Add(this.button6);
+            this.panel5.Controls.Add(this.Update_Button);
             this.panel5.Controls.Add(this.Disable_Button);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(10, 10);
@@ -163,20 +162,20 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Discount promotion\'s name:";
             // 
-            // button6
+            // Update_Button
             // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 2;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.button6.Location = new System.Drawing.Point(47, 146);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 38);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Update";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.Update_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Update_Button.FlatAppearance.BorderSize = 2;
+            this.Update_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Update_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Update_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.Update_Button.Location = new System.Drawing.Point(47, 146);
+            this.Update_Button.Name = "Update_Button";
+            this.Update_Button.Size = new System.Drawing.Size(159, 38);
+            this.Update_Button.TabIndex = 3;
+            this.Update_Button.Text = "Update";
+            this.Update_Button.UseVisualStyleBackColor = true;
+            this.Update_Button.Click += new System.EventHandler(this.Update_Button_Click);
             // 
             // Disable_Button
             // 
@@ -206,43 +205,43 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.button7);
-            this.panel6.Controls.Add(this.button8);
+            this.panel6.Controls.Add(this.Refresh_Button);
+            this.panel6.Controls.Add(this.Add_Button);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(10, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(470, 175);
             this.panel6.TabIndex = 0;
             // 
-            // button7
+            // Refresh_Button
             // 
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 2;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.button7.Location = new System.Drawing.Point(246, 43);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(172, 39);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Refresh";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            this.Refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Refresh_Button.FlatAppearance.BorderSize = 2;
+            this.Refresh_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Refresh_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Refresh_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.Refresh_Button.Location = new System.Drawing.Point(246, 43);
+            this.Refresh_Button.Name = "Refresh_Button";
+            this.Refresh_Button.Size = new System.Drawing.Size(172, 39);
+            this.Refresh_Button.TabIndex = 3;
+            this.Refresh_Button.Text = "Refresh";
+            this.Refresh_Button.UseVisualStyleBackColor = true;
+            this.Refresh_Button.Click += new System.EventHandler(this.Refresh_Button_Click);
             // 
-            // button8
+            // Add_Button
             // 
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 2;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.button8.Location = new System.Drawing.Point(47, 43);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(166, 39);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Add";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click_2);
+            this.Add_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Add_Button.FlatAppearance.BorderSize = 2;
+            this.Add_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Add_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.Add_Button.Location = new System.Drawing.Point(47, 43);
+            this.Add_Button.Name = "Add_Button";
+            this.Add_Button.Size = new System.Drawing.Size(166, 39);
+            this.Add_Button.TabIndex = 2;
+            this.Add_Button.Text = "Add";
+            this.Add_Button.UseVisualStyleBackColor = true;
+            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // panel7
             // 
@@ -260,7 +259,7 @@
             this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.label5);
             this.panel8.Controls.Add(this.label6);
-            this.panel8.Controls.Add(this.button9);
+            this.panel8.Controls.Add(this.Search_Button);
             this.panel8.Controls.Add(this.ServiceID_ComboBox);
             this.panel8.Controls.Add(this.End_DataTime);
             this.panel8.Controls.Add(this.Start_DataTime);
@@ -303,22 +302,22 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Start date:";
             // 
-            // button9
+            // Search_Button
             // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.button9.FlatAppearance.BorderSize = 2;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.button9.Location = new System.Drawing.Point(187, 202);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(94, 51);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "Search";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            this.Search_Button.BackColor = System.Drawing.Color.White;
+            this.Search_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Search_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.Search_Button.FlatAppearance.BorderSize = 2;
+            this.Search_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Search_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.Search_Button.Location = new System.Drawing.Point(187, 202);
+            this.Search_Button.Name = "Search_Button";
+            this.Search_Button.Size = new System.Drawing.Size(94, 51);
+            this.Search_Button.TabIndex = 4;
+            this.Search_Button.Text = "Search";
+            this.Search_Button.UseVisualStyleBackColor = false;
+            this.Search_Button.Click += new System.EventHandler(this.Search_Button_Click);
             // 
             // label4
             // 
@@ -373,17 +372,17 @@
         private Panel UD_Panel;
         private Panel panel5;
         private Label label1;
-        private Button button6;
+        private Button Update_Button;
         private Button Disable_Button;
         private Panel panel1;
         private Panel panel6;
-        private Button button7;
-        private Button button8;
+        private Button Refresh_Button;
+        private Button Add_Button;
         private Panel panel7;
         private Panel panel8;
         private Label label5;
         private Label label6;
-        private Button button9;
+        private Button Search_Button;
         private Label label3;
     }
 }

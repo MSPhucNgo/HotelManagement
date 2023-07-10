@@ -105,7 +105,7 @@ namespace GUI_HotelManagement
 
         }
 
-        private void Filter_ComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void Filter_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedValue = Filter_ComboBox.SelectedItem.ToString();
             string selectedStatus = Status_ComboBox.SelectedItem.ToString();
@@ -113,7 +113,7 @@ namespace GUI_HotelManagement
             setComboBox(selectedValue, selectedStatus, selectedType);
         }
 
-        private void Status_ComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void Status_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedValue = Filter_ComboBox.SelectedItem.ToString();
             string selectedStatus = Status_ComboBox.SelectedItem.ToString();
@@ -121,7 +121,7 @@ namespace GUI_HotelManagement
             setComboBox(selectedValue, selectedStatus, selectedType);
         }
 
-        private void Type_ComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void Type_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedValue = Filter_ComboBox.SelectedItem.ToString();
             string selectedStatus = Status_ComboBox.SelectedItem.ToString();

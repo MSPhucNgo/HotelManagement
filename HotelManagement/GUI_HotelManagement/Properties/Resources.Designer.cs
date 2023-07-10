@@ -79,5 +79,22 @@ namespace GUI_HotelManagement.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        internal static System.Drawing.Bitmap HotelBanner
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("HotelBanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap IconHotel
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("IconHotel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

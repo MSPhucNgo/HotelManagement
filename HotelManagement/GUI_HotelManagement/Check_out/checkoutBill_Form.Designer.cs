@@ -61,7 +61,6 @@
             this.label1.Size = new System.Drawing.Size(262, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Khách sạn HCMUS - Nhóm 7";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -71,7 +70,6 @@
             this.label2.Size = new System.Drawing.Size(303, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Địa chỉ : Quận 2, Trần Duy Hưng, 500k 1 đêm";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -81,7 +79,6 @@
             this.label3.Size = new System.Drawing.Size(149, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hotline : 0843678755";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -91,7 +88,6 @@
             this.label4.Size = new System.Drawing.Size(135, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Hóa đơn khách sạn";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dateout_Label
             // 
@@ -101,7 +97,6 @@
             this.dateout_Label.Size = new System.Drawing.Size(61, 20);
             this.dateout_Label.TabIndex = 4;
             this.dateout_Label.Text = "Ngày đi";
-            this.dateout_Label.Click += new System.EventHandler(this.label5_Click);
             // 
             // idBill_Label
             // 
@@ -111,7 +106,6 @@
             this.idBill_Label.Size = new System.Drawing.Size(89, 20);
             this.idBill_Label.TabIndex = 5;
             this.idBill_Label.Text = "Mã hóa đơn";
-            this.idBill_Label.Click += new System.EventHandler(this.label6_Click);
             // 
             // datePay_Label
             // 
@@ -121,7 +115,6 @@
             this.datePay_Label.Size = new System.Drawing.Size(119, 20);
             this.datePay_Label.TabIndex = 6;
             this.datePay_Label.Text = "Ngày thanh toán";
-            this.datePay_Label.Click += new System.EventHandler(this.label7_Click);
             // 
             // days_Label
             // 
@@ -131,7 +124,6 @@
             this.days_Label.Size = new System.Drawing.Size(60, 20);
             this.days_Label.TabIndex = 7;
             this.days_Label.Text = "Số đêm";
-            this.days_Label.Click += new System.EventHandler(this.label8_Click);
             // 
             // nameCus_Label
             // 
@@ -141,7 +133,6 @@
             this.nameCus_Label.Size = new System.Drawing.Size(111, 20);
             this.nameCus_Label.TabIndex = 8;
             this.nameCus_Label.Text = "Tên khách hàng";
-            this.nameCus_Label.Click += new System.EventHandler(this.label9_Click);
             // 
             // datein_Label
             // 
@@ -151,7 +142,6 @@
             this.datein_Label.Size = new System.Drawing.Size(73, 20);
             this.datein_Label.TabIndex = 9;
             this.datein_Label.Text = "Ngày đến";
-            this.datein_Label.Click += new System.EventHandler(this.label10_Click);
             // 
             // phone_Label
             // 
@@ -161,7 +151,6 @@
             this.phone_Label.Size = new System.Drawing.Size(105, 20);
             this.phone_Label.TabIndex = 10;
             this.phone_Label.Text = "Phone number";
-            this.phone_Label.Click += new System.EventHandler(this.label11_Click);
             // 
             // email_Label
             // 
@@ -171,7 +160,6 @@
             this.email_Label.Size = new System.Drawing.Size(46, 20);
             this.email_Label.TabIndex = 11;
             this.email_Label.Text = "Email";
-            this.email_Label.Click += new System.EventHandler(this.label12_Click);
             // 
             // pictureBox1
             // 
@@ -182,7 +170,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(189, 120);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label13
             // 
@@ -192,7 +179,6 @@
             this.label13.Size = new System.Drawing.Size(121, 20);
             this.label13.TabIndex = 14;
             this.label13.Text = "Website : abc.xyz";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // Information_Panel
             // 
@@ -209,7 +195,6 @@
             this.Information_Panel.Name = "Information_Panel";
             this.Information_Panel.Size = new System.Drawing.Size(658, 117);
             this.Information_Panel.TabIndex = 15;
-            this.Information_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // methods_Label
             // 
@@ -219,7 +204,6 @@
             this.methods_Label.Size = new System.Drawing.Size(168, 20);
             this.methods_Label.TabIndex = 13;
             this.methods_Label.Text = "Phương thức thanh toán";
-            this.methods_Label.Click += new System.EventHandler(this.label15_Click);
             // 
             // receptionist_Label
             // 
@@ -229,7 +213,6 @@
             this.receptionist_Label.Size = new System.Drawing.Size(145, 20);
             this.receptionist_Label.TabIndex = 12;
             this.receptionist_Label.Text = "Thu ngân thanh toán";
-            this.receptionist_Label.Click += new System.EventHandler(this.label14_Click);
             // 
             // Cam
             // 
@@ -239,7 +222,6 @@
             this.Cam.Size = new System.Drawing.Size(352, 20);
             this.Cam.TabIndex = 16;
             this.Cam.Text = "Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi";
-            this.Cam.Click += new System.EventHandler(this.Cam_Click);
             // 
             // Back_Button
             // 
@@ -270,7 +252,6 @@
             this.Name = "checkoutBill_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "bill";
-            this.Load += new System.EventHandler(this.checkoutBill_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Information_Panel.ResumeLayout(false);
             this.Information_Panel.PerformLayout();

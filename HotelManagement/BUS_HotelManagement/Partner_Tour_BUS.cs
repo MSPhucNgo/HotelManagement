@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BUS_HotelManagement
 {
-    public class Partner_Tour_BUS
+    public class WaitingList_BUS
     {
         public static DataTable LoadDataServiceTour()
         {

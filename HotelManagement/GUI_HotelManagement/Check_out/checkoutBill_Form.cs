@@ -118,20 +118,15 @@ namespace GUI_HotelManagement
             subtotal_Price.AutoSize = true;
             subtotal_Price.Text = (subtotal_item + subtotal_room + subtotal_service).ToString();
             Controls.Add(subtotal_Price);
-
-
-
         }
         Label createLine()
         {
             Label line = new Label();
             line.AutoSize = true;
-            //MessageBox.Show((this.Size.Width / 16).ToString() + "   -    " + (this.Size.Width / 8 * 4).ToString());
             for(int i= 0; i < 114; i++)
             {
                 line.Text += '_';
-            }
-            
+            }     
             return line;
         }
         void setRoomDetails(Label roomInfo_Label)
@@ -167,7 +162,6 @@ namespace GUI_HotelManagement
             int distance = 1;
             foreach(roomInfo showRoom in roomInfoList)
             {
-                
                 //Label roomname
                 Label roomName = new Label();
                 roomName.Location = new Point(this.Size.Width/16, roomInfo_Label.Location.Y + 30*distance + 25);
@@ -260,111 +254,6 @@ namespace GUI_HotelManagement
             subtotal_item = total_price;
 
         }
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkoutBill_Form_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cam_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Back_Button_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you want feedback about our service ?", "Feedback", MessageBoxButtons.YesNo);
@@ -372,6 +261,7 @@ namespace GUI_HotelManagement
             {
                 Feedback fd = new Feedback(billID);
                 fd.ShowDialog();
+                this.Close();
             }
             else
             {

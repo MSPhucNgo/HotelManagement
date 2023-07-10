@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Refresh_Button = new System.Windows.Forms.Button();
+            this.Confirm_Button = new System.Windows.Forms.Button();
+            this.Name_Text = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Booking_Grid = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -41,7 +43,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.gName_Text = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Search_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Agent_CheckBox = new System.Windows.Forms.CheckBox();
             this.Own_CheckList = new System.Windows.Forms.CheckedListBox();
@@ -50,10 +52,8 @@
             this.BookID_Text = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Name_Text = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.NoRooms_Text = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -75,14 +75,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.Refresh_Button);
+            this.panel1.Controls.Add(this.Confirm_Button);
+            this.panel1.Controls.Add(this.Name_Text);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.Booking_Grid);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.Search_Button);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.BookID_Text);
             this.panel1.Controls.Add(this.label2);
@@ -93,6 +95,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1360, 907);
             this.panel1.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(22, 122);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Guest name:";
             // 
             // button3
             // 
@@ -107,34 +119,46 @@
             this.button3.TabIndex = 93;
             this.button3.Text = "x";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button1
+            // Refresh_Button
             // 
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.button1.Location = new System.Drawing.Point(443, 819);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 59);
-            this.button1.TabIndex = 92;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Refresh_Button.FlatAppearance.BorderSize = 2;
+            this.Refresh_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Refresh_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Refresh_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.Refresh_Button.Location = new System.Drawing.Point(443, 819);
+            this.Refresh_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Refresh_Button.Name = "Refresh_Button";
+            this.Refresh_Button.Size = new System.Drawing.Size(179, 59);
+            this.Refresh_Button.TabIndex = 92;
+            this.Refresh_Button.Text = "Refresh";
+            this.Refresh_Button.UseVisualStyleBackColor = true;
+            this.Refresh_Button.Click += new System.EventHandler(this.Refresh_Button_Click);
             // 
-            // button4
+            // Confirm_Button
             // 
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.button4.Location = new System.Drawing.Point(702, 819);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(179, 59);
-            this.button4.TabIndex = 91;
-            this.button4.Text = "Confirm";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Confirm_Button.FlatAppearance.BorderSize = 2;
+            this.Confirm_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Confirm_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Confirm_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.Confirm_Button.Location = new System.Drawing.Point(702, 819);
+            this.Confirm_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Confirm_Button.Name = "Confirm_Button";
+            this.Confirm_Button.Size = new System.Drawing.Size(179, 59);
+            this.Confirm_Button.TabIndex = 91;
+            this.Confirm_Button.Text = "Confirm";
+            this.Confirm_Button.UseVisualStyleBackColor = true;
+            this.Confirm_Button.Click += new System.EventHandler(this.Confirm_Button_Click);
+            // 
+            // Name_Text
+            // 
+            this.Name_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Name_Text.Location = new System.Drawing.Point(138, 122);
+            this.Name_Text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name_Text.Name = "Name_Text";
+            this.Name_Text.Size = new System.Drawing.Size(304, 27);
+            this.Name_Text.TabIndex = 10;
             // 
             // label6
             // 
@@ -235,21 +259,22 @@
             this.label11.TabIndex = 35;
             this.label11.Text = "List of Rooms:";
             // 
-            // button2
+            // Search_Button
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(465, 85);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 33);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Search_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.Search_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Search_Button.FlatAppearance.BorderSize = 0;
+            this.Search_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Search_Button.ForeColor = System.Drawing.Color.White;
+            this.Search_Button.Location = new System.Drawing.Point(465, 85);
+            this.Search_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Search_Button.Name = "Search_Button";
+            this.Search_Button.Size = new System.Drawing.Size(147, 64);
+            this.Search_Button.TabIndex = 29;
+            this.Search_Button.Text = "Search";
+            this.Search_Button.UseVisualStyleBackColor = false;
+            this.Search_Button.Click += new System.EventHandler(this.Search_Button_Click);
             // 
             // panel2
             // 
@@ -276,6 +301,7 @@
             this.Agent_CheckBox.TabIndex = 27;
             this.Agent_CheckBox.Text = "Travel agent account";
             this.Agent_CheckBox.UseVisualStyleBackColor = true;
+            this.Agent_CheckBox.CheckedChanged += new System.EventHandler(this.Agent_CheckBox_CheckedChanged_1);
             // 
             // Own_CheckList
             // 
@@ -290,6 +316,7 @@
             this.Own_CheckList.Name = "Own_CheckList";
             this.Own_CheckList.Size = new System.Drawing.Size(244, 48);
             this.Own_CheckList.TabIndex = 24;
+            this.Own_CheckList.SelectedIndexChanged += new System.EventHandler(this.Own_CheckList_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -334,10 +361,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
-            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.Name_Text);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.NoRooms_Text);
             this.panel4.Controls.Add(this.label8);
@@ -354,16 +379,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(810, 363);
             this.panel4.TabIndex = 94;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(32, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Guest name:";
             // 
             // label4
             // 
@@ -384,17 +399,6 @@
             this.label3.Size = new System.Drawing.Size(120, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Check-in date:";
-            // 
-            // Name_Text
-            // 
-            this.Name_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Name_Text.Enabled = false;
-            this.Name_Text.Location = new System.Drawing.Point(159, 23);
-            this.Name_Text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name_Text.Name = "Name_Text";
-            this.Name_Text.ReadOnly = true;
-            this.Name_Text.Size = new System.Drawing.Size(237, 27);
-            this.Name_Text.TabIndex = 10;
             // 
             // label5
             // 
@@ -440,6 +444,7 @@
             this.Edit_Button.TabIndex = 35;
             this.Edit_Button.Text = "Edit";
             this.Edit_Button.UseVisualStyleBackColor = false;
+            this.Edit_Button.Click += new System.EventHandler(this.Edit_Button_Click_1);
             // 
             // IdentityNo_Text
             // 
@@ -543,7 +548,7 @@
         private TextBox textBox4;
         private Panel panel1;
         private Button Edit_Button;
-        private Button button2;
+        private Button Search_Button;
         private Panel panel2;
         private CheckBox Agent_CheckBox;
         private CheckedListBox Own_CheckList;
@@ -574,8 +579,8 @@
         private Label label14;
         private TextBox gName_Text;
         private Label label6;
-        private Button button1;
-        private Button button4;
+        private Button Refresh_Button;
+        private Button Confirm_Button;
         private Button button3;
         private Panel panel4;
     }
