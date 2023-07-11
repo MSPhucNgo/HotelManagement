@@ -51,7 +51,8 @@ namespace GUI_HotelManagement
         }
         public void setDatawithCusInfo(Customer_DTO cusInfo)
         {
-            if (cusInfo.Name.Trim().Length != 0 && idBooking_Text.Text.Trim().Length == 0)
+            bool flag = BookingForm_BUS.check_BookingCheckout(new BookingForm_DTO(idBooking_Text.Text));
+            if (cusInfo.Name.Trim().Length != 0 && idBooking_Text.Text.Trim().Length == 0 && flag)
             {
                 idBooking_Text.Text = Customer_BUS.getCusID_Booking(cusInfo);
                 if (idBooking_Text.Text != "")
@@ -72,7 +73,7 @@ namespace GUI_HotelManagement
                     setNullData();
                 }
             }
-            else if (cusInfo.Name.Trim().Length == 0 && idBooking_Text.Text.Trim().Length != 0)
+            else if (cusInfo.Name.Trim().Length == 0 && idBooking_Text.Text.Trim().Length != 0 && flag)
             {
                 try
                 {
@@ -91,7 +92,7 @@ namespace GUI_HotelManagement
                     MessageBox.Show("Can't find booking id!");
                 }
             }
-            else if (cusInfo.Name.Trim().Length != 0 && idBooking_Text.Text.Trim().Length != 0)
+            else if (cusInfo.Name.Trim().Length != 0 && idBooking_Text.Text.Trim().Length != 0 && flag)
             {
                 if (idBooking_Text.Text == Customer_BUS.getCusID_Booking(cusInfo))
                 {
@@ -113,7 +114,7 @@ namespace GUI_HotelManagement
             }
             else
             {
-                MessageBox.Show("Please assign your name or your booking id!");
+                MessageBox.Show("Can't find the booking form, please check your information again!");
                 setNullData();
             }
         }

@@ -1,18 +1,12 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "cpCV39Az/JR9nl1TyFUua4vQbXW/HRCUyqrH1EMF8pdzn5rO6UQz/CFBZmTdoRNNA8kgRSrbnS+CEERya9yNNQ==",
+  "dgSpecHash": "dfmFQh4Wv2KU6qLRxKpxz2a8x+45k0H7hir/FMy+vggNAWzWwDr+a/WY2AhBkZ5trKd0dGpQShq4Ae/EzUAMbQ==",
   "success": true,
-  "projectFilePath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
-=======
-  "dgSpecHash": "iyRQod9mdmRz5il9zfKm2lbYfg+jmRQzk2qd5OPGth9ONGo7O7VJ+NXeHZX3K/tW9ejWFY66YJFS+IdsI8ikXA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
->>>>>>> origin/Phuc_Final
+  "projectFilePath": "C:\\Users\\ADmin\\Desktop\\Vandap\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Tuyet Anh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\Tuyet Anh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\Tuyet Anh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+    "C:\\Users\\ADmin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\ADmin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\ADmin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
   ],
   "logs": []
 }

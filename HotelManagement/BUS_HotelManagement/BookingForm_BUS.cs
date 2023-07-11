@@ -61,6 +61,10 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.check_Booking(BookingId);
         }
+        public static bool check_BookingCheckout(BookingForm_DTO BookingId)
+        {
+            return BookingForm_DAO.Instance.check_BookingCheckout(BookingId);
+        }
         public static DataTable loadlistOfReservation()
         {
             return BookingForm_DAO.Instance.loadlistOfReservation();

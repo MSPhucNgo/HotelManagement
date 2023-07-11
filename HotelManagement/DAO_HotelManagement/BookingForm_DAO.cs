@@ -54,7 +54,21 @@ namespace DAO_HotelManagement
         private BookingForm_DAO() { }
         public bool check_Booking(BookingForm_DTO BookingID)
         {
-            string query = "SELECT * FROM BOOKING_FORM WHERE ID_BOOKING = '" + BookingID.IdBooking + "'";
+            string query = "SELECT * FROM BOOKING_FORM WHERE " +
+                           "STATUS = N'Chưa xử lý' \n" +
+                           "AND ID_BOOKING = '" + BookingID.IdBooking + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count <= 0)
+            {
+                return false;
+            }
+            else return true;
+        }
+        public bool check_BookingCheckout(BookingForm_DTO BookingID)
+        {
+            string query = "SELECT * FROM BOOKING_FORM WHERE " +
+                           "STATUS = N'Đã xử lý' \n" +
+                           "AND ID_BOOKING = '" + BookingID.IdBooking + "'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             if (dt.Rows.Count <= 0)
             {

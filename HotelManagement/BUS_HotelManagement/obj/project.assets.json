@@ -505,31 +505,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tuyet Anh\\.nuget\\packages\\": {},
+    "C:\\Users\\ADmin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\BUS_HotelManagement\\BUS_HotelManagement.csproj",
+      "projectUniqueName": "C:\\Users\\ADmin\\Desktop\\Vandap\\hotelmanagement\\HotelManagement\\BUS_HotelManagement\\BUS_HotelManagement.csproj",
       "projectName": "BUS_HotelManagement",
-      "projectPath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\BUS_HotelManagement\\BUS_HotelManagement.csproj",
-      "packagesPath": "C:\\Users\\Tuyet Anh\\.nuget\\packages\\",
-      "outputPath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\BUS_HotelManagement\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\BUS_HotelManagement\\BUS_HotelManagement.csproj",
-      "projectName": "BUS_HotelManagement",
-      "projectPath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\BUS_HotelManagement\\BUS_HotelManagement.csproj",
+      "projectPath": "C:\\Users\\ADmin\\Desktop\\Vandap\\hotelmanagement\\HotelManagement\\BUS_HotelManagement\\BUS_HotelManagement.csproj",
       "packagesPath": "C:\\Users\\ADmin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\BUS_HotelManagement\\obj\\",
->>>>>>> origin/Phuc_Final
+      "outputPath": "C:\\Users\\ADmin\\Desktop\\Vandap\\hotelmanagement\\HotelManagement\\BUS_HotelManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tuyet Anh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -538,25 +530,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DAO_HotelManagement\\DAO_HotelManagement.csproj": {
-              "projectPath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DAO_HotelManagement\\DAO_HotelManagement.csproj"
+            "C:\\Users\\ADmin\\Desktop\\Vandap\\hotelmanagement\\HotelManagement\\DAO_HotelManagement\\DAO_HotelManagement.csproj": {
+              "projectPath": "C:\\Users\\ADmin\\Desktop\\Vandap\\hotelmanagement\\HotelManagement\\DAO_HotelManagement\\DAO_HotelManagement.csproj"
             },
-            "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj": {
-              "projectPath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj"
-=======
-            "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DAO_HotelManagement\\DAO_HotelManagement.csproj": {
-              "projectPath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DAO_HotelManagement\\DAO_HotelManagement.csproj"
-            },
-            "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj": {
-              "projectPath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj"
->>>>>>> origin/Phuc_Final
+            "C:\\Users\\ADmin\\Desktop\\Vandap\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj": {
+              "projectPath": "C:\\Users\\ADmin\\Desktop\\Vandap\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj"
             }
           }
         }
