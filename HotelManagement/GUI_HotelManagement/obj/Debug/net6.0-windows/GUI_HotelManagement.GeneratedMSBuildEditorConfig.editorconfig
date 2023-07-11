@@ -14,4 +14,8 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GUI_HotelManagement
+<<<<<<< HEAD
 build_property.ProjectDir = F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\GUI_HotelManagement\
+=======
+build_property.ProjectDir = C:\Users\ADmin\Desktop\Demo\hotelmanagement\HotelManagement\GUI_HotelManagement\
+>>>>>>> origin/Phuc_Final

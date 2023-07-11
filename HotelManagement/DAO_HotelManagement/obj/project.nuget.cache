@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "hM7Q7Oe8llxIo4KQOBH/VboaSvu51GPaZc+cOLJaHZwLoTzpj0SaDiaODmmk+42WKvbLQ1VXdFplW3IICj4yUg==",
   "success": true,
   "projectFilePath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DAO_HotelManagement\\DAO_HotelManagement.csproj",
+=======
+  "dgSpecHash": "QFf7BX1EVEPuQfHhj+nk5Chiuo3GpFEoOZd/GE2U01e3NCHBobks2KKxH0U+OX94EcOgS1LWN/ZEb5QJLlpQLQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DAO_HotelManagement\\DAO_HotelManagement.csproj",
+>>>>>>> origin/Phuc_Final
   "expectedPackageFiles": [
     "C:\\Users\\Tuyet Anh\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Tuyet Anh\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

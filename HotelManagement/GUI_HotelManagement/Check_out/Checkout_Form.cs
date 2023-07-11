@@ -260,13 +260,15 @@ namespace GUI_HotelManagement
                     }
                 }
                 bool flag = Bill_BUS.updateBill(updateBill);
-                if (flag)
+                bool flagCheckout = BookingForm_BUS.Update_BookingFormCheckOut(new BookingForm_DTO(idBooking_Text.Text));
+
+                if (flag && flagCheckout)
                 {
                     MessageBox.Show("Cập nhật thành công!");
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật thất bại, thông tin không chính xác!");
+                    MessageBox.Show("Một số thông tin cập nhật thất bại, thông tin không chính xác!");
                     return;
                 }
                 BookingForm_DTO billBooking = new BookingForm_DTO(idBooking_Text.Text);

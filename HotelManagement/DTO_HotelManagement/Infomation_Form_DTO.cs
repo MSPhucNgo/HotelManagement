@@ -15,28 +15,29 @@ namespace DTO_HotelManagement
         private int numberRooms;
         private int numberStays;
         private string specialRequirements;
+        private string customer;
 
-        public string IdInformationForm { get => idInformationForm; set => idInformationForm=value; }
-        public string Type { get => type; set => type=value; }
-        public string ArrivalDate { get => arrivalDate; set => arrivalDate=value; }
-        public int NumberRooms { get => numberRooms; set => numberRooms=value; }
-        public int NumberStays { get => numberStays; set => numberStays=value; }
-        public string SpecialRequirements { get => specialRequirements; set => specialRequirements=value; }
-
+        public string IdInformationForm { get => idInformationForm; set => idInformationForm = value; }
+        public string Type { get => type; set => type = value; }
+        public string ArrivalDate { get => arrivalDate; set => arrivalDate = value; }
+        public int NumberRooms { get => numberRooms; set => numberRooms = value; }
+        public int NumberStays { get => numberStays; set => numberStays = value; }
+        public string SpecialRequirements { get => specialRequirements; set => specialRequirements = value; }
+        public string Customer { get => customer; set => customer = value; }
 
         public Infomation_Form_DTO()
         {
 
         }
-        public Infomation_Form_DTO(string idInformationForm, string type, string arrivalDate, int numberRooms, int numberStays, string specialRequirements)
+        public Infomation_Form_DTO(string idInformationForm, string type, string arrivalDate, int numberRooms, int numberStays, string specialRequirements, string _customer)
         {
-            this.idInformationForm= idInformationForm;
-            this.type= type;
-            this.arrivalDate= arrivalDate;
-            this.numberRooms= numberRooms;
-            this.numberStays= numberStays;
-            this.specialRequirements= specialRequirements;
+            this.idInformationForm = idInformationForm;
+            this.type = type;
+            this.arrivalDate = arrivalDate;
+            this.numberRooms = numberRooms;
+            this.numberStays = numberStays;
+            this.specialRequirements = specialRequirements;
+            this.customer = _customer;
         }
-       
     }
 }

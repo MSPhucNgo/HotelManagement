@@ -304,6 +304,15 @@ namespace DAO_HotelManagement
             if (index > 0) return true;
             return false;
         }
+        public bool Update_BookingFormCheckOut(BookingForm_DTO BookingID)
+        {
+            string query = "UPDATE BOOKING_FORM\n" +
+                           "SET STATUS = N'Đã check-out', SPECIAL_REQUIREMENTS = N'" + BookingID.SpecialRequirement + "', PAYMENT_METHODS = N'" + BookingID.PaymentMethods + "'\n" +
+                           "WHERE ID_BOOKING = '" + BookingID.IdBooking + "'";
+            int index = DataProvider.Instance.ExecuteNonQuery(query);
+            if (index > 0) return true;
+            return false;
+        }
         public DataTable getListRoom(BookingForm_DTO BookingID)
         {
             string query = "SELECT R.NAME, R.PRICE, R.TYPE FROM BOOKING_FORM BF \n" +
@@ -344,20 +353,18 @@ namespace DAO_HotelManagement
             return null;
         }
 
-        public bool insertBookingForm(BookingForm_DTO inforBooking)
+        public string insertBookingForm(BookingForm_DTO inforBooking)
         {
-               
-        
             string query = "DECLARE @ARRIVAL_DATE_CONVERTED DATE\r\nSET @ARRIVAL_DATE_CONVERTED = CONVERT(DATE, '" + inforBooking.ArrivalDate + "', 103);\r\n" +
                 "DECLARE @DEPARTURE_DATE_CONVERTED DATE\r\nSET @DEPARTURE_DATE_CONVERTED = CONVERT(DATE, '" + inforBooking.DepartureDate + "', 103);\r\n" +
                 "EXEC USP_AddBOOKINGFORM @IDBOOKINGFORM = '" + inforBooking.IdBooking + "', @ARRIVAL_DATE = @ARRIVAL_DATE_CONVERTED, @DEPARTURE_DATE = @DEPARTURE_DATE_CONVERTED, " +
-                "@AMOUNT = N'" + inforBooking.Amount + "', @PRICE = N'" + inforBooking.Price + "', @STATUS = N'" + inforBooking.Status + "', @SPECIAL_REQUIREMENTS = N'" + inforBooking.SpecialRequirement + "',@PAYMENT_METHODS = N'" + inforBooking.PaymentMethods + "',@CUSTOMER = '" + inforBooking.Customer + "'";
-            
-            int index = DataProvider.Instance.ExecuteNonQuery(query);
-            if (index <= 0) { return false; }
-            return true;
+                "@AMOUNT = N'" + inforBooking.Amount + "', @PRICE = N'" + inforBooking.Price + "', @STATUS = N'" + inforBooking.Status + "', @SPECIAL_REQUIREMENTS = N'" + inforBooking.SpecialRequirement + "',@PAYMENT_METHODS = N'" + inforBooking.PaymentMethods + "',@CUSTOMER = '" + inforBooking.Customer + "'";   
+            string id = "";
+            id = DataProvider.Instance.ExecuteScalar(query);
+            if (id == "") { return "error"; }
+            return id;
         }
-        public bool insertBookingForm(BookingForm_DTO inforBooking, Bill_DTO inforBill)
+        public string insertBookingForm(BookingForm_DTO inforBooking, Bill_DTO inforBill)
         {
             string query = "DECLARE @ARRIVAL_DATE_CONVERTED DATE\r\nSET @ARRIVAL_DATE_CONVERTED = CONVERT(DATE, '" + inforBooking.ArrivalDate + "', 103);\r\n" +
                 "DECLARE @DEPARTURE_DATE_CONVERTED DATE\r\nSET @DEPARTURE_DATE_CONVERTED = CONVERT(DATE, '" + inforBooking.DepartureDate + "', 103);\r\n" +
@@ -365,9 +372,32 @@ namespace DAO_HotelManagement
                 "@AMOUNT = " + inforBooking.Amount + ", @PRICE = " + inforBooking.Price + ", @STATUS = N'" + inforBooking.Status + "', @SPECIAL_REQUIREMENTS = N'" + inforBooking.SpecialRequirement +
                 "',@PAYMENT_METHODS = N'" + inforBill.Payment_methods + "',@CUSTOMER = '" + inforBooking.Customer + "', @ROOM_FEE = " + inforBill.Room_Fee + ", @SERVICE_PRICE = NULL, " +
                 "@DAMAGED_PRICE = NULL, @DEPOSIT_PRICE = " + inforBill.Deposit_price + ", @TOTAL_PRICE = NULL, @STATUS_BILL = N'" + inforBill.Status + "', @FORM_CREATOR = 'EMP01'";
-
-            int index = DataProvider.Instance.ExecuteNonQuery(query);
-            if (index <= 0) { return false; }
+            string id = "";
+            id = DataProvider.Instance.ExecuteScalar(query);
+            if (id == "") { return "error"; }
+            return id;
+        }
+        public bool updateStatusRoomReserved(List<Room_DTO> roomInfor)
+        {
+            for (int i = 0; i < roomInfor.Count(); i++)
+            {
+                string query = "UPDATE ROOM \n" +
+                               "SET STATUS = N'Được đặt trước'\n" +
+                               "WHERE ID_ROOM = N'" + roomInfor[i].IdRoom + "'";
+                int index = DataProvider.Instance.ExecuteNonQuery(query);
+                if (index <= 0) { return false; }
+            }
+            return true;
+        }
+        public bool insertBookingRoom(string id, List<Room_DTO> roomInfor)
+        {
+            for (int i = 0; i < roomInfor.Count(); i++)
+            {
+                string query = "INSERT BOOKING_ROOM \n" +
+                               "VALUES ('" + id + "','" + roomInfor[i].IdRoom + "')\n";
+                int index = DataProvider.Instance.ExecuteNonQuery(query);
+                if (index <= 0) { return false; }
+            }
             return true;
         }
     }

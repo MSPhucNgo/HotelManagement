@@ -14,11 +14,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
       "projectName": "DTO_HotelManagement",
       "projectPath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
       "packagesPath": "C:\\Users\\Tuyet Anh\\.nuget\\packages\\",
       "outputPath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
+      "projectName": "DTO_HotelManagement",
+      "projectPath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
+      "packagesPath": "C:\\Users\\ADmin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\obj\\",
+>>>>>>> origin/Phuc_Final
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

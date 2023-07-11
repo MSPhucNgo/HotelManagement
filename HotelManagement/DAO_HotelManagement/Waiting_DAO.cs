@@ -9,6 +9,16 @@ namespace DAO_HotelManagement
 {
     public class Waiting_DAO : DataProvider
     {
+        private static Waiting_DAO instance;
+        public static Waiting_DAO Instance
+        {
+            get
+            {
+                if (instance == null) instance = new Waiting_DAO();
+                return Waiting_DAO.instance;
+            }
+            private set { Waiting_DAO.instance = value; }
+        }
         public DataTable getWaiting()
         {
             DataProvider dp = new DataProvider();

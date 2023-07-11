@@ -120,13 +120,25 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.Update_BookingForm(BookingId);
         }
+        public static bool Update_BookingFormCheckOut(BookingForm_DTO BookingId)
+        {
+            return BookingForm_DAO.Instance.Update_BookingFormCheckOut(BookingId);
+        }
         public static List<string> getListRoomOfBooking(BookingForm_DTO BookingId)
         {
             return BookingForm_DAO.Instance.getListRoomOfBooking(BookingId);
         }
-        public static bool insertBookingForm(BookingForm_DTO inforBooking, Bill_DTO inforBill)
+        public static string insertBookingForm(BookingForm_DTO inforBooking, Bill_DTO inforBill)
         {
             return BookingForm_DAO.Instance.insertBookingForm(inforBooking, inforBill);
+        }
+        public static bool insertBookingRoom(string id, List<Room_DTO> roomInfor)
+        {
+            return BookingForm_DAO.Instance.insertBookingRoom(id, roomInfor);
+        }
+        public static bool updateStatusRoomReserved(List<Room_DTO> roomInfor)
+        {
+            return BookingForm_DAO.Instance.updateStatusRoomReserved(roomInfor);
         }
     }
 }

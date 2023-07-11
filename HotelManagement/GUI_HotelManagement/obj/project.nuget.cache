@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "o1YnAeQmuCQ+iVVMnirkiGLPpLRUlhvqwtY1D8Fv1qe2/W/SbBuoYaE+Zq/99BMqDcv21Vz9MJQSWZVeeLDz+Q==",
   "success": true,
   "projectFilePath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\GUI_HotelManagement\\GUI_HotelManagement.csproj",
+=======
+  "dgSpecHash": "YeoS5vGH64ahhdM6kdgvqOEWOLWUPfQU7jZtjGe6pmyE/NDX5saH8PGaLXB6lumYiBqjjmTIUk+oZClckzF6bg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ADmin\\Desktop\\Demo\\hotelmanagement\\HotelManagement\\GUI_HotelManagement\\GUI_HotelManagement.csproj",
+>>>>>>> origin/Phuc_Final
   "expectedPackageFiles": [
     "C:\\Users\\Tuyet Anh\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Tuyet Anh\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

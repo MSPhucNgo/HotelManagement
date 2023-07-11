@@ -10,9 +10,9 @@ namespace BUS_HotelManagement
 {
     public class InformationForm_BUS
     {
-        public static bool insertInformationForm(Infomation_Form_DTO inforForm)
+        public static bool insertInformationForm(Infomation_Form_DTO inforForm, Supply_Form_DTO sup)
         {
-            return InformationForm_DAO.Instance.insertInformationForm(inforForm);
+            return InformationForm_DAO.Instance.insertInformationForm(inforForm, sup);
         }    
     }
 }
