@@ -111,7 +111,8 @@ namespace GUI_HotelManagement
 
         private void btn_Customer_Click_1(object sender, EventArgs e)
         {
-
+            label_Tittle.Text = "CUSTOMER";
+            loadForm(new CustomerList());
         }
 
         private void btn_Reservation_Click_1(object sender, EventArgs e)

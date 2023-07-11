@@ -155,6 +155,7 @@ namespace GUI_HotelManagement
             this.btnCreateBooking.TabIndex = 36;
             this.btnCreateBooking.Text = "Create Booking";
             this.btnCreateBooking.UseVisualStyleBackColor = true;
+            this.btnCreateBooking.Click += new System.EventHandler(this.btnCreateBooking_Click_1);
             // 
             // labelGender
             // 
@@ -291,6 +292,7 @@ namespace GUI_HotelManagement
             this.comboBoxPaymentMethod.Name = "comboBoxPaymentMethod";
             this.comboBoxPaymentMethod.Size = new System.Drawing.Size(195, 28);
             this.comboBoxPaymentMethod.TabIndex = 84;
+            this.comboBoxPaymentMethod.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaymentMethod_SelectedIndexChanged_1);
             // 
             // checkBoxDeposit
             // 
@@ -302,6 +304,7 @@ namespace GUI_HotelManagement
             this.checkBoxDeposit.TabIndex = 83;
             this.checkBoxDeposit.Text = "Deposited?";
             this.checkBoxDeposit.UseVisualStyleBackColor = true;
+            this.checkBoxDeposit.CheckedChanged += new System.EventHandler(this.checkBoxDeposit_CheckedChanged_1);
             // 
             // txtDepositFee
             // 
@@ -345,6 +348,7 @@ namespace GUI_HotelManagement
             this.btnCheck.TabIndex = 78;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click_1);
             // 
             // splitter1
             // 
@@ -436,6 +440,7 @@ namespace GUI_HotelManagement
             this.checkBoxGroup.TabIndex = 66;
             this.checkBoxGroup.Text = "Group Inclusive Tour?";
             this.checkBoxGroup.UseVisualStyleBackColor = true;
+            this.checkBoxGroup.CheckedChanged += new System.EventHandler(this.checkBoxGroup_CheckedChanged);
             // 
             // btnChooseRoom
             // 
@@ -445,6 +450,7 @@ namespace GUI_HotelManagement
             this.btnChooseRoom.TabIndex = 65;
             this.btnChooseRoom.Text = "Choose Room";
             this.btnChooseRoom.UseVisualStyleBackColor = true;
+            this.btnChooseRoom.Click += new System.EventHandler(this.btnChooseRoom_Click);
             // 
             // labelDepartureDate
             // 

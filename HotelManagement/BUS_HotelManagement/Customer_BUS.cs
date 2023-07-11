@@ -19,6 +19,10 @@ namespace BUS_HotelManagement
         {
             return Customer_DAO.Instance.getUsedService(Cusinfo);
         }
+        public static DataTable getCustomer()
+        {
+            return Customer_DAO.Instance.getCustomer();
+        }
         public static string getCusID_Booking(Customer_DTO Cusinfo)
         {
             return Customer_DAO.Instance.getCusID_Booking(Cusinfo);

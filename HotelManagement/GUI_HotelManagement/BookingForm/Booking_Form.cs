@@ -26,17 +26,20 @@ namespace GUI_HotelManagement
         public List<Room_DTO> roomInfor = new List<Room_DTO>();
         public Infomation_Form_DTO inforForm = new Infomation_Form_DTO();
         public Supply_Form_DTO supInfo = new Supply_Form_DTO();
-        public Bill_DTO inforBill = new Bill_DTO();       
+        public Bill_DTO inforBill = new Bill_DTO();
+        public bool exitedCTM = new bool();
+
         public Booking_Form()
         {
             InitializeComponent();
+            exitedCTM = false;
         }
         public Booking_Form(Room_DTO roomInfp) 
         {
             InitializeComponent();
             roomInfor.Add(roomInfp);
         }
-        public Booking_Form(ref Customer_DTO _inforCTM, ref BookingForm_DTO _inforBooking, ref List<Room_DTO> _roomInfor, ref Infomation_Form_DTO _inforForm, ref Supply_Form_DTO _supInfo, ref Bill_DTO _inforBill)
+        public Booking_Form(ref Customer_DTO _inforCTM, ref BookingForm_DTO _inforBooking, ref List<Room_DTO> _roomInfor, ref Infomation_Form_DTO _inforForm, ref Supply_Form_DTO _supInfo, ref Bill_DTO _inforBill, ref bool _exitedCTM)
         {
             InitializeComponent();
             //txtName.Text = _inforCTM.Name.ToString();
@@ -46,42 +49,11 @@ namespace GUI_HotelManagement
             this.inforForm = _inforForm;
             this.supInfo = _supInfo;
             this.inforBill = _inforBill;
+            this.exitedCTM = _exitedCTM;
             //this.txtName.Text = this.inforCTM.Name.ToString();
-        }
-
-        private void checkBoxGroup_CheckedChanged(object sender, EventArgs e)
-        {
-            if (this.checkBoxGroup.Checked == true)
-            {
-                this.labelNumberStay.Visible = true;
-                this.labelNameGroup.Visible = true;
-                this.txtNameGroup.Visible = true;
-                this.txtNumberStay.Visible = true;
-            }
-            else
-            {
-                this.labelNumberStay.Visible = false;
-                this.labelNameGroup.Visible = false;
-                this.txtNameGroup.Visible = false;
-                this.txtNumberStay.Visible = false;
-            }
-        }
-
-        private void btnCheck_Click(object sender, EventArgs e)
-        {
-            BookingForm_BUS bf = new BookingForm_BUS();
-            //MessageBox.Show(bf.checkExistedCTM(txtIdentify.Text.ToString()).ToString());
-            if (bf.checkExistedCTM(txtIdentify.Text.ToString()) == true)
-            {
-                MessageBox.Show("Customer is exist!");
-
-            }
-            else
-            {
-                MessageBox.Show(txtIdentify.Text);
-                MessageBox.Show("Customer is not exist!");
-            }
-            Load_ExistedCustomer(sender, e);
+            //foreach (Room_DTO room in roomInfor) {
+            //    MessageBox.Show(room.Name.ToString());
+            //}
         }
 
         private void Load_ExistedCustomer(object sender, EventArgs e)
@@ -131,13 +103,71 @@ namespace GUI_HotelManagement
             txtRoomFee.Text = inforBooking.Price.ToString();
             txtDepositFee.Text = inforBill.Deposit_price;
         }
-        private void txtIdentity_TextChanged(object sender, EventArgs e)
-        {
 
+        private void comboBoxPaymentMethod_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            inforBill.Payment_methods = comboBoxPaymentMethod.SelectedItem.ToString();
+
+        }
+
+        private void checkBoxDeposit_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBoxDeposit.Checked == true)
+            {
+                inforBill.Status = "Đã thanh toán tiền cọc";
+                inforForm.Type = "Đảm bảo";
+            }
+            else
+            {
+                inforBill.Status = "Chưa thanh toán";
+                inforForm.Type = "Không đảm bảo";
+            }
+        }
+
+        private void btnCreateBooking_Click_1(object sender, EventArgs e)
+        {
+            if (exitedCTM == false)
+            {
+                inforForm.NumberRooms = roomInfor.Count();
+                inforBooking.Customer = Customer_BUS.insertCustomer(inforCTM, inforBill, inforForm, supInfo);
+                string id = BookingForm_BUS.insertBookingForm(inforBooking, inforBill);
+                BookingForm_BUS.insertBookingRoom(id, roomInfor);
+                BookingForm_BUS.updateStatusRoomReserved(roomInfor);
+                MessageBox.Show("Successfull!");
+            }
+            else
+            {
+                inforForm.NumberRooms = roomInfor.Count();
+                inforBooking.Customer = inforCTM.IdCustomer;
+                inforForm.Customer = inforCTM.IdCustomer;
+                InformationForm_BUS.insertInformationForm(inforForm, supInfo);
+                string id = BookingForm_BUS.insertBookingForm(inforBooking, inforBill);
+                BookingForm_BUS.insertBookingRoom(id, roomInfor);
+                BookingForm_BUS.updateStatusRoomReserved(roomInfor);
+                MessageBox.Show("Successfull!!!");
+            }
+        }
+
+        private void btnCheck_Click_1(object sender, EventArgs e)
+        {
+            BookingForm_BUS bf = new BookingForm_BUS();
+            //MessageBox.Show(bf.checkExistedCTM(txtIdentify.Text.ToString()).ToString());
+            if (bf.checkExistedCTM(txtIdentify.Text.ToString()) == true)
+            {
+                MessageBox.Show("Customer is exist!");
+
+            }
+            else
+            {
+                MessageBox.Show(txtIdentify.Text);
+                MessageBox.Show("Customer is not exist!");
+            }
+            Load_ExistedCustomer(sender, e);
         }
 
         private void btnChooseRoom_Click(object sender, EventArgs e)
         {
+            this.inforBooking.Status = "Chờ xử lý";
             //Gán data khách hàng trong textbox vào biến inforCTM
             this.inforCTM.Name = txtName.Text.ToString();
             this.inforCTM.Gender = txtGender.Text.ToString();
@@ -168,7 +198,7 @@ namespace GUI_HotelManagement
             this.supInfo.RegisteredName = txtName.Text.ToString();
             this.supInfo.GroupSize = int.Parse(txtNumberStay.Text);
 
-            MultiRoom_Form mrf = new MultiRoom_Form(ref this.inforCTM, ref this.inforBooking, ref this.inforForm, ref this.supInfo, ref this.inforBill);
+            MultiRoom_Form mrf = new MultiRoom_Form(ref this.inforCTM, ref this.inforBooking, ref this.inforForm, ref this.supInfo, ref this.inforBill, ref this.exitedCTM, ref roomInfor);
             this.Hide();
             mrf.ShowDialog();
             this.Close();
@@ -179,62 +209,24 @@ namespace GUI_HotelManagement
             //this.Close();
             //this.Close();
             //mrf.Show();
-
         }
 
-        private void Booking_Form_Load(object sender, EventArgs e)
+        private void checkBoxGroup_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-        private void btnCreateBooking_Click(object sender, EventArgs e)
-        {
-            inforForm.NumberRooms = roomInfor.Count();
-            inforBooking.Customer = Customer_BUS.insertCustomer(inforCTM, inforBill, inforForm, supInfo);
-            BookingForm_BUS.insertBookingForm(inforBooking, inforBill);
-
-            MessageBox.Show(inforBill.Payment_methods.ToString());
-            //MessageBox.Show(inforBill.Status.ToString());
-
-            //string id = Customer_BUS.insertCustomer(inforCTM, inforBill);
-            //Update list room status;
-            // MessageBox.Show(roomInfor[0].IdRoom);
-            //MessageBox.Show(id);
-
-            //MessageBox.Show(inforForm.NumberRooms.ToString());
-
-            //MessageBox.Show(inforCTM.Name);
-            //MessageBox.Show(roomInfor[0].IdRoom);
-            //MessageBox.Show(roomInfor[1].IdRoom);
-
-
-        }
-
-        private void panelBooking_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelBooking_Paint_1(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void checkBoxDeposit_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxDeposit.Checked == true)
+            if (this.checkBoxGroup.Checked == true)
             {
-                inforBill.Status = "Đã thanh toán tiền cọc";
-                inforForm.Type = "Đảm bảo";
+                this.labelNumberStay.Visible = true;
+                this.labelNameGroup.Visible = true;
+                this.txtNameGroup.Visible = true;
+                this.txtNumberStay.Visible = true;
             }
             else
             {
-                inforBill.Status = "Chưa thanh toán";
-                inforForm.Type = "Không đảm bảo";
+                this.labelNumberStay.Visible = false;
+                this.labelNameGroup.Visible = false;
+                this.txtNameGroup.Visible = false;
+                this.txtNumberStay.Visible = false;
             }
-        }
-
-        private void comboBoxPaymentMethod_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            inforBill.Payment_methods = comboBoxPaymentMethod.SelectedItem.ToString();
         }
     }
 }
