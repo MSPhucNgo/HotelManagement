@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
             btnBack = new Button();
             btnCreateTourForm = new Button();
             tbDepartureTime = new TextBox();
@@ -46,25 +45,15 @@
             label2 = new Label();
             tbTourName = new TextBox();
             label1 = new Label();
-            tbPhone = new TextBox();
-            label16 = new Label();
             tbProgess = new TextBox();
             label24 = new Label();
             label25 = new Label();
             label26 = new Label();
-            tbTravelMethod = new TextBox();
             label12 = new Label();
+            tbTravelMethod = new ComboBox();
+            label16 = new Label();
+            tbPhone = new TextBox();
             SuspendLayout();
-            // 
-            // button3
-            // 
-            button3.Location = new Point(9, 6);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(90, 27);
-            button3.TabIndex = 53;
-            button3.Text = "Back";
-            button3.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
@@ -75,6 +64,7 @@
             btnBack.TabIndex = 47;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // btnCreateTourForm
             // 
@@ -178,7 +168,7 @@
             // 
             // tbRegister
             // 
-            tbRegister.Location = new Point(508, 167);
+            tbRegister.Location = new Point(508, 214);
             tbRegister.Margin = new Padding(2);
             tbRegister.Name = "tbRegister";
             tbRegister.Size = new Size(226, 27);
@@ -187,7 +177,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(370, 169);
+            label3.Location = new Point(370, 216);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(138, 20);
@@ -221,25 +211,6 @@
             label1.Size = new Size(79, 20);
             label1.TabIndex = 27;
             label1.Text = "Tour name";
-            // 
-            // tbPhone
-            // 
-            tbPhone.Location = new Point(508, 213);
-            tbPhone.Margin = new Padding(2);
-            tbPhone.Name = "tbPhone";
-            tbPhone.Size = new Size(225, 27);
-            tbPhone.TabIndex = 32;
-            tbPhone.TextChanged += tbPhone_TextChanged;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Location = new Point(370, 216);
-            label16.Margin = new Padding(2, 0, 2, 0);
-            label16.Name = "label16";
-            label16.Size = new Size(105, 20);
-            label16.TabIndex = 31;
-            label16.Text = "Phone number";
             // 
             // tbProgess
             // 
@@ -280,14 +251,6 @@
             label26.Text = "Departure time";
             label26.Click += label26_Click;
             // 
-            // tbTravelMethod
-            // 
-            tbTravelMethod.Location = new Point(508, 307);
-            tbTravelMethod.Margin = new Padding(2);
-            tbTravelMethod.Name = "tbTravelMethod";
-            tbTravelMethod.Size = new Size(225, 27);
-            tbTravelMethod.TabIndex = 61;
-            // 
             // label12
             // 
             label12.AutoSize = true;
@@ -297,6 +260,35 @@
             label12.Size = new Size(104, 20);
             label12.TabIndex = 60;
             label12.Text = "Travel Method";
+            // 
+            // tbTravelMethod
+            // 
+            tbTravelMethod.AutoCompleteSource = AutoCompleteSource.ListItems;
+            tbTravelMethod.FormattingEnabled = true;
+            tbTravelMethod.Items.AddRange(new object[] { "Self-sufficiency", "Picking service" });
+            tbTravelMethod.Location = new Point(533, 302);
+            tbTravelMethod.Name = "tbTravelMethod";
+            tbTravelMethod.Size = new Size(201, 28);
+            tbTravelMethod.TabIndex = 61;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(372, 171);
+            label16.Margin = new Padding(2, 0, 2, 0);
+            label16.Name = "label16";
+            label16.Size = new Size(105, 20);
+            label16.TabIndex = 31;
+            label16.Text = "Phone number";
+            // 
+            // tbPhone
+            // 
+            tbPhone.Location = new Point(510, 168);
+            tbPhone.Margin = new Padding(2);
+            tbPhone.Name = "tbPhone";
+            tbPhone.Size = new Size(225, 27);
+            tbPhone.TabIndex = 32;
+            tbPhone.TextChanged += tbPhone_TextChanged;
             // 
             // Tour_Booking
             // 
@@ -311,7 +303,6 @@
             Controls.Add(label24);
             Controls.Add(tbPhone);
             Controls.Add(label16);
-            Controls.Add(button3);
             Controls.Add(btnBack);
             Controls.Add(btnCreateTourForm);
             Controls.Add(tbDepartureTime);
@@ -338,8 +329,6 @@
         }
 
         #endregion
-
-        private Button button3;
         private CheckBox checkBox2;
         private CheckBox checkBox1;
         private Label label11;
@@ -371,8 +360,6 @@
         private Label label18;
         private TextBox textBox13;
         private Label label17;
-        private TextBox tbPhone;
-        private Label label16;
         private TextBox textBox11;
         private Label label15;
         private TextBox tbProgess;
@@ -380,7 +367,9 @@
         private Label label25;
         private Label label26;
         private CheckBox checkBox3;
-        private TextBox tbTravelMethod;
         private Label label12;
+        private ComboBox tbTravelMethod;
+        private Label label16;
+        private TextBox tbPhone;
     }
 }

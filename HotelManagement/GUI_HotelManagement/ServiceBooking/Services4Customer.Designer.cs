@@ -38,6 +38,10 @@
             tabPage2 = new TabPage();
             dtgvTour = new DataGridView();
             panel2 = new Panel();
+            cbxEnd = new CheckBox();
+            cbxLea = new CheckBox();
+            cbxDes = new CheckBox();
+            cbxDep = new CheckBox();
             txbError = new TextBox();
             label1 = new Label();
             timepickEnd = new DateTimePicker();
@@ -56,6 +60,11 @@
             tbSearchPhone = new TextBox();
             label2 = new Label();
             tabPage4 = new TabPage();
+            dtgvCustomerTour = new DataGridView();
+            panel4 = new Panel();
+            btnSearchCustomerTour = new Button();
+            tbSearchPhoneTour = new TextBox();
+            label3 = new Label();
             tabControl_services_for_customer.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvRoomList).BeginInit();
@@ -66,6 +75,9 @@
             tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvServiceForm).BeginInit();
             panel3.SuspendLayout();
+            tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgvCustomerTour).BeginInit();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl_services_for_customer
@@ -178,6 +190,10 @@
             // panel2
             // 
             panel2.BackColor = Color.AliceBlue;
+            panel2.Controls.Add(cbxEnd);
+            panel2.Controls.Add(cbxLea);
+            panel2.Controls.Add(cbxDes);
+            panel2.Controls.Add(cbxDep);
             panel2.Controls.Add(txbError);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(timepickEnd);
@@ -196,9 +212,46 @@
             panel2.Size = new Size(1088, 71);
             panel2.TabIndex = 0;
             // 
+            // cbxEnd
+            // 
+            cbxEnd.AutoSize = true;
+            cbxEnd.Location = new Point(769, 41);
+            cbxEnd.Name = "cbxEnd";
+            cbxEnd.Size = new Size(18, 17);
+            cbxEnd.TabIndex = 15;
+            cbxEnd.UseVisualStyleBackColor = true;
+            // 
+            // cbxLea
+            // 
+            cbxLea.AutoSize = true;
+            cbxLea.Location = new Point(361, 43);
+            cbxLea.Name = "cbxLea";
+            cbxLea.Size = new Size(18, 17);
+            cbxLea.TabIndex = 14;
+            cbxLea.UseVisualStyleBackColor = true;
+            // 
+            // cbxDes
+            // 
+            cbxDes.AutoSize = true;
+            cbxDes.Location = new Point(769, 12);
+            cbxDes.Name = "cbxDes";
+            cbxDes.Size = new Size(18, 17);
+            cbxDes.TabIndex = 13;
+            cbxDes.UseVisualStyleBackColor = true;
+            // 
+            // cbxDep
+            // 
+            cbxDep.AutoSize = true;
+            cbxDep.Location = new Point(361, 13);
+            cbxDep.Name = "cbxDep";
+            cbxDep.Size = new Size(18, 17);
+            cbxDep.TabIndex = 12;
+            cbxDep.UseVisualStyleBackColor = true;
+            cbxDep.CheckedChanged += cbxDep_CheckedChanged;
+            // 
             // txbError
             // 
-            txbError.Location = new Point(800, 39);
+            txbError.Location = new Point(841, 40);
             txbError.Name = "txbError";
             txbError.Size = new Size(43, 27);
             txbError.TabIndex = 11;
@@ -206,7 +259,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(750, 42);
+            label1.Location = new Point(791, 43);
             label1.Name = "label1";
             label1.Size = new Size(44, 20);
             label1.TabIndex = 10;
@@ -214,7 +267,7 @@
             // 
             // timepickEnd
             // 
-            timepickEnd.Location = new Point(472, 37);
+            timepickEnd.Location = new Point(513, 38);
             timepickEnd.Name = "timepickEnd";
             timepickEnd.Size = new Size(250, 27);
             timepickEnd.TabIndex = 9;
@@ -231,10 +284,11 @@
             // cbxDestination
             // 
             cbxDestination.FormattingEnabled = true;
-            cbxDestination.Location = new Point(472, 7);
+            cbxDestination.Location = new Point(513, 8);
             cbxDestination.Name = "cbxDestination";
             cbxDestination.Size = new Size(250, 28);
             cbxDestination.TabIndex = 8;
+            cbxDestination.SelectedIndexChanged += cbxDestination_SelectedIndexChanged;
             // 
             // btn_tour_search
             // 
@@ -254,11 +308,12 @@
             cbxDeparture.Name = "cbxDeparture";
             cbxDeparture.Size = new Size(250, 28);
             cbxDeparture.TabIndex = 1;
+            cbxDeparture.SelectedIndexChanged += cbxDeparture_SelectedIndexChanged;
             // 
             // lb_tour_search_tour_sort
             // 
             lb_tour_search_tour_sort.AutoSize = true;
-            lb_tour_search_tour_sort.Location = new Point(376, 37);
+            lb_tour_search_tour_sort.Location = new Point(417, 38);
             lb_tour_search_tour_sort.Margin = new Padding(2, 0, 2, 0);
             lb_tour_search_tour_sort.Name = "lb_tour_search_tour_sort";
             lb_tour_search_tour_sort.Size = new Size(74, 20);
@@ -278,7 +333,7 @@
             // lb_tour_search_des
             // 
             lb_tour_search_des.AutoSize = true;
-            lb_tour_search_des.Location = new Point(376, 8);
+            lb_tour_search_des.Location = new Point(417, 9);
             lb_tour_search_des.Margin = new Padding(2, 0, 2, 0);
             lb_tour_search_des.Name = "lb_tour_search_des";
             lb_tour_search_des.Size = new Size(88, 20);
@@ -367,6 +422,8 @@
             // 
             // tabPage4
             // 
+            tabPage4.Controls.Add(dtgvCustomerTour);
+            tabPage4.Controls.Add(panel4);
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
@@ -374,6 +431,61 @@
             tabPage4.TabIndex = 3;
             tabPage4.Text = "tabPage4";
             tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dtgvCustomerTour
+            // 
+            dtgvCustomerTour.AllowUserToAddRows = false;
+            dtgvCustomerTour.AllowUserToDeleteRows = false;
+            dtgvCustomerTour.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvCustomerTour.Location = new Point(5, 49);
+            dtgvCustomerTour.Margin = new Padding(2, 3, 2, 3);
+            dtgvCustomerTour.Name = "dtgvCustomerTour";
+            dtgvCustomerTour.ReadOnly = true;
+            dtgvCustomerTour.RowHeadersWidth = 62;
+            dtgvCustomerTour.RowTemplate.Height = 33;
+            dtgvCustomerTour.Size = new Size(827, 507);
+            dtgvCustomerTour.TabIndex = 5;
+            dtgvCustomerTour.CellContentClick += dtgvCustomerTour_CellContentClick;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(btnSearchCustomerTour);
+            panel4.Controls.Add(tbSearchPhoneTour);
+            panel4.Controls.Add(label3);
+            panel4.Location = new Point(5, 10);
+            panel4.Margin = new Padding(2, 3, 2, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(827, 35);
+            panel4.TabIndex = 4;
+            // 
+            // btnSearchCustomerTour
+            // 
+            btnSearchCustomerTour.Location = new Point(539, 4);
+            btnSearchCustomerTour.Margin = new Padding(2, 3, 2, 3);
+            btnSearchCustomerTour.Name = "btnSearchCustomerTour";
+            btnSearchCustomerTour.Size = new Size(89, 27);
+            btnSearchCustomerTour.TabIndex = 2;
+            btnSearchCustomerTour.Text = "Search";
+            btnSearchCustomerTour.UseVisualStyleBackColor = true;
+            btnSearchCustomerTour.Click += btnSearchCustomerTour_Click;
+            // 
+            // tbSearchPhoneTour
+            // 
+            tbSearchPhoneTour.Location = new Point(198, 4);
+            tbSearchPhoneTour.Margin = new Padding(2, 3, 2, 3);
+            tbSearchPhoneTour.Name = "tbSearchPhoneTour";
+            tbSearchPhoneTour.Size = new Size(222, 27);
+            tbSearchPhoneTour.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(69, 7);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(105, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Phone number";
             // 
             // Services4Customer
             // 
@@ -385,6 +497,7 @@
             Name = "Services4Customer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Services_for_customer";
+            Load += Services4Customer_Load;
             tabControl_services_for_customer.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgvRoomList).EndInit();
@@ -398,6 +511,10 @@
             ((System.ComponentModel.ISupportInitialize)dtgvServiceForm).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dtgvCustomerTour).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -443,5 +560,14 @@
         private TextBox tbSearchPhone;
         private Label label2;
         private TabPage tabPage4;
+        private DataGridView dtgvCustomerTour;
+        private Panel panel4;
+        private Button btnSearchCustomerTour;
+        private TextBox tbSearchPhoneTour;
+        private Label label3;
+        private CheckBox cbxEnd;
+        private CheckBox cbxLea;
+        private CheckBox cbxDes;
+        private CheckBox cbxDep;
     }
 }

@@ -13,3 +13,18 @@ C:\Users\ADmin\Desktop\FINAL PLS!\hotelmanagement-tuyetanh1\HotelManagement\DAO_
 C:\Users\ADmin\Desktop\FINAL PLS!\hotelmanagement-tuyetanh1\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\refint\DAO_HotelManagement.dll
 C:\Users\ADmin\Desktop\FINAL PLS!\hotelmanagement-tuyetanh1\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\DAO_HotelManagement.pdb
 C:\Users\ADmin\Desktop\FINAL PLS!\hotelmanagement-tuyetanh1\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\ref\DAO_HotelManagement.dll
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\bin\Release\net6.0\DAO_HotelManagement.deps.json
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\bin\Release\net6.0\DAO_HotelManagement.dll
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\bin\Release\net6.0\DAO_HotelManagement.pdb
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\bin\Release\net6.0\DTO_HotelManagement.dll
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\bin\Release\net6.0\DTO_HotelManagement.pdb
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\DAO_HotelManagement.csproj.AssemblyReference.cache
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\DAO_HotelManagement.GeneratedMSBuildEditorConfig.editorconfig
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\DAO_HotelManagement.AssemblyInfoInputs.cache
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\DAO_HotelManagement.AssemblyInfo.cs
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\DAO_HotelManagement.csproj.CoreCompileInputs.cache
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\DAO_HotelManagement.csproj.CopyComplete
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\DAO_HotelManagement.dll
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\refint\DAO_HotelManagement.dll
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\DAO_HotelManagement.pdb
+F:\source\hotel_tuyetanh1\hotelmanagement\HotelManagement\DAO_HotelManagement\obj\Release\net6.0\ref\DAO_HotelManagement.dll

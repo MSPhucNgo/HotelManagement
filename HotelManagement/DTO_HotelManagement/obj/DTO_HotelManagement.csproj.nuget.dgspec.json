@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADmin\\Desktop\\FINAL PLS!\\hotelmanagement-tuyetanh1\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj": {}
+    "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADmin\\Desktop\\FINAL PLS!\\hotelmanagement-tuyetanh1\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj": {
+    "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADmin\\Desktop\\FINAL PLS!\\hotelmanagement-tuyetanh1\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
+        "projectUniqueName": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
         "projectName": "DTO_HotelManagement",
-        "projectPath": "C:\\Users\\ADmin\\Desktop\\FINAL PLS!\\hotelmanagement-tuyetanh1\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
-        "packagesPath": "C:\\Users\\ADmin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADmin\\Desktop\\FINAL PLS!\\hotelmanagement-tuyetanh1\\HotelManagement\\DTO_HotelManagement\\obj\\",
+        "projectPath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\DTO_HotelManagement.csproj",
+        "packagesPath": "C:\\Users\\Tuyet Anh\\.nuget\\packages\\",
+        "outputPath": "F:\\source\\hotel_tuyetanh1\\hotelmanagement\\HotelManagement\\DTO_HotelManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tuyet Anh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

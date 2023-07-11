@@ -159,5 +159,13 @@ namespace DAO_HotelManagement
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
+        public DataTable usp_getCustomerTourByPhone_svs(String phone)
+        {
+            //@depart nvarchar(30),@des nvarchar(30), @leavingDate char(30),
+            //@endDate char(30), @error int) 
+            string query = "exec usp_getCustomerTourByPhone_svs '" + phone + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
     }
 }

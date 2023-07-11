@@ -67,5 +67,10 @@ namespace BUS_HotelManagement
         {
             return Services_for_customer_DAO.Instance.usp_getServiceFormsByPhone_svs(phone);
         }
+        public static DataTable usp_getCustomerTourByPhone_svs(string phone)
+        {
+            return Services_for_customer_DAO.Instance.usp_getCustomerTourByPhone_svs(phone);
+        }
+
     }
 }

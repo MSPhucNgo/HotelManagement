@@ -52,8 +52,6 @@
             lb5 = new Label();
             cbxNow = new CheckBox();
             cbxWhenCheckout = new CheckBox();
-            txbCheckoutMethod = new TextBox();
-            lb6 = new Label();
             button3 = new Button();
             txbDiscount = new TextBox();
             lb1 = new Label();
@@ -294,24 +292,7 @@
             cbxWhenCheckout.TabIndex = 23;
             cbxWhenCheckout.Text = "Pay when checkout";
             cbxWhenCheckout.UseVisualStyleBackColor = true;
-            // 
-            // txbCheckoutMethod
-            // 
-            txbCheckoutMethod.Location = new Point(591, 479);
-            txbCheckoutMethod.Margin = new Padding(2);
-            txbCheckoutMethod.Name = "txbCheckoutMethod";
-            txbCheckoutMethod.Size = new Size(277, 27);
-            txbCheckoutMethod.TabIndex = 25;
-            // 
-            // lb6
-            // 
-            lb6.AutoSize = true;
-            lb6.Location = new Point(469, 479);
-            lb6.Margin = new Padding(2, 0, 2, 0);
-            lb6.Name = "lb6";
-            lb6.Size = new Size(126, 20);
-            lb6.TabIndex = 24;
-            lb6.Text = "Checkout method";
+            cbxWhenCheckout.CheckedChanged += cbxWhenCheckout_CheckedChanged;
             // 
             // button3
             // 
@@ -410,8 +391,6 @@
             Controls.Add(txbDiscount);
             Controls.Add(lb1);
             Controls.Add(button3);
-            Controls.Add(txbCheckoutMethod);
-            Controls.Add(lb6);
             Controls.Add(cbxWhenCheckout);
             Controls.Add(cbxNow);
             Controls.Add(lb5);

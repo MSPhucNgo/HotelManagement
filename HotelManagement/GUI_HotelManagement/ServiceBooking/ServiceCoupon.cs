@@ -41,7 +41,7 @@ namespace HotelManagement
             this.discountPromotion = discount;
             this.bookingForm_ = bookingForm;
             this.emp = emp;
-           
+
             txbQuantity.Text = "1";
             if (!isFee)
             {
@@ -50,19 +50,20 @@ namespace HotelManagement
                 lb3.Visible = false;
                 lb4.Visible = false;
                 lb5.Visible = false;
-                lb6.Visible = false;
+                //lb6.Visible = false;
                 cbxNow.Visible = false;
                 cbxWhenCheckout.Visible = false;
                 txbOffer.Text = "Not Fee";
                 //
                 txbDiscount.Visible = false;
                 txbEndtotal.Visible = false;
-               // txbPrice.Visible = false;
+                // txbPrice.Visible = false;
                 txbSubsidise.Visible = false;
                 txbTotal.Visible = false;
-                txbCheckoutMethod.Visible = false;
+                //txbCheckoutMethod.Visible = false;
 
                 price = 0;
+                cbxNow.Checked = true;
             }
             else
             {
@@ -110,7 +111,10 @@ namespace HotelManagement
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(cbxNow.Checked == true) {
+                cbxWhenCheckout.Checked = false;
+            }
+            else cbxWhenCheckout.Checked= true;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -152,21 +156,36 @@ namespace HotelManagement
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-
-            Service_Form_DTO sf;
-            Service_Bill_DTO sb;
-            //fix
-            string status = "";
-            emp = new Employee_DTO("EMP00");
-            sf = new Service_Form_DTO("",txbServiceName.Text,txbServiceName.Text,price, quantity, service.idService, emp.IdEmp, cus.IdCustomer);
-            sb = new Service_Bill_DTO("", total, txbUsingTime.Text, float.Parse(txbDiscount.Text), "", bookingForm_.IdBooking, cus.IdCustomer, status,0);
-
-            int res = Services_for_customer_BUS.usp_AddServiceCoupon(sf, sb, emp);
-            if (res != 0)
+            try
             {
-                MessageBox.Show("Order successfully!");
+                Service_Form_DTO sf;
+                Service_Bill_DTO sb;
+                //fix
+                string status = "";
+                emp = new Employee_DTO("EMP00");
+                sf = new Service_Form_DTO("", txbServiceName.Text, txbServiceName.Text, price, quantity, service.idService, emp.IdEmp, cus.IdCustomer);
+                sb = new Service_Bill_DTO("", total, txbUsingTime.Text, float.Parse(txbDiscount.Text), "", bookingForm_.IdBooking, cus.IdCustomer, status, 0);
+
+                int res = Services_for_customer_BUS.usp_AddServiceCoupon(sf, sb, emp);
+                if (res != 0)
+                {
+                    MessageBox.Show("Order successfully!");
+                    this.Close();
+                }
+                else MessageBox.Show("Order fail!");
+            } catch(Exception ex) {
+                MessageBox.Show(ex.Message);
             }
-            else MessageBox.Show("Order fail!");
+
+           
+        }
+
+        private void cbxWhenCheckout_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxWhenCheckout.Checked == true)
+            {
+                cbxNow.Checked = false;
+            }else cbxNow.Checked = true;
         }
     }
 }
