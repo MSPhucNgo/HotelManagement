@@ -25,10 +25,10 @@ namespace DAO_HotelManagement
 
         public DataProvider() { }
         //connectString for the rest
-        private string connectStr = "Data Source = (local);Initial Catalog = HotelManagement; Integrated Security = True";
+        //private string connectStr = "Data Source = (local);Initial Catalog = HotelManagement; Integrated Security = True";
         
         //connectString of Duong
-        //private string connectStr = "Data Source = localhost\\SQLEXPRESS;Initial Catalog = HotelManagement; Integrated Security = True";
+        private string connectStr = "Data Source = localhost\\SQLEXPRESS;Initial Catalog = HotelManagement; Integrated Security = True";
 
         public DataSet ExecuteQuery1(string query)
         {

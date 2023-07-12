@@ -34,3 +34,15 @@ C:\Users\ADmin\Desktop\Vandap\hotelmanagement\HotelManagement\DTO_HotelManagemen
 C:\Users\ADmin\Desktop\Vandap\hotelmanagement\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\refint\DTO_HotelManagement.dll
 C:\Users\ADmin\Desktop\Vandap\hotelmanagement\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\DTO_HotelManagement.pdb
 C:\Users\ADmin\Desktop\Vandap\hotelmanagement\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\ref\DTO_HotelManagement.dll
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\bin\Debug\net6.0\DTO_HotelManagement.deps.json
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\bin\Debug\net6.0\DTO_HotelManagement.dll
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\bin\Debug\net6.0\DTO_HotelManagement.pdb
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\DTO_HotelManagement.csproj.AssemblyReference.cache
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\DTO_HotelManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\DTO_HotelManagement.AssemblyInfoInputs.cache
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\DTO_HotelManagement.AssemblyInfo.cs
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\DTO_HotelManagement.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\DTO_HotelManagement.dll
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\refint\DTO_HotelManagement.dll
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\DTO_HotelManagement.pdb
+C:\Users\Admin\Source\Repos\hotelmanagement_final_final\HotelManagement\DTO_HotelManagement\obj\Debug\net6.0\ref\DTO_HotelManagement.dll
