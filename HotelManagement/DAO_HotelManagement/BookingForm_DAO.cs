@@ -178,11 +178,11 @@ namespace DAO_HotelManagement
         }
 		public DataTable loadlistOfReservation()
 		{
-			string query = "SELECT BF.*, C.NAME, BR.ID_ROOM, R.TYPE\r\n--INTO BOOKING_FORM_CUSTOMER_NAME\r\nFROM BOOKING_FORM BF JOIN BOOKING_ROOM BR ON BF.ID_BOOKING = BR.ID_BOOKING \r\n\t\t JOIN CUSTOMER C ON BF.CUSTOMER = C.ID_CUSTOMER \r\n\t\t JOIN ROOM R ON BR.ID_ROOM = R.ID_ROOM\r\nORDER BY ID_BOOKING ASC";
+			string query = "SELECT BF.*, C.NAME, BR.ID_ROOM, R.TYPE FROM BOOKING_FORM BF JOIN BOOKING_ROOM BR ON BF.ID_BOOKING = BR.ID_BOOKING JOIN CUSTOMER C ON BF.CUSTOMER = C.ID_CUSTOMER JOIN ROOM R ON BR.ID_ROOM = R.ID_ROOM WHERE BF.STATUS not like N'%hủy' ORDER BY ID_BOOKING ASC\r\n";
 			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
 			return dt;
 		}
-		
+
 		public DataTable loadlistOfReservation_Room(BookingForm_DTO BookingID)
 		{
 			string query = " SELECT * FROM BOOKING_FORM where ID_BOOKING = '" + BookingID.IdBooking + "'";
@@ -224,7 +224,8 @@ namespace DAO_HotelManagement
 		}
 		public List<string> getBooKingID()
         {
-            string query = "SELECT * FROM BOOKING_FORM\n" +
+            string query = "SELECT * FROM BOOKING_FORM \n" +
+                            "WHERE STATUS NOT LIKE N'%hủy' \n" +
                            "ORDER BY ID_BOOKING ASC";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
 
