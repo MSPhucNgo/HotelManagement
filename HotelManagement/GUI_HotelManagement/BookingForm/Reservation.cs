@@ -22,7 +22,7 @@ namespace GUI_HotelManagement
             InitializeComponent();
             loadlistOfReservation();
             cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
-        }
+		}
         
 
         private void bt_Edit_Reservation_Click(object sender, EventArgs e)
@@ -89,5 +89,26 @@ namespace GUI_HotelManagement
             //this.ShowDialog();
             this.Visible = true;
         }
+
+        private void bt_Cancel_Reservation_Click(object sender, EventArgs e)
+        {
+			string BookingId = cb_BookingID.Text.ToString();
+			if (BookingId == "")
+			{
+				MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
+				return;
+			}
+			else if (BookingId == "0")
+			{
+				MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
+				return;
+			}
+			else if (BookingId == null)
+			{
+				MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
+				return;
+			}
+            //cancel_Reservation(BookingId);
+		}
     }
 }

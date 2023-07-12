@@ -37,6 +37,7 @@
 			this.dgv_Reservation = new System.Windows.Forms.DataGridView();
 			this.lb_List_Of_Reservation = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.bt_Cancel_Reservation = new System.Windows.Forms.Button();
 			this.bt_Check_Out = new System.Windows.Forms.Button();
 			this.cb_BookingID = new System.Windows.Forms.ComboBox();
 			this.bt_Check_In = new System.Windows.Forms.Button();
@@ -132,6 +133,7 @@
 			// panel4
 			// 
 			this.panel4.BackColor = System.Drawing.Color.DarkGray;
+			this.panel4.Controls.Add(this.bt_Cancel_Reservation);
 			this.panel4.Controls.Add(this.bt_Check_Out);
 			this.panel4.Controls.Add(this.cb_BookingID);
 			this.panel4.Controls.Add(this.bt_Check_In);
@@ -143,10 +145,22 @@
 			this.panel4.Size = new System.Drawing.Size(1053, 84);
 			this.panel4.TabIndex = 0;
 			// 
+			// bt_Cancel_Reservation
+			// 
+			this.bt_Cancel_Reservation.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.bt_Cancel_Reservation.Location = new System.Drawing.Point(477, 27);
+			this.bt_Cancel_Reservation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.bt_Cancel_Reservation.Name = "bt_Cancel_Reservation";
+			this.bt_Cancel_Reservation.Size = new System.Drawing.Size(75, 29);
+			this.bt_Cancel_Reservation.TabIndex = 37;
+			this.bt_Cancel_Reservation.Text = "CANCEL";
+			this.bt_Cancel_Reservation.UseVisualStyleBackColor = false;
+			this.bt_Cancel_Reservation.Click += new System.EventHandler(this.bt_Cancel_Reservation_Click);
+			// 
 			// bt_Check_Out
 			// 
 			this.bt_Check_Out.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.bt_Check_Out.Location = new System.Drawing.Point(843, 28);
+			this.bt_Check_Out.Location = new System.Drawing.Point(877, 28);
 			this.bt_Check_Out.Name = "bt_Check_Out";
 			this.bt_Check_Out.Size = new System.Drawing.Size(100, 29);
 			this.bt_Check_Out.TabIndex = 5;
@@ -165,7 +179,7 @@
 			// bt_Check_In
 			// 
 			this.bt_Check_In.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.bt_Check_In.Location = new System.Drawing.Point(706, 28);
+			this.bt_Check_In.Location = new System.Drawing.Point(747, 28);
 			this.bt_Check_In.Name = "bt_Check_In";
 			this.bt_Check_In.Size = new System.Drawing.Size(100, 29);
 			this.bt_Check_In.TabIndex = 4;
@@ -176,7 +190,7 @@
 			// bt_Search_Reservation
 			// 
 			this.bt_Search_Reservation.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.bt_Search_Reservation.Location = new System.Drawing.Point(401, 28);
+			this.bt_Search_Reservation.Location = new System.Drawing.Point(377, 27);
 			this.bt_Search_Reservation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.bt_Search_Reservation.Name = "bt_Search_Reservation";
 			this.bt_Search_Reservation.Size = new System.Drawing.Size(75, 29);
@@ -197,7 +211,7 @@
 			// bt_Edit_Reservation
 			// 
 			this.bt_Edit_Reservation.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.bt_Edit_Reservation.Location = new System.Drawing.Point(517, 28);
+			this.bt_Edit_Reservation.Location = new System.Drawing.Point(572, 28);
 			this.bt_Edit_Reservation.Name = "bt_Edit_Reservation";
 			this.bt_Edit_Reservation.Size = new System.Drawing.Size(150, 29);
 			this.bt_Edit_Reservation.TabIndex = 2;
@@ -261,5 +275,6 @@
         private ComboBox cb_BookingID;
         private BindingSource bookingFormBUSBindingSource;
         private Button bt_Check_Out;
+		private Button bt_Cancel_Reservation;
 	}
 }

@@ -86,7 +86,11 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.loadlistOfItems_Room(BookingId);
         }
-        public static DataTable Edit_Reservation(string BookingID, string name)
+		public static DataTable cancel_Reservation(BookingForm_DTO BookingId)
+		{
+			return BookingForm_DAO.Instance.cancel_Reservation(BookingId);
+		}
+		public static DataTable Edit_Reservation(string BookingID, string name)
         {
             return BookingForm_DAO.Instance.Edit_Reservation(BookingID, name);
         }
@@ -107,10 +111,7 @@ namespace BUS_HotelManagement
         {
             return BookingForm_DAO.Instance.getRoomType();
         }
-        /*public static DataTable Edit_Reservation(BookingForm_DTO BookingId)//BookingForm_DTO BookingId)
-		{
-			return BookingForm_DAO.Instance.Edit_Reservation(BookingForm_DTO BookingId);//BookingId);
-		}*/
+        
 
         public static DateTime getIn_Date(BookingForm_DTO BookingId)
         {

@@ -207,9 +207,14 @@ namespace DAO_HotelManagement
             string query = "select distinct IR.ID_ROOM, I.ID_ITEM, I.NAME,IR.AMOUNT, I.TYPE, I.STORAGE_LOCATION, I.CHECKOUT_DATE, I.MANAGER from ITEM I join ITEM_ROOM IR on I.ID_ITEM = IR.ID_ITEM WHERE IR.ID_ROOM = '" + BookingID.IdBooking + "'";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
-        } 
+        }
 
-
+		public DataTable cancel_Reservation(BookingForm_DTO BookingID)
+		{
+			string query = "UPDATE BOOKING_FORM\r\n\tSET STATUS = N'Đã hủy'\r\n\tWHERE ID_BOOKING = '" + BookingID.IdBooking + "'";
+			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+			return dt;
+		}
 		public DataTable cb_BookingID(BookingForm_DTO BookingID)
         {
             string query = "SELECT * FROM BOOKING_FORM BF WHERE BF.STATUS like N'%lý';";
