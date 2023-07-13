@@ -22,7 +22,7 @@ namespace GUI_HotelManagement
 			InitializeComponent();
             loadlistOfReservation();
 			cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
-            cb_RoomType.DataSource = BookingForm_BUS.cb_RoomType();
+            //cb_RoomType.DataSource = BookingForm_BUS.cb_RoomType();
 			cb_BookingID_Edit.DataSource = BookingForm_BUS.cb_BookingID_Edit();
 
 
@@ -47,10 +47,13 @@ namespace GUI_HotelManagement
             }
 			//BookingForm_DTO booking = new BookingForm_DTO(BookingId);
 			Customer_DTO customer = new Customer_DTO();
-			string booking = cb_BookingID.ToString();
-			string cus_name = tb_Customer_Name.ToString();
-			dgv_Reservation.DataSource = BookingForm_BUS.Edit_Reservation(booking, cus_name);
-			//Edit_Reservation(BookingId);
+			BookingForm_DTO booking = new BookingForm_DTO (cb_BookingID.ToString());
+			//BookingForm_DTO cus_name = new BookingForm_DTO (tb_Customer_Name.ToString());
+			BookingForm_DTO ar_date = new BookingForm_DTO (date_Arrive.ToString());
+			BookingForm_DTO de_date = new BookingForm_DTO (date_Departure.ToString());
+			BookingForm_DTO spec_re = new BookingForm_DTO (tb_Special_Re.ToString());
+			dgv_Reservation.DataSource = BookingForm_BUS.bt_edit_Reservation(booking, ar_date, de_date, spec_re);
+			//bt_edit_Reservation(booking, ar_date, de_date, spec_re, cus_name);
 			MessageBox.Show("Update successful!");
             /*Reservation r = new Reservation();
             r.Show();

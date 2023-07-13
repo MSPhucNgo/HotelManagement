@@ -18,10 +18,10 @@ namespace GUI_HotelManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard_GUI());
+            //Application.Run(new Dashboard_GUI());
             //Application.Run(new Edit_Reservation());
             //Application.Run(new Check_inForm());
-            //Application.Run(new Edit_Resevation());
+            Application.Run(new Edit_Resevation());
         }
     }
 }
