@@ -41,8 +41,6 @@
 			this.tb_Special_Re = new System.Windows.Forms.TextBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.tb_Customer_Name = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
 			this.bt_Exit = new System.Windows.Forms.Button();
@@ -102,8 +100,6 @@
 			this.panel4.Controls.Add(this.tb_Special_Re);
 			this.panel4.Controls.Add(this.label9);
 			this.panel4.Controls.Add(this.label5);
-			this.panel4.Controls.Add(this.tb_Customer_Name);
-			this.panel4.Controls.Add(this.label4);
 			this.panel4.Location = new System.Drawing.Point(19, 77);
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(490, 424);
@@ -112,7 +108,7 @@
 			// cb_BookingID_Edit
 			// 
 			this.cb_BookingID_Edit.FormattingEnabled = true;
-			this.cb_BookingID_Edit.Location = new System.Drawing.Point(216, 38);
+			this.cb_BookingID_Edit.Location = new System.Drawing.Point(211, 66);
 			this.cb_BookingID_Edit.Name = "cb_BookingID_Edit";
 			this.cb_BookingID_Edit.Size = new System.Drawing.Size(250, 28);
 			this.cb_BookingID_Edit.TabIndex = 51;
@@ -120,7 +116,7 @@
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(33, 41);
+			this.label6.Location = new System.Drawing.Point(28, 69);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(96, 20);
 			this.label6.TabIndex = 50;
@@ -128,7 +124,7 @@
 			// 
 			// date_Departure
 			// 
-			this.date_Departure.Location = new System.Drawing.Point(216, 276);
+			this.date_Departure.Location = new System.Drawing.Point(211, 233);
 			this.date_Departure.Name = "date_Departure";
 			this.date_Departure.Size = new System.Drawing.Size(250, 27);
 			this.date_Departure.TabIndex = 48;
@@ -136,7 +132,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(33, 280);
+			this.label1.Location = new System.Drawing.Point(28, 237);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(124, 20);
 			this.label1.TabIndex = 47;
@@ -144,7 +140,7 @@
 			// 
 			// date_Arrive
 			// 
-			this.date_Arrive.Location = new System.Drawing.Point(216, 191);
+			this.date_Arrive.Location = new System.Drawing.Point(211, 148);
 			this.date_Arrive.Name = "date_Arrive";
 			this.date_Arrive.Size = new System.Drawing.Size(250, 27);
 			this.date_Arrive.TabIndex = 46;
@@ -152,7 +148,7 @@
 			// tb_Special_Re
 			// 
 			this.tb_Special_Re.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.tb_Special_Re.Location = new System.Drawing.Point(216, 357);
+			this.tb_Special_Re.Location = new System.Drawing.Point(211, 314);
 			this.tb_Special_Re.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.tb_Special_Re.Name = "tb_Special_Re";
 			this.tb_Special_Re.Size = new System.Drawing.Size(250, 27);
@@ -161,7 +157,7 @@
 			// label9
 			// 
 			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(33, 360);
+			this.label9.Location = new System.Drawing.Point(28, 317);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(177, 20);
 			this.label9.TabIndex = 42;
@@ -170,29 +166,11 @@
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(33, 196);
+			this.label5.Location = new System.Drawing.Point(28, 153);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(123, 20);
 			this.label5.TabIndex = 38;
 			this.label5.Text = "DATE OF ARRIVE:";
-			// 
-			// tb_Customer_Name
-			// 
-			this.tb_Customer_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.tb_Customer_Name.Location = new System.Drawing.Point(216, 108);
-			this.tb_Customer_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.tb_Customer_Name.Name = "tb_Customer_Name";
-			this.tb_Customer_Name.Size = new System.Drawing.Size(250, 27);
-			this.tb_Customer_Name.TabIndex = 37;
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(33, 111);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(133, 20);
-			this.label4.TabIndex = 36;
-			this.label4.Text = "CUSTOMER NAME:";
 			// 
 			// panel6
 			// 
@@ -415,8 +393,6 @@
 		private TextBox tb_Special_Re;
 		private Label label9;
 		private Label label5;
-		private TextBox tb_Customer_Name;
-		private Label label4;
 		private Panel panel6;
 		private Label label3;
 		private ComboBox cb_BookingID_Edit;

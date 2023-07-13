@@ -53,5 +53,12 @@ namespace DTO_HotelManagement
             this.paymentMethods = _paymethod;
             this.customer = _customer;
         }
-    }
+		public BookingForm_DTO(string _idBooking, string _arrivalDate, string _departure, string _specialReq)
+		{
+			this.idBooking = _idBooking;
+			this.arrivalDate = _arrivalDate;
+			this.departureDate = _departure;
+			this.specialRequirement = _specialReq;
+		}
+	}
 }

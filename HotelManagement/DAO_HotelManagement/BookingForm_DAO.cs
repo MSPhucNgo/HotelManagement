@@ -268,13 +268,18 @@ namespace DAO_HotelManagement
 			}
 			return roomList;
 		}
-        public DataTable bt_edit_Reservation(BookingForm_DTO _idBooking, BookingForm_DTO _arrivalDate, BookingForm_DTO _departure, BookingForm_DTO _specialReq )
+        public bool update_Reservation(BookingForm_DTO _idBooking, BookingForm_DTO _arrivalDate, BookingForm_DTO _departure, BookingForm_DTO _specialReq )
         {
             string query = "UPDATE BOOKING_FORM" +
-							"SET ARRIVAL_DATE = '" + _arrivalDate.ArrivalDate + "', DEPARTURE_DATE = '" + _departure.DepartureDate + "'" +
-							"WHERE ID_BOOKING = '" + _idBooking.IdBooking + "'";
-			DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            return dt;
+							"SET ARRIVAL_DATE = '" + _arrivalDate.ArrivalDate + "'" +
+							"', DEPARTURE_DATE = '" + _departure.DepartureDate + "'" +
+							"', SPECIAL_REQUIREMENTS = '" + _specialReq.SpecialRequirement + "'" +
+                            "WHERE ID_BOOKING = '" + _idBooking.IdBooking + "'";
+			//DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+			int index = DataProvider.Instance.ExecuteNonQuery(query);
+			if (index <= 0) { return false; }
+			return true;
+            
         }
 
         /*public bool updateCustomer(Customer_DTO CusInfo)

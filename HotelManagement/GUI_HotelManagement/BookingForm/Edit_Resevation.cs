@@ -46,14 +46,22 @@ namespace GUI_HotelManagement
                 return;
             }
 			//BookingForm_DTO booking = new BookingForm_DTO(BookingId);
-			Customer_DTO customer = new Customer_DTO();
-			BookingForm_DTO booking = new BookingForm_DTO (cb_BookingID.ToString());
+			//Customer_DTO customer = new Customer_DTO();
+			string booking = cb_BookingID_Edit.Text.ToString();
 			//BookingForm_DTO cus_name = new BookingForm_DTO (tb_Customer_Name.ToString());
-			BookingForm_DTO ar_date = new BookingForm_DTO (date_Arrive.ToString());
-			BookingForm_DTO de_date = new BookingForm_DTO (date_Departure.ToString());
-			BookingForm_DTO spec_re = new BookingForm_DTO (tb_Special_Re.ToString());
-			dgv_Reservation.DataSource = BookingForm_BUS.bt_edit_Reservation(booking, ar_date, de_date, spec_re);
-			//bt_edit_Reservation(booking, ar_date, de_date, spec_re, cus_name);
+			string ar_date = date_Arrive.Text.ToString();
+			string de_date = date_Departure.Text.ToString();
+			string spec_re = tb_Special_Re.Text.ToString();
+			
+			BookingForm_DTO temp = new BookingForm_DTO(booking, ar_date, de_date,spec_re);
+			bool flag = BookingForm_BUS.Update_BookingForm(temp);
+			/*date_Arrive.Format = DateTimePickerFormat.Custom;
+			date_Arrive.CustomFormat = "mm/dd/yyyy";
+			date_Departure.Format = DateTimePickerFormat.Custom;
+			date_Departure.CustomFormat = "dd/mm/yyyy hh:mm:ss";*/
+
+			//dgv_Reservation.DataSource = BookingForm_BUS.update_Reservation(booking, ar_date, de_date, spec_re);
+			//update_Reservation(booking, ar_date, de_date, spec_re);
 			MessageBox.Show("Update successful!");
             /*Reservation r = new Reservation();
             r.Show();

@@ -90,9 +90,9 @@ namespace BUS_HotelManagement
 		{
 			return BookingForm_DAO.Instance.cancel_Reservation(BookingId);
 		}
-		public static DataTable bt_edit_Reservation(BookingForm_DTO _idBooking, BookingForm_DTO _arrivalDate, BookingForm_DTO _departure, BookingForm_DTO _specialReq)
+		public static bool update_Reservation(BookingForm_DTO _idBooking, BookingForm_DTO _arrivalDate, BookingForm_DTO _departure, BookingForm_DTO _specialReq)
         {
-            return BookingForm_DAO.Instance.bt_edit_Reservation(_idBooking, _arrivalDate, _departure, _specialReq);
+            return BookingForm_DAO.Instance.update_Reservation(_idBooking, _arrivalDate, _departure, _specialReq);
         }
 
         public static List<string> cb_BookingID()
