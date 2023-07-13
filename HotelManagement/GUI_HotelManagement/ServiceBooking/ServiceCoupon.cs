@@ -111,10 +111,11 @@ namespace HotelManagement
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(cbxNow.Checked == true) {
+            if (cbxNow.Checked == true)
+            {
                 cbxWhenCheckout.Checked = false;
             }
-            else cbxWhenCheckout.Checked= true;
+            else cbxWhenCheckout.Checked = true;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -156,6 +157,37 @@ namespace HotelManagement
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+
+
+
+        }
+
+        private void cbxWhenCheckout_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxWhenCheckout.Checked == true)
+            {
+                cbxNow.Checked = false;
+            }
+            else cbxNow.Checked = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
             try
             {
                 Service_Form_DTO sf;
@@ -173,19 +205,11 @@ namespace HotelManagement
                     this.Close();
                 }
                 else MessageBox.Show("Order fail!");
-            } catch(Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
-
-           
-        }
-
-        private void cbxWhenCheckout_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxWhenCheckout.Checked == true)
-            {
-                cbxNow.Checked = false;
-            }else cbxNow.Checked = true;
         }
     }
 }

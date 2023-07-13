@@ -23,7 +23,7 @@ namespace GUI_HotelManagement
             loadlistOfReservation();
             cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
         }
-        
+
 
         private void bt_Edit_Reservation_Click(object sender, EventArgs e)
         {
@@ -51,7 +51,7 @@ namespace GUI_HotelManagement
         public string selectedID;
         public void loadlistOfReservation()
         {
-           BookingForm_DTO booking = new BookingForm_DTO(null);
+            BookingForm_DTO booking = new BookingForm_DTO(null);
             dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation();
         }
         public void loadlistOfReservation(string idBooking)
@@ -61,24 +61,24 @@ namespace GUI_HotelManagement
         }
         private void bt_Search_Reservation_Click(object sender, EventArgs e)
         {
-			string BookingId = cb_BookingID.Text.ToString();
-			if (BookingId == "")
-			{
-				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
-				return;
-			}
-			else if (BookingId == "0")
-			{
-				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
-				return;
-			}
-			else if (BookingId == null)
-			{
-				MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
-				return;
-			}
-			loadlistOfReservation(BookingId);
-		}
+            string BookingId = cb_BookingID.Text.ToString();
+            if (BookingId == "")
+            {
+                MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+                return;
+            }
+            else if (BookingId == "0")
+            {
+                MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+                return;
+            }
+            else if (BookingId == null)
+            {
+                MessageBox.Show("The Room_ID is not correct, please re-enter the Room_ID!");
+                return;
+            }
+            loadlistOfReservation(BookingId);
+        }
 
         private void bt_Check_Out_Click(object sender, EventArgs e)
         {

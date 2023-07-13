@@ -30,515 +30,560 @@ namespace GUI_HotelManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelPhone = new System.Windows.Forms.Label();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.labelIdentify = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnCreateBooking = new System.Windows.Forms.Button();
-            this.labelGender = new System.Windows.Forms.Label();
-            this.labelBirthday = new System.Windows.Forms.Label();
-            this.labelArrivalDate = new System.Windows.Forms.Label();
-            this.labelNumberRoom = new System.Windows.Forms.Label();
-            this.labelSepcialReq = new System.Windows.Forms.Label();
-            this.panelBooking = new System.Windows.Forms.Panel();
-            this.labelPaymentMethod = new System.Windows.Forms.Label();
-            this.comboBoxPaymentMethod = new System.Windows.Forms.ComboBox();
-            this.checkBoxDeposit = new System.Windows.Forms.CheckBox();
-            this.txtDepositFee = new System.Windows.Forms.TextBox();
-            this.labelDepositFee = new System.Windows.Forms.Label();
-            this.txtRoomFee = new System.Windows.Forms.TextBox();
-            this.labelRoomFee = new System.Windows.Forms.Label();
-            this.btnCheck = new System.Windows.Forms.Button();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.txtSpecialReq = new System.Windows.Forms.TextBox();
-            this.txtNumberRoom = new System.Windows.Forms.TextBox();
-            this.txtDepartureDate = new System.Windows.Forms.TextBox();
-            this.txtArrivalDate = new System.Windows.Forms.TextBox();
-            this.txtNameGroup = new System.Windows.Forms.TextBox();
-            this.txtNumberStay = new System.Windows.Forms.TextBox();
-            this.labelNameGroup = new System.Windows.Forms.Label();
-            this.labelNumberStay = new System.Windows.Forms.Label();
-            this.checkBoxGroup = new System.Windows.Forms.CheckBox();
-            this.btnChooseRoom = new System.Windows.Forms.Button();
-            this.labelDepartureDate = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBirthday = new System.Windows.Forms.TextBox();
-            this.txtGender = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtIdentify = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.panelBooking.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            labelName = new Label();
+            labelPhone = new Label();
+            labelEmail = new Label();
+            labelIdentify = new Label();
+            label11 = new Label();
+            btnCreateBooking = new Button();
+            labelGender = new Label();
+            labelBirthday = new Label();
+            labelArrivalDate = new Label();
+            labelNumberRoom = new Label();
+            labelSepcialReq = new Label();
+            panelBooking = new Panel();
+            labelPaymentMethod = new Label();
+            comboBoxPaymentMethod = new ComboBox();
+            checkBoxDeposit = new CheckBox();
+            txtDepositFee = new TextBox();
+            labelDepositFee = new Label();
+            txtRoomFee = new TextBox();
+            labelRoomFee = new Label();
+            btnCheck = new Button();
+            txtSpecialReq = new TextBox();
+            txtNumberRoom = new TextBox();
+            txtDepartureDate = new TextBox();
+            txtArrivalDate = new TextBox();
+            btnChooseRoom = new Button();
+            labelDepartureDate = new Label();
+            label2 = new Label();
+            txtBirthday = new TextBox();
+            txtGender = new TextBox();
+            txtEmail = new TextBox();
+            txtPhone = new TextBox();
+            txtIdentify = new TextBox();
+            txtName = new TextBox();
+            panel1 = new Panel();
+            txtNumberStay = new TextBox();
+            labelNumberStay = new Label();
+            labelNameGroup = new Label();
+            txtNameGroup = new TextBox();
+            checkBoxGroup = new CheckBox();
+            contextMenuStrip2 = new ContextMenuStrip(components);
+            panelBooking.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // labelName
             // 
-            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelName.Location = new System.Drawing.Point(24, 59);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(127, 35);
-            this.labelName.TabIndex = 7;
-            this.labelName.Text = "Full Name";
+            labelName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelName.AutoSize = true;
+            labelName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelName.Location = new Point(21, 60);
+            labelName.Name = "labelName";
+            labelName.Size = new Size(84, 21);
+            labelName.TabIndex = 7;
+            labelName.Text = "Full Name:";
             // 
             // labelPhone
             // 
-            this.labelPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPhone.AutoSize = true;
-            this.labelPhone.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPhone.Location = new System.Drawing.Point(24, 185);
-            this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(184, 35);
-            this.labelPhone.TabIndex = 11;
-            this.labelPhone.Text = "Phone Number";
+            labelPhone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelPhone.AutoSize = true;
+            labelPhone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPhone.Location = new Point(21, 139);
+            labelPhone.Name = "labelPhone";
+            labelPhone.Size = new Size(119, 21);
+            labelPhone.TabIndex = 11;
+            labelPhone.Text = "Phone Number:";
             // 
             // labelEmail
             // 
-            this.labelEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelEmail.Location = new System.Drawing.Point(24, 251);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(75, 35);
-            this.labelEmail.TabIndex = 15;
-            this.labelEmail.Text = "Email";
+            labelEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelEmail.AutoSize = true;
+            labelEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelEmail.Location = new Point(21, 179);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(51, 21);
+            labelEmail.TabIndex = 15;
+            labelEmail.Text = "Email:";
             // 
             // labelIdentify
             // 
-            this.labelIdentify.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelIdentify.AutoSize = true;
-            this.labelIdentify.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelIdentify.Location = new System.Drawing.Point(24, 121);
-            this.labelIdentify.Name = "labelIdentify";
-            this.labelIdentify.Size = new System.Drawing.Size(157, 35);
-            this.labelIdentify.TabIndex = 23;
-            this.labelIdentify.Text = "Identify Card";
+            labelIdentify.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelIdentify.AutoSize = true;
+            labelIdentify.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelIdentify.Location = new Point(21, 98);
+            labelIdentify.Name = "labelIdentify";
+            labelIdentify.Size = new Size(102, 21);
+            labelIdentify.TabIndex = 23;
+            labelIdentify.Text = "Identify Card:";
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(491, -3);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 35);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Booking";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.FromArgb(8, 48, 107);
+            label11.Location = new Point(423, 6);
+            label11.Name = "label11";
+            label11.Size = new Size(151, 28);
+            label11.TabIndex = 35;
+            label11.Text = "Booking Room";
+            label11.TextAlign = ContentAlignment.TopCenter;
             // 
             // btnCreateBooking
             // 
-            this.btnCreateBooking.Location = new System.Drawing.Point(801, 486);
-            this.btnCreateBooking.Name = "btnCreateBooking";
-            this.btnCreateBooking.Size = new System.Drawing.Size(256, 85);
-            this.btnCreateBooking.TabIndex = 36;
-            this.btnCreateBooking.Text = "Create Booking";
-            this.btnCreateBooking.UseVisualStyleBackColor = true;
-            this.btnCreateBooking.Click += new System.EventHandler(this.btnCreateBooking_Click_1);
+            btnCreateBooking.BackColor = Color.FromArgb(0, 193, 138);
+            btnCreateBooking.Cursor = Cursors.Hand;
+            btnCreateBooking.FlatStyle = FlatStyle.Flat;
+            btnCreateBooking.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCreateBooking.ForeColor = Color.White;
+            btnCreateBooking.Location = new Point(584, 376);
+            btnCreateBooking.Margin = new Padding(3, 2, 3, 2);
+            btnCreateBooking.Name = "btnCreateBooking";
+            btnCreateBooking.Size = new Size(286, 53);
+            btnCreateBooking.TabIndex = 36;
+            btnCreateBooking.Text = "Create Booking";
+            btnCreateBooking.UseVisualStyleBackColor = false;
+            btnCreateBooking.Click += btnCreateBooking_Click_1;
             // 
             // labelGender
             // 
-            this.labelGender.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelGender.AutoSize = true;
-            this.labelGender.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelGender.Location = new System.Drawing.Point(24, 311);
-            this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(96, 35);
-            this.labelGender.TabIndex = 42;
-            this.labelGender.Text = "Gender";
+            labelGender.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelGender.AutoSize = true;
+            labelGender.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelGender.Location = new Point(21, 219);
+            labelGender.Name = "labelGender";
+            labelGender.Size = new Size(64, 21);
+            labelGender.TabIndex = 42;
+            labelGender.Text = "Gender:";
             // 
             // labelBirthday
             // 
-            this.labelBirthday.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelBirthday.AutoSize = true;
-            this.labelBirthday.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelBirthday.Location = new System.Drawing.Point(17, 374);
-            this.labelBirthday.Name = "labelBirthday";
-            this.labelBirthday.Size = new System.Drawing.Size(106, 35);
-            this.labelBirthday.TabIndex = 43;
-            this.labelBirthday.Text = "Birthday";
+            labelBirthday.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelBirthday.AutoSize = true;
+            labelBirthday.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelBirthday.Location = new Point(21, 260);
+            labelBirthday.Name = "labelBirthday";
+            labelBirthday.Size = new Size(71, 21);
+            labelBirthday.TabIndex = 43;
+            labelBirthday.Text = "Birthday:";
             // 
             // labelArrivalDate
             // 
-            this.labelArrivalDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelArrivalDate.AutoSize = true;
-            this.labelArrivalDate.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelArrivalDate.Location = new System.Drawing.Point(635, 61);
-            this.labelArrivalDate.Name = "labelArrivalDate";
-            this.labelArrivalDate.Size = new System.Drawing.Size(145, 35);
-            this.labelArrivalDate.TabIndex = 45;
-            this.labelArrivalDate.Text = "Arrival Date";
+            labelArrivalDate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelArrivalDate.AutoSize = true;
+            labelArrivalDate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelArrivalDate.Location = new Point(496, 60);
+            labelArrivalDate.Name = "labelArrivalDate";
+            labelArrivalDate.Size = new Size(95, 21);
+            labelArrivalDate.TabIndex = 45;
+            labelArrivalDate.Text = "Arrival Date:";
             // 
             // labelNumberRoom
             // 
-            this.labelNumberRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNumberRoom.AutoSize = true;
-            this.labelNumberRoom.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNumberRoom.Location = new System.Drawing.Point(589, 249);
-            this.labelNumberRoom.Name = "labelNumberRoom";
-            this.labelNumberRoom.Size = new System.Drawing.Size(191, 35);
-            this.labelNumberRoom.TabIndex = 46;
-            this.labelNumberRoom.Text = "Number Rooms";
+            labelNumberRoom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelNumberRoom.AutoSize = true;
+            labelNumberRoom.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelNumberRoom.Location = new Point(496, 214);
+            labelNumberRoom.Name = "labelNumberRoom";
+            labelNumberRoom.Size = new Size(124, 21);
+            labelNumberRoom.TabIndex = 46;
+            labelNumberRoom.Text = "Number Rooms:";
             // 
             // labelSepcialReq
             // 
-            this.labelSepcialReq.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSepcialReq.AutoSize = true;
-            this.labelSepcialReq.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelSepcialReq.Location = new System.Drawing.Point(550, 183);
-            this.labelSepcialReq.Name = "labelSepcialReq";
-            this.labelSepcialReq.Size = new System.Drawing.Size(230, 35);
-            this.labelSepcialReq.TabIndex = 49;
-            this.labelSepcialReq.Text = "Special Requiments";
+            labelSepcialReq.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelSepcialReq.AutoSize = true;
+            labelSepcialReq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSepcialReq.Location = new Point(496, 139);
+            labelSepcialReq.Name = "labelSepcialReq";
+            labelSepcialReq.Size = new Size(149, 21);
+            labelSepcialReq.TabIndex = 49;
+            labelSepcialReq.Text = "Special Requiments:";
             // 
             // panelBooking
             // 
-            this.panelBooking.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBooking.Controls.Add(this.labelPaymentMethod);
-            this.panelBooking.Controls.Add(this.comboBoxPaymentMethod);
-            this.panelBooking.Controls.Add(this.checkBoxDeposit);
-            this.panelBooking.Controls.Add(this.txtDepositFee);
-            this.panelBooking.Controls.Add(this.labelDepositFee);
-            this.panelBooking.Controls.Add(this.txtRoomFee);
-            this.panelBooking.Controls.Add(this.labelRoomFee);
-            this.panelBooking.Controls.Add(this.btnCheck);
-            this.panelBooking.Controls.Add(this.splitter1);
-            this.panelBooking.Controls.Add(this.txtSpecialReq);
-            this.panelBooking.Controls.Add(this.txtNumberRoom);
-            this.panelBooking.Controls.Add(this.txtDepartureDate);
-            this.panelBooking.Controls.Add(this.txtArrivalDate);
-            this.panelBooking.Controls.Add(this.txtNameGroup);
-            this.panelBooking.Controls.Add(this.txtNumberStay);
-            this.panelBooking.Controls.Add(this.labelNameGroup);
-            this.panelBooking.Controls.Add(this.labelNumberStay);
-            this.panelBooking.Controls.Add(this.checkBoxGroup);
-            this.panelBooking.Controls.Add(this.btnChooseRoom);
-            this.panelBooking.Controls.Add(this.labelDepartureDate);
-            this.panelBooking.Controls.Add(this.label2);
-            this.panelBooking.Controls.Add(this.txtBirthday);
-            this.panelBooking.Controls.Add(this.txtGender);
-            this.panelBooking.Controls.Add(this.txtEmail);
-            this.panelBooking.Controls.Add(this.txtPhone);
-            this.panelBooking.Controls.Add(this.txtIdentify);
-            this.panelBooking.Controls.Add(this.txtName);
-            this.panelBooking.Controls.Add(this.labelSepcialReq);
-            this.panelBooking.Controls.Add(this.labelNumberRoom);
-            this.panelBooking.Controls.Add(this.labelArrivalDate);
-            this.panelBooking.Controls.Add(this.labelBirthday);
-            this.panelBooking.Controls.Add(this.labelGender);
-            this.panelBooking.Controls.Add(this.btnCreateBooking);
-            this.panelBooking.Controls.Add(this.label11);
-            this.panelBooking.Controls.Add(this.labelIdentify);
-            this.panelBooking.Controls.Add(this.labelEmail);
-            this.panelBooking.Controls.Add(this.labelPhone);
-            this.panelBooking.Controls.Add(this.labelName);
-            this.panelBooking.Location = new System.Drawing.Point(12, 12);
-            this.panelBooking.Name = "panelBooking";
-            this.panelBooking.Size = new System.Drawing.Size(1093, 599);
-            this.panelBooking.TabIndex = 8;
+            panelBooking.BackColor = Color.White;
+            panelBooking.Controls.Add(labelPaymentMethod);
+            panelBooking.Controls.Add(comboBoxPaymentMethod);
+            panelBooking.Controls.Add(checkBoxDeposit);
+            panelBooking.Controls.Add(txtDepositFee);
+            panelBooking.Controls.Add(labelDepositFee);
+            panelBooking.Controls.Add(txtRoomFee);
+            panelBooking.Controls.Add(labelRoomFee);
+            panelBooking.Controls.Add(btnCheck);
+            panelBooking.Controls.Add(txtSpecialReq);
+            panelBooking.Controls.Add(txtNumberRoom);
+            panelBooking.Controls.Add(txtDepartureDate);
+            panelBooking.Controls.Add(txtArrivalDate);
+            panelBooking.Controls.Add(btnChooseRoom);
+            panelBooking.Controls.Add(labelDepartureDate);
+            panelBooking.Controls.Add(label2);
+            panelBooking.Controls.Add(txtBirthday);
+            panelBooking.Controls.Add(txtGender);
+            panelBooking.Controls.Add(txtEmail);
+            panelBooking.Controls.Add(txtPhone);
+            panelBooking.Controls.Add(txtIdentify);
+            panelBooking.Controls.Add(txtName);
+            panelBooking.Controls.Add(labelSepcialReq);
+            panelBooking.Controls.Add(labelNumberRoom);
+            panelBooking.Controls.Add(labelArrivalDate);
+            panelBooking.Controls.Add(labelBirthday);
+            panelBooking.Controls.Add(labelGender);
+            panelBooking.Controls.Add(btnCreateBooking);
+            panelBooking.Controls.Add(label11);
+            panelBooking.Controls.Add(labelIdentify);
+            panelBooking.Controls.Add(labelEmail);
+            panelBooking.Controls.Add(labelPhone);
+            panelBooking.Controls.Add(labelName);
+            panelBooking.Controls.Add(panel1);
+            panelBooking.Dock = DockStyle.Fill;
+            panelBooking.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            panelBooking.Location = new Point(10, 10);
+            panelBooking.Margin = new Padding(3, 2, 3, 2);
+            panelBooking.Name = "panelBooking";
+            panelBooking.Size = new Size(957, 447);
+            panelBooking.TabIndex = 8;
             // 
             // labelPaymentMethod
             // 
-            this.labelPaymentMethod.AutoSize = true;
-            this.labelPaymentMethod.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPaymentMethod.Location = new System.Drawing.Point(635, 437);
-            this.labelPaymentMethod.Name = "labelPaymentMethod";
-            this.labelPaymentMethod.Size = new System.Drawing.Size(204, 35);
-            this.labelPaymentMethod.TabIndex = 85;
-            this.labelPaymentMethod.Text = "Payment Method";
+            labelPaymentMethod.AutoSize = true;
+            labelPaymentMethod.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPaymentMethod.Location = new Point(496, 336);
+            labelPaymentMethod.Name = "labelPaymentMethod";
+            labelPaymentMethod.Size = new Size(131, 21);
+            labelPaymentMethod.TabIndex = 85;
+            labelPaymentMethod.Text = "Payment Method:";
             // 
             // comboBoxPaymentMethod
             // 
-            this.comboBoxPaymentMethod.FormattingEnabled = true;
-            this.comboBoxPaymentMethod.Items.AddRange(new object[] {
-            "Cash",
-            "Credit Card",
-            "Traveller Cheque",
-            "Traveller Agent Account"});
-            this.comboBoxPaymentMethod.Location = new System.Drawing.Point(862, 444);
-            this.comboBoxPaymentMethod.Name = "comboBoxPaymentMethod";
-            this.comboBoxPaymentMethod.Size = new System.Drawing.Size(195, 28);
-            this.comboBoxPaymentMethod.TabIndex = 84;
-            this.comboBoxPaymentMethod.SelectedIndexChanged += new System.EventHandler(this.comboBoxPaymentMethod_SelectedIndexChanged_1);
+            comboBoxPaymentMethod.Cursor = Cursors.IBeam;
+            comboBoxPaymentMethod.FormattingEnabled = true;
+            comboBoxPaymentMethod.Items.AddRange(new object[] { "Cash", "Credit Card", "Traveller Cheque", "Traveller Agent Account" });
+            comboBoxPaymentMethod.Location = new Point(648, 331);
+            comboBoxPaymentMethod.Margin = new Padding(3, 2, 3, 2);
+            comboBoxPaymentMethod.Name = "comboBoxPaymentMethod";
+            comboBoxPaymentMethod.Size = new Size(151, 29);
+            comboBoxPaymentMethod.TabIndex = 84;
+            comboBoxPaymentMethod.SelectedIndexChanged += comboBoxPaymentMethod_SelectedIndexChanged_1;
             // 
             // checkBoxDeposit
             // 
-            this.checkBoxDeposit.AutoSize = true;
-            this.checkBoxDeposit.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxDeposit.Location = new System.Drawing.Point(635, 505);
-            this.checkBoxDeposit.Name = "checkBoxDeposit";
-            this.checkBoxDeposit.Size = new System.Drawing.Size(162, 39);
-            this.checkBoxDeposit.TabIndex = 83;
-            this.checkBoxDeposit.Text = "Deposited?";
-            this.checkBoxDeposit.UseVisualStyleBackColor = true;
-            this.checkBoxDeposit.CheckedChanged += new System.EventHandler(this.checkBoxDeposit_CheckedChanged_1);
+            checkBoxDeposit.AutoSize = true;
+            checkBoxDeposit.Cursor = Cursors.Hand;
+            checkBoxDeposit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxDeposit.Location = new Point(819, 336);
+            checkBoxDeposit.Margin = new Padding(3, 2, 3, 2);
+            checkBoxDeposit.Name = "checkBoxDeposit";
+            checkBoxDeposit.Size = new Size(106, 25);
+            checkBoxDeposit.TabIndex = 83;
+            checkBoxDeposit.Text = "Deposited?";
+            checkBoxDeposit.UseVisualStyleBackColor = true;
+            checkBoxDeposit.CheckedChanged += checkBoxDeposit_CheckedChanged_1;
             // 
             // txtDepositFee
             // 
-            this.txtDepositFee.Location = new System.Drawing.Point(801, 402);
-            this.txtDepositFee.Name = "txtDepositFee";
-            this.txtDepositFee.Size = new System.Drawing.Size(256, 27);
-            this.txtDepositFee.TabIndex = 82;
+            txtDepositFee.BorderStyle = BorderStyle.FixedSingle;
+            txtDepositFee.Cursor = Cursors.IBeam;
+            txtDepositFee.Location = new Point(648, 291);
+            txtDepositFee.Margin = new Padding(3, 2, 3, 2);
+            txtDepositFee.Name = "txtDepositFee";
+            txtDepositFee.Size = new Size(151, 29);
+            txtDepositFee.TabIndex = 82;
             // 
             // labelDepositFee
             // 
-            this.labelDepositFee.AutoSize = true;
-            this.labelDepositFee.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelDepositFee.Location = new System.Drawing.Point(634, 394);
-            this.labelDepositFee.Name = "labelDepositFee";
-            this.labelDepositFee.Size = new System.Drawing.Size(146, 35);
-            this.labelDepositFee.TabIndex = 81;
-            this.labelDepositFee.Text = "Deposit Fee";
+            labelDepositFee.AutoSize = true;
+            labelDepositFee.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelDepositFee.Location = new Point(496, 299);
+            labelDepositFee.Name = "labelDepositFee";
+            labelDepositFee.Size = new Size(94, 21);
+            labelDepositFee.TabIndex = 81;
+            labelDepositFee.Text = "Deposit Fee:";
             // 
             // txtRoomFee
             // 
-            this.txtRoomFee.Location = new System.Drawing.Point(801, 357);
-            this.txtRoomFee.Name = "txtRoomFee";
-            this.txtRoomFee.Size = new System.Drawing.Size(256, 27);
-            this.txtRoomFee.TabIndex = 80;
+            txtRoomFee.BorderStyle = BorderStyle.FixedSingle;
+            txtRoomFee.Cursor = Cursors.IBeam;
+            txtRoomFee.Location = new Point(648, 252);
+            txtRoomFee.Margin = new Padding(3, 2, 3, 2);
+            txtRoomFee.Name = "txtRoomFee";
+            txtRoomFee.Size = new Size(151, 29);
+            txtRoomFee.TabIndex = 80;
             // 
             // labelRoomFee
             // 
-            this.labelRoomFee.AutoSize = true;
-            this.labelRoomFee.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelRoomFee.Location = new System.Drawing.Point(661, 349);
-            this.labelRoomFee.Name = "labelRoomFee";
-            this.labelRoomFee.Size = new System.Drawing.Size(119, 35);
-            this.labelRoomFee.TabIndex = 79;
-            this.labelRoomFee.Text = "RoomFee";
+            labelRoomFee.AutoSize = true;
+            labelRoomFee.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelRoomFee.Location = new Point(496, 260);
+            labelRoomFee.Name = "labelRoomFee";
+            labelRoomFee.Size = new Size(83, 21);
+            labelRoomFee.TabIndex = 79;
+            labelRoomFee.Text = "Room Fee:";
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(346, 122);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(60, 40);
-            this.btnCheck.TabIndex = 78;
-            this.btnCheck.Text = "Check";
-            this.btnCheck.UseVisualStyleBackColor = true;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click_1);
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(4, 599);
-            this.splitter1.TabIndex = 77;
-            this.splitter1.TabStop = false;
+            btnCheck.BackColor = Color.FromArgb(8, 48, 107);
+            btnCheck.Cursor = Cursors.Hand;
+            btnCheck.FlatAppearance.BorderSize = 0;
+            btnCheck.FlatStyle = FlatStyle.Flat;
+            btnCheck.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCheck.ForeColor = Color.White;
+            btnCheck.Location = new Point(306, 92);
+            btnCheck.Margin = new Padding(3, 2, 3, 2);
+            btnCheck.Name = "btnCheck";
+            btnCheck.Size = new Size(100, 29);
+            btnCheck.TabIndex = 78;
+            btnCheck.Text = "Check";
+            btnCheck.UseVisualStyleBackColor = false;
+            btnCheck.Click += btnCheck_Click_1;
             // 
             // txtSpecialReq
             // 
-            this.txtSpecialReq.Location = new System.Drawing.Point(796, 192);
-            this.txtSpecialReq.Name = "txtSpecialReq";
-            this.txtSpecialReq.Size = new System.Drawing.Size(263, 27);
-            this.txtSpecialReq.TabIndex = 72;
+            txtSpecialReq.BorderStyle = BorderStyle.FixedSingle;
+            txtSpecialReq.Cursor = Cursors.IBeam;
+            txtSpecialReq.Location = new Point(648, 131);
+            txtSpecialReq.Margin = new Padding(3, 2, 3, 2);
+            txtSpecialReq.Multiline = true;
+            txtSpecialReq.Name = "txtSpecialReq";
+            txtSpecialReq.Size = new Size(277, 64);
+            txtSpecialReq.TabIndex = 72;
             // 
             // txtNumberRoom
             // 
-            this.txtNumberRoom.Location = new System.Drawing.Point(713, 287);
-            this.txtNumberRoom.Name = "txtNumberRoom";
-            this.txtNumberRoom.Size = new System.Drawing.Size(56, 27);
-            this.txtNumberRoom.TabIndex = 73;
+            txtNumberRoom.BorderStyle = BorderStyle.FixedSingle;
+            txtNumberRoom.Cursor = Cursors.IBeam;
+            txtNumberRoom.Location = new Point(648, 206);
+            txtNumberRoom.Margin = new Padding(3, 2, 3, 2);
+            txtNumberRoom.Name = "txtNumberRoom";
+            txtNumberRoom.Size = new Size(86, 29);
+            txtNumberRoom.TabIndex = 73;
             // 
             // txtDepartureDate
             // 
-            this.txtDepartureDate.Location = new System.Drawing.Point(796, 130);
-            this.txtDepartureDate.Name = "txtDepartureDate";
-            this.txtDepartureDate.Size = new System.Drawing.Size(261, 27);
-            this.txtDepartureDate.TabIndex = 74;
+            txtDepartureDate.BorderStyle = BorderStyle.FixedSingle;
+            txtDepartureDate.Cursor = Cursors.IBeam;
+            txtDepartureDate.Location = new Point(648, 91);
+            txtDepartureDate.Margin = new Padding(3, 2, 3, 2);
+            txtDepartureDate.Name = "txtDepartureDate";
+            txtDepartureDate.Size = new Size(151, 29);
+            txtDepartureDate.TabIndex = 74;
             // 
             // txtArrivalDate
             // 
-            this.txtArrivalDate.Location = new System.Drawing.Point(796, 69);
-            this.txtArrivalDate.Name = "txtArrivalDate";
-            this.txtArrivalDate.Size = new System.Drawing.Size(263, 27);
-            this.txtArrivalDate.TabIndex = 75;
-            // 
-            // txtNameGroup
-            // 
-            this.txtNameGroup.Location = new System.Drawing.Point(242, 544);
-            this.txtNameGroup.Name = "txtNameGroup";
-            this.txtNameGroup.Size = new System.Drawing.Size(164, 27);
-            this.txtNameGroup.TabIndex = 76;
-            this.txtNameGroup.Visible = false;
-            // 
-            // txtNumberStay
-            // 
-            this.txtNumberStay.Location = new System.Drawing.Point(242, 498);
-            this.txtNumberStay.Name = "txtNumberStay";
-            this.txtNumberStay.Size = new System.Drawing.Size(164, 27);
-            this.txtNumberStay.TabIndex = 71;
-            this.txtNumberStay.Visible = false;
-            // 
-            // labelNameGroup
-            // 
-            this.labelNameGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNameGroup.AutoSize = true;
-            this.labelNameGroup.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNameGroup.Location = new System.Drawing.Point(24, 535);
-            this.labelNameGroup.Name = "labelNameGroup";
-            this.labelNameGroup.Size = new System.Drawing.Size(189, 35);
-            this.labelNameGroup.TabIndex = 68;
-            this.labelNameGroup.Text = "Name of Group";
-            this.labelNameGroup.Visible = false;
-            // 
-            // labelNumberStay
-            // 
-            this.labelNumberStay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNumberStay.AutoSize = true;
-            this.labelNumberStay.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNumberStay.Location = new System.Drawing.Point(24, 489);
-            this.labelNumberStay.Name = "labelNumberStay";
-            this.labelNumberStay.Size = new System.Drawing.Size(159, 35);
-            this.labelNumberStay.TabIndex = 67;
-            this.labelNumberStay.Text = "Number Stay";
-            this.labelNumberStay.Visible = false;
-            // 
-            // checkBoxGroup
-            // 
-            this.checkBoxGroup.AutoSize = true;
-            this.checkBoxGroup.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxGroup.Location = new System.Drawing.Point(24, 435);
-            this.checkBoxGroup.Name = "checkBoxGroup";
-            this.checkBoxGroup.Size = new System.Drawing.Size(276, 39);
-            this.checkBoxGroup.TabIndex = 66;
-            this.checkBoxGroup.Text = "Group Inclusive Tour?";
-            this.checkBoxGroup.UseVisualStyleBackColor = true;
-            this.checkBoxGroup.CheckedChanged += new System.EventHandler(this.checkBoxGroup_CheckedChanged);
+            txtArrivalDate.BorderStyle = BorderStyle.FixedSingle;
+            txtArrivalDate.Cursor = Cursors.IBeam;
+            txtArrivalDate.Location = new Point(648, 52);
+            txtArrivalDate.Margin = new Padding(3, 2, 3, 2);
+            txtArrivalDate.Name = "txtArrivalDate";
+            txtArrivalDate.Size = new Size(151, 29);
+            txtArrivalDate.TabIndex = 75;
             // 
             // btnChooseRoom
             // 
-            this.btnChooseRoom.Location = new System.Drawing.Point(801, 249);
-            this.btnChooseRoom.Name = "btnChooseRoom";
-            this.btnChooseRoom.Size = new System.Drawing.Size(256, 80);
-            this.btnChooseRoom.TabIndex = 65;
-            this.btnChooseRoom.Text = "Choose Room";
-            this.btnChooseRoom.UseVisualStyleBackColor = true;
-            this.btnChooseRoom.Click += new System.EventHandler(this.btnChooseRoom_Click);
+            btnChooseRoom.BackColor = Color.FromArgb(8, 48, 107);
+            btnChooseRoom.Cursor = Cursors.Hand;
+            btnChooseRoom.FlatAppearance.BorderSize = 0;
+            btnChooseRoom.FlatStyle = FlatStyle.Flat;
+            btnChooseRoom.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChooseRoom.ForeColor = Color.White;
+            btnChooseRoom.Location = new Point(754, 206);
+            btnChooseRoom.Margin = new Padding(3, 2, 3, 2);
+            btnChooseRoom.Name = "btnChooseRoom";
+            btnChooseRoom.Size = new Size(171, 29);
+            btnChooseRoom.TabIndex = 65;
+            btnChooseRoom.Text = "Choose Room";
+            btnChooseRoom.UseVisualStyleBackColor = false;
+            btnChooseRoom.Click += btnChooseRoom_Click;
             // 
             // labelDepartureDate
             // 
-            this.labelDepartureDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDepartureDate.AutoSize = true;
-            this.labelDepartureDate.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelDepartureDate.Location = new System.Drawing.Point(594, 122);
-            this.labelDepartureDate.Name = "labelDepartureDate";
-            this.labelDepartureDate.Size = new System.Drawing.Size(186, 35);
-            this.labelDepartureDate.TabIndex = 62;
-            this.labelDepartureDate.Text = "Departure Date";
+            labelDepartureDate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelDepartureDate.AutoSize = true;
+            labelDepartureDate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelDepartureDate.Location = new Point(496, 100);
+            labelDepartureDate.Name = "labelDepartureDate";
+            labelDepartureDate.Size = new Size(119, 21);
+            labelDepartureDate.TabIndex = 62;
+            labelDepartureDate.Text = "Departure Date:";
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(567, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 35);
-            this.label2.TabIndex = 61;
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(496, 87);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 28);
+            label2.TabIndex = 61;
             // 
             // txtBirthday
             // 
-            this.txtBirthday.Location = new System.Drawing.Point(126, 382);
-            this.txtBirthday.Name = "txtBirthday";
-            this.txtBirthday.Size = new System.Drawing.Size(280, 27);
-            this.txtBirthday.TabIndex = 56;
+            txtBirthday.BorderStyle = BorderStyle.FixedSingle;
+            txtBirthday.Cursor = Cursors.IBeam;
+            txtBirthday.Location = new Point(146, 252);
+            txtBirthday.Margin = new Padding(3, 2, 3, 2);
+            txtBirthday.Name = "txtBirthday";
+            txtBirthday.Size = new Size(141, 29);
+            txtBirthday.TabIndex = 56;
             // 
             // txtGender
             // 
-            this.txtGender.Location = new System.Drawing.Point(126, 319);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(280, 27);
-            this.txtGender.TabIndex = 55;
+            txtGender.BorderStyle = BorderStyle.FixedSingle;
+            txtGender.Cursor = Cursors.IBeam;
+            txtGender.Location = new Point(146, 211);
+            txtGender.Margin = new Padding(3, 2, 3, 2);
+            txtGender.Name = "txtGender";
+            txtGender.Size = new Size(141, 29);
+            txtGender.TabIndex = 55;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(126, 255);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(280, 27);
-            this.txtEmail.TabIndex = 54;
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Cursor = Cursors.IBeam;
+            txtEmail.Location = new Point(146, 171);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(260, 29);
+            txtEmail.TabIndex = 54;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(214, 193);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(192, 27);
-            this.txtPhone.TabIndex = 53;
+            txtPhone.BorderStyle = BorderStyle.FixedSingle;
+            txtPhone.Cursor = Cursors.IBeam;
+            txtPhone.Location = new Point(146, 131);
+            txtPhone.Margin = new Padding(3, 2, 3, 2);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(141, 29);
+            txtPhone.TabIndex = 53;
             // 
             // txtIdentify
             // 
-            this.txtIdentify.Location = new System.Drawing.Point(214, 129);
-            this.txtIdentify.Name = "txtIdentify";
-            this.txtIdentify.Size = new System.Drawing.Size(126, 27);
-            this.txtIdentify.TabIndex = 52;
+            txtIdentify.BorderStyle = BorderStyle.FixedSingle;
+            txtIdentify.Cursor = Cursors.IBeam;
+            txtIdentify.Location = new Point(146, 92);
+            txtIdentify.Margin = new Padding(3, 2, 3, 2);
+            txtIdentify.Name = "txtIdentify";
+            txtIdentify.Size = new Size(141, 29);
+            txtIdentify.TabIndex = 52;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(214, 68);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(192, 27);
-            this.txtName.TabIndex = 51;
+            txtName.BorderStyle = BorderStyle.FixedSingle;
+            txtName.Cursor = Cursors.IBeam;
+            txtName.Location = new Point(146, 52);
+            txtName.Margin = new Padding(3, 2, 3, 2);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(260, 29);
+            txtName.TabIndex = 51;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(235, 246, 252);
+            panel1.Controls.Add(txtNumberStay);
+            panel1.Controls.Add(labelNumberStay);
+            panel1.Controls.Add(labelNameGroup);
+            panel1.Controls.Add(txtNameGroup);
+            panel1.Controls.Add(checkBoxGroup);
+            panel1.Location = new Point(21, 299);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(385, 130);
+            panel1.TabIndex = 86;
+            // 
+            // txtNumberStay
+            // 
+            txtNumberStay.BorderStyle = BorderStyle.FixedSingle;
+            txtNumberStay.Cursor = Cursors.IBeam;
+            txtNumberStay.Location = new Point(170, 45);
+            txtNumberStay.Margin = new Padding(3, 2, 3, 2);
+            txtNumberStay.Name = "txtNumberStay";
+            txtNumberStay.Size = new Size(171, 29);
+            txtNumberStay.TabIndex = 71;
+            txtNumberStay.Visible = false;
+            // 
+            // labelNumberStay
+            // 
+            labelNumberStay.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelNumberStay.AutoSize = true;
+            labelNumberStay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelNumberStay.Location = new Point(35, 53);
+            labelNumberStay.Name = "labelNumberStay";
+            labelNumberStay.Size = new Size(104, 21);
+            labelNumberStay.TabIndex = 67;
+            labelNumberStay.Text = "Number Stay:";
+            labelNumberStay.Visible = false;
+            // 
+            // labelNameGroup
+            // 
+            labelNameGroup.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelNameGroup.AutoSize = true;
+            labelNameGroup.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelNameGroup.Location = new Point(35, 90);
+            labelNameGroup.Name = "labelNameGroup";
+            labelNameGroup.Size = new Size(121, 21);
+            labelNameGroup.TabIndex = 68;
+            labelNameGroup.Text = "Name of Group:";
+            labelNameGroup.Visible = false;
+            // 
+            // txtNameGroup
+            // 
+            txtNameGroup.BorderStyle = BorderStyle.FixedSingle;
+            txtNameGroup.Cursor = Cursors.IBeam;
+            txtNameGroup.Location = new Point(170, 82);
+            txtNameGroup.Margin = new Padding(3, 2, 3, 2);
+            txtNameGroup.Name = "txtNameGroup";
+            txtNameGroup.Size = new Size(171, 29);
+            txtNameGroup.TabIndex = 76;
+            txtNameGroup.Visible = false;
+            // 
+            // checkBoxGroup
+            // 
+            checkBoxGroup.AutoSize = true;
+            checkBoxGroup.Cursor = Cursors.Hand;
+            checkBoxGroup.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxGroup.Location = new Point(35, 14);
+            checkBoxGroup.Margin = new Padding(3, 2, 3, 2);
+            checkBoxGroup.Name = "checkBoxGroup";
+            checkBoxGroup.Size = new Size(178, 25);
+            checkBoxGroup.TabIndex = 66;
+            checkBoxGroup.Text = "Group Inclusive Tour?";
+            checkBoxGroup.UseVisualStyleBackColor = true;
+            checkBoxGroup.CheckedChanged += checkBoxGroup_CheckedChanged;
             // 
             // contextMenuStrip2
             // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            contextMenuStrip2.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip2.Name = "contextMenuStrip2";
+            contextMenuStrip2.Size = new Size(61, 4);
             // 
             // Booking_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 623);
-            this.Controls.Add(this.panelBooking);
-            this.Name = "Booking_Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Booking_Form";
-            this.Load += new System.EventHandler(this.Load_BookingForm);
-            this.panelBooking.ResumeLayout(false);
-            this.panelBooking.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(0, 193, 138);
+            ClientSize = new Size(977, 467);
+            Controls.Add(panelBooking);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "Booking_Form";
+            Padding = new Padding(10);
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Booking_Form";
+            Load += Load_BookingForm;
+            panelBooking.ResumeLayout(false);
+            panelBooking.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -572,7 +617,6 @@ namespace GUI_HotelManagement
         private TextBox txtNameGroup;
         private TextBox txtNumberStay;
         private ContextMenuStrip contextMenuStrip2;
-        private Splitter splitter1;
         private Label labelNameGroup;
         private Label labelNumberStay;
         private CheckBox checkBoxGroup;
@@ -584,5 +628,6 @@ namespace GUI_HotelManagement
         private CheckBox checkBoxDeposit;
         private ComboBox comboBoxPaymentMethod;
         private Label labelPaymentMethod;
+        private Panel panel1;
     }
 }

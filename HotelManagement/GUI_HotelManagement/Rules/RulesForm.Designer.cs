@@ -28,221 +28,217 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Rule_ComboBox = new System.Windows.Forms.ComboBox();
-            this.Rules_DataGrid = new System.Windows.Forms.DataGridView();
-            this.Add_Button = new System.Windows.Forms.Button();
-            this.rulesId_ComboBox = new System.Windows.Forms.ComboBox();
-            this.Delete_Button = new System.Windows.Forms.Button();
-            this.Update_Button = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Refresh_Button = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Rules_DataGrid)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.SuspendLayout();
+            Rule_ComboBox = new ComboBox();
+            Rules_DataGrid = new DataGridView();
+            Add_Button = new Button();
+            rulesId_ComboBox = new ComboBox();
+            Delete_Button = new Button();
+            Update_Button = new Button();
+            panel1 = new Panel();
+            label1 = new Label();
+            Refresh_Button = new Button();
+            panel2 = new Panel();
+            label4 = new Label();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)Rules_DataGrid).BeginInit();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // Rule_ComboBox
             // 
-            this.Rule_ComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Rule_ComboBox.FormattingEnabled = true;
-            this.Rule_ComboBox.Items.AddRange(new object[] {
-            "All",
-            "Quy định chìa khóa",
-            "Quy định khách sạn"});
-            this.Rule_ComboBox.Location = new System.Drawing.Point(36, 69);
-            this.Rule_ComboBox.Name = "Rule_ComboBox";
-            this.Rule_ComboBox.Size = new System.Drawing.Size(425, 28);
-            this.Rule_ComboBox.TabIndex = 0;
-            this.Rule_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Rule_ComboBox_SelectedIndexChanged_1);
+            Rule_ComboBox.Cursor = Cursors.Hand;
+            Rule_ComboBox.FormattingEnabled = true;
+            Rule_ComboBox.Items.AddRange(new object[] { "All", "Quy định chìa khóa", "Quy định khách sạn" });
+            Rule_ComboBox.Location = new Point(36, 69);
+            Rule_ComboBox.Name = "Rule_ComboBox";
+            Rule_ComboBox.Size = new Size(425, 23);
+            Rule_ComboBox.TabIndex = 0;
+            Rule_ComboBox.SelectedIndexChanged += Rule_ComboBox_SelectedIndexChanged_1;
             // 
             // Rules_DataGrid
             // 
-            this.Rules_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Rules_DataGrid.Location = new System.Drawing.Point(38, 307);
-            this.Rules_DataGrid.Name = "Rules_DataGrid";
-            this.Rules_DataGrid.RowHeadersWidth = 51;
-            this.Rules_DataGrid.RowTemplate.Height = 24;
-            this.Rules_DataGrid.Size = new System.Drawing.Size(1032, 278);
-            this.Rules_DataGrid.TabIndex = 2;
+            Rules_DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Rules_DataGrid.Location = new Point(38, 307);
+            Rules_DataGrid.Name = "Rules_DataGrid";
+            Rules_DataGrid.RowHeadersWidth = 51;
+            Rules_DataGrid.RowTemplate.Height = 24;
+            Rules_DataGrid.Size = new Size(1032, 278);
+            Rules_DataGrid.TabIndex = 2;
             // 
             // Add_Button
             // 
-            this.Add_Button.BackColor = System.Drawing.Color.White;
-            this.Add_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Add_Button.FlatAppearance.BorderSize = 2;
-            this.Add_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Add_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.Add_Button.Location = new System.Drawing.Point(36, 110);
-            this.Add_Button.Name = "Add_Button";
-            this.Add_Button.Size = new System.Drawing.Size(193, 43);
-            this.Add_Button.TabIndex = 3;
-            this.Add_Button.Text = "Add";
-            this.Add_Button.UseVisualStyleBackColor = false;
-            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
+            Add_Button.BackColor = Color.White;
+            Add_Button.Cursor = Cursors.Hand;
+            Add_Button.FlatAppearance.BorderSize = 2;
+            Add_Button.FlatStyle = FlatStyle.Flat;
+            Add_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Add_Button.ForeColor = Color.FromArgb(0, 193, 138);
+            Add_Button.Location = new Point(36, 110);
+            Add_Button.Name = "Add_Button";
+            Add_Button.Size = new Size(193, 43);
+            Add_Button.TabIndex = 3;
+            Add_Button.Text = "Add";
+            Add_Button.UseVisualStyleBackColor = false;
+            Add_Button.Click += Add_Button_Click;
             // 
             // rulesId_ComboBox
             // 
-            this.rulesId_ComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rulesId_ComboBox.FormattingEnabled = true;
-            this.rulesId_ComboBox.Location = new System.Drawing.Point(34, 90);
-            this.rulesId_ComboBox.Name = "rulesId_ComboBox";
-            this.rulesId_ComboBox.Size = new System.Drawing.Size(247, 28);
-            this.rulesId_ComboBox.TabIndex = 6;
+            rulesId_ComboBox.Cursor = Cursors.Hand;
+            rulesId_ComboBox.FormattingEnabled = true;
+            rulesId_ComboBox.Location = new Point(34, 90);
+            rulesId_ComboBox.Name = "rulesId_ComboBox";
+            rulesId_ComboBox.Size = new Size(247, 23);
+            rulesId_ComboBox.TabIndex = 6;
             // 
             // Delete_Button
             // 
-            this.Delete_Button.BackColor = System.Drawing.Color.White;
-            this.Delete_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Delete_Button.FlatAppearance.BorderSize = 2;
-            this.Delete_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Delete_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(59)))), ((int)(((byte)(44)))));
-            this.Delete_Button.Location = new System.Drawing.Point(318, 114);
-            this.Delete_Button.Name = "Delete_Button";
-            this.Delete_Button.Size = new System.Drawing.Size(144, 51);
-            this.Delete_Button.TabIndex = 4;
-            this.Delete_Button.Text = "Delete";
-            this.Delete_Button.UseVisualStyleBackColor = false;
-            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
+            Delete_Button.BackColor = Color.White;
+            Delete_Button.Cursor = Cursors.Hand;
+            Delete_Button.FlatAppearance.BorderSize = 2;
+            Delete_Button.FlatStyle = FlatStyle.Flat;
+            Delete_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Delete_Button.ForeColor = Color.Red;
+            Delete_Button.Location = new Point(318, 114);
+            Delete_Button.Name = "Delete_Button";
+            Delete_Button.Size = new Size(144, 51);
+            Delete_Button.TabIndex = 4;
+            Delete_Button.Text = "Delete";
+            Delete_Button.UseVisualStyleBackColor = false;
+            Delete_Button.Click += Delete_Button_Click;
             // 
             // Update_Button
             // 
-            this.Update_Button.BackColor = System.Drawing.Color.White;
-            this.Update_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Update_Button.FlatAppearance.BorderSize = 2;
-            this.Update_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Update_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Update_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.Update_Button.Location = new System.Drawing.Point(318, 45);
-            this.Update_Button.Name = "Update_Button";
-            this.Update_Button.Size = new System.Drawing.Size(144, 51);
-            this.Update_Button.TabIndex = 5;
-            this.Update_Button.Text = "Update";
-            this.Update_Button.UseVisualStyleBackColor = false;
-            this.Update_Button.Click += new System.EventHandler(this.Update_Button_Click);
+            Update_Button.BackColor = Color.White;
+            Update_Button.Cursor = Cursors.Hand;
+            Update_Button.FlatAppearance.BorderSize = 2;
+            Update_Button.FlatStyle = FlatStyle.Flat;
+            Update_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Update_Button.ForeColor = Color.FromArgb(0, 193, 138);
+            Update_Button.Location = new Point(318, 45);
+            Update_Button.Name = "Update_Button";
+            Update_Button.Size = new Size(144, 51);
+            Update_Button.TabIndex = 5;
+            Update_Button.Text = "Update";
+            Update_Button.UseVisualStyleBackColor = false;
+            Update_Button.Click += Update_Button_Click;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.rulesId_ComboBox);
-            this.panel1.Controls.Add(this.Update_Button);
-            this.panel1.Controls.Add(this.Delete_Button);
-            this.panel1.Location = new System.Drawing.Point(578, 31);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(492, 204);
-            this.panel1.TabIndex = 7;
+            panel1.BackColor = Color.FromArgb(235, 246, 252);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(rulesId_ComboBox);
+            panel1.Controls.Add(Update_Button);
+            panel1.Controls.Add(Delete_Button);
+            panel1.Location = new Point(578, 31);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(492, 204);
+            panel1.TabIndex = 7;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(34, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 25);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Selected Rule:";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(34, 61);
+            label1.Name = "label1";
+            label1.Size = new Size(102, 20);
+            label1.TabIndex = 17;
+            label1.Text = "Selected Rule:";
             // 
             // Refresh_Button
             // 
-            this.Refresh_Button.BackColor = System.Drawing.Color.White;
-            this.Refresh_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Refresh_Button.FlatAppearance.BorderSize = 2;
-            this.Refresh_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Refresh_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Refresh_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.Refresh_Button.Location = new System.Drawing.Point(266, 110);
-            this.Refresh_Button.Name = "Refresh_Button";
-            this.Refresh_Button.Size = new System.Drawing.Size(195, 43);
-            this.Refresh_Button.TabIndex = 9;
-            this.Refresh_Button.Text = "Refresh";
-            this.Refresh_Button.UseVisualStyleBackColor = false;
-            this.Refresh_Button.Click += new System.EventHandler(this.Refresh_Button_Click);
+            Refresh_Button.BackColor = Color.White;
+            Refresh_Button.Cursor = Cursors.Hand;
+            Refresh_Button.FlatAppearance.BorderSize = 2;
+            Refresh_Button.FlatStyle = FlatStyle.Flat;
+            Refresh_Button.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Refresh_Button.ForeColor = Color.FromArgb(8, 48, 107);
+            Refresh_Button.Location = new Point(266, 110);
+            Refresh_Button.Name = "Refresh_Button";
+            Refresh_Button.Size = new Size(195, 43);
+            Refresh_Button.TabIndex = 9;
+            Refresh_Button.Text = "Refresh";
+            Refresh_Button.UseVisualStyleBackColor = false;
+            Refresh_Button.Click += Refresh_Button_Click;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.Refresh_Button);
-            this.panel2.Controls.Add(this.Add_Button);
-            this.panel2.Controls.Add(this.Rule_ComboBox);
-            this.panel2.Location = new System.Drawing.Point(38, 31);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(497, 204);
-            this.panel2.TabIndex = 10;
+            panel2.BackColor = Color.FromArgb(235, 246, 252);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(Refresh_Button);
+            panel2.Controls.Add(Add_Button);
+            panel2.Controls.Add(Rule_ComboBox);
+            panel2.Location = new Point(38, 31);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(497, 204);
+            panel2.TabIndex = 10;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(36, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 25);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Types of Rule:";
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(36, 39);
+            label4.Name = "label4";
+            label4.Size = new Size(100, 20);
+            label4.TabIndex = 16;
+            label4.Text = "Types of Rule:";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 621);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1119, 10);
-            this.panel3.TabIndex = 11;
+            panel3.BackColor = Color.FromArgb(8, 48, 107);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(0, 621);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1119, 10);
+            panel3.TabIndex = 11;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1109, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 621);
-            this.panel4.TabIndex = 12;
+            panel4.BackColor = Color.FromArgb(8, 48, 107);
+            panel4.Dock = DockStyle.Right;
+            panel4.Location = new Point(1109, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(10, 621);
+            panel4.TabIndex = 12;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Window;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(480, 263);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 41);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "List of Rules";
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.Window;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(8, 48, 107);
+            label2.Location = new Point(480, 263);
+            label2.Name = "label2";
+            label2.Size = new Size(153, 32);
+            label2.TabIndex = 17;
+            label2.Text = "List of Rules";
             // 
             // RulesForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1119, 631);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Rules_DataGrid);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RulesForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quy định khách sạn";
-            ((System.ComponentModel.ISupportInitialize)(this.Rules_DataGrid)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleMode = AutoScaleMode.None;
+            BackColor = Color.White;
+            ClientSize = new Size(1119, 631);
+            Controls.Add(label2);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(Rules_DataGrid);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "RulesForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Quy định khách sạn";
+            ((System.ComponentModel.ISupportInitialize)Rules_DataGrid).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -28,235 +28,295 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Amount_room_Label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Amount_Emp_Label = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Amount_Service_Label = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Room_Panel = new System.Windows.Forms.Panel();
-            this.Line_Room_Label = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.Line_Emp_Label = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.Line_Service_Label = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.Room_Panel.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI_HotelManagement.Properties.Resources.IconHotel;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(410, 402);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GUI_HotelManagement.Properties.Resources.HotelBanner;
-            this.pictureBox2.Location = new System.Drawing.Point(487, 121);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(589, 244);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            panel1 = new Panel();
+            Amount_room_Label = new Label();
+            label1 = new Label();
+            panel2 = new Panel();
+            Amount_Emp_Label = new Label();
+            label2 = new Label();
+            panel3 = new Panel();
+            Amount_Service_Label = new Label();
+            label3 = new Label();
+            Room_Panel = new Panel();
+            Line_Room_Label = new Label();
+            panel5 = new Panel();
+            Line_Emp_Label = new Label();
+            panel6 = new Panel();
+            Line_Service_Label = new Label();
+            pictureBox1 = new PictureBox();
+            panel4 = new Panel();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            Room_Panel.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.Amount_room_Label);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(42, 438);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 132);
-            this.panel1.TabIndex = 2;
+            panel1.BackColor = Color.FromArgb(195, 225, 246);
+            panel1.Controls.Add(pictureBox4);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(Amount_room_Label);
+            panel1.Location = new Point(77, 368);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(252, 99);
+            panel1.TabIndex = 2;
             // 
             // Amount_room_Label
             // 
-            this.Amount_room_Label.AutoSize = true;
-            this.Amount_room_Label.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Amount_room_Label.Location = new System.Drawing.Point(94, 36);
-            this.Amount_room_Label.Name = "Amount_room_Label";
-            this.Amount_room_Label.Size = new System.Drawing.Size(99, 81);
-            this.Amount_room_Label.TabIndex = 1;
-            this.Amount_room_Label.Text = "10";
-            this.Amount_room_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            Amount_room_Label.AutoSize = true;
+            Amount_room_Label.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            Amount_room_Label.ForeColor = Color.FromArgb(34, 83, 169);
+            Amount_room_Label.Location = new Point(144, 27);
+            Amount_room_Label.Name = "Amount_room_Label";
+            Amount_room_Label.Size = new Size(84, 65);
+            Amount_room_Label.TabIndex = 1;
+            Amount_room_Label.Text = "10";
+            Amount_room_Label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Số lượng phòng";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(34, 83, 169);
+            label1.Location = new Point(135, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(106, 17);
+            label1.TabIndex = 0;
+            label1.Text = "Số lượng phòng";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.Amount_Emp_Label);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(409, 438);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(285, 132);
-            this.panel2.TabIndex = 3;
+            panel2.BackColor = Color.FromArgb(252, 229, 158);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(Amount_Emp_Label);
+            panel2.Location = new Point(457, 372);
+            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(249, 99);
+            panel2.TabIndex = 3;
             // 
             // Amount_Emp_Label
             // 
-            this.Amount_Emp_Label.AutoSize = true;
-            this.Amount_Emp_Label.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Amount_Emp_Label.Location = new System.Drawing.Point(91, 36);
-            this.Amount_Emp_Label.Name = "Amount_Emp_Label";
-            this.Amount_Emp_Label.Size = new System.Drawing.Size(99, 81);
-            this.Amount_Emp_Label.TabIndex = 2;
-            this.Amount_Emp_Label.Text = "10";
+            Amount_Emp_Label.AutoSize = true;
+            Amount_Emp_Label.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            Amount_Emp_Label.ForeColor = Color.FromArgb(69, 56, 33);
+            Amount_Emp_Label.Location = new Point(136, 23);
+            Amount_Emp_Label.Name = "Amount_Emp_Label";
+            Amount_Emp_Label.Size = new Size(84, 65);
+            Amount_Emp_Label.TabIndex = 2;
+            Amount_Emp_Label.Text = "10";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Số lượng nhân viên";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(69, 56, 33);
+            label2.Location = new Point(115, 8);
+            label2.Name = "label2";
+            label2.Size = new Size(126, 17);
+            label2.TabIndex = 0;
+            label2.Text = "Số lượng nhân viên";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.Amount_Service_Label);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(773, 438);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(282, 132);
-            this.panel3.TabIndex = 4;
+            panel3.BackColor = Color.FromArgb(214, 237, 187);
+            panel3.Controls.Add(pictureBox3);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(Amount_Service_Label);
+            panel3.Location = new Point(820, 372);
+            panel3.Margin = new Padding(3, 2, 3, 2);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(247, 99);
+            panel3.TabIndex = 4;
             // 
             // Amount_Service_Label
             // 
-            this.Amount_Service_Label.AutoSize = true;
-            this.Amount_Service_Label.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Amount_Service_Label.Location = new System.Drawing.Point(100, 36);
-            this.Amount_Service_Label.Name = "Amount_Service_Label";
-            this.Amount_Service_Label.Size = new System.Drawing.Size(99, 81);
-            this.Amount_Service_Label.TabIndex = 3;
-            this.Amount_Service_Label.Text = "10";
+            Amount_Service_Label.AutoSize = true;
+            Amount_Service_Label.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            Amount_Service_Label.ForeColor = Color.FromArgb(41, 115, 74);
+            Amount_Service_Label.Location = new Point(142, 23);
+            Amount_Service_Label.Name = "Amount_Service_Label";
+            Amount_Service_Label.Size = new Size(84, 65);
+            Amount_Service_Label.TabIndex = 3;
+            Amount_Service_Label.Text = "10";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(89, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Số lượng dịch vụ";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(41, 115, 74);
+            label3.Location = new Point(129, 8);
+            label3.Name = "label3";
+            label3.Size = new Size(110, 17);
+            label3.TabIndex = 1;
+            label3.Text = "Số lượng dịch vụ";
             // 
             // Room_Panel
             // 
-            this.Room_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Room_Panel.Controls.Add(this.Line_Room_Label);
-            this.Room_Panel.Location = new System.Drawing.Point(42, 593);
-            this.Room_Panel.Name = "Room_Panel";
-            this.Room_Panel.Size = new System.Drawing.Size(288, 186);
-            this.Room_Panel.TabIndex = 5;
+            Room_Panel.BackColor = Color.FromArgb(195, 225, 246);
+            Room_Panel.Controls.Add(Line_Room_Label);
+            Room_Panel.Location = new Point(79, 489);
+            Room_Panel.Margin = new Padding(3, 2, 3, 2);
+            Room_Panel.Name = "Room_Panel";
+            Room_Panel.Size = new Size(252, 140);
+            Room_Panel.TabIndex = 5;
             // 
             // Line_Room_Label
             // 
-            this.Line_Room_Label.AutoSize = true;
-            this.Line_Room_Label.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Line_Room_Label.Location = new System.Drawing.Point(3, 0);
-            this.Line_Room_Label.Name = "Line_Room_Label";
-            this.Line_Room_Label.Size = new System.Drawing.Size(137, 38);
-            this.Line_Room_Label.TabIndex = 0;
-            this.Line_Room_Label.Text = "RoomInfo";
-            this.Line_Room_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            Line_Room_Label.AutoSize = true;
+            Line_Room_Label.Font = new Font("Segoe UI Semibold", 17.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Line_Room_Label.ForeColor = Color.FromArgb(34, 83, 169);
+            Line_Room_Label.Location = new Point(3, 2);
+            Line_Room_Label.Name = "Line_Room_Label";
+            Line_Room_Label.Size = new Size(117, 31);
+            Line_Room_Label.TabIndex = 0;
+            Line_Room_Label.Text = "RoomInfo";
+            Line_Room_Label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel5.Controls.Add(this.Line_Emp_Label);
-            this.panel5.Location = new System.Drawing.Point(406, 593);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(288, 186);
-            this.panel5.TabIndex = 6;
+            panel5.BackColor = Color.FromArgb(252, 229, 158);
+            panel5.Controls.Add(Line_Emp_Label);
+            panel5.Location = new Point(454, 489);
+            panel5.Margin = new Padding(3, 2, 3, 2);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(252, 140);
+            panel5.TabIndex = 6;
             // 
             // Line_Emp_Label
             // 
-            this.Line_Emp_Label.AutoSize = true;
-            this.Line_Emp_Label.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Line_Emp_Label.Location = new System.Drawing.Point(3, 0);
-            this.Line_Emp_Label.Name = "Line_Emp_Label";
-            this.Line_Emp_Label.Size = new System.Drawing.Size(119, 38);
-            this.Line_Emp_Label.TabIndex = 1;
-            this.Line_Emp_Label.Text = "EmpInfo";
+            Line_Emp_Label.AutoSize = true;
+            Line_Emp_Label.Font = new Font("Segoe UI Semibold", 17.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Line_Emp_Label.ForeColor = Color.FromArgb(69, 56, 33);
+            Line_Emp_Label.Location = new Point(3, 2);
+            Line_Emp_Label.Name = "Line_Emp_Label";
+            Line_Emp_Label.Size = new Size(102, 31);
+            Line_Emp_Label.TabIndex = 1;
+            Line_Emp_Label.Text = "EmpInfo";
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel6.Controls.Add(this.Line_Service_Label);
-            this.panel6.Location = new System.Drawing.Point(773, 593);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(288, 186);
-            this.panel6.TabIndex = 7;
+            panel6.BackColor = Color.FromArgb(214, 237, 187);
+            panel6.Controls.Add(Line_Service_Label);
+            panel6.Location = new Point(820, 489);
+            panel6.Margin = new Padding(3, 2, 3, 2);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(247, 140);
+            panel6.TabIndex = 7;
             // 
             // Line_Service_Label
             // 
-            this.Line_Service_Label.AutoSize = true;
-            this.Line_Service_Label.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Line_Service_Label.Location = new System.Drawing.Point(0, 0);
-            this.Line_Service_Label.Name = "Line_Service_Label";
-            this.Line_Service_Label.Size = new System.Drawing.Size(153, 38);
-            this.Line_Service_Label.TabIndex = 8;
-            this.Line_Service_Label.Text = "ServiceInfo";
+            Line_Service_Label.AutoSize = true;
+            Line_Service_Label.Font = new Font("Segoe UI Semibold", 17.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Line_Service_Label.ForeColor = Color.FromArgb(41, 115, 74);
+            Line_Service_Label.Location = new Point(2, 2);
+            Line_Service_Label.Name = "Line_Service_Label";
+            Line_Service_Label.Size = new Size(132, 31);
+            Line_Service_Label.TabIndex = 8;
+            Line_Service_Label.Text = "ServiceInfo";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Asset_1_png__blue_;
+            pictureBox1.Location = new Point(317, 14);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(491, 325);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.White;
+            panel4.Controls.Add(pictureBox1);
+            panel4.Controls.Add(panel1);
+            panel4.Controls.Add(panel6);
+            panel4.Controls.Add(panel5);
+            panel4.Controls.Add(panel3);
+            panel4.Controls.Add(panel2);
+            panel4.Controls.Add(Room_Panel);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(0, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1125, 660);
+            panel4.TabIndex = 9;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.team;
+            pictureBox2.Location = new Point(15, 8);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(94, 87);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.room_service;
+            pictureBox3.Location = new Point(19, 10);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(89, 80);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.living_room;
+            pictureBox4.Location = new Point(24, 9);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(94, 87);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 5;
+            pictureBox4.TabStop = false;
             // 
             // Main_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 800);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.Room_Panel);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Main_Form";
-            this.Text = "Main_Form";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.Room_Panel.ResumeLayout(false);
-            this.Room_Panel.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(8, 48, 107);
+            ClientSize = new Size(1135, 670);
+            Controls.Add(panel4);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "Main_Form";
+            Padding = new Padding(0, 0, 10, 10);
+            Text = "Main_Form";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            Room_Panel.ResumeLayout(false);
+            Room_Panel.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private Panel panel1;
         private Label Amount_room_Label;
         private Label label1;
@@ -272,5 +332,10 @@
         private Label Line_Room_Label;
         private Label Line_Emp_Label;
         private Label Line_Service_Label;
+        private PictureBox pictureBox1;
+        private Panel panel4;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

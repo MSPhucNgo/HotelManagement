@@ -68,7 +68,7 @@ namespace HotelManagement
                 MessageBox.Show(ex.Message);
             }
 
-           
+
 
 
         }
@@ -123,7 +123,7 @@ namespace HotelManagement
                 MessageBox.Show(ex.Message);
             }
 
-           
+
         }
         // load data
         private void loadTour(string depart, string des, string leavingDate, string endDate)
@@ -179,7 +179,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
 
 
         }
@@ -197,7 +197,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-          
+
         }
 
         private void loadDestinationList()
@@ -214,7 +214,7 @@ namespace HotelManagement
                 MessageBox.Show(ex.Message);
             }
 
-          
+
         }
         private void loadServiceForm()
         {
@@ -241,9 +241,9 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-           
 
-                
+
+
         }
         private void loadCustomerTour()
         {
@@ -261,7 +261,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-          
+
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -285,7 +285,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-        
+
 
         }
 
@@ -318,7 +318,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -352,7 +352,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-       
+
         }
 
         private void timepickLeaving_ValueChanged(object sender, EventArgs e)
@@ -404,7 +404,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
 
         }
 
@@ -462,7 +462,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
 
         }
 
@@ -484,7 +484,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-        
+
         }
 
         private void dtgvCustomerTour_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -524,7 +524,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void Services4Customer_Load(object sender, EventArgs e)
@@ -545,6 +545,21 @@ namespace HotelManagement
         private void cbxDestination_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbxDes.Checked = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cbxLea_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbError_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

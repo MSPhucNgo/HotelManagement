@@ -29,5 +29,10 @@ namespace GUI_HotelManagement
         {
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

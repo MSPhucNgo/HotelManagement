@@ -34,7 +34,7 @@ namespace GUI_HotelManagement
             InitializeComponent();
             exitedCTM = false;
         }
-        public Booking_Form(Room_DTO roomInfp) 
+        public Booking_Form(Room_DTO roomInfp)
         {
             InitializeComponent();
             roomInfor.Add(roomInfp);
@@ -99,7 +99,7 @@ namespace GUI_HotelManagement
 
             txtNameGroup.Text = supInfo.GroupName;
             supInfo.RegisteredName = inforCTM.Name;
-            supInfo.GroupSize = inforBooking.Amount; 
+            supInfo.GroupSize = inforBooking.Amount;
             txtRoomFee.Text = inforBooking.Price.ToString();
             txtDepositFee.Text = inforBill.Deposit_price;
         }

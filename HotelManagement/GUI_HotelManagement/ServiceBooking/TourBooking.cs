@@ -44,7 +44,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-          
+
             //tbRegister.Text = cus.Name.ToString();
 
         }
@@ -98,7 +98,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
 
         private void tbPhone_TextChanged(object sender, EventArgs e)
@@ -121,7 +121,19 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-        
+
+        }
+
+        private void Close_Button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

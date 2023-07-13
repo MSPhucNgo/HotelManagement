@@ -21,7 +21,7 @@ namespace GUI_HotelManagement
         {
             InitializeComponent();
         }
-        public Check_inForm(string idBooking) 
+        public Check_inForm(string idBooking)
         {
             InitializeComponent();
             BookID_Text.Text = idBooking; ;
@@ -68,7 +68,7 @@ namespace GUI_HotelManagement
                     IdentityNo_Text.Text = BookingForm_BUS.getNoIdentity(new BookingForm_DTO(CusId_BF));
                     SPRequiments_Text.Text = BookingForm_BUS.getSPRequires(new BookingForm_DTO(CusId_BF));
                     Price_Text.Text = BookingForm_BUS.getPrice(new BookingForm_DTO(CusId_BF));
-                    Edit_Button.Enabled = true; 
+                    Edit_Button.Enabled = true;
                     In_Datatime.Value = BookingForm_BUS.getIn_Date(new BookingForm_DTO(CusId_BF));
                     Out_Datetime.Value = BookingForm_BUS.getOut_Date(new BookingForm_DTO(CusId_BF));
                     Own_CheckList.Enabled = true;

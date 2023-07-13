@@ -27,7 +27,7 @@ namespace GUI_HotelManagement.Dashboard
             string room6P = roominfo.Split("\n")[2];
             string room8P = roominfo.Split("\n")[3];
             Amount_room_Label.Text = (int.Parse(room2P) + int.Parse(room4P) + int.Parse(room6P) + int.Parse(room8P)).ToString();
-            Line_Room_Label.Text =  "Phòng 2 người : " + room2P + "\n" +
+            Line_Room_Label.Text = "Phòng 2 người : " + room2P + "\n" +
                                     "Phòng 4 người : " + room4P + "\n" +
                                     "Phòng 6 người : " + room6P + "\n" +
                                     "Phòng 8 người : " + room8P + "\n";
@@ -39,7 +39,7 @@ namespace GUI_HotelManagement.Dashboard
             string DV = empinfo.Split("\n")[2];
             string QLVT = empinfo.Split("\n")[3];
             Amount_Emp_Label.Text = (int.Parse(LT) + int.Parse(Bellman) + int.Parse(DV) + int.Parse(QLVT)).ToString();
-            Line_Emp_Label.Text =   "Lễ tân : " + LT + "\n" +
+            Line_Emp_Label.Text = "Lễ tân : " + LT + "\n" +
                                     "Nhân viên quản lí vật tư : " + QLVT + "\n" +
                                     "Nhân viên dịch vụ: " + DV + "\n" +
                                     "Nhân viên Bellman : " + Bellman + "\n";
@@ -49,7 +49,7 @@ namespace GUI_HotelManagement.Dashboard
             string DVKD = serviceinfo.Split("\n")[1];
 
             Amount_Service_Label.Text = (int.Parse(DVKD) + int.Parse(DVHC)).ToString();
-            Line_Service_Label.Text =   "Dịch vụ hậu cần : " + DVHC + "\n" +
+            Line_Service_Label.Text = "Dịch vụ hậu cần : " + DVHC + "\n" +
                                         "Dịch vụ kinh doanh : " + DVKD + "\n";
         }
     }

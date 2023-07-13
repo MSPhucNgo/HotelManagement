@@ -45,7 +45,7 @@ namespace GUI_HotelManagement
                 Identify_Text.Text = null;
 
                 //Edit_Confirm_Button.Hide();
-                
+
                 //Button bookingRoom = new Button();
                 //bookingRoom.Enabled = true;
                 //bookingRoom.Text = "Booking";

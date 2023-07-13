@@ -164,11 +164,11 @@ namespace GUI_HotelManagement
                 if (!row.IsNewRow && row.Cells["Total_Price"].Value.ToString() != "")
                 {
                     string statusService = row.Cells["Status"].Value.ToString();
-                    if(statusService == "Ðã thanh toán")
+                    if (statusService == "Ðã thanh toán")
                     {
                         int price = int.Parse(row.Cells["Total_Price"].Value.ToString());
                         serviceFeePay += price;
-                    }              
+                    }
                 }
             }
             foreach (DataGridViewRow row in damage_DataGrid.Rows)
@@ -286,12 +286,12 @@ namespace GUI_HotelManagement
         }
 
         bool isClick_Deposit = false;
-        bool isClick_Service = false;   
+        bool isClick_Service = false;
         private void Status_Service_Fee_Button_Click(object sender, EventArgs e)
         {
-            if(!isClick_Service)
+            if (!isClick_Service)
             {
-                Service_Fee_Details_Panel.Visible= true;
+                Service_Fee_Details_Panel.Visible = true;
             }
             else
             {

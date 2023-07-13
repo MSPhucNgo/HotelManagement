@@ -43,11 +43,11 @@ namespace GUI_HotelManagement
             this.inforBill = _inforBill;
             this.exitedCTM = _exitedCTM;
             this.roomInfor = roomInfor;
-            
+
             bookingRoom_DataGrid.Columns.Add("NameRoom", "Name");
             bookingRoom_DataGrid.Columns.Add("PriceRoom", "Price");
             bookingRoom_DataGrid.Columns.Add("TypeRoom", "Type");
-            foreach(Room_DTO room in this.roomInfor)
+            foreach (Room_DTO room in this.roomInfor)
             {
                 bookingRoom_DataGrid.Rows.Add(room.Name, room.Price, room.Type);
 
@@ -89,7 +89,7 @@ namespace GUI_HotelManagement
 
             foreach (DataGridViewRow row in bookingRoom_DataGrid.Rows)
             {
-                if(row.Cells["NameRoom"].Value.ToString() == roomName.Split('\n')[0])
+                if (row.Cells["NameRoom"].Value.ToString() == roomName.Split('\n')[0])
                 {
                     roundedButton.BackColor = Color.Gray;
                 }
@@ -115,7 +115,7 @@ namespace GUI_HotelManagement
                 buttonList.Add(sender as Button);
                 //(sender as Button).Enabled = false;
                 (sender as Button).BackColor = Color.Gray;
-               // roomInfor.Add(new Room_DTO(null, roomname, price, type));
+                // roomInfor.Add(new Room_DTO(null, roomname, price, type));
             }
             else if ((sender as Button).BackColor == Color.Gray)
             {

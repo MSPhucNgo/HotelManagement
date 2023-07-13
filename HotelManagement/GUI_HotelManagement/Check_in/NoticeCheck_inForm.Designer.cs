@@ -28,156 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.Discount_DataGrid = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Service_Label = new System.Windows.Forms.Label();
-            this.Rules_DataGrid = new System.Windows.Forms.DataGridView();
-            this.ServiceHotel_DataGid = new System.Windows.Forms.DataGridView();
-            this.Confirm_Button = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Discount_DataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rules_DataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceHotel_DataGid)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            label2 = new Label();
+            Discount_DataGrid = new DataGridView();
+            label1 = new Label();
+            Service_Label = new Label();
+            Rules_DataGrid = new DataGridView();
+            ServiceHotel_DataGid = new DataGridView();
+            Confirm_Button = new Button();
+            panel1 = new Panel();
+            label6 = new Label();
+            ((System.ComponentModel.ISupportInitialize)Discount_DataGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Rules_DataGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ServiceHotel_DataGid).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(699, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Hotel rule:";
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(8, 48, 107);
+            label2.Location = new Point(612, 88);
+            label2.Name = "label2";
+            label2.Size = new Size(90, 21);
+            label2.TabIndex = 13;
+            label2.Text = "Hotel rule:";
             // 
             // Discount_DataGrid
             // 
-            this.Discount_DataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
-            this.Discount_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Discount_DataGrid.Location = new System.Drawing.Point(67, 541);
-            this.Discount_DataGrid.Name = "Discount_DataGrid";
-            this.Discount_DataGrid.ReadOnly = true;
-            this.Discount_DataGrid.RowHeadersWidth = 51;
-            this.Discount_DataGrid.RowTemplate.Height = 29;
-            this.Discount_DataGrid.Size = new System.Drawing.Size(598, 240);
-            this.Discount_DataGrid.TabIndex = 12;
+            Discount_DataGrid.BackgroundColor = Color.FromArgb(212, 230, 242);
+            Discount_DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Discount_DataGrid.Location = new Point(59, 406);
+            Discount_DataGrid.Margin = new Padding(3, 2, 3, 2);
+            Discount_DataGrid.Name = "Discount_DataGrid";
+            Discount_DataGrid.ReadOnly = true;
+            Discount_DataGrid.RowHeadersWidth = 51;
+            Discount_DataGrid.RowTemplate.Height = 29;
+            Discount_DataGrid.Size = new Size(523, 180);
+            Discount_DataGrid.TabIndex = 12;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.label1.Location = new System.Drawing.Point(56, 491);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 25);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Discount promotion atteched:";
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(8, 48, 107);
+            label1.Location = new Point(49, 368);
+            label1.Name = "label1";
+            label1.Size = new Size(239, 21);
+            label1.TabIndex = 11;
+            label1.Text = "Discount promotion attached:";
             // 
             // Service_Label
             // 
-            this.Service_Label.AutoSize = true;
-            this.Service_Label.BackColor = System.Drawing.Color.White;
-            this.Service_Label.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Service_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.Service_Label.Location = new System.Drawing.Point(56, 117);
-            this.Service_Label.Name = "Service_Label";
-            this.Service_Label.Size = new System.Drawing.Size(129, 25);
-            this.Service_Label.TabIndex = 10;
-            this.Service_Label.Text = "Hotel service:";
+            Service_Label.AutoSize = true;
+            Service_Label.BackColor = Color.White;
+            Service_Label.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Service_Label.ForeColor = Color.FromArgb(8, 48, 107);
+            Service_Label.Location = new Point(49, 88);
+            Service_Label.Name = "Service_Label";
+            Service_Label.Size = new Size(114, 21);
+            Service_Label.TabIndex = 10;
+            Service_Label.Text = "Hotel service:";
             // 
             // Rules_DataGrid
             // 
-            this.Rules_DataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
-            this.Rules_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Rules_DataGrid.Location = new System.Drawing.Point(711, 168);
-            this.Rules_DataGrid.Name = "Rules_DataGrid";
-            this.Rules_DataGrid.ReadOnly = true;
-            this.Rules_DataGrid.RowHeadersWidth = 51;
-            this.Rules_DataGrid.RowTemplate.Height = 29;
-            this.Rules_DataGrid.Size = new System.Drawing.Size(610, 613);
-            this.Rules_DataGrid.TabIndex = 8;
+            Rules_DataGrid.BackgroundColor = Color.FromArgb(212, 230, 242);
+            Rules_DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Rules_DataGrid.Location = new Point(622, 126);
+            Rules_DataGrid.Margin = new Padding(3, 2, 3, 2);
+            Rules_DataGrid.Name = "Rules_DataGrid";
+            Rules_DataGrid.ReadOnly = true;
+            Rules_DataGrid.RowHeadersWidth = 51;
+            Rules_DataGrid.RowTemplate.Height = 29;
+            Rules_DataGrid.Size = new Size(534, 460);
+            Rules_DataGrid.TabIndex = 8;
             // 
             // ServiceHotel_DataGid
             // 
-            this.ServiceHotel_DataGid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
-            this.ServiceHotel_DataGid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ServiceHotel_DataGid.Location = new System.Drawing.Point(56, 155);
-            this.ServiceHotel_DataGid.Name = "ServiceHotel_DataGid";
-            this.ServiceHotel_DataGid.ReadOnly = true;
-            this.ServiceHotel_DataGid.RowHeadersWidth = 51;
-            this.ServiceHotel_DataGid.RowTemplate.Height = 29;
-            this.ServiceHotel_DataGid.Size = new System.Drawing.Size(598, 292);
-            this.ServiceHotel_DataGid.TabIndex = 7;
-            this.ServiceHotel_DataGid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ServiceHotel_DataGid_CellContentClick);
+            ServiceHotel_DataGid.BackgroundColor = Color.FromArgb(212, 230, 242);
+            ServiceHotel_DataGid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ServiceHotel_DataGid.Location = new Point(49, 116);
+            ServiceHotel_DataGid.Margin = new Padding(3, 2, 3, 2);
+            ServiceHotel_DataGid.Name = "ServiceHotel_DataGid";
+            ServiceHotel_DataGid.ReadOnly = true;
+            ServiceHotel_DataGid.RowHeadersWidth = 51;
+            ServiceHotel_DataGid.RowTemplate.Height = 29;
+            ServiceHotel_DataGid.Size = new Size(523, 219);
+            ServiceHotel_DataGid.TabIndex = 7;
+            ServiceHotel_DataGid.CellContentClick += ServiceHotel_DataGid_CellContentClick;
             // 
             // Confirm_Button
             // 
-            this.Confirm_Button.FlatAppearance.BorderSize = 2;
-            this.Confirm_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Confirm_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Confirm_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.Confirm_Button.Location = new System.Drawing.Point(553, 805);
-            this.Confirm_Button.Name = "Confirm_Button";
-            this.Confirm_Button.Size = new System.Drawing.Size(249, 59);
-            this.Confirm_Button.TabIndex = 14;
-            this.Confirm_Button.Text = "Confirm";
-            this.Confirm_Button.UseVisualStyleBackColor = true;
-            this.Confirm_Button.Click += new System.EventHandler(this.Confirm_Button_Click_1);
+            Confirm_Button.BackColor = Color.FromArgb(8, 48, 107);
+            Confirm_Button.FlatAppearance.BorderSize = 0;
+            Confirm_Button.FlatStyle = FlatStyle.Flat;
+            Confirm_Button.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            Confirm_Button.ForeColor = Color.White;
+            Confirm_Button.Location = new Point(451, 603);
+            Confirm_Button.Margin = new Padding(3, 2, 3, 2);
+            Confirm_Button.Name = "Confirm_Button";
+            Confirm_Button.Size = new Size(280, 54);
+            Confirm_Button.TabIndex = 14;
+            Confirm_Button.Text = "Confirm";
+            Confirm_Button.UseVisualStyleBackColor = false;
+            Confirm_Button.Click += Confirm_Button_Click_1;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.Confirm_Button);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.ServiceHotel_DataGid);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.Service_Label);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(11, 13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1360, 907);
-            this.panel1.TabIndex = 15;
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(Confirm_Button);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(ServiceHotel_DataGid);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(Service_Label);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(10, 10);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1189, 680);
+            panel1.TabIndex = 15;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.label6.Location = new System.Drawing.Point(353, 52);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(670, 37);
-            this.label6.TabIndex = 91;
-            this.label6.Text = "CHECKIN (2) - NOTICE SERVICE, PROMOTION, RULE";
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.ControlLightLight;
+            label6.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.FromArgb(8, 48, 107);
+            label6.Location = new Point(309, 39);
+            label6.Name = "label6";
+            label6.Size = new Size(548, 30);
+            label6.TabIndex = 91;
+            label6.Text = "CHECKIN (2) - NOTICE SERVICE, PROMOTION, RULE";
             // 
             // NoticeCheck_inForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.ClientSize = new System.Drawing.Size(1382, 933);
-            this.Controls.Add(this.Discount_DataGrid);
-            this.Controls.Add(this.Rules_DataGrid);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NoticeCheck_inForm";
-            this.Padding = new System.Windows.Forms.Padding(11, 13, 11, 13);
-            this.Text = "NoticeCheck_inForm";
-            ((System.ComponentModel.ISupportInitialize)(this.Discount_DataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Rules_DataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServiceHotel_DataGid)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(0, 193, 138);
+            ClientSize = new Size(1209, 700);
+            Controls.Add(Discount_DataGrid);
+            Controls.Add(Rules_DataGrid);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "NoticeCheck_inForm";
+            Padding = new Padding(10);
+            Text = "NoticeCheck_inForm";
+            ((System.ComponentModel.ISupportInitialize)Discount_DataGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Rules_DataGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ServiceHotel_DataGid).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

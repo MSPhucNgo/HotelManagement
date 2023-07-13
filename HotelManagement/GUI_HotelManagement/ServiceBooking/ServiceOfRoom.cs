@@ -22,7 +22,7 @@ namespace HotelManagement
         public DiscountPromotion_DTO discountPromotion;
         public BookingForm_DTO bookingForm;
         public bool isAllServices = false;
-        public bool isChoosedDiscount ;
+        public bool isChoosedDiscount;
         string status = "";
         public Service_Of_Room()
         {
@@ -33,8 +33,8 @@ namespace HotelManagement
         {
             try
             {
-                
-            } 
+
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -71,8 +71,8 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-            
-          
+
+
 
         }
 
@@ -90,29 +90,29 @@ namespace HotelManagement
         {
             try
             {
-                 isAllServices = false;
-            dtgvServiceList.Visible = true;
-            dtgvAllServices.Visible = false;
-            string serviceName = txbServiceName.Text;
-            HotelService_DTO serv = new HotelService_DTO("", serviceName, "", 0, "", "");
-            dtgvServiceList.DataSource = Services_for_customer_BUS.usp_getServicesOfRoom_svs(room, serv);
-            dtgvServiceList.Columns[0].Visible = false;
-            for (int i = 0; i < dtgvServiceList.Rows.Count - 1; i++)
-            {
-                dtgvServiceList.Rows[i].HeaderCell.Value = (i + 1).ToString();
-                string sta = dtgvServiceList.Rows[i].Cells["STATUS"].Value.ToString();
-                //string sta = "";
-                if (sta != "Khả dụng")
+                isAllServices = false;
+                dtgvServiceList.Visible = true;
+                dtgvAllServices.Visible = false;
+                string serviceName = txbServiceName.Text;
+                HotelService_DTO serv = new HotelService_DTO("", serviceName, "", 0, "", "");
+                dtgvServiceList.DataSource = Services_for_customer_BUS.usp_getServicesOfRoom_svs(room, serv);
+                dtgvServiceList.Columns[0].Visible = false;
+                for (int i = 0; i < dtgvServiceList.Rows.Count - 1; i++)
                 {
-                    dtgvServiceList.Rows[i].DefaultCellStyle.BackColor = Color.Tan;
+                    dtgvServiceList.Rows[i].HeaderCell.Value = (i + 1).ToString();
+                    string sta = dtgvServiceList.Rows[i].Cells["STATUS"].Value.ToString();
+                    //string sta = "";
+                    if (sta != "Khả dụng")
+                    {
+                        dtgvServiceList.Rows[i].DefaultCellStyle.BackColor = Color.Tan;
+                    }
                 }
-            }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
 
         }
 
@@ -129,7 +129,7 @@ namespace HotelManagement
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
         }
-    
+
         private void dtgvServiceList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -165,7 +165,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
 
         }
 
@@ -196,7 +196,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
 
 
         }
@@ -234,7 +234,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
 
         private void dtgvAllServices_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -272,7 +272,7 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
 
         private void dtgvOffer_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -294,6 +294,11 @@ namespace HotelManagement
             {
                 MessageBox.Show(ex.Message);
             }
-           }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

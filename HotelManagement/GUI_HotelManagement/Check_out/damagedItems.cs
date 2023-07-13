@@ -29,7 +29,7 @@ namespace GUI_HotelManagement
             setData();
 
         }
-        public damagedItems(BookingForm_DTO bookingInfo,DataTable damageList)
+        public damagedItems(BookingForm_DTO bookingInfo, DataTable damageList)
         {
             InitializeComponent();
             infoBooking = bookingInfo;

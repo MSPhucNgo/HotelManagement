@@ -28,90 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListRoom_FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.bookingRoom_DataGrid = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.bookingRoom_DataGrid)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            ListRoom_FlowLayout = new FlowLayoutPanel();
+            bookingRoom_DataGrid = new DataGridView();
+            label1 = new Label();
+            button2 = new Button();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)bookingRoom_DataGrid).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // ListRoom_FlowLayout
             // 
-            this.ListRoom_FlowLayout.AutoScroll = true;
-            this.ListRoom_FlowLayout.Location = new System.Drawing.Point(42, 89);
-            this.ListRoom_FlowLayout.Name = "ListRoom_FlowLayout";
-            this.ListRoom_FlowLayout.Size = new System.Drawing.Size(786, 635);
-            this.ListRoom_FlowLayout.TabIndex = 8;
+            ListRoom_FlowLayout.AutoScroll = true;
+            ListRoom_FlowLayout.Location = new Point(37, 67);
+            ListRoom_FlowLayout.Margin = new Padding(3, 2, 3, 2);
+            ListRoom_FlowLayout.Name = "ListRoom_FlowLayout";
+            ListRoom_FlowLayout.Size = new Size(688, 476);
+            ListRoom_FlowLayout.TabIndex = 8;
             // 
             // bookingRoom_DataGrid
             // 
-            this.bookingRoom_DataGrid.AllowUserToAddRows = false;
-            this.bookingRoom_DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bookingRoom_DataGrid.Location = new System.Drawing.Point(870, 89);
-            this.bookingRoom_DataGrid.Name = "bookingRoom_DataGrid";
-            this.bookingRoom_DataGrid.RowHeadersVisible = false;
-            this.bookingRoom_DataGrid.RowHeadersWidth = 51;
-            this.bookingRoom_DataGrid.RowTemplate.Height = 29;
-            this.bookingRoom_DataGrid.Size = new System.Drawing.Size(398, 509);
-            this.bookingRoom_DataGrid.TabIndex = 9;
+            bookingRoom_DataGrid.AllowUserToAddRows = false;
+            bookingRoom_DataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            bookingRoom_DataGrid.Location = new Point(761, 67);
+            bookingRoom_DataGrid.Margin = new Padding(3, 2, 3, 2);
+            bookingRoom_DataGrid.Name = "bookingRoom_DataGrid";
+            bookingRoom_DataGrid.RowHeadersVisible = false;
+            bookingRoom_DataGrid.RowHeadersWidth = 51;
+            bookingRoom_DataGrid.RowTemplate.Height = 29;
+            bookingRoom_DataGrid.Size = new Size(348, 396);
+            bookingRoom_DataGrid.TabIndex = 9;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(870, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "BookingRoom";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(8, 48, 107);
+            label1.Location = new Point(761, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(127, 21);
+            label1.TabIndex = 11;
+            label1.Text = "Booking Room:";
             // 
             // button2
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.button2.Location = new System.Drawing.Point(984, 660);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 64);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Confirm";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            button2.BackColor = Color.FromArgb(8, 48, 107);
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderSize = 2;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(861, 495);
+            button2.Name = "button2";
+            button2.Size = new Size(177, 48);
+            button2.TabIndex = 28;
+            button2.Text = "Confirm";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ListRoom_FlowLayout);
-            this.panel1.Controls.Add(this.bookingRoom_DataGrid);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(11, 13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1319, 763);
-            this.panel1.TabIndex = 29;
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(ListRoom_FlowLayout);
+            panel1.Controls.Add(bookingRoom_DataGrid);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(10, 10);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1153, 572);
+            panel1.TabIndex = 29;
             // 
             // MultiRoom_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.ClientSize = new System.Drawing.Size(1341, 789);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MultiRoom_Form";
-            this.Padding = new System.Windows.Forms.Padding(11, 13, 11, 13);
-            this.Text = "MultiRoom_Form";
-            ((System.ComponentModel.ISupportInitialize)(this.bookingRoom_DataGrid)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(0, 193, 138);
+            ClientSize = new Size(1173, 592);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "MultiRoom_Form";
+            Padding = new Padding(10);
+            Text = "MultiRoom_Form";
+            ((System.ComponentModel.ISupportInitialize)bookingRoom_DataGrid).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
