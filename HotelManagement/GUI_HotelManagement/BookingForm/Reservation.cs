@@ -89,8 +89,13 @@ namespace GUI_HotelManagement
             //this.ShowDialog();
             this.Visible = true;
         }
-
-        private void bt_Cancel_Reservation_Click(object sender, EventArgs e)
+		public void cancel_Reservation(string idBooking)
+		{
+			BookingForm_DTO booking = new BookingForm_DTO(idBooking);
+			//cancel_Reservation(idBooking);
+			dgv_Reservation.DataSource = BookingForm_BUS.cancel_Reservation(booking);
+		}
+		private void bt_Cancel_Reservation_Click(object sender, EventArgs e)
         {
 			string BookingId = cb_BookingID.Text.ToString();
 			if (BookingId == "")
@@ -108,7 +113,10 @@ namespace GUI_HotelManagement
 				MessageBox.Show("The Booking_ID is not correct, please re-enter the Booking_ID!");
 				return;
 			}
-            //cancel_Reservation(BookingId);
+            cancel_Reservation(BookingId);
+			MessageBox.Show("Update successful!");
+			cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
+			loadlistOfReservation();
 		}
-    }
+	}
 }
