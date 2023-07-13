@@ -24,10 +24,11 @@ namespace GUI_HotelManagement
 			cb_BookingID.DataSource = BookingForm_BUS.cb_BookingID();
             //cb_RoomType.DataSource = BookingForm_BUS.cb_RoomType();
 			cb_BookingID_Edit.DataSource = BookingForm_BUS.cb_BookingID_Edit();
+			
 
 
 		}
-        private void bt_Edit_Reservation_Click_1(object sender, EventArgs e)
+		private void bt_Edit_Reservation_Click_1(object sender, EventArgs e)
         {
             string BookingId = cb_BookingID_Edit.Text.ToString();
             if (BookingId == "")
@@ -52,8 +53,8 @@ namespace GUI_HotelManagement
 			string ar_date = date_Arrive.Text.ToString();
 			string de_date = date_Departure.Text.ToString();
 			string spec_re = tb_Special_Re.Text.ToString();
-			
-			BookingForm_DTO temp = new BookingForm_DTO(booking, ar_date, de_date,spec_re);
+
+			BookingForm_DTO temp = new BookingForm_DTO(booking, ar_date, de_date, spec_re);
 			bool flag = BookingForm_BUS.Update_BookingForm(temp);
 			/*date_Arrive.Format = DateTimePickerFormat.Custom;
 			date_Arrive.CustomFormat = "mm/dd/yyyy";
@@ -63,19 +64,25 @@ namespace GUI_HotelManagement
 			//dgv_Reservation.DataSource = BookingForm_BUS.update_Reservation(booking, ar_date, de_date, spec_re);
 			//update_Reservation(booking, ar_date, de_date, spec_re);
 			MessageBox.Show("Update successful!");
-            /*Reservation r = new Reservation();
+			/*Reservation r = new Reservation();
             r.Show();
             this.Hide();*/
-        }
+		}
 		public void loadlistOfReservation()
 		{
 			BookingForm_DTO booking = new BookingForm_DTO(null);
 			dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation();
+			
 		}
 		public void loadlistOfReservation(string idBooking)
 		{
 			BookingForm_DTO booking = new BookingForm_DTO(idBooking);
 			dgv_Reservation.DataSource = BookingForm_BUS.loadlistOfReservation_Room(booking);
+			cb_BookingID_Edit.Text = idBooking;
+			tb_Special_Re.Text = BookingForm_BUS.getSPRequires(new BookingForm_DTO(idBooking));
+			date_Arrive.Value = BookingForm_BUS.getIn_Date(new BookingForm_DTO(idBooking));
+			date_Departure.Value = BookingForm_BUS.getOut_Date(new BookingForm_DTO(idBooking));
+
 		}
         private void bt_Cancel_Click_1(object sender, EventArgs e)
         {
